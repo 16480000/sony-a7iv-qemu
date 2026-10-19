@@ -1,0 +1,26 @@
+{
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "display": "none",
+  "menu_boot": true,
+  "keys": [],
+  "full_camera_boot": false,
+  "baseline": {
+    "label": "00-menu",
+    "sequence": 467,
+    "pixel_source_seq": 2,
+    "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+    "ramfb_matches_ap_pixels": true,
+    "distinct_colors": 14
+  },
+  "system_sound": {
+    "physical_address": "0x41ea00000",
+    "reserved_bytes": 131072,
+    "original_bytes": 77504,
+    "original_sha256": "dae3d18d37b85a22398573f04090a4a95a97052380f4b2b4402a374516399dfb",
+    "qemu_memory_sha256": "dae3d18d37b85a22398573f04090a4a95a97052380f4b2b4402a374516399dfb",
+    "original_bytes_match_and_tail_zero": true,
+    "playback_implemented": false
+  },
+  "elapsed_seconds": 60.17
+}

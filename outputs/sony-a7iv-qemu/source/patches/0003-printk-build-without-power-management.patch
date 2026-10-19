@@ -1,0 +1,11 @@
+--- a/kernel/printk/printk.c
++++ b/kernel/printk/printk.c
+@@ -1839,7 +1839,7 @@
+ 	 * prefix which might be passed-in as a parameter.
+ 	 */
+ 	text_len = vscnprintf(text, sizeof(textbuf), fmt, args);
+-#ifdef CONFIG_ARCH_EJ
++#if defined(CONFIG_ARCH_EJ) && defined(CONFIG_PM_SLEEP)
+ 	if (console_suspended && printk_pmdebug
+ 	    && (!resume_phase || printk_pmdebug > 1)) {
+ 		extern void printascii(char *);

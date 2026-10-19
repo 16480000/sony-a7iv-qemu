@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "shell_ready": true,
+    "openssl_original_binary": true,
+    "four_guest_cpus": true,
+    "original_software_ipc_modules_loaded": true,
+    "all_original_data_partitions_read_only": true,
+    "probe_completed": true
+  },
+  "passed": true,
+  "guest_counter_hz": 2000000,
+  "source_log": "logs/final-smoke.log"
+}

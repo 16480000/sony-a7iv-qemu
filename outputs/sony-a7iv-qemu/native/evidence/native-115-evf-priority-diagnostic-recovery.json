@@ -1,0 +1,12 @@
+{
+  "raw_console_sha256": "5e6f25f4a972d88749d9d7360d5117049dbc1f3e4aa1c8c4450449d898f719ce",
+  "identified_noise_records_removed": 15,
+  "sample_bytes": 523611,
+  "sample_records": 3784,
+  "sample_sha256": "7d388e55a5ae031b7f08963126d7278833553d826a176147091a38bf7159b881",
+  "full_guest_stream_bytes": 8100565,
+  "full_guest_stream_records": 68624,
+  "full_guest_stream_sha256": "47b702a53c674031a6f15ec4e3e88eb9d7e18a982909282943caa0ce579c4bde",
+  "sample_sha256_independently_reported_by_old_guest_exporter": false,
+  "limitation": "Old exporter supplied only full-stream SHA; this recovered tail sample passes every record bound/header and the original record/byte counts. The source log and original failed result remain unchanged."
+}

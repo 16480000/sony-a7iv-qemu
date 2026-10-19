@@ -1,0 +1,18 @@
+--- a/drivers/udif/mach-cxd900xx/pm_core.c
++++ b/drivers/udif/mach-cxd900xx/pm_core.c
+@@ -124,6 +124,7 @@
+ 	extern unsigned int  cxd90057_xpower_off_bitmask; /* sleep.S */
+ #endif /* !CONFIG_EJ_SIMPLE_SUSPEND */
+ 
++#if !defined(CONFIG_EJ_SIMPLE_SUSPEND)
+ 	/* resume vector */
+ 	if (~0UL == cxd90057_resume_vector) {
+ 		printk("resume vector: not defined\n");
+@@ -132,6 +133,7 @@
+ 		printk("resume entry:  0x%09lx\n", (unsigned long)virt_to_phys(cxd90057_resume));
+ 		*(unsigned long *)phys_to_virt(cxd90057_resume_vector) = virt_to_phys(cxd90057_resume);
+ 	}
++#endif /* !CONFIG_EJ_SIMPLE_SUSPEND */
+ 	/* sus_error flag */
+ 	if (~0UL == cxd90057_sus_error) {
+ 		printk("sus_error address: not defined\n");

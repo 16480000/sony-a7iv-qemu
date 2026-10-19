@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-19",
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "primary_run": "native-87-basic-stable",
+  "primary_image": "main-ap-state-consumer.cpio",
+  "primary_image_sha256": "7a39d7cf3412769f6d340dab25e9f9cd46b834a1033300043a730f5290fa4cf1",
+  "completed_actions": [
+    {
+      "time": 1792352233.8317118,
+      "key": "FN",
+      "result": {}
+    },
+    {
+      "time": 1792352319.6413183,
+      "key": "MENU",
+      "result": {}
+    },
+    {
+      "time": 1792352342.2336264,
+      "key": "PLAY",
+      "result": {}
+    },
+    {
+      "time": 1792352375.9409132,
+      "key": "PLAY",
+      "result": {}
+    },
+    {
+      "time": 1792352664.707628,
+      "key": "RESTART",
+      "result": {
+        "restart": {
+          "label": "restart-1792352624-setup-main",
+          "sequence": 2324,
+          "pixel_source_seq": 2311,
+          "pixel_sha256": "a5c7fe0103d7662fe23c0bde3c0190512e20393ae227ad234425c0a00e830a72",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 130
+        }
+      }
+    },
+    {
+      "time": 1792352950.5536954,
+      "key": "LEFT",
+      "result": {}
+    },
+    {
+      "time": 1792352951.266847,
+      "key": "LEFT",
+      "result": {}
+    },
+    {
+      "time": 1792352955.0116467,
+      "key": "MENU",
+      "result": {}
+    },
+    {
+      "time": 1792352956.9027297,
+      "key": "LEFT",
+      "result": {}
+    },
+    {
+      "time": 1792352958.6445608,
+      "key": "DOWN",
+      "result": {}
+    },
+    {
+      "time": 1792352960.7507625,
+      "key": "LEFT",
+      "result": {}
+    },
+    {
+      "time": 1792352962.445631,
+      "key": "ENTER",
+      "result": {}
+    },
+    {
+      "time": 1792352971.151948,
+      "key": "ENTER",
+      "result": {}
+    },
+    {
+      "time": 1792352972.0728338,
+      "key": "ENTER",
+      "result": {}
+    },
+    {
+      "time": 1792352972.785139,
+      "key": "ENTER",
+      "result": {}
+    },
+    {
+      "time": 1792352974.1211913,
+      "key": "ENTER",
+      "result": {}
+    }
+  ],
+  "restart_success": true,
+  "settings_persistence": "UI setup replay only; personal settings are not persisted",
+  "photo_capture_implemented": false,
+  "sensor_liveview_implemented": false
+}

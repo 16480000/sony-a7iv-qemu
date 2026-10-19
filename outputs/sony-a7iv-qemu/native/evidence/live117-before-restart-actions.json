@@ -1,0 +1,30 @@
+[
+  {
+    "key": "PLAY",
+    "image": "live117-before-restart-1-play.png",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "key": "PLAY",
+    "image": "live117-before-restart-2-play.png",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "key": "FN",
+    "image": "live117-before-restart-3-fn.png",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "key": "MENU",
+    "image": "live117-before-restart-4-menu.png",
+    "result": {
+      "ok": true
+    }
+  }
+]

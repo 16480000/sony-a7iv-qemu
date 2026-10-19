@@ -1,0 +1,11 @@
+echo ORIGINAL_STDERR_BEGIN; /bin/busybox tail -n 160 /tmp/im.log; echo ORIGI
+NAL_STDERR_END; rc=$?; printf '\nA7M4_COMMAND_DONE_0591cf7033c88b97ef6f3c70:%s\n
+' "$rc"
+ORIGINAL_STDERR_BEGIN
+I/stella(   194): Created HeapAllocator: 0x7f90005ce0((nil))
+I/stella(   194): Replaced log-hook: 0x0x7fa01447d0 => 0x0x7fa017022c
+No user exists for uid 0
+ORIGINAL_STDERR_END
+
+A7M4_COMMAND_DONE_0591cf7033c88b97ef6f3c70:0
+/ # 

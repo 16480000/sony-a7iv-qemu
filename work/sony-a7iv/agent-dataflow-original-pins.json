@@ -1,0 +1,350 @@
+{
+  "firmware": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/cp/cpapp-b.bin",
+  "sha256": "7b9b137d696e5972d20db7f9119076172ed8e0730805d7f0b4c31b87689e2c2b",
+  "scope": "Original CP constructor definitions; initial state before later runtime connections, not live topology.",
+  "pin_constructor_file_offset": "0x4e2006",
+  "pins": [
+    {
+      "index": 0,
+      "type": 0,
+      "direction": 1,
+      "number": 0,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4feec",
+      "definition_runtime_va": "0xf57eec",
+      "object_runtime_va": "0x121fd50",
+      "object_pointer_file_offset": "0xe5001c",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f8010"
+    },
+    {
+      "index": 1,
+      "type": 0,
+      "direction": 1,
+      "number": 1,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4fefc",
+      "definition_runtime_va": "0xf57efc",
+      "object_runtime_va": "0x121fd88",
+      "object_pointer_file_offset": "0xe50020",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f803a"
+    },
+    {
+      "index": 2,
+      "type": 0,
+      "direction": 1,
+      "number": 2,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff0c",
+      "definition_runtime_va": "0xf57f0c",
+      "object_runtime_va": "0x121fdc0",
+      "object_pointer_file_offset": "0xe50024",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f805c"
+    },
+    {
+      "index": 3,
+      "type": 0,
+      "direction": 1,
+      "number": 3,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff1c",
+      "definition_runtime_va": "0xf57f1c",
+      "object_runtime_va": "0x121fdf8",
+      "object_pointer_file_offset": "0xe50028",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f807e"
+    },
+    {
+      "index": 4,
+      "type": 0,
+      "direction": 2,
+      "number": 0,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff2c",
+      "definition_runtime_va": "0xf57f2c",
+      "object_runtime_va": "0x121fe30",
+      "object_pointer_file_offset": "0xe5002c",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f80a0"
+    },
+    {
+      "index": 5,
+      "type": 0,
+      "direction": 2,
+      "number": 1,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff3c",
+      "definition_runtime_va": "0xf57f3c",
+      "object_runtime_va": "0x121fe68",
+      "object_pointer_file_offset": "0xe50030",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f80c2"
+    },
+    {
+      "index": 6,
+      "type": 0,
+      "direction": 2,
+      "number": 2,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff4c",
+      "definition_runtime_va": "0xf57f4c",
+      "object_runtime_va": "0x121fea0",
+      "object_pointer_file_offset": "0xe50034",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f80e4"
+    },
+    {
+      "index": 7,
+      "type": 0,
+      "direction": 2,
+      "number": 3,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff5c",
+      "definition_runtime_va": "0xf57f5c",
+      "object_runtime_va": "0x121fed8",
+      "object_pointer_file_offset": "0xe50038",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f8106"
+    },
+    {
+      "index": 8,
+      "type": 8,
+      "direction": 1,
+      "number": 0,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff6c",
+      "definition_runtime_va": "0xf57f6c",
+      "object_runtime_va": "0x121ff10",
+      "object_pointer_file_offset": "0xe5003c",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f8128"
+    },
+    {
+      "index": 9,
+      "type": 8,
+      "direction": 2,
+      "number": 0,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff7c",
+      "definition_runtime_va": "0xf57f7c",
+      "object_runtime_va": "0x121ff48",
+      "object_pointer_file_offset": "0xe50040",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f814a"
+    },
+    {
+      "index": 10,
+      "type": 6,
+      "direction": 2,
+      "number": 0,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff8c",
+      "definition_runtime_va": "0xf57f8c",
+      "object_runtime_va": "0x121ff80",
+      "object_pointer_file_offset": "0xe50044",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f816c"
+    },
+    {
+      "index": 11,
+      "type": 0,
+      "direction": 1,
+      "number": 10,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ff9c",
+      "definition_runtime_va": "0xf57f9c",
+      "object_runtime_va": "0x121ffb8",
+      "object_pointer_file_offset": "0xe50048",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f818e"
+    },
+    {
+      "index": 12,
+      "type": 0,
+      "direction": 1,
+      "number": 11,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ffac",
+      "definition_runtime_va": "0xf57fac",
+      "object_runtime_va": "0x121fff0",
+      "object_pointer_file_offset": "0xe5004c",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f81b0"
+    },
+    {
+      "index": 13,
+      "type": 0,
+      "direction": 1,
+      "number": 12,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ffbc",
+      "definition_runtime_va": "0xf57fbc",
+      "object_runtime_va": "0x1220028",
+      "object_pointer_file_offset": "0xe50050",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f81d2"
+    },
+    {
+      "index": 14,
+      "type": 0,
+      "direction": 1,
+      "number": 13,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ffcc",
+      "definition_runtime_va": "0xf57fcc",
+      "object_runtime_va": "0x1220060",
+      "object_pointer_file_offset": "0xe50054",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f81f4"
+    },
+    {
+      "index": 15,
+      "type": 0,
+      "direction": 2,
+      "number": 10,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ffdc",
+      "definition_runtime_va": "0xf57fdc",
+      "object_runtime_va": "0x1220098",
+      "object_pointer_file_offset": "0xe50058",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f8216"
+    },
+    {
+      "index": 16,
+      "type": 0,
+      "direction": 2,
+      "number": 11,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4ffec",
+      "definition_runtime_va": "0xf57fec",
+      "object_runtime_va": "0x12200d0",
+      "object_pointer_file_offset": "0xe5005c",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f8238"
+    },
+    {
+      "index": 17,
+      "type": 0,
+      "direction": 2,
+      "number": 12,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe4fffc",
+      "definition_runtime_va": "0xf57ffc",
+      "object_runtime_va": "0x1220108",
+      "object_pointer_file_offset": "0xe50060",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f825a"
+    },
+    {
+      "index": 18,
+      "type": 0,
+      "direction": 2,
+      "number": 13,
+      "owner": "0x9284074a",
+      "definition_file_offset": "0xe5000c",
+      "definition_runtime_va": "0xf5800c",
+      "object_runtime_va": "0x1220140",
+      "object_pointer_file_offset": "0xe50064",
+      "initial_state": 1,
+      "initial_state_meaning": "disconnected",
+      "initial_state_source_file_offsets": [
+        "0x4e2022",
+        "0x4e2028"
+      ],
+      "constructor_call_file_offset": "0x4f827c"
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "result": true,
+  "code": "00",
+  "returnMsg": "",
+  "returnData": {
+    "Data": {
+      "id": "00003010",
+      "path": "/etc/commerce/products/casch/pim/download/firmware/00003010",
+      "createTime": "2022-08-16",
+      "updateTime": "2026-05-28 10:04:18",
+      "modelName": [
+        "ILCE-7M4"
+      ],
+      "manualTime": "2026-05-28 12:00",
+      "isShow": true,
+      "jumpLink": "",
+      "downloadPath": [
+        "https://support.d-imaging.sony.co.jp/download/NEX/YE19b5b7b3/BODYDATA.DAT?fm=cn"
+      ],
+      "title": "ILCE-7M4 Ver.6.02 固件升级操作方法 (使用SD卡或CFexpress Type A卡升级)",
+      "subTitle": "",
+      "fileSize": "",
+      "description": "",
+      "keyword": "固件更新,软件更新,版本更新,升级,版本升级,更新,系统升级,下载,下载更新,下载升级,系统更新,",
+      "downloadType": "SONY_CASCH_DOWNLOAD_FIRM",
+      "sling:resourceType": "SONY_CASCH_DOWNLOAD_FIRM",
+      "tags": [],
+      "categoryPaths": [],
+      "subCategoryPaths": [],
+      "downloadHistory": [
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.1.01",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.提高了眼部AF功能的准确性。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one/levelTwo/two-51f52f0b80a5462e8955539b492cffaa",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2.改善了搭载SEL2860镜头时可能无法拍照的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one/levelTwo/two-5589d13b892c44c7bfb379d8155df4c0",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "3.提高了相机的整体稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-fb9977c3f03445ad95549b65e463759f",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.1.05",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-fb9977c3f03445ad95549b65e463759f/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "固件版本为Ver.1.00或Ver.1.01的情况，需先升级至Ver1.05，才能进行Ver.1.10的升级。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.1.10",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.当采用RAW无损压缩方式时，影像尺寸在L之外，还增加了M和S的选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-53f51e21f8424181b28ade1609996dca",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2.使用闪光灯拍摄时，可以保留快门速度和ISO感光度的设置。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-76437b12c96c440d97ff770877df0c4e",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "3.增加触屏快门的功能。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-97b985ec803d43aeaa45b5a99ce45b62",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "4.提高了眼部自动对焦功能的准确性。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-f6d8460d717b4e4cb7859e0acf1fb0b8",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "5.相机的序列号可写入动态影像文件的元数据中。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-290457883539401cad2addafc529b91c",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "6.提高了WI-FI连接的可操作性。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-1e5122d995a64dbba89f47ab3983d052",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "7.自动关显示屏的菜单中，增加了“1分钟”的选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-a2328735cd034f708608c77fba921dbe",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "8.改善了取景器可能不会根据环境亮度而变亮的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-85700476facc42ab83b349bb2c634ff0/levelTwo/two-e4958996cf544476b1d739c42cbd2e8f",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "9.提高了相机的整体稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e87a220e121e462ba6304dc6a9ce4d3c",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.1.11",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e87a220e121e462ba6304dc6a9ce4d3c/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1. 提高了快门的稳定性。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e87a220e121e462ba6304dc6a9ce4d3c/levelTwo/two-2b5b3c2661644bcc94ec7363544e7c40",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2. 修复了由相机旋转的动态影像文件在电脑上显示时可能无法旋转的现象。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.2.00",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.增加了对Creators' App应用程序的支持。",
+              "levelThree": [
+                {
+                  "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two/levelThree/three",
+                  "updateTime": "2026-05-28 10:04:18",
+                  "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+                  "levelThree": "*新的Creators' App替代Imaging Edge Mobile应用程序。"
+                },
+                {
+                  "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two/levelThree/three-339027f3b1d440eb914cdc2dfe4491cc",
+                  "updateTime": "2026-05-28 10:04:18",
+                  "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+                  "levelThree": "*Creators' App可以实现影像从相机到智能手机的传输、遥控拍摄及各种功能。"
+                }
+              ]
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two-6cef69e3d1f64ac0bbd5f23def2ce2fd",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2. 增加了当使用Creators' App或Imaging Edge Desktop进行遥控拍摄或影像传输时，提高安全性的功能。",
+              "levelThree": [
+                {
+                  "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two-6cef69e3d1f64ac0bbd5f23def2ce2fd/levelThree/three",
+                  "updateTime": "2026-05-28 10:04:18",
+                  "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+                  "levelThree": "*需要将Imaging Edge Desktop更新为最新版本（Ver.3.6或更高版本）。"
+                }
+              ]
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-e6d8bdf1fc1b49d5a1b8f81c21ea5d84/levelTwo/two-367c674820844eada70688969a68c110",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "3.提高了相机的整体稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-2a2301e5dad0472b85a5f1574cd0725d",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.2.01",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-2a2301e5dad0472b85a5f1574cd0725d/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.修复了在使用Creators' App时，自动校准时间和区域可能会关闭的现象。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-2a2301e5dad0472b85a5f1574cd0725d/levelTwo/two-866db17740f440649b0c9e4640a92b53",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2.提高了相机的整体稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.3.00",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.增加了对网络直播功能的支持。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-0c6e60e7317b4923857124dea9a42248",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "2.Wi-Fi信号强度显示。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-3c125053fd9744e0b62f228593abd2c1",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "3.一个文件夹内的记录影像数量上限从4000增加至9999。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-ec085e69c54e4388a7be94359b631bcc",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "4.增加了对C2PA格式的支持（证书生效日期未定）。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-b1b02d28566f44ac9c2a741706cb2758",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "5.自定义网格线功能需付费才能使用。上市计划未定。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-d6c0efaae7d143fbafb8e35d30a73cca",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "6.修复了重新启动电源后时间码可能无法保留的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-821cc7c59e2445198ef255585b99424d",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "7.修复了某些自定义键操作时而引起重启的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-2a30324df854439e9798f20767422b51",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "8.提升了在录制视频过程中使用扩展ISO时的曝光精准度。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-f091416b6c8a441aa3cb4300eb1ce41e/levelTwo/two-5d8d34c175c6422cb11d324f4077d152",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "9.提升了相机的操控稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-166a5dbe5dcf4fa284f56b9d0159c44e",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.3.01",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-166a5dbe5dcf4fa284f56b9d0159c44e/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.修复了相机可能会无法连接网络的问题。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-1a74d85aef344fb6a997eb5cdd495b69",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.3.02",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-1a74d85aef344fb6a997eb5cdd495b69/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "1.修复了当录制视频时可能会有中断的问题。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.4.00",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "01. 新增了包围对焦拍摄，当连拍时可以自动切换对焦位置。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-7f44a76e59a6420da9e78f1c8340ee01",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "02. 新增了曝光值调整及包围曝光拍摄数量的设置。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-90893feda8804a72897ea1f835cafc56",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "03. 新增了在视频录制后在视频素材中可自动创建拍摄标记（Shot Marks）的静态照片的功能。      ·  当你在拍摄或播放一段视频时，你可以添加一个拍摄标记（Shot Marks）以便于筛选，传输或编辑。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-e7b75ee7f2094ffda6f584ab87bf91f6",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "04. 当使用亮屏显示功能时，支持在手动对焦模式下使用对焦放大和MF中自动放大对焦功能。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-a676d9e261e84d3abb175e65862af6bf",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "05. 当相机有最新固件可以更新时允许有通知提示的显示。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-a579be53df0e45e78fcea8e41f0157b1",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "06. 当向智能手机或平板电脑传输照片和视频时，您可以同时进行拍摄。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-16222f751af74c43967d23ed7a9b1683",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "07. 向智能手机或平板电脑传输时允许断点续传。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-ecb56179fb49443ba173373591e43d94",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "08. 在向智能手机或平板电脑传输过程中，允许用户只发送还没传输过的内容或新增照片及视频传输。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-48178ac2150f46248824affe6ec6dcfc",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "09. 新增了对Monitor &amp; Control App的支持。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-2812dd1b70d84465b2aafda72c8fd13a",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "10. 修复了当视频回放时会出现峰值显示的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-4a5bf0465f6a455b8e0c256384b9e567/levelTwo/two-0ec921737acf4d04866819d9daed7d9e",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "11. 提升了相机功能及操控的稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.5.00",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "-  修复了当拍摄结束后立即切换录制帧率会导致在随后的拍摄中音画不同步或不稳定操控的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c/levelTwo/two-b40ea8dbad17409c8f9874fc7da44085",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "-  修复了在功能菜单中注册多个相同项目注时光标无法正确移动的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c/levelTwo/two-88f95a5f943445c6bb7cf9f357f50a7d",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "-  修复了在拍照模式下按视频录制按钮拍摄视频时会引发某些按钮操控停止工作的问题。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c/levelTwo/two-6608ba30156b4f4d9f6fbda769d9e5b7",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "-  提升了相机操控的稳定性。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-463fff3d84e045539a213a6fd08ecd1c/levelTwo/two-c0425eeeed254034a51c3ea070b14865",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "-  支持对于静态照片写入数字签名的功能，该功能属于索尼影像认证方案之一。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-a00ebc1240084854b238bc32a7664d85",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.5.01",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-a00ebc1240084854b238bc32a7664d85/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "01.  不再支持安全性（IPsec）功能。请激活并使用连接认证以获得更安全的保护。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-a00ebc1240084854b238bc32a7664d85/levelTwo/two-5da736cfadb04c65bad4041e6cb953cc",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "02.  更新支持更安全的WPA2和WPA3功能。当连接Wi-Fi时将无法选择WPA和WEP。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-a00ebc1240084854b238bc32a7664d85/levelTwo/two-b311561023834f30a19fe1b897fe7a9e",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "03.  提升了相机操控的稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.6.00",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    自适应显示横屏和竖屏拍摄信息。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-4cf766718c1242959291014152d185f0",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增对焦点尺寸选择：对焦区域菜单内的对焦点下增加XL。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-47c279132ceb448a812046f2170b09ad",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在对焦区域菜单内的自定义里新增自定义1，自定义2，和自定义3。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-2540838f5240435d9039c55c9deb5e6d",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在对焦区域菜单内的追踪下，新增追踪功能：对焦点XL，追踪：自定义1，追踪：自定义2，追踪：自定义3。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-c6fb7d28c1094331a64160305c4d136b",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    网格线设置菜单内新增黄金分割比例选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-5bafb562bb3d46fd80bb13090d1e5ca1",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增放大菜单显示的选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-9aa8d07368294172b3f407aa5ac7b032",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许在录制过程中或录制后向素材添加OK/NG/KEEP旗标。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-297fd5b3955b4847bfcbe1e62aa3506f",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    当在视频录制中使用了同时或自动切换媒体（接力录制）功能，允许显示双卡内的剩余空间容量。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-d6db478de67846ccabadca41f0aebb2a",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增支持双卡间中继回放功能。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-6ce5043cea924265940b02b7c3cf9b8e",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增允许使用多重过滤功能（比如标星）来筛选回放的照片。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-ae88ce5e3a3d4853910b66d8adeb5ada",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在回放中允许向AF-ON，AEL和Delete按钮设定分配自定义键。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-2071415ccf124cad94b34f5bf57b0ffd",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增支持导入/切换多重IPTC预设。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-27ecbc9ee89d47a780cb7d21fa28d104",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持针对照片和视频的数字签名写入功能，该功能隶属于索尼相机认证方案。            -  向某些媒体以外的客户提供许可证（付费）的时间尚未确定。            -  该服务在某些国家或地区无法使用。更多信息请访问认证目录页面：(https://www.sony.net/cas/).",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-fce82818f64943398dad6b8c2cf740d6",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持扫描和标记，照片裁切，以及具备容积摄影许可证下进行容积摄影指令。            -  使用前必须要安装付费证书。          -  该服务在某些国家或地区无法使用。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-b83b5943b8c046af89301e08fb96b253",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    当在向相机存储卡写入时，允许通过FTP传输。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-9db792d23e884c0091353315235ee485",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许受保护的视频和照片自动通过FTP传输。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-639c6331f5764a7ba7b2997e676b65f2",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许通过FTP传输的视频和照片自动受保护。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-22aa6958307841b2b080f145cead7ead",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许通过FTP优先传输特定照片。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-c42ed84fd51845bf99e2666452daa27b",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持以下关于Monitor &amp; Control app的功能：            -  焦点图显示。                   注意：最新版本的Monitor &amp; Control app为必须。该app在某些国家或地区无法使用。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-21796214e7d349d18318027f06312991/levelTwo/two-54864648513e41a39e94e2fbc137383d",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    提升了相机操控的稳定性。",
+              "levelThree": []
+            }
+          ]
+        },
+        {
+          "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd",
+          "updateTime": "2026-05-28 10:04:18",
+          "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+          "levelOne": "Ver.6.01",
+          "levelTwo": [
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    自适应显示横屏和竖屏拍摄信息。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-2e5bb9bcc404484fb0a4ecdd74caf588",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增对焦点尺寸选择：对焦区域菜单内的对焦点下增加XL。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-1799618ab89a462596068fb75d45af36",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在对焦区域菜单内的自定义里新增自定义1，自定义2，和自定义3。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-74abb4c76f3349f69dd186ab5ce6f6cf",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在对焦区域菜单内的追踪下，新增追踪功能：对焦点XL，追踪：自定义1，追踪：自定义2，追踪：自定义3。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-f851ed934c894f57a7dc8870c0c40e14",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    网格线设置菜单内新增黄金分割比例选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-8e3b65b3441e44b089f1db329a3ddfcd",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增放大菜单显示的选项。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-5dd9199dfc924c4089ae5d22e06daba5",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许在录制过程中或录制后向素材添加OK/NG/KEEP旗标。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-c83df01409cf4df987ba856cfe2519bd",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    当在视频录制中使用了同时或自动切换媒体（接力录制）功能，允许显示双卡内的剩余空间容量。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-610ebb8a99fa4a139bc329184fd04bc5",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增支持双卡间中继回放功能。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-28f0d5de6fed461980a2096857bd20f1",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增允许使用多重过滤功能（比如标星）来筛选回放的照片。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-1ddffb8a206a44b89b4fd172d0951b18",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    在回放中允许向AF-ON，AEL和Delete按钮设定分配自定义键。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-e1ffd37c159142e8931f2091ab4879b3",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    新增支持导入/切换多重IPTC预设。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-8a12815d1a0f43839cca27ef4fd2e4c5",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持针对照片和视频的数字签名写入功能，该功能隶属于索尼相机认证方案。  -  向某些媒体以外的客户提供许可证（付费）的时间尚未确定。-  该服务在某些国家或地区无法使用。更多信息请访问认证目录页面：(https://www.sony.net/cas/).",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-e3d00384c4dd4f46a039f929ff32e289",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持扫描和标记，照片裁切，以及具备容积摄影许可证下进行容积摄影指令。            -  使用前必须要安装付费证书。          -  该服务在某些国家或地区无法使用。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-626025739f8349dca8f096fb17c38b00",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    当在向相机存储卡写入时，允许通过FTP传输。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-62ffd6e97d4f4222ac2d41c8bc422d15",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许受保护的视频和照片自动通过FTP传输。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-d61a65d2b45243eabcd51434988c0a3d",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许通过FTP传输的视频和照片自动受保护。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-43fbed6fa419485bbeb23ebab749b9ba",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    允许通过FTP优先传输特定照片。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-a05623d306ff439ca01b9b162bcac3c5",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    支持以下关于Monitor &amp; Control app的功能：            -  焦点图显示。                   注意：最新版本的Monitor &amp; Control app为必须。该app在某些国家或地区无法使用。",
+              "levelThree": []
+            },
+            {
+              "path": "/etc/commerce/products/casch/pim/download/firmware/00003010/downloadHistory/one-d263e8701b514bcf87109926e0ee54dd/levelTwo/two-ed2ebc26f6f94d21ba88b57de9ace860",
+              "updateTime": "2026-05-28 10:04:18",
+              "sling:resourceType": "SONY_CASCH_DOWNLOAD_HISRORY",
+              "levelTwo": "·    提升了相机操控的稳定性。",
+              "levelThree": []
+            }
+          ]
+        }
+      ],
+      "otherDownloadHistory": [],
+      "seriesPaths": [],
+      "productModelPaths": [
+        "/etc/commerce/products/casch/pim/category/di/数码微单相机/ILCE7系列/ILCE-7M4"
+      ],
+      "updateUser": "jessie.xie",
+      "isActive": true
+    }
+  }
+}

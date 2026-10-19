@@ -1,0 +1,474 @@
+{
+  "date": "2026-10-19",
+  "physical_storage_used": false,
+  "probes": [
+    {
+      "run": "native-93-single-virtual-card",
+      "console_sha256": "0c3f7d80263da79a6a0e598cabfceefaa3e899c6bdc966a07baa57bea615cec7",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1376,
+          "pixel_source_seq": 50,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.03
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=0 RM3_STATUS=0; one explicit file-backed card, other dummy ports empty",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=0; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=0 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=0; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=0 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=0; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=0 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=0; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=1 fourth=0 fifth=0 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DUMMY_OPEN device=/dev/mmca result=0 fd=42 sector_bytes=512 sectors=131072 status=0x1; original dummy file open forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f88003760; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f88003c10; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_MOUNT Fsys_Mount device=/nondev/rm2 flags=0x300 result=0 drive=65; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DRIVE_INFO drive=65 result=0 words=0x8000084000000,0x40000000080000,0x400000,0x400000,0x9000,0; native readonly query",
+        "BOOT_LOG_MEDIA_FREE_SPACE drive=65 result=0 words=0x1f01b0001f01e,0x1f0000001f000,0,0x100000200; native readonly query"
+      ]
+    },
+    {
+      "run": "native-94-card-header",
+      "console_sha256": "1bf91ae6b7a6ffdbb2c967d8a353bb5effb150b65c2cc9815ca3de8b52b18d1e",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1325,
+          "pixel_source_seq": 1271,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.01
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=0 RM3_STATUS=0; one explicit file-backed card, other dummy ports empty",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-95-card-port2",
+      "console_sha256": "40345abd650a3547ffe9a921df1ef7989c610e6f5fbdd7860120e91862f3d876",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1329,
+          "pixel_source_seq": 1273,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.143
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=0 RM3_STATUS=0; one explicit file-backed card, other dummy ports empty",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-96-card-native-status",
+      "console_sha256": "5470562fef2ec1003912ad9321dc68e698e5884c96ac427492c3d60d1e7e3e74",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1352,
+          "pixel_source_seq": 1298,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.123
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-97-card-error-trace",
+      "console_sha256": "ad174200e3500a93f7cf9532db793a6cabd1e278e6cce2d2274ddaab8d3584be",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1342,
+          "pixel_source_seq": 1290,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.196
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-98-card-root-error",
+      "console_sha256": "9b6938682364c46102b14187a7ce0f6463ee9096e7435e5335138cec3d76190b",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1367,
+          "pixel_source_seq": 1310,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.062
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_ROOT_ERROR error=0x80000004 source=0xd line=0xb23 context=0x7f8c25dcb0 result=0x80000004; original root error retained",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-99-card-pci-contract",
+      "console_sha256": "4ba5674b42befe6ce5ff39ae9856c103dfe3edc7895ce5d7384d637d132e70ed",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1417,
+          "pixel_source_seq": 1321,
+          "pixel_sha256": "0aead4673f7e7dcbab95196a921b88ef8ee77a79639dd32e9eb42da8b2d38e33",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14
+        },
+        "elapsed_seconds": 70.118
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_PCI_CONFIG path=/proc/bus/pci/0001:01/00.0 caller=libInfraMediaCommon.so+0x3a564 fd=42; isolated SD class metadata model, original parser retained",
+        "BOOT_LOG_MEDIA_ROOT_ERROR error=0x80000004 source=0xd line=0xb39 context=0x7f6825e200 result=0x80000004; original root error retained",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm3 flags=0 result=0x80000004 handle=(nil); original forwarded unchanged"
+      ]
+    },
+    {
+      "run": "native-100-slot2-sd",
+      "console_sha256": "74b22edd0f4674a1931f1ffdbe5470114a2ec7b7df37f0e9fce996f400b0c531",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "visible_boot": true,
+        "baseline": {
+          "label": "00-menu",
+          "sequence": 1377,
+          "pixel_source_seq": 2,
+          "pixel_sha256": "b127de144dbac6d6b031fa020639331efe78992e649098908a218b685a40cbcf",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 32
+        },
+        "elapsed_seconds": 70.083
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_DUMMY_OPEN device=/dev/mmca result=0 fd=42 sector_bytes=512 sectors=131072 status=0x1; original dummy file open forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f7c251340; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f9357dae4",
+        "BOOT_LOG_MEDIA_MOUNT Fsys_Mount device=/nondev/rm2 flags=0x300 result=0 drive=65; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DRIVE_INFO drive=65 result=0 words=0x8000084000000,0x40000000080000,0x400000,0x400000,0x9000,0; native readonly query",
+        "BOOT_LOG_MEDIA_FREE_SPACE drive=65 result=0 words=0x1f01b0001f01e,0x1f0000001f000,0,0x100000200; native readonly query"
+      ]
+    },
+    {
+      "run": "native-101-slot2-main",
+      "console_sha256": "545a73ace7d1cf3937cf07e327f392fb0b8a0423434b70df544563dd769c8326",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2748,
+          "pixel_source_seq": 2736,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123
+        },
+        "elapsed_seconds": 110.04
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_DUMMY_OPEN device=/dev/mmca result=0 fd=42 sector_bytes=512 sectors=131072 status=0x1; original dummy file open forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f800d1770; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f7c002830; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_MOUNT Fsys_Mount device=/nondev/rm2 flags=0x300 result=0 drive=65; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DRIVE_INFO drive=65 result=0 words=0x8000084000000,0x40000000080000,0x400000,0x400000,0x9000,0; native readonly query",
+        "BOOT_LOG_MEDIA_FREE_SPACE drive=65 result=0 words=0x1f01b0001f01e,0x1f0000001f000,0,0x100000200; native readonly query"
+      ]
+    },
+    {
+      "run": "native-103-slot2-controls",
+      "console_sha256": "722d0083c426687263c6953318f0d4d8b731a5cc2e93f492acc96f29565b63b2",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6"
+        ],
+        "main_ui_overlay_observed": true,
+        "error": "Error: Only base64 data is allowed",
+        "elapsed_seconds": 76.537
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_DUMMY_OPEN device=/dev/mmca result=0 fd=43 sector_bytes=512 sectors=131072 status=0x1; original dummy file open forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f9825caf0; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7fa0002870; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_MOUNT Fsys_Mount device=/nondev/rm2 flags=0x300 result=0 drive=65; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DRIVE_INFO drive=65 result=0 words=0x8000084000000,0x40000000080000,0x400000,0x400000,0x9000,0; native readonly query",
+        "BOOT_LOG_MEDIA_FREE_SPACE drive=65 result=0 words=0x1f01b0001f01e,0x1f0000001f000,0,0x100000200; native readonly query"
+      ]
+    },
+    {
+      "run": "native-104-slot2-controls",
+      "console_sha256": "c792847b547e06bc3025d6d161fef27af14c789a13b1ad1f19832d078ca37c0f",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2718,
+          "pixel_source_seq": 2707,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "elapsed_seconds": 372.292
+      },
+      "native_media_log": [
+        "BOOT_LOG_MEDIA_FILE_BACKEND EXISTMEDIADRIVER=1->0 OMIT_WRITE=0; original firmware file backend selected, isolated guest files only",
+        "BOOT_LOG_MEDIA_PORT_PROFILE RM1_STATUS=1 RM2_STATUS=1 RM3_STATUS=1; original driver status defaults, insertion comes from front-end record",
+        "BOOT_LOG_MEDIA_RM_CONFIG words=00000001,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000000,00000001,00000002,00000002,00000000,00000020,00000000,00000000,00000000,00000000,00000002,00000005,00000006,00000000,00000021,000000b0,00000000,00010001,00000002; original readonly config",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1000 mask=0x5 field18=0x1 field1c=0x1cfe099 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1000 second=0x1cfe099 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=0 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=0 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_INFO_EVENT state=1 device=0x1010 mask=0x2 field18=0x1 field1c=0x1cfe097 field20=0 field30=0 field32=1; original MediaInfo retained",
+        "BOOT_LOG_MEDIA_EVENT device=0x1010 second=0x1cfe097 third=1 fourth=0 fifth=1 sixth=0; original notification forwarded unchanged",
+        "BOOT_LOG_MEDIA_DUMMY_OPEN device=/dev/mmca result=0 fd=42 sector_bytes=512 sectors=131072 status=0x1; original dummy file open forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f900cace0; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_OPEN device=/nondev/rm2 flags=0 result=0 handle=0x7f94002be0; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_MOUNT Fsys_Mount device=/nondev/rm2 flags=0x300 result=0 drive=65; original forwarded unchanged",
+        "BOOT_LOG_MEDIA_DRIVE_INFO drive=65 result=0 words=0x8000084000000,0x40000000080000,0x400000,0x400000,0x9000,0; native readonly query",
+        "BOOT_LOG_MEDIA_FREE_SPACE drive=65 result=0 words=0x1f01b0001f01e,0x1f0000001f000,0,0x100000200; native readonly query"
+      ]
+    }
+  ],
+  "photo_capture_implemented": false,
+  "interpretation": {
+    "slot2": "Native /nondev/rm2 -> /dev/mmca; 64 MiB MBR/FAT32 mounted and drive/free-space queries succeeded. Native100 stayed on original language page without card-error view330. Native101 completed original setup and reached main view0.",
+    "slot1": "Native hybrid /nondev/rm3 fails. Native98 traced root error source0xd line0xb23 to missing /proc/bus/pci configuration. Native99 metadata experiment advanced to line0xb39, missing hybrid submodule. That experiment was removed from current observer.",
+    "port_header": "libInfraMediaDetect ParseInternalMessage at0x10a9c requires byte0=2. Kernel-only acceptance of type0 did not establish upper-layer handling.",
+    "notification_state": "0/1 also encode initial subscription notifications; they must not be interpreted as raw inserted/removed flags.",
+    "verification_limit": "Native101 main snapshot RGB comparison was false during asynchronous drawing. This report does not claim exact AP/QMP equality for that snapshot. Native100 language and native101 power-setting snapshot comparisons passed.",
+    "recording_target": "Native104 original Rec. Media Settings photo target changed from Slot1 to Slot2 via native menu; actual QMP screenshot slot2-recording-media.png. Main showed boxed2 and no NO CARD text in checked frame.",
+    "playback_limit": "Native104 PLAY created views352 and8f but actual AP/QMP output stayed on main. Last traced request includes CP3006, while CameraBackground stack also waits in libObj e9ca8 via ea918 (301c path). No completion contract was added or fabricated.",
+    "audit_limit": "Guest BusyBox has no sha256sum applet. The attempted read-only card hash audit did not produce a hash; no storage-write or JPEG-file claim is supported.",
+    "remaining": "Storage writes, working playback, photography, JPEG encoding and sensor/ISP/AF still require validation or implementation."
+  }
+}

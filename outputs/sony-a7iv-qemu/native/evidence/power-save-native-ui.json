@@ -1,0 +1,39 @@
+{
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "display": "none",
+  "menu_boot": true,
+  "keys": [],
+  "full_camera_boot": false,
+  "power_save_off": true,
+  "power_save_configuration": [
+    {
+      "method": "QMP -> native input -> original menu -> Power Save Start Time Off -> original confirmation",
+      "power_screen": {
+        "label": "configured-power-off",
+        "sequence": 953,
+        "pixel_source_seq": 933,
+        "pixel_sha256": "203fa9b6e93b3c57e8c57743024ff88f43e24d5d797e381d5f47e5ffec987bb4",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 165
+      },
+      "restored_menu": {
+        "label": "configured-menu",
+        "sequence": 1074,
+        "pixel_source_seq": 1067,
+        "pixel_sha256": "c4ab293effca43eb98311b1cc393fc97dcf203524d5b5bc3feeb8144da5bffcf",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 157
+      }
+    }
+  ],
+  "baseline": {
+    "label": "configured-menu",
+    "sequence": 1074,
+    "pixel_source_seq": 1067,
+    "pixel_sha256": "c4ab293effca43eb98311b1cc393fc97dcf203524d5b5bc3feeb8144da5bffcf",
+    "ramfb_matches_ap_pixels": true,
+    "distinct_colors": 157
+  },
+  "elapsed_seconds": 100.178
+}

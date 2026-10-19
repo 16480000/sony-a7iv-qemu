@@ -1,0 +1,264 @@
+{
+  "original_rootfs_files": [
+    {
+      "path": "/bin/hostname",
+      "bytes": 43328,
+      "sha256": "cb899d28caa476d0d6b83b3df5bf26269d9e9a97f271cc73df926c04f70eb2e2"
+    },
+    {
+      "path": "/bin/vmstat",
+      "bytes": 22856,
+      "sha256": "d984a09d8fcf3f31c603d50554013b6794884362f99f0e5336f9afdfd0925a3b"
+    },
+    {
+      "path": "/bin/du",
+      "bytes": 146112,
+      "sha256": "0dc7b34dbcf60e5e7b4c77972417aa9b77e4c0fe2ce23e8a1ca90aba1a4effd4"
+    },
+    {
+      "path": "/bin/ps",
+      "bytes": 88992,
+      "sha256": "ccbda25d379b493e4e971edb261b251b9df01c238ab2022368572e00e14bae14"
+    },
+    {
+      "path": "/bin/busybox",
+      "bytes": 423000,
+      "sha256": "c3297a7086efe9a001c39fa98d74d125992cf3225cf353ab6ff2238d827c7799"
+    },
+    {
+      "path": "/bin/dnsdomainname",
+      "bytes": 43328,
+      "sha256": "cb899d28caa476d0d6b83b3df5bf26269d9e9a97f271cc73df926c04f70eb2e2"
+    },
+    {
+      "path": "/bin/chattr",
+      "bytes": 32080,
+      "sha256": "12739ae5f5fd3f0af733a0b5624cdbf24a68bd79da1bfd8e97c991811b2c9d07"
+    },
+    {
+      "path": "/bin/compile_et",
+      "bytes": 1365,
+      "sha256": "774711c746929c814d687a9ce87301df51d70fce23f592a319c693b6dd2c038a"
+    },
+    {
+      "path": "/bin/mk_cmds",
+      "bytes": 1134,
+      "sha256": "4ad0eec4a5581beaa984445123415fe7aedcc19b2bccb64b22cc7e0d3d32ad80"
+    },
+    {
+      "path": "/bin/cat",
+      "bytes": 32896,
+      "sha256": "bdc1def95d743ebfac043b9b803d5cddbaa030266f8b2e5f1977e50ac4238868"
+    },
+    {
+      "path": "/bin/lsattr",
+      "bytes": 29048,
+      "sha256": "d86a5846d80175cbd417e2d36610bd5f65462fd946b7dc138de9fb1b48e9c710"
+    },
+    {
+      "path": "/bin/top",
+      "bytes": 92576,
+      "sha256": "bcad50b1b740e6bbe50023e6b2c79e90c379c6a74f86c2ef4d18b77e5bd506e1"
+    },
+    {
+      "path": "/kmod/emmc.ko",
+      "bytes": 341024,
+      "sha256": "82258356fb5b7c71d58645468d322da5611dd76e3fbb072c0288014d33dd5ac7"
+    },
+    {
+      "path": "/kmod/crypt-emmc.ko",
+      "bytes": 14592,
+      "sha256": "0f4a3191921c3e750ddd8feb799ce2ebb3c2638f1a27ee894fc5cf8586317e29"
+    },
+    {
+      "path": "/kmod/devno.ko",
+      "bytes": 6344,
+      "sha256": "1739c61a4d1eea78db0ec47cb3bfc87fe15ccb187b0ba6531ee74125cf4f3565"
+    },
+    {
+      "path": "/kmod/dma330.ko",
+      "bytes": 607336,
+      "sha256": "ddf4ea377189cc6c32221315823146d5da4a837e004382c44a2d87aee675d420"
+    },
+    {
+      "path": "/lib/libnsl-2.25.so",
+      "bytes": 76600,
+      "sha256": "94c06dfa144557de11ff2da1e69a20fb97a6d12c8e8986f39f29940286873e56"
+    },
+    {
+      "path": "/lib/libnss_nis-2.25.so",
+      "bytes": 39272,
+      "sha256": "b286501f4954960057e70f0d57564aedbd4e44f2e87b4d67b039b6f34ae8aafb"
+    },
+    {
+      "path": "/lib/libSTMcmdexecute.so",
+      "bytes": 10120,
+      "sha256": "4bcde80b18a30b08c36d5ca1183b3c2fa5e357bb81530a8a9f39c5ec267d8a71"
+    },
+    {
+      "path": "/lib/libdl-2.25.so",
+      "bytes": 10368,
+      "sha256": "6dde01ab92843eaf8c330f4cbd9b47186b14843c4e1de9f7c68ecacb3414403b"
+    },
+    {
+      "path": "/lib/libnss_files-2.25.so",
+      "bytes": 39224,
+      "sha256": "616dd733f55851e4e04199b2974242fd376d74edf60a74f785e5cd659706de52"
+    },
+    {
+      "path": "/lib/libresolv-2.25.so",
+      "bytes": 72328,
+      "sha256": "244be3f0b0cedafe9821a07886ca79aa2aa3bff9ad2df70eb996f21286f06225"
+    },
+    {
+      "path": "/lib/libm-2.25.so",
+      "bytes": 658000,
+      "sha256": "dfffde29fdbf16430c5c27587253323eb94b4b551235a8839478ff3a1cfd1871"
+    },
+    {
+      "path": "/lib/libc-2.25.so",
+      "bytes": 1283936,
+      "sha256": "f9104526eb7e5d2ea533c1a209bb0b83e69367f569e4c966895c8e106e6382c9"
+    },
+    {
+      "path": "/lib/libpthread-2.25.so",
+      "bytes": 101888,
+      "sha256": "7394f861930c45dd5076a700da5755faf0f6bed08544b0d60eadb85a14a7d592"
+    },
+    {
+      "path": "/lib/ld-2.25.so",
+      "bytes": 120616,
+      "sha256": "90b4fe734ba7faa08d4591b1363bff478e7bde399a821fc0b2d021c062a58a9a"
+    },
+    {
+      "path": "/lib/libnss_dns-2.25.so",
+      "bytes": 18616,
+      "sha256": "a44439c64ed3dee2de07f812a8378e4fa4bd22b189e6f226be0d3556700d4dd0"
+    },
+    {
+      "path": "/lib/librt-2.25.so",
+      "bytes": 27448,
+      "sha256": "be048444b8eaa1bfaf0ff2b3382ba097c130b2b540091ba14bb67b688bd2f8c2"
+    },
+    {
+      "path": "/lib/libanl-2.25.so",
+      "bytes": 14752,
+      "sha256": "d93218159dc39722e512d03dc744f611ff23bd1e43314a0ebc46bc38494945ea"
+    },
+    {
+      "path": "/lib/libutil-2.25.so",
+      "bytes": 10480,
+      "sha256": "b44197a676179b76bd2bbd64b9d838593fa9b5192423dff96b9fd746b3c5ba5c"
+    },
+    {
+      "path": "/lib/libcrypt-2.25.so",
+      "bytes": 30864,
+      "sha256": "5e8476cab62694f2b158f1806b794c8d32cbe2d89cfd410181118f5af8af27d8"
+    },
+    {
+      "path": "/root/chassis",
+      "bytes": 18,
+      "sha256": "7880368a5b3a8efe7e19337e225fc1248dca9e8f1f96eb111823eb66588417e1"
+    },
+    {
+      "path": "/root/common.src",
+      "bytes": 2546,
+      "sha256": "96f3bddf603788409af69fead42f6686e3701ad6f4aa2ccd3af0ef4ba986d7d2"
+    },
+    {
+      "path": "/sbin/pam_tally2",
+      "bytes": 37952,
+      "sha256": "4fcba7ad189119b083ebdf7367ebcc77d2d2f7b69730c4a4783545d487785515"
+    },
+    {
+      "path": "/sbin/sysctl",
+      "bytes": 18832,
+      "sha256": "bd985c9ea64328f677fce3b359593cd701a36daf5cdcf41839c4bff95127efe2"
+    },
+    {
+      "path": "/sbin/mkdosfs",
+      "bytes": 33992,
+      "sha256": "a57aa09f616cad1ede2a0a827e38c547c089815be4096eb57f0d968964367675"
+    },
+    {
+      "path": "/sbin/initrc/insmod_drv1",
+      "bytes": 152,
+      "sha256": "22f29d06d7776fe5e8362c17049beabfd3e3bebffd222e51276e3704d483a591"
+    },
+    {
+      "path": "/sbin/initrc/setup_console",
+      "bytes": 1205,
+      "sha256": "9411360fdfe60c7b7a09fa9e931e4ae9ec9c062e480b620e4c313c31f9139dd0"
+    },
+    {
+      "path": "/sbin/initrc/insmod_drv2",
+      "bytes": 1298,
+      "sha256": "19757bdd450061f861e2da44a6a93be2525668e3f7edc64e5a99a25bde56564e"
+    },
+    {
+      "path": "/sbin/initrc/setup_rootfs",
+      "bytes": 593,
+      "sha256": "ee84d317484d8cb4a0f1e39d665f1f04f18bf4d193a36a6e9bf63f8666a6a34d"
+    },
+    {
+      "path": "/sbin/initrc/fstab.ext",
+      "bytes": 134,
+      "sha256": "a77bdfb7bf15d3a1240bdefc4edb4469672f3258d6d8dba7dd4164e3fd2d51c3"
+    },
+    {
+      "path": "/sbin/initrc/setup_shielding",
+      "bytes": 720,
+      "sha256": "d54f7a0ebfa3db37fe329463bdbf60c8b6fd14c3cb95dc658c244e8bf61ead1f"
+    },
+    {
+      "path": "/sbin/initrc/fstab.root",
+      "bytes": 58,
+      "sha256": "c77d93236b89349bcc24853756f960bb49411e922c9430ede70b5b2cb8b6a4b2"
+    },
+    {
+      "path": "/sbin/initrc/fstab",
+      "bytes": 1085,
+      "sha256": "3936e6508ba89a025fc998c824434562c2d16234db96e179ec3f3a90a5a1d6f0"
+    },
+    {
+      "path": "/sbin/initrc/setup_nflash",
+      "bytes": 375,
+      "sha256": "055cb3db7a40084aef8aaa89a7357921b514bf0af89690f920b608d9f3734cdc"
+    },
+    {
+      "path": "/sbin/initrc/setup_cpuset_CPU3",
+      "bytes": 562,
+      "sha256": "95c778bd94e446d1e92f3f978cba58b714ca328c9020d03b7969ff2f83dd5ead"
+    },
+    {
+      "path": "/sbin/dosfsck",
+      "bytes": 56048,
+      "sha256": "bda7e32b0f1efe089d0334f784dfbfbaecd9e2acaa61dca1098631677d6333a3"
+    },
+    {
+      "path": "/sbin/init2",
+      "bytes": 1658,
+      "sha256": "45d3b907e6ef96c9a930cd3e6f919db700bffb5f18c386abfdb655f4d9954aeb"
+    },
+    {
+      "path": "/sbin/init",
+      "bytes": 735,
+      "sha256": "c83de1abeeb779f7473181b51face32ecfedfa3bd5c0fc346ae0c628f1b0ac5e"
+    },
+    {
+      "path": "/version.txt",
+      "bytes": 19,
+      "sha256": "b5377b8e08ba1f7a1105bcb6af07187414a5493a3d4622f02b7ad8a2578c87e5"
+    }
+  ],
+  "original_regular_files_unchanged": true,
+  "added_boot_scripts": [
+    "/init",
+    "/sbin/qemu-load-ipc"
+  ],
+  "added_setting_files_from": "0800_appli/setting in same official update",
+  "entry_count": 167,
+  "bytes": 1961052,
+  "sha256": "ba573c95f5522367903b322c3a527a7527a1b60036b9e49e96837fdb08e5bd54",
+  "note": "Derived initramfs. Original Sony /sbin/init is retained but not used as PID 1."
+}

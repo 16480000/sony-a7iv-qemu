@@ -1,0 +1,33 @@
+# Python caches and temporary files
+__pycache__/
+*.py[cod]
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local firmware, partition images and generated boot artifacts
+/outputs/sony-a7iv-qemu/images/
+/outputs/sony-a7iv-qemu/source/System.map
+*.cpio
+*.cpio.gz
+*.ext2
+*.vfat
+*.qcow2
+*.dtb
+BODYDATA.DAT
+
+# Runtime logs; frozen evidence snapshots remain versioned
+*.log
+/outputs/sony-a7iv-qemu/logs/
+!/outputs/sony-a7iv-qemu/native/evidence/*.log
+
+# Scratch screenshots (accepted screenshots live under outputs/)
+/work/sony-a7iv/*.png
+/work/sony-a7iv/*.ppm
+
+# Local environment and private credentials
+.env
+.env.*
+*.pem
+*.key

@@ -1,0 +1,2905 @@
+{
+  "model": "ILCE-7M4",
+  "version": "6.02",
+  "physical_devices_used": false,
+  "runs": [
+    {
+      "run": "native-105-shutter-audit",
+      "console_sha256": "ae1d61138466dd08bc97326c66e0f5f50d57e4a041e30f12e62d36944c7fd8c9",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2746,
+          "pixel_source_seq": 2734,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "46008c1b10bc6a9c15e9417a7ad50373c5fa05758d93d7e82ab88f0487b0901d",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "46008c1b10bc6a9c15e9417a7ad50373c5fa05758d93d7e82ab88f0487b0901d",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 140.086
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3375,
+          "pixel_source_seq": 3363,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 3967,
+          "pixel_source_seq": 3778,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 7,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4155,
+          "pixel_source_seq": 4067,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_IDLE native3007 already-idle completion; no running imaging pipeline or sensor transition"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 0,
+        "first": [],
+        "last": []
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-106-background-failure",
+      "console_sha256": "f1e648cabdfd69909277df5b8b65c112f0351b1bab4ffcf03140b0519336d9ef",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2806,
+          "pixel_source_seq": 2794,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "ca874ef81637121b7bb7ee4a1b132b853945dd8617d00fbf4047616e2e4ce597",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "ca874ef81637121b7bb7ee4a1b132b853945dd8617d00fbf4047616e2e4ce597",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 140.005
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3451,
+          "pixel_source_seq": 3438,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 3990,
+          "pixel_source_seq": 3814,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 9,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4174,
+          "pixel_source_seq": 4144,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_IDLE native3007 already-idle completion; no running imaging pipeline or sensor transition",
+        "OBS BOOT_LOG_BACKGROUND_FAILURE tid=274 cmd=0x3006 reply=0x810261c4 status=0xf001; original failed-transition contract, no ready state or sensor data"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 0,
+        "first": [],
+        "last": []
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-107-background-control",
+      "console_sha256": "655b2f3647dd60eab750621500be6976014b94514063a8bea53a72774fec35fb",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2839,
+          "pixel_source_seq": 2825,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "6abf4089912033662872aa74dedb2799a0de88f7267bafb3c668130e13d30b79",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "6abf4089912033662872aa74dedb2799a0de88f7267bafb3c668130e13d30b79",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 150.087
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3484,
+          "pixel_source_seq": 3470,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 3999,
+          "pixel_source_seq": 3830,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 7,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4177,
+          "pixel_source_seq": 4175,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 0,
+        "first": [],
+        "last": []
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "581b40fa2dd01d9d65b1f064f3667dbeed4e1b7ca610819ce124aba0b6dc17d0"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-107-background-control/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "1f829b71f8fea6589266a3255651253e546ee895cafa91293bc839512e85fd79"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "a4ae2b798be5e7b3c0454ade3c8d4e28f9cf7408f78bb56119ab0b02c3b6061d"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "fb1ed17384c1c85a9e9e8549177011f6f5d9e631967e827ae069aceea2071973",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-108-diagnostic-receiver",
+      "console_sha256": "0bc2d6319ef85dd78f6b2593d09dc7d5d8e7fb931a9733189fe510798a6251e9",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2809,
+          "pixel_source_seq": 2797,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "497731d4c4cae9a02d5015a33b89011c906f653027ebef3da8657f79dcaecf6d",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "497731d4c4cae9a02d5015a33b89011c906f653027ebef3da8657f79dcaecf6d",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 150.105
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3427,
+          "pixel_source_seq": 3416,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 3941,
+          "pixel_source_seq": 3771,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4115,
+          "pixel_source_seq": 3771,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c5; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 0,
+        "first": [],
+        "last": []
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "66636767521b50d6e10cff8eb019bc328682dbba9c1136bbc95d99f5ecfe8eb8"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-108-diagnostic-receiver/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "1f829b71f8fea6589266a3255651253e546ee895cafa91293bc839512e85fd79"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "d2c9d9c0dbd9f8c53f6fa8f87f399618760426904cc25a5c4128ef1dd161781f",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-109-diagnostic-exact",
+      "console_sha256": "1167865c7e65725441177be895f2573cbc1cc3bb39f9d2c21b12d3d71a7435e9",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2869,
+          "pixel_source_seq": 2856,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 174,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "059e396515e573ec6ca9a205ee96168a1a5b5e781f117c743ff085e506a5d5e4",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "059e396515e573ec6ca9a205ee96168a1a5b5e781f117c743ff085e506a5d5e4",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 160.046
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3526,
+          "pixel_source_seq": 3514,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 180,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4066,
+          "pixel_source_seq": 3888,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 177,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4260,
+          "pixel_source_seq": 4211,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4260,
+          "pixel_source_seq": 4211,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4260,
+          "pixel_source_seq": 4211,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4260,
+          "pixel_source_seq": 4211,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 4035,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4722 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4723 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4724 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4725 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4726 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4727 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4728 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4729 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "9081a8261878607f7ddfd9fbc8fa66d435550b980661393a7c540d111a593d5d"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-109-diagnostic-exact/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "0afc91381f9bc27efd2bfa0671c4b04cb036af46777e4b172f2ec10f99728ce2"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "7944cb8a95f94568f66a1e04fb6623c59c32ed88dbea5ddafdf888a41fa5c013",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-110-diagnostic-wire",
+      "console_sha256": "fec8ceba457b3621cd4fb67137fe251253caa745b3c92974591c0ce418bba3eb",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2758,
+          "pixel_source_seq": 2745,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "af605ccc6e3db7ca58b699c075b97b67fe47efcfaa2ce58a14a8e414a39ca673",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "af605ccc6e3db7ca58b699c075b97b67fe47efcfaa2ce58a14a8e414a39ca673",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "elapsed_seconds": 160.135
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3394,
+          "pixel_source_seq": 3381,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3615,
+          "pixel_source_seq": 3567,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3841,
+          "pixel_source_seq": 3798,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4331,
+          "pixel_source_seq": 4164,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4507,
+          "pixel_source_seq": 4164,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4507,
+          "pixel_source_seq": 4164,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4507,
+          "pixel_source_seq": 4164,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4507,
+          "pixel_source_seq": 4164,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 18,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=64 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=128 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=318 count=8192 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "dd552f1f79817fa01f034459a9d1af2e8a1115e6092090b80d9f57b95d8c8de5"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-110-diagnostic-wire/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "2633fabce02ae56212b660c18f888d4ef355a3f81568fba6d772b2d118f2fe37"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "38f49ea60c7ccc77e9697a31ba55a407047ee1038310c087f14fccfca1eb7da9",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-111-playback-threads",
+      "console_sha256": "bdd0862c127352a3c0031e6dd95bf0fd8b366cfdf41eb521aa558e46b36e13d9",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2745,
+          "pixel_source_seq": 2734,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "217962a45312fd43b79479a3159223123f1b52a09315397ac00351ac65f6e9e4",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "217962a45312fd43b79479a3159223123f1b52a09315397ac00351ac65f6e9e4",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "error": "RuntimeError: guest \u547d\u4ee4\u5931\u8d25\uff0c\u8fd4\u56de\u7801 4",
+        "elapsed_seconds": 144.06
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3384,
+          "pixel_source_seq": 3372,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3625,
+          "pixel_source_seq": 3599,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 10,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3892,
+          "pixel_source_seq": 3855,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4483,
+          "pixel_source_seq": 4312,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4666,
+          "pixel_source_seq": 4312,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4666,
+          "pixel_source_seq": 4312,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4666,
+          "pixel_source_seq": 4312,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4666,
+          "pixel_source_seq": 4312,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=273 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=273 previous=0x3007 state=0x3006 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 19,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=128 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=318 count=8192 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=32768 bytes=756 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "d3ed4575ed8f376975fba69644256ddcc5f3eff3a6a99cfc7bbc292b05b7bb6e"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-111-playback-threads/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "4550dbdbffd39273b798b8fed7779d07599c3d586cc01a802f4a4f0559e880fc"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "44d0c6fc0c6b28de99a70781309bca159a3498b1c398c4ea9e14e16176886e18",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-112-diagnostic-audit",
+      "console_sha256": "d6568cdc49029291c1f0bf3824d3b7d17bce8d94153ed9c6d51c7ffe4e78775d",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2769,
+          "pixel_source_seq": 2757,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "2ab6f98e48f2d9d6c91643db982d2dd0d078dbf8c88a81ac1df3650bf31616d0",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "2ab6f98e48f2d9d6c91643db982d2dd0d078dbf8c88a81ac1df3650bf31616d0",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "diagnostics": {
+          "records": 8905,
+          "payload_lengths": {
+            "11": 6,
+            "12": 4707,
+            "4": 1612,
+            "6": 933,
+            "49": 3,
+            "59": 2,
+            "75": 1,
+            "51": 9,
+            "50": 3,
+            "82": 2,
+            "98": 1,
+            "8": 203,
+            "55": 1,
+            "58": 1,
+            "5": 209,
+            "31": 3,
+            "18": 1,
+            "30": 41,
+            "2": 276,
+            "40": 34,
+            "39": 15,
+            "10": 34,
+            "26": 6,
+            "25": 138,
+            "28": 281,
+            "724": 134,
+            "23": 3,
+            "33": 1,
+            "37": 16,
+            "35": 1,
+            "16": 2,
+            "3965": 1,
+            "2153": 1,
+            "14": 36,
+            "20": 12,
+            "621": 1,
+            "13": 2,
+            "44": 3,
+            "43": 1,
+            "70": 1,
+            "67": 2,
+            "71": 1,
+            "60": 50,
+            "63": 10,
+            "22": 1,
+            "38": 10,
+            "77": 1,
+            "56": 2,
+            "48": 4,
+            "118": 2,
+            "159": 1,
+            "113": 1,
+            "64": 40,
+            "94": 1,
+            "69": 1,
+            "24": 1,
+            "214": 1,
+            "53": 1,
+            "17": 2,
+            "19": 1,
+            "47": 2,
+            "21": 2,
+            "89": 1,
+            "9": 14,
+            "52": 1,
+            "68": 2,
+            "96": 2,
+            "92": 1,
+            "108": 2,
+            "114": 2,
+            "62": 3,
+            "45": 3
+          },
+          "bytes": 524133,
+          "sha256": "c5d4eda3aae9ce8c219b8ef1ebdc3202863eafd1c65731dcfa9a322f5431cf95",
+          "full_stream": {
+            "bytes": 6294903,
+            "records": 55148,
+            "sha256": "0444d3cfbe4577b3041f535656ac1b0ef159d3eae11d2aff445d65925330afcb",
+            "raw_export_scope": "complete record prefix, at most512KiB; full stream validated and hashed in guest"
+          }
+        },
+        "elapsed_seconds": 160.056
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3418,
+          "pixel_source_seq": 3407,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3653,
+          "pixel_source_seq": 3606,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3880,
+          "pixel_source_seq": 3838,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4420,
+          "pixel_source_seq": 4236,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4603,
+          "pixel_source_seq": 4236,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4603,
+          "pixel_source_seq": 4236,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4603,
+          "pixel_source_seq": 4236,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4603,
+          "pixel_source_seq": 4236,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 19,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=128 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8192 bytes=36 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=195 count=16384 bytes=34 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "retained_diagnostics": {
+        "file": "native-112-diagnostic-audit-diagnostic-events.bin",
+        "bytes": 524133,
+        "sha256": "c5d4eda3aae9ce8c219b8ef1ebdc3202863eafd1c65731dcfa9a322f5431cf95"
+      },
+      "kernel-stack-audit.console": {
+        "file": "native-112-diagnostic-audit-kernel-stack-audit.console",
+        "sha256": "d0712b90a90aeffab3fe69afa3eba9e86e5cde91bc59b52568b0237310003239"
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "2d625e91aea6e841df7e5003fdb230cffd686ef991e7b6c46dc2b0f74a8250d3"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-112-diagnostic-audit/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "55b9c074432b380535d353be2102aef7d7dda0da901ed8ca0d7ab51669287bf9"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "614df25b67b593df01a675182cb32cba30080f41b8b26c57431c19df5622c7af",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-113-playback-crash",
+      "console_sha256": "3ceba79aea5e8db274ce4bb59ec65c96716b20f357116d3571c01cf1a727fcf4",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2818,
+          "pixel_source_seq": 2807,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "b5f8be9b86d375ac6dbad1fe01363c4f275e5c064e939d9afdfac1ba0ce2de8b",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "b5f8be9b86d375ac6dbad1fe01363c4f275e5c064e939d9afdfac1ba0ce2de8b",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "diagnostics": {
+          "records": 8907,
+          "payload_lengths": {
+            "11": 6,
+            "12": 4707,
+            "4": 1612,
+            "6": 933,
+            "49": 3,
+            "59": 2,
+            "75": 1,
+            "51": 9,
+            "50": 3,
+            "82": 2,
+            "98": 1,
+            "8": 203,
+            "55": 1,
+            "58": 1,
+            "5": 209,
+            "31": 2,
+            "18": 1,
+            "30": 41,
+            "2": 279,
+            "40": 34,
+            "39": 15,
+            "10": 34,
+            "26": 6,
+            "25": 138,
+            "28": 281,
+            "724": 134,
+            "23": 3,
+            "33": 1,
+            "37": 16,
+            "35": 1,
+            "16": 2,
+            "3965": 1,
+            "2153": 1,
+            "14": 36,
+            "20": 12,
+            "621": 1,
+            "13": 2,
+            "44": 3,
+            "43": 1,
+            "70": 1,
+            "67": 2,
+            "71": 1,
+            "60": 50,
+            "63": 10,
+            "22": 1,
+            "77": 1,
+            "56": 2,
+            "48": 4,
+            "38": 10,
+            "118": 2,
+            "159": 1,
+            "113": 1,
+            "64": 40,
+            "94": 1,
+            "69": 1,
+            "24": 1,
+            "214": 1,
+            "53": 1,
+            "17": 2,
+            "19": 1,
+            "47": 2,
+            "21": 2,
+            "89": 1,
+            "9": 14,
+            "52": 1,
+            "68": 2,
+            "96": 2,
+            "92": 1,
+            "108": 2,
+            "114": 2,
+            "62": 3,
+            "45": 3
+          },
+          "bytes": 524180,
+          "sha256": "42a6799d8dd89a014fc006c714af61ff8c131af53dee82965c8a22b0c730b676",
+          "full_stream": {
+            "bytes": 6368249,
+            "records": 55685,
+            "sha256": "6ecce836725425a05d5ebcfc6f179c6f551267561693b090bb616391df658bdc",
+            "raw_export_scope": "complete record prefix, at most512KiB; full stream validated and hashed in guest"
+          }
+        },
+        "elapsed_seconds": 160.069
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3483,
+          "pixel_source_seq": 3469,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3720,
+          "pixel_source_seq": 3674,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3950,
+          "pixel_source_seq": 3910,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 7,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4481,
+          "pixel_source_seq": 4305,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4670,
+          "pixel_source_seq": 4305,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4670,
+          "pixel_source_seq": 4305,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4670,
+          "pixel_source_seq": 4305,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4670,
+          "pixel_source_seq": 4305,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 20,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8192 bytes=60 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=16384 bytes=36 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=32768 bytes=57 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "retained_diagnostics": {
+        "file": "native-113-playback-crash-diagnostic-events.bin",
+        "bytes": 524180,
+        "sha256": "42a6799d8dd89a014fc006c714af61ff8c131af53dee82965c8a22b0c730b676"
+      },
+      "kernel-before-ptrace.console": {
+        "file": "native-113-playback-crash-kernel-before-ptrace.console",
+        "sha256": "0170c8fee906b6bead9c1d23fd6a87c7687675f3affc4e5a378712660ab12597"
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "dc3e716b7a58c669260ce8857ec4e132bf35ab483aa94293af45edca87f0e697"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-113-playback-crash/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "81500e0e59b86504380c9fdc64c97b5aa17f8e17eab63e1e4efb9e40b83d1c93"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "f5571c07e82bae16e92dce8faa072f1ef814ed83b8499c3cd3f69c3a37321956"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "8929ada068fbbf09080a3987633014ab2d5ae8373573ab9afff9bed21e52897a",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-114-abort-origin",
+      "console_sha256": "f4640402c481fe553a340897dd438526214ec5790af724621bc62b6963ac793c",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2789,
+          "pixel_source_seq": 2775,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 123,
+          "observer_records_removed": 8,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "94a2c9cf6a8ff6a749f60c8db4b73ca3ecc8fa504b48a7d8d03c436e21c63752",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "94a2c9cf6a8ff6a749f60c8db4b73ca3ecc8fa504b48a7d8d03c436e21c63752",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "diagnostics": {
+          "records": 4163,
+          "payload_lengths": {
+            "4": 1437,
+            "724": 451,
+            "2": 480,
+            "25": 451,
+            "28": 904,
+            "6": 163,
+            "30": 16,
+            "14": 22,
+            "37": 9,
+            "8": 40,
+            "12": 53,
+            "13": 4,
+            "5": 106,
+            "23": 2,
+            "17": 1,
+            "11": 2,
+            "29": 6,
+            "10": 1,
+            "20": 1,
+            "26": 3,
+            "49": 1,
+            "102": 1,
+            "69": 2,
+            "16": 2,
+            "66": 2,
+            "41": 1,
+            "53": 1,
+            "31": 1
+          },
+          "bytes": 524269,
+          "sha256": "7aa439cd01a593db47fe1702c872ca2b783836a0e590f5b2cd9ea90f634effb6",
+          "full_stream": {
+            "bytes": 6368931,
+            "records": 55666,
+            "sha256": "46f8366812c3dafb0e41f0e4cd5e5248322d23eb7f738c10aa0ad5cdd5adcb45",
+            "raw_export_scope": "last complete records, at most512KiB; full stream validated and hashed in guest"
+          }
+        },
+        "elapsed_seconds": 160.026
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3464,
+          "pixel_source_seq": 3450,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3706,
+          "pixel_source_seq": 3661,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3957,
+          "pixel_source_seq": 3913,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 7,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4483,
+          "pixel_source_seq": 4309,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4679,
+          "pixel_source_seq": 4309,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4679,
+          "pixel_source_seq": 4309,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 4679,
+          "pixel_source_seq": 4309,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 4679,
+          "pixel_source_seq": 4309,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 0,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c5; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 20,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=195 count=8192 bytes=34 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=16384 bytes=60 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=32768 bytes=36 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "retained_diagnostics": {
+        "file": "native-114-abort-origin-diagnostic-events.bin",
+        "bytes": 524269,
+        "sha256": "7aa439cd01a593db47fe1702c872ca2b783836a0e590f5b2cd9ea90f634effb6"
+      },
+      "kernel-before-ptrace.console": {
+        "file": "native-114-abort-origin-kernel-before-ptrace.console",
+        "sha256": "91d0a1f84a215fcbd49c2ca874063646f90e6503c50fd018bb295a4495ddbbba"
+      },
+      "original-stderr.console": {
+        "file": "native-114-abort-origin-original-stderr.console",
+        "sha256": "17b06aebed6852cb42173f2ff91b8763a24db49184915e84fe80b5c0da40f94f"
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "60f8992ba7cfc3697a792087d116369a8ca721d1bbb1568bd6f937d6ef0b9e95"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-114-abort-origin/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "a34f06ee6a10ef88b0260b396f78afd6447f81f8e6a76a032e31ad70686b9f96"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "c8977c902665a3d87538fab7cc35880d6fa7388ed5fd6b5afd881d043d288d8a"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "f4d0754398b1c47eb77603d4aefbb10a4936a0d906e667de33a123812d709a1e",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-115-evf-priority",
+      "console_sha256": "8a40589dcecf6a7b73e783414db7be8b1b474811af92785a95f61633427e7707",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2785,
+          "pixel_source_seq": 2771,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "b9ab56589e96e79845e2e1f40ae9339f318e186fc106941af445fe6d0d1b99c5",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "b9ab56589e96e79845e2e1f40ae9339f318e186fc106941af445fe6d0d1b99c5",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "storage_controls_checks": {
+          "fn_changes_main_before_shutter": true,
+          "menu_returns_main_before_shutter": true,
+          "playback_changes_main": true,
+          "play_returns_main": true,
+          "fn_after_play_matches_before": true,
+          "menu_after_fn_returns_main": true
+        },
+        "original_assertion_seen": false,
+        "error": "RuntimeError: Diagnostic export is incomplete or contains unknown interleaved data",
+        "elapsed_seconds": 155.319
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3407,
+          "pixel_source_seq": 3395,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3629,
+          "pixel_source_seq": 3584,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3844,
+          "pixel_source_seq": 3801,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4339,
+          "pixel_source_seq": 4175,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4578,
+          "pixel_source_seq": 4516,
+          "pixel_sha256": "42cff1354061ea97b3c4cdda221a14224fdef4ec5c5b6fa75de8eeb5123e494d",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4799,
+          "pixel_source_seq": 4754,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 5025,
+          "pixel_source_seq": 4979,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 5245,
+          "pixel_source_seq": 5201,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 6,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=273 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=273 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 19,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=128 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8192 bytes=36 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=65536 bytes=756 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "retained_diagnostics": {
+        "file": "native-115-evf-priority-diagnostic-events.bin",
+        "bytes": 523611,
+        "sha256": "7d388e55a5ae031b7f08963126d7278833553d826a176147091a38bf7159b881"
+      },
+      "kernel-before-ptrace.console": {
+        "file": "native-115-evf-priority-kernel-before-ptrace.console",
+        "sha256": "c0c62853ba78a39daa147a910d61801c8966f9fb020e4cc6988b1c326425b433"
+      },
+      "original-stderr.console": {
+        "file": "native-115-evf-priority-original-stderr.console",
+        "sha256": "514c4455f1cfc5bea89b75e6ca80e09000299d747e28f8ca54aa60110101d340"
+      },
+      "diagnostic-recovery.json": {
+        "file": "native-115-evf-priority-diagnostic-recovery.json",
+        "sha256": "21dc5b58b6c3597c5eaeb5f4e7b2bffdc6dc90ecefd6fe2ee6034b3ce27132e1"
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "429f065eba5eeebf4aab2ddd189057b3acbb12116f5f850ab61de0c1a330553a"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-115-evf-priority/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "3a492b1527bcfb15e5a8cc800f6abde12d0634e3abb6d8c62fa29925919b03fc"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "c8977c902665a3d87538fab7cc35880d6fa7388ed5fd6b5afd881d043d288d8a"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "0ba5c1dd8562c696a66dfdc4eab481ec6248601bc07e21aca38fb49f266afc7d",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": []
+    },
+    {
+      "run": "native-116-card-controls",
+      "console_sha256": "fbd0cbf57cb269fb633e6643d8d358d642783e9405583fa5c1bdfb5f0868bc86",
+      "result": {
+        "model": "ILCE-7M4",
+        "firmware": "6.02",
+        "display": "none",
+        "menu_boot": false,
+        "keys": [
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "HALF",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "SHUTTER",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "PLAY",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          },
+          {
+            "key": "FN",
+            "route": "original InfraInput",
+            "capture_file_generated": false
+          }
+        ],
+        "full_camera_boot": false,
+        "original_setup_views": [
+          "0x12e",
+          "0x1e3",
+          "0x1e0",
+          "0x1c8",
+          "0xd1",
+          "0x11d",
+          "0x99",
+          "0x1de",
+          "0x1f7",
+          "0x1e9",
+          "0x0",
+          "0x2d6",
+          "0x0"
+        ],
+        "main_ui_overlay_observed": true,
+        "power_save_off": true,
+        "original_setup_replayed": true,
+        "original_setup_date": "2026-10-19",
+        "visible_boot": true,
+        "baseline": {
+          "label": "setup-main",
+          "sequence": 2747,
+          "pixel_source_seq": 2734,
+          "pixel_sha256": "8012ad2d96a1b9a5d62c0c05c19682bcb60d24e507ab554b4e3cdb04313b94a7",
+          "ramfb_matches_ap_pixels": false,
+          "distinct_colors": 123,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "recording_slot2": true,
+        "card_audits": [
+          {
+            "label": "before-shutter",
+            "sha256": "8863a98a82fca07890a95ff4ac4cd93e1e916c3cf6baeb7c85274f1dfbbf7b73",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          },
+          {
+            "label": "after-shutter",
+            "sha256": "8863a98a82fca07890a95ff4ac4cd93e1e916c3cf6baeb7c85274f1dfbbf7b73",
+            "files": 2,
+            "directories": 11,
+            "file_records": [
+              "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+              "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+            ]
+          }
+        ],
+        "card_changed_after_shutter": false,
+        "storage_controls_checks": {
+          "fn_changes_main_before_shutter": true,
+          "menu_returns_main_before_shutter": true,
+          "playback_changes_main": true,
+          "play_returns_main": true,
+          "fn_after_play_matches_before": true,
+          "menu_after_fn_returns_main": true
+        },
+        "original_assertion_seen": false,
+        "diagnostics": {
+          "records": 3784,
+          "payload_lengths": {
+            "2": 473,
+            "25": 473,
+            "28": 946,
+            "4": 1419,
+            "724": 473
+          },
+          "bytes": 523611,
+          "sha256": "e7c378ae6cc39ebec291e8afd72aedb86974f7e0c70b38154394841c80b62f05",
+          "full_stream": {
+            "bytes": 8141934,
+            "records": 68951,
+            "sha256": "3391b35b4c9ae57d0fd1d1ce1764c43aae5a5f516b2c182ed2e5172c378c5e10",
+            "raw_export_scope": "last complete records, at most512KiB; full stream validated and hashed in guest"
+          }
+        },
+        "elapsed_seconds": 180.017
+      },
+      "frames": {
+        "slot2-main": {
+          "label": "slot2-main",
+          "sequence": 3376,
+          "pixel_source_seq": 3363,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "fn-before-shutter": {
+          "label": "fn-before-shutter",
+          "sequence": 3605,
+          "pixel_source_seq": 3559,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "main-before-shutter": {
+          "label": "main-before-shutter",
+          "sequence": 3833,
+          "pixel_source_seq": 3788,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "after-shutter": {
+          "label": "after-shutter",
+          "sequence": 4333,
+          "pixel_source_seq": 4166,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 9,
+          "export_attempt": 0
+        },
+        "after-play": {
+          "label": "after-play",
+          "sequence": 4576,
+          "pixel_source_seq": 4512,
+          "pixel_sha256": "42cff1354061ea97b3c4cdda221a14224fdef4ec5c5b6fa75de8eeb5123e494d",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 14,
+          "observer_records_removed": 9,
+          "export_attempt": 0
+        },
+        "play-return": {
+          "label": "play-return",
+          "sequence": 4795,
+          "pixel_source_seq": 4758,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "fn-after-play": {
+          "label": "fn-after-play",
+          "sequence": 5030,
+          "pixel_source_seq": 4983,
+          "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 52,
+          "observer_records_removed": 11,
+          "export_attempt": 0
+        },
+        "main-after-fn": {
+          "label": "main-after-fn",
+          "sequence": 5258,
+          "pixel_source_seq": 5216,
+          "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+          "ramfb_matches_ap_pixels": true,
+          "distinct_colors": 105,
+          "observer_records_removed": 14,
+          "export_attempt": 0
+        }
+      },
+      "control_records": [
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3007 reply=0x810261c3; virtual control state only, no sensor/ISP/frame/capture completion",
+        "OBS BOOT_LOG_BACKGROUND_CONTROL tid=274 previous=0x3007 state=0x3006 reply=0x810261c4; virtual control state only, no sensor/ISP/frame/capture completion"
+      ],
+      "diagnostic_observer_records": {
+        "logged_records": 20,
+        "first": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1 bytes=43 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=3 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=5 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=6 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=7 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=8 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ],
+        "last": [
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=256 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=512 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=1024 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=2048 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=4096 bytes=44 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=318 count=8192 bytes=52 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=276 count=16384 bytes=36 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free",
+          "OBS BOOT_LOG_DIAGNOSTIC_RETAINED tid=195 count=65536 bytes=34 caller=appFw+0x3724ff8; exact one-way diagnostic event retained before free"
+        ]
+      },
+      "retained_diagnostics": {
+        "file": "native-116-card-controls-diagnostic-events.bin",
+        "bytes": 523611,
+        "sha256": "e7c378ae6cc39ebec291e8afd72aedb86974f7e0c70b38154394841c80b62f05"
+      },
+      "kernel-before-ptrace.console": {
+        "file": "native-116-card-controls-kernel-before-ptrace.console",
+        "sha256": "d95431fd9532d2f4045fc75eea9caeab853262548954b60848eda06f6167b7c0"
+      },
+      "original-stderr.console": {
+        "file": "native-116-card-controls-original-stderr.console",
+        "sha256": "efea5ff06271a6155794357151484ff73a31e433a6b406685324e44df163648c"
+      },
+      "runtime-artifacts.json": {
+        "kernel": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/boot-original/vmlinux.bin",
+          "sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920"
+        },
+        "initramfs": {
+          "path": "/mnt/d/CodexWork/sony-a7iv-qemu/menu-a7m4/main-virtual-card-info.cpio",
+          "sha256": "ef7ed4046bcd3ccc0ea42f03550a958459272fb134ac61fac6f7a734f2a304d4"
+        },
+        "dtb": {
+          "path": "/opt/sony-a7iv/menu-a7m4/runs/native-116-card-controls/virt.dtb",
+          "sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4"
+        },
+        "session_script": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-session.py",
+          "sha256": "ae02dc647f46f0774c2d17f4da1769cba8bf77f405cd3c566919f968d314730a"
+        },
+        "frame_parser": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native_frame.py",
+          "sha256": "7e36401d0ea8b83056d66b3d888b8e6914a323f479b4e4a821c4f79fc1ee8391"
+        },
+        "serial_transport": {
+          "path": "/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/work/sony-a7iv/native-serial.py",
+          "sha256": "f995b74046031c07fdcc25acbe7bfaecce6242cb055adad63abbed117fa3929f"
+        }
+      },
+      "initial-card-profile.json": {
+        "virtual_file": "/opt/sony-a7iv/menu-a7m4/runtime/analysis/menu-root/image_mmca",
+        "bytes": 67108864,
+        "sha256": "26968a6cd3f157f92be3698c114dbe6cd41f637236c5169e80ff67dba28366e1",
+        "partition_type": "FAT32 LBA",
+        "partition_start_lba": 2048,
+        "partition_sectors": 129024,
+        "fsck_read_only_passed": true,
+        "physical_devices_used": false
+      },
+      "guest_card_file_records": [
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d",
+        "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+        "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+      ],
+      "fatal_trace": [],
+      "diagnostic_rotation_records": [
+        "OBS BOOT_LOG_DIAGNOSTIC_ROTATED generation=1 limit=8388608 files=2; complete records retained in rolling segments"
+      ]
+    }
+  ],
+  "audit_method": "Read-only /image_mmca SHA256 using original libcrypto, then bounded FAT32 directory walk; no files created by audit helper.",
+  "initial_card_contents": "Stage creates empty FAT32 with DCIM/100MSDCF only; PRIVATE metadata files are created during original firmware execution.",
+  "cp_scope": "Failure probe returns original F001 only for3006. Control probe models only3006/3007 control states, not CP firmware execution, sensor, ISP or JPEG.",
+  "stack_correction": "libObj ea818 sets3006 and jumps to shared ea910/ea914; ea90c also supplies301c to that call. LR ea918 alone cannot identify the command. Direct send trace confirms3006."
+}

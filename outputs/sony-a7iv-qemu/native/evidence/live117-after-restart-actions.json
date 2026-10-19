@@ -1,0 +1,37 @@
+[
+  {
+    "image": "live117-after-restart-1-play.png",
+    "key": "PLAY",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "image": "live117-after-restart-2-play.png",
+    "key": "PLAY",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "image": "live117-after-restart-3-fn.png",
+    "key": "FN",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "image": "live117-after-restart-4-menu.png",
+    "key": "MENU",
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "image": "live117-after-restart-5-play.png",
+    "key": "PLAY",
+    "result": {
+      "ok": true
+    }
+  }
+]

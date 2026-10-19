@@ -1,0 +1,54 @@
+{
+  "model": "ILCE-7M4",
+  "firmware_version": "6.02",
+  "result": "Original user-space runs; full camera boot and menus are not working.",
+  "original_firmware_kernel_used": false,
+  "kernel": "4.9.337-scel, Sony GPL Ver.6.00 mirror plus recorded patches",
+  "board": "QEMU virt, generated DTB, four Cortex-A35 CPUs, 2 MHz architectural counter, 1024 MiB RAM",
+  "qemu_version": "QEMU emulator version 11.1.0 (v11.1.0-12130-ge470268ff4)",
+  "qemu_sha256": "952f897511177803722efed6fefe79bc3e7e5a51a026112dfc40f9a37fb0dad2",
+  "images": [
+    {
+      "path": "images/cp.vfat",
+      "bytes": 22777856,
+      "sha256": "62d16a76ac949e7f9ec5b9b1a46c7cdc65148b1a169b8d617c83c441d7806aee"
+    },
+    {
+      "path": "images/Image",
+      "bytes": 4931592,
+      "sha256": "722ae1e53259cc05344a232251b9be410e5d20415c1f53f198288c611936aea7"
+    },
+    {
+      "path": "images/qemu-initramfs.cpio.gz",
+      "bytes": 1961052,
+      "sha256": "ba573c95f5522367903b322c3a527a7527a1b60036b9e49e96837fdb08e5bd54"
+    },
+    {
+      "path": "images/rootfs-original.ext2",
+      "bytes": 5218304,
+      "sha256": "a96e69d870c07266551ccd01f13b44f5c53ee1a191eebdf289761c32120d83b8"
+    },
+    {
+      "path": "images/system.vfat",
+      "bytes": 30845952,
+      "sha256": "8f26ffa8792e60436d7d311e3ae089d929c13daf22c76136360e94e51e0c2862"
+    },
+    {
+      "path": "images/usr.ext2",
+      "bytes": 378580992,
+      "sha256": "b33408130538b6b34b3fe196d455bfce6f404a207a5567a0ab13e933024c8637"
+    }
+  ],
+  "successful_checks": [
+    "Original BusyBox 1.34.1 shell and glibc 2.25",
+    "Four Cortex-A35 guest CPUs",
+    "Original /usr, /system, /cp partitions mounted read-only",
+    "Original OpenSSL 3.0.2 executes",
+    "Original devno, osal_utm and osal_uipc kernel modules load with status zero"
+  ],
+  "observed_boundaries": [
+    "bootin starts im.elf, which faults in MonQueue::GetQueueRemain with a null object",
+    "The original hardware driver phase faults in pcieatu at virtual address 0xfffffffff7300004"
+  ],
+  "signature_validation": "Internal CRC checks passed; Sony digital signature was not independently verified."
+}

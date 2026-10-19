@@ -1,0 +1,100 @@
+echo ORIGINAL_STDERR_BEGIN; /bin/busybox tail -n 160 /tmp/im.log; echo ORIGI
+NAL_STDERR_END; rc=$?; printf '\nA7M4_COMMAND_DONE_f7e4ba634a26de4b85ca0588:%s\n
+' "$rc"
+ORIGINAL_STDERR_BEGIN
+I/stella(   194): Created HeapAllocator: 0x7f80005ce0((nil))
+I/stella(   194): Replaced log-hook: 0x0x7f7b8b37d0 => 0x0x7f7b8df22c
+No user exists for uid 0
+im.elf: lib_assert.cpp:49: void lib::assert::notify_model_system_error(): Assertion `false' failed.
+ FixedAreaTop  : 10268000
+ FixedAreaSize : 0007C000
+ Physical Addr : 102BB400
+ Logical  Addr : 0x7f88999400
+ Mon Buf Size  : 00008000
+
+    mpMemoryHeap on 0x0000000410524000-0x0000000410AE6040 (6037568) for 50-4194303 kbyte res.
+   mpMemoryHeap2 on 0x0000000410AE6040-0x0000000410E26040 (3407872) for 0-50 kbyte res.
+      mpTextHeap on 0x0000000410E26040-0x0000000411026040 (2097152) for 0-4194303 kbyte res.
+[UDTR_MEDIA] udtr_get_media_path
+[UDTR_MEDIA] attribute_info.payload.count  =[1]
+[UDTR_MEDIA] attribute_info.payload.mediaID=[0x00001000]
+[UDTR_MEDIA] devicePath buffer size=21
+[UDTR_MEDIA] Media DevicePath=[/nondev/rm3]
+[UDTR_MEDIA] end
+[UDTR_MEDIA] udtr_get_media_path
+[UDTR_MEDIA] attribute_info.payload.count  =[1]
+[UDTR_MEDIA] attribute_info.payload.mediaID=[0x00001000]
+[UDTR_MEDIA] devicePath buffer size=21
+[UDTR_MEDIA] Media DevicePath=[/nondev/rm3]
+[UDTR_MEDIA] end
+[UDTR_MEDIA] udtr_get_media_path
+[UDTR_MEDIA] attribute_info.payload.count  =[1]
+[UDTR_MEDIA] attribute_info.payload.mediaID=[0x00001000]
+[UDTR_MEDIA] devicePath buffer size=21
+[UDTR_MEDIA] Media DevicePath=[/nondev/rm3]
+[UDTR_MEDIA] end
+[UDTR_MEDIA] udtr_get_media_path
+[UDTR_MEDIA] attribute_info.payload.count  =[1]
+[UDTR_MEDIA] attribute_info.payload.mediaID=[0x00001000]
+[UDTR_MEDIA] devicePath buffer size=21
+[UDTR_MEDIA] Media DevicePath=[/nondev/rm3]
+[UDTR_MEDIA] end
+[UDTR_MEDIA] udtr_get_media_path
+[UDTR_MEDIA] attribute_info.payload.count  =[1]
+[UDTR_MEDIA] attribute_info.payload.mediaID=[0x00001000]
+[UDTR_MEDIA] devicePath buffer size=21
+[UDTR_MEDIA] Media DevicePath=[/nondev/rm3]
+[UDTR_MEDIA] end
+open screen: scr0039_boot -> scr0099_0001
+open screen: scr0099_0001 -> scr7248_0001
+open screen: scr7248_0001 -> scr0103_0023
+open screen: scr0103_0023 -> scr0103_0009
+open screen: scr0103_0009 -> scr0103_0014
+open screen: scr0103_0014 -> scr0103_0013
+open screen: scr0103_0013 -> scr0103_0015_ymd
+open screen: scr0103_0015_ymd -> scr0103_0022
+open screen: scr0103_0022 -> scr0103_0024
+open screen: scr0103_0024 -> rep_boot
+open screen: rep_boot -> rep_shooting
+open screen: rep_shooting -> scr7240_0001
+open screen: scr7240_0001 -> rep_shooting
+open screen: rep_shooting -> scr0132_0001
+open screen: scr0132_0001 -> scr0008_0003
+open screen: scr0008_0003 -> rep_shooting
+open screen: rep_shooting -> scr0132_0001
+open screen: scr0132_0001 -> rep_menu
+open screen: rep_menu -> scr7001_1003
+open screen: scr7001_1003 -> scr7001_1002
+open screen: scr7001_1002 -> scr7001_1001
+open screen: scr7001_1001 -> scr7001_1002
+open screen: scr7001_1002 -> scr7001_1003
+open screen: scr7001_1003 -> scr7001_1005
+open screen: scr7001_1005 -> dlg_uud018
+open screen: dlg_uud018 -> rep_menu
+open screen: rep_menu -> scr7001_1003
+open screen: scr7001_1003 -> rep_shooting
+open screen: rep_shooting -> scr0132_0001
+open screen: scr0132_0001 -> rep_menu
+open screen: rep_menu -> scr7001_1003
+open screen: scr7001_1003 -> scr7001_1002
+open screen: scr7001_1002 -> scr7001_1001
+open screen: scr7001_1001 -> scr7001_1002
+open screen: scr7001_1002 -> scr7001_1003
+open screen: scr7001_1003 -> scr0221_1001
+open screen: scr0221_1001 -> scr7001_1005
+open screen: scr0221_1001 -> rep_menu
+open screen: rep_menu -> scr7001_1003
+open screen: scr7001_1003 -> rep_shooting
+open screen: rep_shooting -> scr0132_0001
+open screen: scr0132_0001 -> scr0135_0001
+open screen: scr0135_0001 -> rep_shooting
+open screen: rep_shooting -> scr0132_0001
+open screen: scr0132_0001 -> rep_playback
+assert at infra_wrapper_bb_ipsx_ls_branch.cpp:876
+function:void infra_wrapper_bb::detail::send_no_wait_with_main_thread_i(OSAL_ID, const void*, int32_t)
+index[0] num[0]
+open screen: rep_playback -> scr7105_0003_noimage
+ORIGINAL_STDERR_END
+
+A7M4_COMMAND_DONE_f7e4ba634a26de4b85ca0588:0
+/ # 

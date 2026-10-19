@@ -1,0 +1,7 @@
+#!/bin/sh
+# Original Sony software modules, with their actual implementations.
+set -e
+insmod /kmod/devno.ko
+insmod /usr/kmod/osal_utm.ko
+insmod /usr/kmod/osal_uipc.ko
+ls -l /dev/uipc

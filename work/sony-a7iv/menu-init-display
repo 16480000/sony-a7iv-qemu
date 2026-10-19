@@ -1,0 +1,79 @@
+#!/bin/busybox sh
+/bin/busybox mount -t devtmpfs devtmpfs /dev
+exec </dev/ttyAMA0 >/dev/ttyAMA0 2>&1
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export LD_LIBRARY_PATH=/usr/lib:/lib
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t tmpfs tmpfs /tmp
+mount -t tmpfs tmpfs /setting
+mount -t tmpfs tmpfs /tmp_wbshd
+mkdir -p /dev/pts /setting/updater /mnt
+mount -t devpts devpts /dev/pts
+mkdir -p /dev/cgroup
+mount -t cgroup -o cpuset nodev /dev/cgroup
+for group in cpu0 cpu1 cpu2 cpu3rt cpu0_1 cpu0_1_2 cpu0_1_2_3rt; do
+  mkdir -p /dev/cgroup/$group
+  echo 0 >/dev/cgroup/$group/cpuset.mems
+  echo 0 >/dev/cgroup/$group/cpuset.cpus
+done
+cp -a /seed-setting/. /setting/
+echo A7M4_NATIVE_KERNEL_BOOTSTRAP
+uname -a
+echo set >/proc/udm/drivers
+for mod in /kmod/devno.ko /usr/kmod/osal_utm.ko /usr/kmod/osal_uipc.ko /usr/kmod/utimer.ko; do
+  insmod "$mod"; echo MODULE_STATUS "$mod" $?
+done
+insmod /usr/kmod/backup.ko Backup_load=1 Backup_save=0
+echo BACKUP_MODULE_STATUS=$?
+ls -l /dev/mem /dev/backup /dev/uipc
+for mod in stream stream2 osal_ulogio dmm grm_ma; do
+  case "$mod" in
+    dmm) insmod /usr/kmod/dmm.ko DmmConfig=/setting/DmmCfg.bin ;;
+    osal_ulogio) insmod /usr/kmod/osal_ulogio.ko ulogio_initfile=/setting/ulogio.bin ;;
+    *) insmod /usr/kmod/$mod.ko ;;
+  esac
+  echo MODULE_STATUS "$mod" $?
+done
+
+for mod in udate; do
+  insmod /usr/kmod/$mod.ko; echo EXTRA_MODULE_STATUS "$mod" $?
+done
+mkdir -p /setting/updater /mnt
+cp /simulation/firmware-version.dat4 /setting/updater/dat4
+mknod /dev/ram1 b 1 1
+ln -s /dev/ram1 /dev/nflasha1
+dd if=/simulation/firmware-identity.fat of=/dev/ram1 bs=4096
+/simulation/seed-power-on 1
+echo POWER_SEED_STATUS=$?
+insmod /usr/kmod/upm.ko
+insmod /usr/kmod/kikilog.ko
+/simulation/seed-date-clock
+echo DATE_SEED_STATUS=$?
+cat /proc/modules
+export QEMU_NO_CP_UPDATER=1 QEMU_CAPID_SERVICE=1 QEMU_SA_ADDRESS_SERVICE=1
+export QEMU_HDMI_FORMAT_SERVICE=1 QEMU_HDMI_PHOTO_SERVICE=1 QEMU_DMM_SERVICE=1
+export QEMU_SOFTWARE_GPE=1 QEMU_GPE_RGBA4444=1 QEMU_DISPLAY_INFO_SERVICE=1
+
+export MENU_HEADLESS_OSD=1 MENU_FRAME_OBSERVE=1 MENU_OSD_OBSERVE=1 QEMU_SOFTWARE_LZ77=1
+/simulation/ramfb-viewer >/tmp/ramfb-stderr.log 2>&1 &
+echo NATIVE_MODULES_LOADED
+LD_PRELOAD=/simulation/menu-observe.so /usr/bin/bootin.elf 'target=qemu ' dmode=3 >/tmp/im.log 2>&1 &
+echo BOOTIN_LAUNCH_PID=$!
+sleep 12
+/simulation/headless-osd-export; echo HEADLESS_OSD_EXPORT_STATUS=$?
+echo APPLICATION_LOG_BEGIN
+cat /tmp/im.log
+echo LOADER_LOG_BEGIN
+cat /tmp/menu-load.log
+ps
+
+for t in /proc/$(pidof im.elf)/task/*; do
+  echo TASK_STATUS "$t"
+  cat "$t/comm" "$t/wchan"
+  case "$(cat "$t/comm")" in CameraBackgroun|IMCMN-DRV-RM|IMD-*|IWrapperImaging|AppFw|IWrapperHDMI|IWrapperBB|IWrapperBBSub|SeqQueueCommon|SeqQueueDispSwi|SeqQueueSetYuvO|SeqThreadPool*) /simulation/menu-regs "${t##*/}";; esac
+done
+cat /proc/$(pidof im.elf)/maps
+cat /tmp/ramfb-viewer.status
+echo A7M4_BOOTSTRAP_DONE
+exec /bin/busybox sh

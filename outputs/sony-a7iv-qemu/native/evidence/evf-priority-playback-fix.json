@@ -1,0 +1,170 @@
+{
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "original_artifacts": {
+    "usr/lib/appFw.so": "1e1b9202eaa69198f20df03dbfdab2f103b206cc4ebcd2e7bd817e6a710018a2",
+    "cp/cpapp-b.bin": "7b9b137d696e5972d20db7f9119076172ed8e0730805d7f0b4c31b87689e2c2b"
+  },
+  "wire_contract": {
+    "frame": "200d",
+    "command": "0118",
+    "bytes": 22,
+    "evf_priority_offset": 20,
+    "allowed_values": [
+      0,
+      1,
+      2
+    ],
+    "cp_parser_file_offsets": [
+      "0xa814a",
+      "0xa814c"
+    ],
+    "cp_context_offset": "0x624",
+    "cp_validation_file_offsets": [
+      "0xa18ce",
+      "0xa18d4",
+      "0xa18d6",
+      "0xa18f6"
+    ],
+    "validation": "unsigned cmp priority,3 followed by branch below3; field name from original string at runtime0xdd9ab5",
+    "completion_file_offset": "0xaded8",
+    "completion": "12-byte200d/1118 status0 preserving registered source"
+  },
+  "before": {
+    "run": "native-114-abort-origin",
+    "failure": "Exact shape guard rejected playback EVF priority2; original AP35b8340 send failure triggers assertion at35b8358/source line876. Original stderr names send_no_wait_with_main_thread_i; kernel snapshot confirms coredump before ptrace."
+  },
+  "after": {
+    "run": "native-115-evf-priority",
+    "checks": {
+      "fn_changes_main_before_shutter": true,
+      "menu_returns_main_before_shutter": true,
+      "playback_changes_main": true,
+      "play_returns_main": true,
+      "fn_after_play_matches_before": true,
+      "menu_after_fn_returns_main": true
+    },
+    "original_assertion_seen": false,
+    "frames": {
+      "slot2-main": {
+        "label": "slot2-main",
+        "sequence": 3407,
+        "pixel_source_seq": 3395,
+        "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 105,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "fn-before-shutter": {
+        "label": "fn-before-shutter",
+        "sequence": 3629,
+        "pixel_source_seq": 3584,
+        "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 52,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "main-before-shutter": {
+        "label": "main-before-shutter",
+        "sequence": 3844,
+        "pixel_source_seq": 3801,
+        "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 105,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "after-shutter": {
+        "label": "after-shutter",
+        "sequence": 4339,
+        "pixel_source_seq": 4175,
+        "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 105,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "after-play": {
+        "label": "after-play",
+        "sequence": 4578,
+        "pixel_source_seq": 4516,
+        "pixel_sha256": "42cff1354061ea97b3c4cdda221a14224fdef4ec5c5b6fa75de8eeb5123e494d",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 14,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "play-return": {
+        "label": "play-return",
+        "sequence": 4799,
+        "pixel_source_seq": 4754,
+        "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 105,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "fn-after-play": {
+        "label": "fn-after-play",
+        "sequence": 5025,
+        "pixel_source_seq": 4979,
+        "pixel_sha256": "aff399b2595a3c4405620137a95e0b1c30ff51f8e46ff0fd5b158b5bbc8b7ce2",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 52,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      },
+      "main-after-fn": {
+        "label": "main-after-fn",
+        "sequence": 5245,
+        "pixel_source_seq": 5201,
+        "pixel_sha256": "7281e4188f5ff70928848df1fab1ed3385caa8638c9498c936f07437eb09ac29",
+        "ramfb_matches_ap_pixels": true,
+        "distinct_colors": 105,
+        "observer_records_removed": 6,
+        "export_attempt": 0
+      }
+    },
+    "diagnostic_export": {
+      "raw_console_sha256": "5e6f25f4a972d88749d9d7360d5117049dbc1f3e4aa1c8c4450449d898f719ce",
+      "identified_noise_records_removed": 15,
+      "sample_bytes": 523611,
+      "sample_records": 3784,
+      "sample_sha256": "7d388e55a5ae031b7f08963126d7278833553d826a176147091a38bf7159b881",
+      "full_guest_stream_bytes": 8100565,
+      "full_guest_stream_records": 68624,
+      "full_guest_stream_sha256": "47b702a53c674031a6f15ec4e3e88eb9d7e18a982909282943caa0ce579c4bde",
+      "sample_sha256_independently_reported_by_old_guest_exporter": false,
+      "limitation": "Old exporter supplied only full-stream SHA; this recovered tail sample passes every record bound/header and the original record/byte counts. The source log and original failed result remain unchanged."
+    }
+  },
+  "photography": {
+    "card_changed_after_shutter": false,
+    "card_audits": [
+      {
+        "label": "before-shutter",
+        "sha256": "b9ab56589e96e79845e2e1f40ae9339f318e186fc106941af445fe6d0d1b99c5",
+        "files": 2,
+        "directories": 11,
+        "file_records": [
+          "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+          "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+        ]
+      },
+      {
+        "label": "after-shutter",
+        "sha256": "b9ab56589e96e79845e2e1f40ae9339f318e186fc106941af445fe6d0d1b99c5",
+        "files": 2,
+        "directories": 11,
+        "file_records": [
+          "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+          "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+        ]
+      }
+    ],
+    "sensor_isp_jpeg_implemented": false
+  },
+  "scope": "Virtual display control state and original UI only; no CP firmware execution, synthetic images or fabricated capture completion."
+}

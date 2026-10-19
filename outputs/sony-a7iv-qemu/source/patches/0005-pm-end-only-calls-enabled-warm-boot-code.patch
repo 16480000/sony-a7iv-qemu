@@ -1,0 +1,12 @@
+--- a/drivers/udif/mach-cxd900xx/pm_core.c
++++ b/drivers/udif/mach-cxd900xx/pm_core.c
+@@ -375,7 +375,9 @@
+ 
+ static void cxd90057_pm_end(void)
+ {
++#ifdef CONFIG_WARM_BOOT_IMAGE
+ 	warm_boot_pm_end();
++#endif /* CONFIG_WARM_BOOT_IMAGE */
+ 	watchdog_stop();
+ }
+ 

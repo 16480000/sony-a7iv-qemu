@@ -1,0 +1,17 @@
+{
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "display": "none",
+  "menu_boot": true,
+  "keys": [],
+  "full_camera_boot": false,
+  "baseline": {
+    "label": "00-menu",
+    "sequence": 454,
+    "pixel_source_seq": 2,
+    "pixel_sha256": "b127de144dbac6d6b031fa020639331efe78992e649098908a218b685a40cbcf",
+    "ramfb_matches_ap_pixels": true,
+    "distinct_colors": 32
+  },
+  "elapsed_seconds": 60.019
+}

@@ -1,0 +1,1784 @@
+STORAGE_PROBE_THREAD /proc/194/task/221 UDATE_ASYNCSET
+echo PROBE_KERNEL_BEGIN; for t in /proc/$(pidof im.elf)/task/*; do case "$(cat "$t/comm")" in SeqQueueCommon|SeqQueueDispSwi|CameraBackgroun|AppFw) echo KERNEL_THREAD "$t" "$(cat "$t/comm")"; cat "$t/wchan" "$t/stack" "$t/status";; esac; done; echo PROBE_KERNEL_END
+REGS tid=221 pc=7f85622500 lr=7f85d878cc sp=7f57ffe560 fp=7f57ffe560
+FRAME tid=221 fp=7f57ffe560 savedfp=7f57ffe590 lr=7f85d85648
+FRAME tid=221 fp=7f57ffe590 savedfp=7f57ffe840 lr=7f85e14004
+FRAME tid=221 fp=7f57ffe840 savedfp=7f57ffe8a0 lr=7f70562400
+FRAME tid=221 fp=7f57ffe8a0 savedfp=7f57ffe910 lr=7f7056251c
+FRAME tid=221 fp=7f57ffe910 savedfp=7f57ffe980 lr=7f85d9c184
+FRAME tid=221 fp=7f57ffe980 savedfp=7f57ffe9d0 lr=7f85d46020
+FRAME tid=221 fp=7f57ffe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/222 InfraGetVersion
+REGS tid=222 pc=7f8561ecbc lr=7f85d82c9c sp=7f567fe5b0 fp=7f567fe5b0
+FRAME tid=222 fp=7f567fe5b0 savedfp=7f567fe5f0 lr=7f85d855a4
+FRAME tid=222 fp=7f567fe5f0 savedfp=7f567fe8a0 lr=7f85e14004
+FRAME tid=222 fp=7f567fe8a0 savedfp=7f567fe900 lr=7f7054c1cc
+FRAME tid=222 fp=7f567fe900 savedfp=7f567fe980 lr=7f85d9c184
+FRAME tid=222 fp=7f567fe980 savedfp=7f567fe9d0 lr=7f85d46020
+FRAME tid=222 fp=7f567fe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/223 ExternalOSDIF
+REGS tid=223 pc=7f8561ecbc lr=7f85d82c9c sp=7f55ffe5a0 fp=7f55ffe5a0
+FRAME tid=223 fp=7f55ffe5a0 savedfp=7f55ffe5e0 lr=7f85d855a4
+FRAME tid=223 fp=7f55ffe5e0 savedfp=7f55ffe890 lr=7f85e14004
+FRAME tid=223 fp=7f55ffe890 savedfp=7f55ffe8f0 lr=7f7291098c
+FRAME tid=223 fp=7f55ffe8f0 savedfp=7f55ffe950 lr=7f72a2a70c
+FRAME tid=223 fp=7f55ffe950 savedfp=7f55ffe980 lr=7f85d9c184
+FRAME tid=223 fp=7f55ffe980 savedfp=7f55ffe9d0 lr=7f85d46020
+FRAME tid=223 fp=7f55ffe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/224 grm_gpe
+REGS tid=224 pc=7f85d4cadc lr=7f85d4cabc sp=7f557fe7f0 fp=7f557fe7f0
+FRAME tid=224 fp=7f557fe7f0 savedfp=7f557fe8e0 lr=7f72a34524
+FRAME tid=224 fp=7f557fe8e0 savedfp=7f557fe910 lr=7f72a336b0
+FRAME tid=224 fp=7f557fe910 savedfp=7f557fe930 lr=7f72a2c20c
+FRAME tid=224 fp=7f557fe930 savedfp=7f557fe980 lr=7f85d9c184
+FRAME tid=224 fp=7f557fe980 savedfp=7f557fe9d0 lr=7f85d46020
+FRAME tid=224 fp=7f557fe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/225 MPGRM_GPE0
+REGS tid=225 pc=7f8561ecbc lr=7f85d82c9c sp=7f54ffe4a0 fp=7f54ffe4a0
+FRAME tid=225 fp=7f54ffe4a0 savedfp=7f54ffe4e0 lr=7f85d855a4
+FRAME tid=225 fp=7f54ffe4e0 savedfp=7f54ffe790 lr=7f85e14004
+FRAME tid=225 fp=7f54ffe790 savedfp=7f54ffe7f0 lr=7f700b4fe8
+FRAME tid=225 fp=7f54ffe7f0 savedfp=7f54ffe830 lr=7f700b14e0
+FRAME tid=225 fp=7f54ffe830 savedfp=7f54ffe970 lr=7f700b550c
+FRAME tid=225 fp=7f54ffe970 savedfp=7f54ffe980 lr=7f85d9c184
+FRAME tid=225 fp=7f54ffe980 savedfp=7f54ffe9d0 lr=7f85d46020
+FRAME tid=225 fp=7f54ffe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/226 MPGRM_GPE0_COMP
+REGS tid=226 pc=7f8561ecbc lr=7f85d82c9c sp=7f54750540 fp=7f54750540
+FRAME tid=226 fp=7f54750540 savedfp=7f54750580 lr=7f85d855a4
+FRAME tid=226 fp=7f54750580 savedfp=7f54750830 lr=7f85e14004
+FRAME tid=226 fp=7f54750830 savedfp=7f54750890 lr=7f700b4fe8
+FRAME tid=226 fp=7f54750890 savedfp=7f547508d0 lr=7f700b51a0
+FRAME tid=226 fp=7f547508d0 savedfp=7f54750920 lr=7f700b52f0
+FRAME tid=226 fp=7f54750920 savedfp=7f54750970 lr=7f700b53a0
+FRAME tid=226 fp=7f54750970 savedfp=7f54750980 lr=7f85d9c184
+FRAME tid=226 fp=7f54750980 savedfp=7f547509d0 lr=7f85d46020
+FRAME tid=226 fp=7f547509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/227 AV_DDS
+REGS tid=227 pc=7f8561ecbc lr=7f85d82c9c sp=7f53f505e0 fp=7f53f505e0
+FRAME tid=227 fp=7f53f505e0 savedfp=7f53f50620 lr=7f85d855a4
+FRAME tid=227 fp=7f53f50620 savedfp=7f53f508d0 lr=7f85e14004
+FRAME tid=227 fp=7f53f508d0 savedfp=7f53f50930 lr=7f72a1ffe8
+FRAME tid=227 fp=7f53f50930 savedfp=7f53f50980 lr=7f85d9c184
+FRAME tid=227 fp=7f53f50980 savedfp=7f53f509d0 lr=7f85d46020
+FRAME tid=227 fp=7f53f509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/228 InfraAudioDecod
+REGS tid=228 pc=7f8561ecbc lr=7f85d82c9c sp=7f537503e0 fp=7f537503e0
+FRAME tid=228 fp=7f537503e0 savedfp=7f53750420 lr=7f85d855a4
+FRAME tid=228 fp=7f53750420 savedfp=7f537506d0 lr=7f85e14004
+FRAME tid=228 fp=7f537506d0 savedfp=7f53750730 lr=7f70213c28
+FRAME tid=228 fp=7f53750730 savedfp=7f53750790 lr=7f7020cd24
+FRAME tid=228 fp=7f53750790 savedfp=7f53750950 lr=7f70176a44
+FRAME tid=228 fp=7f53750950 savedfp=7f53750970 lr=7f800978c4
+FRAME tid=228 fp=7f53750970 savedfp=7f53750980 lr=7f85d9c184
+FRAME tid=228 fp=7f53750980 savedfp=7f537509d0 lr=7f85d46020
+FRAME tid=228 fp=7f537509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/229 InfraBluetoothM
+REGS tid=229 pc=7f85622500 lr=7f85d878cc sp=7f52f50320 fp=7f52f50320
+FRAME tid=229 fp=7f52f50320 savedfp=7f52f50350 lr=7f85d85648
+FRAME tid=229 fp=7f52f50350 savedfp=7f52f50600 lr=7f85e14004
+FRAME tid=229 fp=7f52f50600 savedfp=7f52f50660 lr=7f7006f6f4
+FRAME tid=229 fp=7f52f50660 savedfp=7f52f50980 lr=7f85d9c184
+FRAME tid=229 fp=7f52f50980 savedfp=7f52f509d0 lr=7f85d46020
+FRAME tid=229 fp=7f52f509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/230 InfraIndctr
+REGS tid=230 pc=7f8561ecbc lr=7f85d82c9c sp=7f527505b0 fp=7f527505b0
+FRAME tid=230 fp=7f527505b0 savedfp=7f527505f0 lr=7f85d855a4
+FRAME tid=230 fp=7f527505f0 savedfp=7f527508a0 lr=7f85e14004
+FRAME tid=230 fp=7f527508a0 savedfp=7f52750900 lr=7f729f9cb0
+FRAME tid=230 fp=7f52750900 savedfp=7f52750980 lr=7f85d9c184
+FRAME tid=230 fp=7f52750980 savedfp=7f527509d0 lr=7f85d46020
+FRAME tid=230 fp=7f527509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/231 InfraAvEffector
+REGS tid=231 pc=7f8561ecbc lr=7f85d82c9c sp=7f51f503e0 fp=7f51f503e0
+FRAME tid=231 fp=7f51f503e0 savedfp=7f51f50420 lr=7f85d855a4
+FRAME tid=231 fp=7f51f50420 savedfp=7f51f506d0 lr=7f85e14004
+FRAME tid=231 fp=7f51f506d0 savedfp=7f51f50730 lr=7f70213c28
+FRAME tid=231 fp=7f51f50730 savedfp=7f51f50790 lr=7f7020cd24
+FRAME tid=231 fp=7f51f50790 savedfp=7f51f50950 lr=7f701ae4f4
+FRAME tid=231 fp=7f51f50950 savedfp=7f51f50970 lr=7f800978c4
+FRAME tid=231 fp=7f51f50970 savedfp=7f51f50980 lr=7f85d9c184
+FRAME tid=231 fp=7f51f50980 savedfp=7f51f509d0 lr=7f85d46020
+FRAME tid=231 fp=7f51f509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/232 I-TpMain
+REGS tid=232 pc=7f8561ecbc lr=7f85d82c9c sp=7f51750540 fp=7f51750540
+FRAME tid=232 fp=7f51750540 savedfp=7f51750580 lr=7f85d855a4
+FRAME tid=232 fp=7f51750580 savedfp=7f51750830 lr=7f85e14004
+FRAME tid=232 fp=7f51750830 savedfp=7f51750890 lr=7f72a0e3f4
+FRAME tid=232 fp=7f51750890 savedfp=7f51750980 lr=7f85d9c184
+FRAME tid=232 fp=7f51750980 savedfp=7f517509d0 lr=7f85d46020
+FRAME tid=232 fp=7f517509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/233 InfraDecoder
+REGS tid=233 pc=7f8561ecbc lr=7f85d82c9c sp=7f50f503e0 fp=7f50f503e0
+FRAME tid=233 fp=7f50f503e0 savedfp=7f50f50420 lr=7f85d855a4
+FRAME tid=233 fp=7f50f50420 savedfp=7f50f506d0 lr=7f85e14004
+FRAME tid=233 fp=7f50f506d0 savedfp=7f50f50730 lr=7f70213c28
+FRAME tid=233 fp=7f50f50730 savedfp=7f50f50790 lr=7f7020cd24
+FRAME tid=233 fp=7f50f50790 savedfp=7f50f50950 lr=7f701b4ae4
+FRAME tid=233 fp=7f50f50950 savedfp=7f50f50970 lr=7f800978c4
+FRAME tid=233 fp=7f50f50970 savedfp=7f50f50980 lr=7f85d9c184
+FRAME tid=233 fp=7f50f50980 savedfp=7f50f509d0 lr=7f85d46020
+FRAME tid=233 fp=7f50f509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/234 I-TpRecv
+REGS tid=234 pc=7f8561ecbc lr=7f85d82c9c sp=7f507505d0 fp=7f507505d0
+FRAME tid=234 fp=7f507505d0 savedfp=7f50750610 lr=7f85d855a4
+FRAME tid=234 fp=7f50750610 savedfp=7f507508c0 lr=7f85e14004
+FRAME tid=234 fp=7f507508c0 savedfp=7f50750920 lr=7f72a0cf84
+FRAME tid=234 fp=7f50750920 savedfp=7f50750980 lr=7f85d9c184
+FRAME tid=234 fp=7f50750980 savedfp=7f507509d0 lr=7f85d46020
+FRAME tid=234 fp=7f507509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/235 I-HotshoeMain
+REGS tid=235 pc=7f85622500 lr=7f85d878cc sp=7f4ff505a0 fp=7f4ff505a0
+FRAME tid=235 fp=7f4ff505a0 savedfp=7f4ff505d0 lr=7f85d85648
+FRAME tid=235 fp=7f4ff505d0 savedfp=7f4ff50880 lr=7f85e14004
+FRAME tid=235 fp=7f4ff50880 savedfp=7f4ff508e0 lr=7f729f6ddc
+FRAME tid=235 fp=7f4ff508e0 savedfp=7f4ff50980 lr=7f85d9c184
+FRAME tid=235 fp=7f4ff50980 savedfp=7f4ff509d0 lr=7f85d46020
+FRAME tid=235 fp=7f4ff509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/236 I-HotshoeRecv
+REGS tid=236 pc=7f8561ecbc lr=7f85d82c9c sp=7f4f7505d0 fp=7f4f7505d0
+FRAME tid=236 fp=7f4f7505d0 savedfp=7f4f750610 lr=7f85d855a4
+FRAME tid=236 fp=7f4f750610 savedfp=7f4f7508c0 lr=7f85e14004
+FRAME tid=236 fp=7f4f7508c0 savedfp=7f4f750920 lr=7f729f7cf8
+FRAME tid=236 fp=7f4f750920 savedfp=7f4f750980 lr=7f85d9c184
+FRAME tid=236 fp=7f4f750980 savedfp=7f4f7509d0 lr=7f85d46020
+FRAME tid=236 fp=7f4f7509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/237 InfraMovieEdito
+REGS tid=237 pc=7f8561ecbc lr=7f85d82c9c sp=7f4ef503e0 fp=7f4ef503e0
+FRAME tid=237 fp=7f4ef503e0 savedfp=7f4ef50420 lr=7f85d855a4
+FRAME tid=237 fp=7f4ef50420 savedfp=7f4ef506d0 lr=7f85e14004
+FRAME tid=237 fp=7f4ef506d0 savedfp=7f4ef50730 lr=7f70213c28
+FRAME tid=237 fp=7f4ef50730 savedfp=7f4ef50790 lr=7f7020cd24
+FRAME tid=237 fp=7f4ef50790 savedfp=7f4ef50950 lr=7f701dd480
+FRAME tid=237 fp=7f4ef50950 savedfp=7f4ef50970 lr=7f800978c4
+FRAME tid=237 fp=7f4ef50970 savedfp=7f4ef50980 lr=7f85d9c184
+FRAME tid=237 fp=7f4ef50980 savedfp=7f4ef509d0 lr=7f85d46020
+FRAME tid=237 fp=7f4ef509d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/238 I-SircsMain
+REGS tid=238 pc=7f8561ecbc lr=7f85d82c9c sp=7f4e6f1590 fp=7f4e6f1590
+FRAME tid=238 fp=7f4e6f1590 savedfp=7f4e6f15d0 lr=7f85d855a4
+FRAME tid=238 fp=7f4e6f15d0 savedfp=7f4e6f1880 lr=7f85e14004
+FRAME tid=238 fp=7f4e6f1880 savedfp=7f4e6f18f0 lr=7f72a098b8
+FRAME tid=238 fp=7f4e6f18f0 savedfp=7f4e6f1980 lr=7f85d9c184
+FRAME tid=238 fp=7f4e6f1980 savedfp=7f4e6f19d0 lr=7f85d46020
+FRAME tid=238 fp=7f4e6f19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/239 I-SircsAsyncUip
+REGS tid=239 pc=7f8561ecbc lr=7f85d82c9c sp=7f4def15e0 fp=7f4def15e0
+FRAME tid=239 fp=7f4def15e0 savedfp=7f4def1620 lr=7f85d855a4
+FRAME tid=239 fp=7f4def1620 savedfp=7f4def18d0 lr=7f85e14004
+FRAME tid=239 fp=7f4def18d0 savedfp=7f4def1930 lr=7f72a08b74
+FRAME tid=239 fp=7f4def1930 savedfp=7f4def1980 lr=7f85d9c184
+FRAME tid=239 fp=7f4def1980 savedfp=7f4def19d0 lr=7f85d46020
+FRAME tid=239 fp=7f4def19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/240 InfraMovieEncod
+REGS tid=240 pc=7f8561ecbc lr=7f85d82c9c sp=7f4d6f13e0 fp=7f4d6f13e0
+FRAME tid=240 fp=7f4d6f13e0 savedfp=7f4d6f1420 lr=7f85d855a4
+FRAME tid=240 fp=7f4d6f1420 savedfp=7f4d6f16d0 lr=7f85e14004
+FRAME tid=240 fp=7f4d6f16d0 savedfp=7f4d6f1730 lr=7f70213c28
+FRAME tid=240 fp=7f4d6f1730 savedfp=7f4d6f1790 lr=7f7020cd24
+FRAME tid=240 fp=7f4d6f1790 savedfp=7f4d6f1950 lr=7f70180cc8
+FRAME tid=240 fp=7f4d6f1950 savedfp=7f4d6f1970 lr=7f800978c4
+FRAME tid=240 fp=7f4d6f1970 savedfp=7f4d6f1980 lr=7f85d9c184
+FRAME tid=240 fp=7f4d6f1980 savedfp=7f4d6f19d0 lr=7f85d46020
+FRAME tid=240 fp=7f4d6f19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/241 InfraMovieEncTh
+REGS tid=241 pc=7f8561ecbc lr=7f85d82c9c sp=7f4cef13d0 fp=7f4cef13d0
+FRAME tid=241 fp=7f4cef13d0 savedfp=7f4cef1410 lr=7f85d855a4
+FRAME tid=241 fp=7f4cef1410 savedfp=7f4cef16c0 lr=7f85e14004
+FRAME tid=241 fp=7f4cef16c0 savedfp=7f4cef1720 lr=7f70213c28
+FRAME tid=241 fp=7f4cef1720 savedfp=7f4cef1780 lr=7f7020cd24
+FRAME tid=241 fp=7f4cef1780 savedfp=7f4cef1940 lr=7f7017bc00
+FRAME tid=241 fp=7f4cef1940 savedfp=7f4cef1970 lr=7f800978c4
+FRAME tid=241 fp=7f4cef1970 savedfp=7f4cef1980 lr=7f85d9c184
+FRAME tid=241 fp=7f4cef1980 savedfp=7f4cef19d0 lr=7f85d46020
+FRAME tid=241 fp=7f4cef19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/242 InfraStillEncod
+REGS tid=242 pc=7f8561ecbc lr=7f85d82c9c sp=7f4c6f13e0 fp=7f4c6f13e0
+FRAME tid=242 fp=7f4c6f13e0 savedfp=7f4c6f1420 lr=7f85d855a4
+FRAME tid=242 fp=7f4c6f1420 savedfp=7f4c6f16d0 lr=7f85e14004
+FRAME tid=242 fp=7f4c6f16d0 savedfp=7f4c6f1730 lr=7f70213c28
+FRAME tid=242 fp=7f4c6f1730 savedfp=7f4c6f1790 lr=7f7020cd24
+FRAME tid=242 fp=7f4c6f1790 savedfp=7f4c6f1950 lr=7f701ea8a8
+FRAME tid=242 fp=7f4c6f1950 savedfp=7f4c6f1970 lr=7f800978c4
+FRAME tid=242 fp=7f4c6f1970 savedfp=7f4c6f1980 lr=7f85d9c184
+FRAME tid=242 fp=7f4c6f1980 savedfp=7f4c6f19d0 lr=7f85d46020
+FRAME tid=242 fp=7f4c6f19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/243 InfraAvbbcIf
+REGS tid=243 pc=7f8561ecbc lr=7f85d82c9c sp=7f4bef1330 fp=7f4bef1330
+FRAME tid=243 fp=7f4bef1330 savedfp=7f4bef1370 lr=7f85d855a4
+FRAME tid=243 fp=7f4bef1370 savedfp=7f4bef1620 lr=7f85e14004
+FRAME tid=243 fp=7f4bef1620 savedfp=7f4bef1680 lr=7f7291098c
+FRAME tid=243 fp=7f4bef1680 savedfp=7f4bef16e0 lr=7f7020cbe0
+FRAME tid=243 fp=7f4bef16e0 savedfp=7f4bef18e0 lr=7f70175aa0
+FRAME tid=243 fp=7f4bef18e0 savedfp=7f4bef1970 lr=7f800978c4
+FRAME tid=243 fp=7f4bef1970 savedfp=7f4bef1980 lr=7f85d9c184
+FRAME tid=243 fp=7f4bef1980 savedfp=7f4bef19d0 lr=7f85d46020
+FRAME tid=243 fp=7f4bef19d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/244 WlanResource_Ma
+REGS tid=244 pc=7f85622500 lr=7f85d878cc sp=7f697fe610 fp=7f697fe610
+FRAME tid=244 fp=7f697fe610 savedfp=7f697fe640 lr=7f85d85648
+FRAME tid=244 fp=7f697fe640 savedfp=7f697fe8f0 lr=7f85e14004
+FRAME tid=244 fp=7f697fe8f0 savedfp=7f697fe950 lr=7f4b6c1a98
+FRAME tid=244 fp=7f697fe950 savedfp=7f697fe980 lr=7f85d9c184
+FRAME tid=244 fp=7f697fe980 savedfp=7f697fe9d0 lr=7f85d46020
+FRAME tid=244 fp=7f697fe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/245 WlanResource_Ir
+REGS tid=245 pc=7f8561ecbc lr=7f85d82c9c sp=7f4b63e600 fp=7f4b63e600
+FRAME tid=245 fp=7f4b63e600 savedfp=7f4b63e640 lr=7f85d855a4
+FRAME tid=245 fp=7f4b63e640 savedfp=7f4b63e8f0 lr=7f85e14004
+FRAME tid=245 fp=7f4b63e8f0 savedfp=7f4b63e950 lr=7f4b6c0bb0
+FRAME tid=245 fp=7f4b63e950 savedfp=7f4b63e980 lr=7f85d9c184
+FRAME tid=245 fp=7f4b63e980 savedfp=7f4b63e9d0 lr=7f85d46020
+FRAME tid=245 fp=7f4b63e9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/246 IMCMN-DRV-RM
+REGS tid=246 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f4ac93800 fp=7f4ac93800
+FRAME tid=246 fp=7f4ac93800 savedfp=7f4ac938d0 lr=7f727bd294
+FRAME tid=246 fp=7f4ac938d0 savedfp=7f4ac93980 lr=7f85d9c184
+FRAME tid=246 fp=7f4ac93980 savedfp=7f4ac939d0 lr=7f85d46020
+FRAME tid=246 fp=7f4ac939d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/247 WiredLanResourc
+REGS tid=247 pc=7f85622500 lr=7f85d878cc sp=7f4a47a5f0 fp=7f4a47a5f0
+FRAME tid=247 fp=7f4a47a5f0 savedfp=7f4a47a620 lr=7f85d85648
+FRAME tid=247 fp=7f4a47a620 savedfp=7f4a47a8d0 lr=7f85e14004
+FRAME tid=247 fp=7f4a47a8d0 savedfp=7f4a47a930 lr=7f4a4816f4
+FRAME tid=247 fp=7f4a47a930 savedfp=7f4a47a980 lr=7f85d9c184
+FRAME tid=247 fp=7f4a47a980 savedfp=7f4a47a9d0 lr=7f85d46020
+FRAME tid=247 fp=7f4a47a9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/248 IFsys
+REGS tid=248 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f49c7a850 fp=7f49c7a850
+FRAME tid=248 fp=7f49c7a850 savedfp=7f49c7a920 lr=7f4acf4478
+FRAME tid=248 fp=7f49c7a920 savedfp=7f49c7a980 lr=7f85d9c184
+FRAME tid=248 fp=7f49c7a980 savedfp=7f49c7a9d0 lr=7f85d46020
+FRAME tid=248 fp=7f49c7a9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/249 IFsys
+REGS tid=249 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f4947a850 fp=7f4947a850
+FRAME tid=249 fp=7f4947a850 savedfp=7f4947a920 lr=7f4acf4478
+FRAME tid=249 fp=7f4947a920 savedfp=7f4947a980 lr=7f85d9c184
+FRAME tid=249 fp=7f4947a980 savedfp=7f4947a9d0 lr=7f85d46020
+FRAME tid=249 fp=7f4947a9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/250 IFsys
+REGS tid=250 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f489bc850 fp=7f489bc850
+FRAME tid=250 fp=7f489bc850 savedfp=7f489bc920 lr=7f4acf4478
+FRAME tid=250 fp=7f489bc920 savedfp=7f489bc980 lr=7f85d9c184
+FRAME tid=250 fp=7f489bc980 savedfp=7f489bc9d0 lr=7f85d46020
+FRAME tid=250 fp=7f489bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/251 FSYS_WORKER
+REGS tid=251 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f481bc850 fp=7f481bc850
+FRAME tid=251 fp=7f481bc850 savedfp=7f481bc920 lr=7f4acf4478
+FRAME tid=251 fp=7f481bc920 savedfp=7f481bc980 lr=7f85d9c184
+FRAME tid=251 fp=7f481bc980 savedfp=7f481bc9d0 lr=7f85d46020
+FRAME tid=251 fp=7f481bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/252 FSYS_WORKER
+REGS tid=252 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f479bc850 fp=7f479bc850
+FRAME tid=252 fp=7f479bc850 savedfp=7f479bc920 lr=7f4acf4478
+FRAME tid=252 fp=7f479bc920 savedfp=7f479bc980 lr=7f85d9c184
+FRAME tid=252 fp=7f479bc980 savedfp=7f479bc9d0 lr=7f85d46020
+FRAME tid=252 fp=7f479bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/253 FSYS_WORKER
+REGS tid=253 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f471bc850 fp=7f471bc850
+FRAME tid=253 fp=7f471bc850 savedfp=7f471bc920 lr=7f4acf4478
+FRAME tid=253 fp=7f471bc920 savedfp=7f471bc980 lr=7f85d9c184
+FRAME tid=253 fp=7f471bc980 savedfp=7f471bc9d0 lr=7f85d46020
+FRAME tid=253 fp=7f471bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/254 FSYS_WORKER
+REGS tid=254 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f469bc850 fp=7f469bc850
+FRAME tid=254 fp=7f469bc850 savedfp=7f469bc920 lr=7f4acf4478
+FRAME tid=254 fp=7f469bc920 savedfp=7f469bc980 lr=7f85d9c184
+FRAME tid=254 fp=7f469bc980 savedfp=7f469bc9d0 lr=7f85d46020
+FRAME tid=254 fp=7f469bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/255 IFsys
+REGS tid=255 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f461bc810 fp=7f461bc810
+FRAME tid=255 fp=7f461bc810 savedfp=7f461bc8e0 lr=7f80097778
+FRAME tid=255 fp=7f461bc8e0 savedfp=7f461bc930 lr=7f4acd1d1c
+FRAME tid=255 fp=7f461bc930 savedfp=7f461bc970 lr=7f800978c4
+FRAME tid=255 fp=7f461bc970 savedfp=7f461bc980 lr=7f85d9c184
+FRAME tid=255 fp=7f461bc980 savedfp=7f461bc9d0 lr=7f85d46020
+FRAME tid=255 fp=7f461bc9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/256 CAMERA On Deman
+REGS tid=256 pc=7f8561ecbc lr=7f85d82c9c sp=7f459a75d0 fp=7f459a75d0
+FRAME tid=256 fp=7f459a75d0 savedfp=7f459a7610 lr=7f85d855a4
+FRAME tid=256 fp=7f459a7610 savedfp=7f459a78c0 lr=7f85e14004
+FRAME tid=256 fp=7f459a78c0 savedfp=7f459a7920 lr=7f459abf6c
+FRAME tid=256 fp=7f459a7920 savedfp=7f459a7980 lr=7f85d9c184
+FRAME tid=256 fp=7f459a7980 savedfp=7f459a79d0 lr=7f85d46020
+FRAME tid=256 fp=7f459a79d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/257 NetServiceEther
+REGS tid=257 pc=7f85622500 lr=7f85d878cc sp=7f451a75c0 fp=7f451a75c0
+FRAME tid=257 fp=7f451a75c0 savedfp=7f451a75f0 lr=7f85d85648
+FRAME tid=257 fp=7f451a75f0 savedfp=7f451a78a0 lr=7f85e14004
+FRAME tid=257 fp=7f451a78a0 savedfp=7f451a7900 lr=7f48c464f0
+FRAME tid=257 fp=7f451a7900 savedfp=7f451a7980 lr=7f85d9c184
+FRAME tid=257 fp=7f451a7980 savedfp=7f451a79d0 lr=7f85d46020
+FRAME tid=257 fp=7f451a79d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/258 THREAD_INFRA1
+REGS tid=258 pc=7f85d4cadc lr=7f85d4cabc sp=7f44062860 fp=7f44062860
+FRAME tid=258 fp=7f44062860 savedfp=7f44062950 lr=7f440a71c0
+FRAME tid=258 fp=7f44062950 savedfp=7f440629d0 lr=7f85d46020
+FRAME tid=258 fp=7f440629d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/259 OPTION_INSTALLE
+REGS tid=259 pc=7f8561ecbc lr=7f85d82c9c sp=7f436fda50 fp=7f436fda50
+FRAME tid=259 fp=7f436fda50 savedfp=7f436fda90 lr=7f85d855a4
+FRAME tid=259 fp=7f436fda90 savedfp=7f436fdd40 lr=7f85e14004
+FRAME tid=259 fp=7f436fdd40 savedfp=7f436fddb0 lr=7f43815ccc
+FRAME tid=259 fp=7f436fddb0 savedfp=7f436fde30 lr=7f4380e898
+FRAME tid=259 fp=7f436fde30 savedfp=7f436fe8a0 lr=7f4380b7c8
+FRAME tid=259 fp=7f436fe8a0 savedfp=7f436fe980 lr=7f85d9c184
+FRAME tid=259 fp=7f436fe980 savedfp=7f436fe9d0 lr=7f85d46020
+FRAME tid=259 fp=7f436fe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/260 NetServiceMainT
+REGS tid=260 pc=7f85622500 lr=7f85d878cc sp=7f42efe590 fp=7f42efe590
+FRAME tid=260 fp=7f42efe590 savedfp=7f42efe5c0 lr=7f85d85648
+FRAME tid=260 fp=7f42efe5c0 savedfp=7f42efe870 lr=7f85e14004
+FRAME tid=260 fp=7f42efe870 savedfp=7f42efe8d0 lr=7f4376261c
+FRAME tid=260 fp=7f42efe8d0 savedfp=7f42efe980 lr=7f85d9c184
+FRAME tid=260 fp=7f42efe980 savedfp=7f42efe9d0 lr=7f85d46020
+FRAME tid=260 fp=7f42efe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/261 IMM
+REGS tid=261 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f426de810 fp=7f426de810
+FRAME tid=261 fp=7f426de810 savedfp=7f426de8e0 lr=7f80097778
+FRAME tid=261 fp=7f426de8e0 savedfp=7f426de930 lr=7f426ea440
+FRAME tid=261 fp=7f426de930 savedfp=7f426de970 lr=7f800978c4
+FRAME tid=261 fp=7f426de970 savedfp=7f426de980 lr=7f85d9c184
+FRAME tid=261 fp=7f426de980 savedfp=7f426de9d0 lr=7f85d46020
+FRAME tid=261 fp=7f426de9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/262 IMM
+REGS tid=262 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f41ec2810 fp=7f41ec2810
+FRAME tid=262 fp=7f41ec2810 savedfp=7f41ec28e0 lr=7f80097778
+FRAME tid=262 fp=7f41ec28e0 savedfp=7f41ec2930 lr=7f426ea440
+FRAME tid=262 fp=7f41ec2930 savedfp=7f41ec2970 lr=7f800978c4
+FRAME tid=262 fp=7f41ec2970 savedfp=7f41ec2980 lr=7f85d9c184
+FRAME tid=262 fp=7f41ec2980 savedfp=7f41ec29d0 lr=7f85d46020
+FRAME tid=262 fp=7f41ec29d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/263 IMM
+REGS tid=263 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f416c2810 fp=7f416c2810
+FRAME tid=263 fp=7f416c2810 savedfp=7f416c28e0 lr=7f80097778
+FRAME tid=263 fp=7f416c28e0 savedfp=7f416c2930 lr=7f426ea440
+FRAME tid=263 fp=7f416c2930 savedfp=7f416c2970 lr=7f800978c4
+FRAME tid=263 fp=7f416c2970 savedfp=7f416c2980 lr=7f85d9c184
+FRAME tid=263 fp=7f416c2980 savedfp=7f416c29d0 lr=7f85d46020
+FRAME tid=263 fp=7f416c29d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/264 IMM
+REGS tid=264 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f40eae810 fp=7f40eae810
+FRAME tid=264 fp=7f40eae810 savedfp=7f40eae8e0 lr=7f80097778
+FRAME tid=264 fp=7f40eae8e0 savedfp=7f40eae930 lr=7f426ea440
+FRAME tid=264 fp=7f40eae930 savedfp=7f40eae970 lr=7f800978c4
+FRAME tid=264 fp=7f40eae970 savedfp=7f40eae980 lr=7f85d9c184
+FRAME tid=264 fp=7f40eae980 savedfp=7f40eae9d0 lr=7f85d46020
+FRAME tid=264 fp=7f40eae9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/265 IMM
+REGS tid=265 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f406ae810 fp=7f406ae810
+FRAME tid=265 fp=7f406ae810 savedfp=7f406ae8e0 lr=7f80097778
+FRAME tid=265 fp=7f406ae8e0 savedfp=7f406ae930 lr=7f426ea440
+FRAME tid=265 fp=7f406ae930 savedfp=7f406ae970 lr=7f800978c4
+FRAME tid=265 fp=7f406ae970 savedfp=7f406ae980 lr=7f85d9c184
+FRAME tid=265 fp=7f406ae980 savedfp=7f406ae9d0 lr=7f85d46020
+FRAME tid=265 fp=7f406ae9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/266 IMM
+REGS tid=266 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3fe85810 fp=7f3fe85810
+FRAME tid=266 fp=7f3fe85810 savedfp=7f3fe858e0 lr=7f80097778
+FRAME tid=266 fp=7f3fe858e0 savedfp=7f3fe85930 lr=7f426ea440
+FRAME tid=266 fp=7f3fe85930 savedfp=7f3fe85970 lr=7f800978c4
+FRAME tid=266 fp=7f3fe85970 savedfp=7f3fe85980 lr=7f85d9c184
+FRAME tid=266 fp=7f3fe85980 savedfp=7f3fe859d0 lr=7f85d46020
+FRAME tid=266 fp=7f3fe859d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/267 IMM
+REGS tid=267 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3f685810 fp=7f3f685810
+FRAME tid=267 fp=7f3f685810 savedfp=7f3f6858e0 lr=7f80097778
+FRAME tid=267 fp=7f3f6858e0 savedfp=7f3f685930 lr=7f426ea440
+FRAME tid=267 fp=7f3f685930 savedfp=7f3f685970 lr=7f800978c4
+FRAME tid=267 fp=7f3f685970 savedfp=7f3f685980 lr=7f85d9c184
+FRAME tid=267 fp=7f3f685980 savedfp=7f3f6859d0 lr=7f85d46020
+FRAME tid=267 fp=7f3f6859d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/268 GpsRsMainThread
+REGS tid=268 pc=7f85622500 lr=7f85d878cc sp=7f3ee855c0 fp=7f3ee855c0
+FRAME tid=268 fp=7f3ee855c0 savedfp=7f3ee855f0 lr=7f85d85648
+FRAME tid=268 fp=7f3ee855f0 savedfp=7f3ee858a0 lr=7f85e14004
+FRAME tid=268 fp=7f3ee858a0 savedfp=7f3ee85900 lr=7f3fe9c518
+FRAME tid=268 fp=7f3ee85900 savedfp=7f3ee85980 lr=7f85d9c184
+FRAME tid=268 fp=7f3ee85980 savedfp=7f3ee859d0 lr=7f85d46020
+FRAME tid=268 fp=7f3ee859d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/269 IMM
+REGS tid=269 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3e685810 fp=7f3e685810
+FRAME tid=269 fp=7f3e685810 savedfp=7f3e6858e0 lr=7f80097778
+FRAME tid=269 fp=7f3e6858e0 savedfp=7f3e685930 lr=7f426ea440
+FRAME tid=269 fp=7f3e685930 savedfp=7f3e685970 lr=7f800978c4
+FRAME tid=269 fp=7f3e685970 savedfp=7f3e685980 lr=7f85d9c184
+FRAME tid=269 fp=7f3e685980 savedfp=7f3e6859d0 lr=7f85d46020
+FRAME tid=269 fp=7f3e6859d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/270 IMD-Default
+REGS tid=270 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3de5d810 fp=7f3de5d810
+FRAME tid=270 fp=7f3de5d810 savedfp=7f3de5d8e0 lr=7f80097778
+FRAME tid=270 fp=7f3de5d8e0 savedfp=7f3de5d930 lr=7f3de6c100
+FRAME tid=270 fp=7f3de5d930 savedfp=7f3de5d970 lr=7f800978c4
+FRAME tid=270 fp=7f3de5d970 savedfp=7f3de5d980 lr=7f85d9c184
+FRAME tid=270 fp=7f3de5d980 savedfp=7f3de5d9d0 lr=7f85d46020
+FRAME tid=270 fp=7f3de5d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/271 IMD-RM
+REGS tid=271 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3d65d810 fp=7f3d65d810
+FRAME tid=271 fp=7f3d65d810 savedfp=7f3d65d8e0 lr=7f80097778
+FRAME tid=271 fp=7f3d65d8e0 savedfp=7f3d65d930 lr=7f3de6c100
+FRAME tid=271 fp=7f3d65d930 savedfp=7f3d65d970 lr=7f800978c4
+FRAME tid=271 fp=7f3d65d970 savedfp=7f3d65d980 lr=7f85d9c184
+FRAME tid=271 fp=7f3d65d980 savedfp=7f3d65d9d0 lr=7f85d46020
+FRAME tid=271 fp=7f3d65d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/272 gps_main_thread
+REGS tid=272 pc=7f85622500 lr=7f85d878cc sp=7f3ce5ccd0 fp=7f3ce5ccd0
+FRAME tid=272 fp=7f3ce5ccd0 savedfp=7f3ce5cd00 lr=7f85d85648
+FRAME tid=272 fp=7f3ce5cd00 savedfp=7f3ce5cfb0 lr=7f85e14004
+FRAME tid=272 fp=7f3ce5cfb0 savedfp=7f3ce5d010 lr=7f72ad0e74
+FRAME tid=272 fp=7f3ce5d010 savedfp=7f3ce5d960 lr=7f72ad1dfc
+FRAME tid=272 fp=7f3ce5d960 savedfp=7f3ce5d980 lr=7f85d9c184
+FRAME tid=272 fp=7f3ce5d980 savedfp=7f3ce5d9d0 lr=7f85d46020
+FRAME tid=272 fp=7f3ce5d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/273 InfraIPTC
+REGS tid=273 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f3c031810 fp=7f3c031810
+FRAME tid=273 fp=7f3c031810 savedfp=7f3c0318e0 lr=7f80097778
+FRAME tid=273 fp=7f3c0318e0 savedfp=7f3c031930 lr=7f3c1e3368
+FRAME tid=273 fp=7f3c031930 savedfp=7f3c031970 lr=7f800978c4
+FRAME tid=273 fp=7f3c031970 savedfp=7f3c031980 lr=7f85d9c184
+FRAME tid=273 fp=7f3c031980 savedfp=7f3c0319d0 lr=7f85d46020
+FRAME tid=273 fp=7f3c0319d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/274 CameraBackgroun
+REGS tid=274 pc=7f8561ecbc lr=7f85d82c9c sp=7f68ffe5f0 fp=7f68ffe5f0
+FRAME tid=274 fp=7f68ffe5f0 savedfp=7f68ffe630 lr=7f85d855a4
+FRAME tid=274 fp=7f68ffe630 savedfp=7f68ffe8e0 lr=7f85e14004
+FRAME tid=274 fp=7f68ffe8e0 savedfp=7f68ffe940 lr=7f72a21a24
+FRAME tid=274 fp=7f68ffe940 savedfp=7f68ffe980 lr=7f85d9c184
+FRAME tid=274 fp=7f68ffe980 savedfp=7f68ffe9d0 lr=7f85d46020
+FRAME tid=274 fp=7f68ffe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/276 AppFw
+REGS tid=276 pc=7f85d49f54 lr=7f357b9f94 sp=7f3276f6a0 fp=7f3276f6a0
+FRAME tid=276 fp=7f3276f6a0 savedfp=7f3276f700 lr=7f34e0471c
+FRAME tid=276 fp=7f3276f700 savedfp=7f3276f740 lr=7f347d8920
+FRAME tid=276 fp=7f3276f740 savedfp=7f3276f980 lr=7f341140ec
+FRAME tid=276 fp=7f3276f980 savedfp=7f3276fd60 lr=7f3411117c
+FRAME tid=276 fp=7f3276fd60 savedfp=7f32770950 lr=7f36069ab0
+FRAME tid=276 fp=7f32770950 savedfp=7f32770980 lr=7f85d9c184
+FRAME tid=276 fp=7f32770980 savedfp=7f327709d0 lr=7f85d46020
+FRAME tid=276 fp=7f327709d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/277 uxengine_res1
+REGS tid=277 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f687fe7b0 fp=7f687fe7b0
+FRAME tid=277 fp=7f687fe7b0 savedfp=7f687fe880 lr=7f72a5f6d0
+FRAME tid=277 fp=7f687fe880 savedfp=7f687fe890 lr=7f72a67094
+FRAME tid=277 fp=7f687fe890 savedfp=7f687fe8d0 lr=7f72a59578
+FRAME tid=277 fp=7f687fe8d0 savedfp=7f687fe900 lr=7f72a6a350
+FRAME tid=277 fp=7f687fe900 savedfp=7f687fe970 lr=7f72a8a934
+FRAME tid=277 fp=7f687fe970 savedfp=7f687fe980 lr=7f85d9c184
+FRAME tid=277 fp=7f687fe980 savedfp=7f687fe9d0 lr=7f85d46020
+FRAME tid=277 fp=7f687fe9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/278 uxengine_res2
+REGS tid=278 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f31f707b0 fp=7f31f707b0
+FRAME tid=278 fp=7f31f707b0 savedfp=7f31f70880 lr=7f72a5f6d0
+FRAME tid=278 fp=7f31f70880 savedfp=7f31f70890 lr=7f72a67094
+FRAME tid=278 fp=7f31f70890 savedfp=7f31f708d0 lr=7f72a59578
+FRAME tid=278 fp=7f31f708d0 savedfp=7f31f70900 lr=7f72a6a350
+FRAME tid=278 fp=7f31f70900 savedfp=7f31f70970 lr=7f72a8a934
+FRAME tid=278 fp=7f31f70970 savedfp=7f31f70980 lr=7f85d9c184
+FRAME tid=278 fp=7f31f70980 savedfp=7f31f709d0 lr=7f85d46020
+FRAME tid=278 fp=7f31f709d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/279 InfraNotify
+REGS tid=279 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f30b23d30 fp=7f30b23d30
+FRAME tid=279 fp=7f30b23d30 savedfp=7f30b23e00 lr=7f8582f610
+FRAME tid=279 fp=7f30b23e00 savedfp=7f30b23e30 lr=7f35767598
+FRAME tid=279 fp=7f30b23e30 savedfp=7f30b3d950 lr=7f36069ab0
+FRAME tid=279 fp=7f30b3d950 savedfp=7f30b3d980 lr=7f85d9c184
+FRAME tid=279 fp=7f30b3d980 savedfp=7f30b3d9d0 lr=7f85d46020
+FRAME tid=279 fp=7f30b3d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/280 IWrapperBB
+REGS tid=280 pc=7f8561ecbc lr=7f85d82c9c sp=7f3033d580 fp=7f3033d580
+FRAME tid=280 fp=7f3033d580 savedfp=7f3033d5c0 lr=7f85d855a4
+FRAME tid=280 fp=7f3033d5c0 savedfp=7f3033d870 lr=7f85e14004
+FRAME tid=280 fp=7f3033d870 savedfp=7f3033d8d0 lr=7f35e941dc
+FRAME tid=280 fp=7f3033d8d0 savedfp=7f3033d950 lr=7f36069ab0
+FRAME tid=280 fp=7f3033d950 savedfp=7f3033d980 lr=7f85d9c184
+FRAME tid=280 fp=7f3033d980 savedfp=7f3033d9d0 lr=7f85d46020
+FRAME tid=280 fp=7f3033d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/281 IWrapperBBSub
+REGS tid=281 pc=7f8561ecbc lr=7f85d82c9c sp=7f2fb3d330 fp=7f2fb3d330
+FRAME tid=281 fp=7f2fb3d330 savedfp=7f2fb3d370 lr=7f85d855a4
+FRAME tid=281 fp=7f2fb3d370 savedfp=7f2fb3d620 lr=7f85e14004
+FRAME tid=281 fp=7f2fb3d620 savedfp=7f2fb3d680 lr=7f7291098c
+FRAME tid=281 fp=7f2fb3d680 savedfp=7f2fb3d6e0 lr=7f35eabaf0
+FRAME tid=281 fp=7f2fb3d6e0 savedfp=7f2fb3d8c0 lr=7f35e8b9c4
+FRAME tid=281 fp=7f2fb3d8c0 savedfp=7f2fb3d950 lr=7f36069ab0
+FRAME tid=281 fp=7f2fb3d950 savedfp=7f2fb3d980 lr=7f85d9c184
+FRAME tid=281 fp=7f2fb3d980 savedfp=7f2fb3d9d0 lr=7f85d46020
+FRAME tid=281 fp=7f2fb3d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/282 IWrapperHDMI
+REGS tid=282 pc=7f8561ecbc lr=7f85d82c9c sp=7f2f33d5b0 fp=7f2f33d5b0
+FRAME tid=282 fp=7f2f33d5b0 savedfp=7f2f33d5f0 lr=7f85d855a4
+FRAME tid=282 fp=7f2f33d5f0 savedfp=7f2f33d8a0 lr=7f85e14004
+FRAME tid=282 fp=7f2f33d8a0 savedfp=7f2f33d900 lr=7f35e89df4
+FRAME tid=282 fp=7f2f33d900 savedfp=7f2f33d950 lr=7f36069ab0
+FRAME tid=282 fp=7f2f33d950 savedfp=7f2f33d980 lr=7f85d9c184
+FRAME tid=282 fp=7f2f33d980 savedfp=7f2f33d9d0 lr=7f85d46020
+FRAME tid=282 fp=7f2f33d9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/283 InfraBluetoothL
+REGS tid=283 pc=7f85622500 lr=7f85d878cc sp=7f2ea435e0 fp=7f2ea435e0
+FRAME tid=283 fp=7f2ea435e0 savedfp=7f2ea43610 lr=7f85d85648
+FRAME tid=283 fp=7f2ea43610 savedfp=7f2ea438c0 lr=7f85e14004
+FRAME tid=283 fp=7f2ea438c0 savedfp=7f2ea43920 lr=7f2ea89f40
+FRAME tid=283 fp=7f2ea43920 savedfp=7f2ea43980 lr=7f85d9c184
+FRAME tid=283 fp=7f2ea43980 savedfp=7f2ea439d0 lr=7f85d46020
+FRAME tid=283 fp=7f2ea439d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/284 CertificateMain
+REGS tid=284 pc=7f85622500 lr=7f85d878cc sp=7f2e1e25d0 fp=7f2e1e25d0
+FRAME tid=284 fp=7f2e1e25d0 savedfp=7f2e1e2600 lr=7f85d85648
+FRAME tid=284 fp=7f2e1e2600 savedfp=7f2e1e28b0 lr=7f85e14004
+FRAME tid=284 fp=7f2e1e28b0 savedfp=7f2e1e2910 lr=7f2e1e72d4
+FRAME tid=284 fp=7f2e1e2910 savedfp=7f2e1e2980 lr=7f85d9c184
+FRAME tid=284 fp=7f2e1e2980 savedfp=7f2e1e29d0 lr=7f85d46020
+FRAME tid=284 fp=7f2e1e29d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/285 InfraFtpClient
+REGS tid=285 pc=7f85622500 lr=7f85d878cc sp=7f2d999600 fp=7f2d999600
+FRAME tid=285 fp=7f2d999600 savedfp=7f2d999630 lr=7f85d85648
+FRAME tid=285 fp=7f2d999630 savedfp=7f2d9998e0 lr=7f85e14004
+FRAME tid=285 fp=7f2d9998e0 savedfp=7f2d999940 lr=7f2d9b2f38
+FRAME tid=285 fp=7f2d999940 savedfp=7f2d999980 lr=7f85d9c184
+FRAME tid=285 fp=7f2d999980 savedfp=7f2d9999d0 lr=7f85d46020
+FRAME tid=285 fp=7f2d9999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/286 IWrapperImaging
+REGS tid=286 pc=7f8561ecbc lr=7f85d82c9c sp=7f2d199590 fp=7f2d199590
+FRAME tid=286 fp=7f2d199590 savedfp=7f2d1995d0 lr=7f85d855a4
+FRAME tid=286 fp=7f2d1995d0 savedfp=7f2d199880 lr=7f85e14004
+FRAME tid=286 fp=7f2d199880 savedfp=7f2d1998e0 lr=7f35ec0394
+FRAME tid=286 fp=7f2d1998e0 savedfp=7f2d199950 lr=7f36069ab0
+FRAME tid=286 fp=7f2d199950 savedfp=7f2d199980 lr=7f85d9c184
+FRAME tid=286 fp=7f2d199980 savedfp=7f2d1999d0 lr=7f85d46020
+FRAME tid=286 fp=7f2d1999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/288 I-InputEvent
+REGS tid=288 pc=7f85622500 lr=7f85d878cc sp=7f2c9995c0 fp=7f2c9995c0
+FRAME tid=288 fp=7f2c9995c0 savedfp=7f2c9995f0 lr=7f85d85648
+FRAME tid=288 fp=7f2c9995f0 savedfp=7f2c9998a0 lr=7f85e14004
+FRAME tid=288 fp=7f2c9998a0 savedfp=7f2c999900 lr=7f72a00b40
+FRAME tid=288 fp=7f2c999900 savedfp=7f2c999980 lr=7f85d9c184
+FRAME tid=288 fp=7f2c999980 savedfp=7f2c9999d0 lr=7f85d46020
+FRAME tid=288 fp=7f2c9999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/289 I-InputEvent
+REGS tid=289 pc=7f85622500 lr=7f85d878cc sp=7f2c1995c0 fp=7f2c1995c0
+FRAME tid=289 fp=7f2c1995c0 savedfp=7f2c1995f0 lr=7f85d85648
+FRAME tid=289 fp=7f2c1995f0 savedfp=7f2c1998a0 lr=7f85e14004
+FRAME tid=289 fp=7f2c1998a0 savedfp=7f2c199900 lr=7f72a00b40
+FRAME tid=289 fp=7f2c199900 savedfp=7f2c199980 lr=7f85d9c184
+FRAME tid=289 fp=7f2c199980 savedfp=7f2c1999d0 lr=7f85d46020
+FRAME tid=289 fp=7f2c1999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/290 I-InputEvent
+REGS tid=290 pc=7f85622500 lr=7f85d878cc sp=7f2b9995c0 fp=7f2b9995c0
+FRAME tid=290 fp=7f2b9995c0 savedfp=7f2b9995f0 lr=7f85d85648
+FRAME tid=290 fp=7f2b9995f0 savedfp=7f2b9998a0 lr=7f85e14004
+FRAME tid=290 fp=7f2b9998a0 savedfp=7f2b999900 lr=7f72a00b40
+FRAME tid=290 fp=7f2b999900 savedfp=7f2b999980 lr=7f85d9c184
+FRAME tid=290 fp=7f2b999980 savedfp=7f2b9999d0 lr=7f85d46020
+FRAME tid=290 fp=7f2b9999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/291 I-InputEvent
+REGS tid=291 pc=7f85622500 lr=7f85d878cc sp=7f2b1995c0 fp=7f2b1995c0
+FRAME tid=291 fp=7f2b1995c0 savedfp=7f2b1995f0 lr=7f85d85648
+FRAME tid=291 fp=7f2b1995f0 savedfp=7f2b1998a0 lr=7f85e14004
+FRAME tid=291 fp=7f2b1998a0 savedfp=7f2b199900 lr=7f72a00b40
+FRAME tid=291 fp=7f2b199900 savedfp=7f2b199980 lr=7f85d9c184
+FRAME tid=291 fp=7f2b199980 savedfp=7f2b1999d0 lr=7f85d46020
+FRAME tid=291 fp=7f2b1999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/292 I-InputEvent
+REGS tid=292 pc=7f85622500 lr=7f85d878cc sp=7f2a9995c0 fp=7f2a9995c0
+FRAME tid=292 fp=7f2a9995c0 savedfp=7f2a9995f0 lr=7f85d85648
+FRAME tid=292 fp=7f2a9995f0 savedfp=7f2a9998a0 lr=7f85e14004
+FRAME tid=292 fp=7f2a9998a0 savedfp=7f2a999900 lr=7f72a00b40
+FRAME tid=292 fp=7f2a999900 savedfp=7f2a999980 lr=7f85d9c184
+FRAME tid=292 fp=7f2a999980 savedfp=7f2a9999d0 lr=7f85d46020
+FRAME tid=292 fp=7f2a9999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/293 I-InputEvent
+REGS tid=293 pc=7f85622500 lr=7f85d878cc sp=7f2a1995c0 fp=7f2a1995c0
+FRAME tid=293 fp=7f2a1995c0 savedfp=7f2a1995f0 lr=7f85d85648
+FRAME tid=293 fp=7f2a1995f0 savedfp=7f2a1998a0 lr=7f85e14004
+FRAME tid=293 fp=7f2a1998a0 savedfp=7f2a199900 lr=7f72a00b40
+FRAME tid=293 fp=7f2a199900 savedfp=7f2a199980 lr=7f85d9c184
+FRAME tid=293 fp=7f2a199980 savedfp=7f2a1999d0 lr=7f85d46020
+FRAME tid=293 fp=7f2a1999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/294 I-InputEvent
+REGS tid=294 pc=7f85622500 lr=7f85d878cc sp=7f299995c0 fp=7f299995c0
+FRAME tid=294 fp=7f299995c0 savedfp=7f299995f0 lr=7f85d85648
+FRAME tid=294 fp=7f299995f0 savedfp=7f299998a0 lr=7f85e14004
+FRAME tid=294 fp=7f299998a0 savedfp=7f29999900 lr=7f72a00b40
+FRAME tid=294 fp=7f29999900 savedfp=7f29999980 lr=7f85d9c184
+FRAME tid=294 fp=7f29999980 savedfp=7f299999d0 lr=7f85d46020
+FRAME tid=294 fp=7f299999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/295 I-InputEvent
+REGS tid=295 pc=7f85622500 lr=7f85d878cc sp=7f291995c0 fp=7f291995c0
+FRAME tid=295 fp=7f291995c0 savedfp=7f291995f0 lr=7f85d85648
+FRAME tid=295 fp=7f291995f0 savedfp=7f291998a0 lr=7f85e14004
+FRAME tid=295 fp=7f291998a0 savedfp=7f29199900 lr=7f72a00b40
+FRAME tid=295 fp=7f29199900 savedfp=7f29199980 lr=7f85d9c184
+FRAME tid=295 fp=7f29199980 savedfp=7f291999d0 lr=7f85d46020
+FRAME tid=295 fp=7f291999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/296 IWrapperMprNull
+REGS tid=296 pc=7f8561ecbc lr=7f85d82c9c sp=7f289995d0 fp=7f289995d0
+FRAME tid=296 fp=7f289995d0 savedfp=7f28999610 lr=7f85d855a4
+FRAME tid=296 fp=7f28999610 savedfp=7f289998c0 lr=7f85e14004
+FRAME tid=296 fp=7f289998c0 savedfp=7f28999920 lr=7f35ed751c
+FRAME tid=296 fp=7f28999920 savedfp=7f28999950 lr=7f36069ab0
+FRAME tid=296 fp=7f28999950 savedfp=7f28999980 lr=7f85d9c184
+FRAME tid=296 fp=7f28999980 savedfp=7f289999d0 lr=7f85d46020
+FRAME tid=296 fp=7f289999d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/297 InfraRemoteUsbt
+REGS tid=297 pc=7f85622500 lr=7f85d878cc sp=7f27fc65e0 fp=7f27fc65e0
+FRAME tid=297 fp=7f27fc65e0 savedfp=7f27fc6610 lr=7f85d85648
+FRAME tid=297 fp=7f27fc6610 savedfp=7f27fc68c0 lr=7f85e14004
+FRAME tid=297 fp=7f27fc68c0 savedfp=7f27fc6920 lr=7f28099ca4
+FRAME tid=297 fp=7f27fc6920 savedfp=7f27fc6960 lr=7f28099dc8
+FRAME tid=297 fp=7f27fc6960 savedfp=7f27fc6980 lr=7f85d9c184
+FRAME tid=297 fp=7f27fc6980 savedfp=7f27fc69d0 lr=7f85d46020
+FRAME tid=297 fp=7f27fc69d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/298 I-AppRemoteBoar
+REGS tid=298 pc=7f8561ecbc lr=7f85d82c9c sp=7f277b35f0 fp=7f277b35f0
+FRAME tid=298 fp=7f277b35f0 savedfp=7f277b3630 lr=7f85d855a4
+FRAME tid=298 fp=7f277b3630 savedfp=7f277b38e0 lr=7f85e14004
+FRAME tid=298 fp=7f277b38e0 savedfp=7f277b3940 lr=7f277b67fc
+FRAME tid=298 fp=7f277b3940 savedfp=7f277b3980 lr=7f85d9c184
+FRAME tid=298 fp=7f277b3980 savedfp=7f277b39d0 lr=7f85d46020
+FRAME tid=298 fp=7f277b39d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/299 IWrapperUPM
+REGS tid=299 pc=7f8561ecbc lr=7f85d82c9c sp=7f26f9a5c0 fp=7f26f9a5c0
+FRAME tid=299 fp=7f26f9a5c0 savedfp=7f26f9a600 lr=7f85d855a4
+FRAME tid=299 fp=7f26f9a600 savedfp=7f26f9a8b0 lr=7f85e14004
+FRAME tid=299 fp=7f26f9a8b0 savedfp=7f26f9a910 lr=7f35f13f94
+FRAME tid=299 fp=7f26f9a910 savedfp=7f26f9a950 lr=7f36069ab0
+FRAME tid=299 fp=7f26f9a950 savedfp=7f26f9a980 lr=7f85d9c184
+FRAME tid=299 fp=7f26f9a980 savedfp=7f26f9a9d0 lr=7f85d46020
+FRAME tid=299 fp=7f26f9a9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/300 IWrapperDataSer
+REGS tid=300 pc=7f8561ecbc lr=7f85d82c9c sp=7f2679a5c0 fp=7f2679a5c0
+FRAME tid=300 fp=7f2679a5c0 savedfp=7f2679a600 lr=7f85d855a4
+FRAME tid=300 fp=7f2679a600 savedfp=7f2679a8b0 lr=7f85e14004
+FRAME tid=300 fp=7f2679a8b0 savedfp=7f2679a910 lr=7f35eac6d8
+FRAME tid=300 fp=7f2679a910 savedfp=7f2679a950 lr=7f36069ab0
+FRAME tid=300 fp=7f2679a950 savedfp=7f2679a980 lr=7f85d9c184
+FRAME tid=300 fp=7f2679a980 savedfp=7f2679a9d0 lr=7f85d46020
+FRAME tid=300 fp=7f2679a9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/301 InfraCcpfMessag
+REGS tid=301 pc=7f85622500 lr=7f85d878cc sp=7f25c525f0 fp=7f25c525f0
+FRAME tid=301 fp=7f25c525f0 savedfp=7f25c52620 lr=7f85d85648
+FRAME tid=301 fp=7f25c52620 savedfp=7f25c528d0 lr=7f85e14004
+FRAME tid=301 fp=7f25c528d0 savedfp=7f25c52930 lr=7f25f10014
+FRAME tid=301 fp=7f25c52930 savedfp=7f25c52980 lr=7f85d9c184
+FRAME tid=301 fp=7f25c52980 savedfp=7f25c529d0 lr=7f85d46020
+FRAME tid=301 fp=7f25c529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/302 InfraCcpfAuth
+REGS tid=302 pc=7f85622500 lr=7f85d878cc sp=7f254525f0 fp=7f254525f0
+FRAME tid=302 fp=7f254525f0 savedfp=7f25452620 lr=7f85d85648
+FRAME tid=302 fp=7f25452620 savedfp=7f254528d0 lr=7f85e14004
+FRAME tid=302 fp=7f254528d0 savedfp=7f25452930 lr=7f25f10014
+FRAME tid=302 fp=7f25452930 savedfp=7f25452980 lr=7f85d9c184
+FRAME tid=302 fp=7f25452980 savedfp=7f254529d0 lr=7f85d46020
+FRAME tid=302 fp=7f254529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/303 InfraCcpfRemote
+REGS tid=303 pc=7f85622500 lr=7f85d878cc sp=7f24c525f0 fp=7f24c525f0
+FRAME tid=303 fp=7f24c525f0 savedfp=7f24c52620 lr=7f85d85648
+FRAME tid=303 fp=7f24c52620 savedfp=7f24c528d0 lr=7f85e14004
+FRAME tid=303 fp=7f24c528d0 savedfp=7f24c52930 lr=7f25f10014
+FRAME tid=303 fp=7f24c52930 savedfp=7f24c52980 lr=7f85d9c184
+FRAME tid=303 fp=7f24c52980 savedfp=7f24c529d0 lr=7f85d46020
+FRAME tid=303 fp=7f24c529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/304 InfraCcpfRemote
+REGS tid=304 pc=7f85622500 lr=7f85d878cc sp=7f244525f0 fp=7f244525f0
+FRAME tid=304 fp=7f244525f0 savedfp=7f24452620 lr=7f85d85648
+FRAME tid=304 fp=7f24452620 savedfp=7f244528d0 lr=7f85e14004
+FRAME tid=304 fp=7f244528d0 savedfp=7f24452930 lr=7f25f10014
+FRAME tid=304 fp=7f24452930 savedfp=7f24452980 lr=7f85d9c184
+FRAME tid=304 fp=7f24452980 savedfp=7f244529d0 lr=7f85d46020
+FRAME tid=304 fp=7f244529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/305 InfraCcpfCertCa
+REGS tid=305 pc=7f85622500 lr=7f85d878cc sp=7f23c525f0 fp=7f23c525f0
+FRAME tid=305 fp=7f23c525f0 savedfp=7f23c52620 lr=7f85d85648
+FRAME tid=305 fp=7f23c52620 savedfp=7f23c528d0 lr=7f85e14004
+FRAME tid=305 fp=7f23c528d0 savedfp=7f23c52930 lr=7f25f10014
+FRAME tid=305 fp=7f23c52930 savedfp=7f23c52980 lr=7f85d9c184
+FRAME tid=305 fp=7f23c52980 savedfp=7f23c529d0 lr=7f85d46020
+FRAME tid=305 fp=7f23c529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/306 InfraCcpfConten
+REGS tid=306 pc=7f85622500 lr=7f85d878cc sp=7f234525f0 fp=7f234525f0
+FRAME tid=306 fp=7f234525f0 savedfp=7f23452620 lr=7f85d85648
+FRAME tid=306 fp=7f23452620 savedfp=7f234528d0 lr=7f85e14004
+FRAME tid=306 fp=7f234528d0 savedfp=7f23452930 lr=7f25f10014
+FRAME tid=306 fp=7f23452930 savedfp=7f23452980 lr=7f85d9c184
+FRAME tid=306 fp=7f23452980 savedfp=7f234529d0 lr=7f85d46020
+FRAME tid=306 fp=7f234529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/307 InfraCcpf
+REGS tid=307 pc=7f85622500 lr=7f85d878cc sp=7f22c525f0 fp=7f22c525f0
+FRAME tid=307 fp=7f22c525f0 savedfp=7f22c52620 lr=7f85d85648
+FRAME tid=307 fp=7f22c52620 savedfp=7f22c528d0 lr=7f85e14004
+FRAME tid=307 fp=7f22c528d0 savedfp=7f22c52930 lr=7f25f10014
+FRAME tid=307 fp=7f22c52930 savedfp=7f22c52980 lr=7f85d9c184
+FRAME tid=307 fp=7f22c52980 savedfp=7f22c529d0 lr=7f85d46020
+FRAME tid=307 fp=7f22c529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/308 IWrapperMwfInh
+REGS tid=308 pc=7f8561ecbc lr=7f85d82c9c sp=7f22452530 fp=7f22452530
+FRAME tid=308 fp=7f22452530 savedfp=7f22452570 lr=7f85d855a4
+FRAME tid=308 fp=7f22452570 savedfp=7f22452820 lr=7f85e14004
+FRAME tid=308 fp=7f22452820 savedfp=7f22452880 lr=7f35f12d34
+FRAME tid=308 fp=7f22452880 savedfp=7f224528c0 lr=7f35efd60c
+FRAME tid=308 fp=7f224528c0 savedfp=7f22452950 lr=7f36069ab0
+FRAME tid=308 fp=7f22452950 savedfp=7f22452980 lr=7f85d9c184
+FRAME tid=308 fp=7f22452980 savedfp=7f224529d0 lr=7f85d46020
+FRAME tid=308 fp=7f224529d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/310 I_SSHManager
+REGS tid=310 pc=7f85622500 lr=7f85d878cc sp=7f21bb05f0 fp=7f21bb05f0
+FRAME tid=310 fp=7f21bb05f0 savedfp=7f21bb0620 lr=7f85d85648
+FRAME tid=310 fp=7f21bb0620 savedfp=7f21bb08d0 lr=7f85e14004
+FRAME tid=310 fp=7f21bb08d0 savedfp=7f21bb0930 lr=7f21c3cba0
+FRAME tid=310 fp=7f21bb0930 savedfp=7f21bb0960 lr=7f21c17918
+FRAME tid=310 fp=7f21bb0960 savedfp=7f21bb0980 lr=7f85d9c184
+FRAME tid=310 fp=7f21bb0980 savedfp=7f21bb09d0 lr=7f85d46020
+FRAME tid=310 fp=7f21bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/311 SeqThreadPool0
+REGS tid=311 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f213b0820 fp=7f213b0820
+FRAME tid=311 fp=7f213b0820 savedfp=7f213b08f0 lr=7f8582f610
+FRAME tid=311 fp=7f213b08f0 savedfp=7f213b0900 lr=7f35e605a4
+FRAME tid=311 fp=7f213b0900 savedfp=7f213b0950 lr=7f36069ab0
+FRAME tid=311 fp=7f213b0950 savedfp=7f213b0980 lr=7f85d9c184
+FRAME tid=311 fp=7f213b0980 savedfp=7f213b09d0 lr=7f85d46020
+FRAME tid=311 fp=7f213b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/312 SeqThreadPool1
+REGS tid=312 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f20bb0820 fp=7f20bb0820
+FRAME tid=312 fp=7f20bb0820 savedfp=7f20bb08f0 lr=7f8582f610
+FRAME tid=312 fp=7f20bb08f0 savedfp=7f20bb0900 lr=7f35e605a4
+FRAME tid=312 fp=7f20bb0900 savedfp=7f20bb0950 lr=7f36069ab0
+FRAME tid=312 fp=7f20bb0950 savedfp=7f20bb0980 lr=7f85d9c184
+FRAME tid=312 fp=7f20bb0980 savedfp=7f20bb09d0 lr=7f85d46020
+FRAME tid=312 fp=7f20bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/313 SeqThreadPool2
+REGS tid=313 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f203b0820 fp=7f203b0820
+FRAME tid=313 fp=7f203b0820 savedfp=7f203b08f0 lr=7f8582f610
+FRAME tid=313 fp=7f203b08f0 savedfp=7f203b0900 lr=7f35e605a4
+FRAME tid=313 fp=7f203b0900 savedfp=7f203b0950 lr=7f36069ab0
+FRAME tid=313 fp=7f203b0950 savedfp=7f203b0980 lr=7f85d9c184
+FRAME tid=313 fp=7f203b0980 savedfp=7f203b09d0 lr=7f85d46020
+FRAME tid=313 fp=7f203b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/314 SeqThreadPool3
+REGS tid=314 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1fbb0820 fp=7f1fbb0820
+FRAME tid=314 fp=7f1fbb0820 savedfp=7f1fbb08f0 lr=7f8582f610
+FRAME tid=314 fp=7f1fbb08f0 savedfp=7f1fbb0900 lr=7f35e605a4
+FRAME tid=314 fp=7f1fbb0900 savedfp=7f1fbb0950 lr=7f36069ab0
+FRAME tid=314 fp=7f1fbb0950 savedfp=7f1fbb0980 lr=7f85d9c184
+FRAME tid=314 fp=7f1fbb0980 savedfp=7f1fbb09d0 lr=7f85d46020
+FRAME tid=314 fp=7f1fbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/315 SeqQueueCommon
+STORAGE_PROBE_THREAD /proc/194/task/316 SeqQueueIndexTh
+REGS tid=316 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1ebb07f0 fp=7f1ebb07f0
+FRAME tid=316 fp=7f1ebb07f0 savedfp=7f1ebb08c0 lr=7f8582f610
+FRAME tid=316 fp=7f1ebb08c0 savedfp=7f1ebb08d0 lr=7f35bc0f0c
+FRAME tid=316 fp=7f1ebb08d0 savedfp=7f1ebb0950 lr=7f36069ab0
+FRAME tid=316 fp=7f1ebb0950 savedfp=7f1ebb0980 lr=7f85d9c184
+FRAME tid=316 fp=7f1ebb0980 savedfp=7f1ebb09d0 lr=7f85d46020
+FRAME tid=316 fp=7f1ebb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/317 SeqQueueStillCa
+REGS tid=317 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1e3b0730 fp=7f1e3b0730
+FRAME tid=317 fp=7f1e3b0730 savedfp=7f1e3b0800 lr=7f8582f610
+FRAME tid=317 fp=7f1e3b0800 savedfp=7f1e3b0810 lr=7f35e55060
+FRAME tid=317 fp=7f1e3b0810 savedfp=7f1e3b08d0 lr=7f35bc0f8c
+FRAME tid=317 fp=7f1e3b08d0 savedfp=7f1e3b0950 lr=7f36069ab0
+FRAME tid=317 fp=7f1e3b0950 savedfp=7f1e3b0980 lr=7f85d9c184
+FRAME tid=317 fp=7f1e3b0980 savedfp=7f1e3b09d0 lr=7f85d46020
+FRAME tid=317 fp=7f1e3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/318 SeqQueueCreateO
+REGS tid=318 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1dbb07f0 fp=7f1dbb07f0
+FRAME tid=318 fp=7f1dbb07f0 savedfp=7f1dbb08c0 lr=7f8582f610
+FRAME tid=318 fp=7f1dbb08c0 savedfp=7f1dbb08d0 lr=7f35bc0f0c
+FRAME tid=318 fp=7f1dbb08d0 savedfp=7f1dbb0950 lr=7f36069ab0
+FRAME tid=318 fp=7f1dbb0950 savedfp=7f1dbb0980 lr=7f85d9c184
+FRAME tid=318 fp=7f1dbb0980 savedfp=7f1dbb09d0 lr=7f85d46020
+FRAME tid=318 fp=7f1dbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/319 SeqQueueMedia
+REGS tid=319 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1d3b07f0 fp=7f1d3b07f0
+FRAME tid=319 fp=7f1d3b07f0 savedfp=7f1d3b08c0 lr=7f8582f610
+FRAME tid=319 fp=7f1d3b08c0 savedfp=7f1d3b08d0 lr=7f35bc0f0c
+FRAME tid=319 fp=7f1d3b08d0 savedfp=7f1d3b0950 lr=7f36069ab0
+FRAME tid=319 fp=7f1d3b0950 savedfp=7f1d3b0980 lr=7f85d9c184
+FRAME tid=319 fp=7f1d3b0980 savedfp=7f1d3b09d0 lr=7f85d46020
+FRAME tid=319 fp=7f1d3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/320 SeqQueueAutoRev
+REGS tid=320 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1cbb07f0 fp=7f1cbb07f0
+FRAME tid=320 fp=7f1cbb07f0 savedfp=7f1cbb08c0 lr=7f8582f610
+FRAME tid=320 fp=7f1cbb08c0 savedfp=7f1cbb08d0 lr=7f35bc0f0c
+FRAME tid=320 fp=7f1cbb08d0 savedfp=7f1cbb0950 lr=7f36069ab0
+FRAME tid=320 fp=7f1cbb0950 savedfp=7f1cbb0980 lr=7f85d9c184
+FRAME tid=320 fp=7f1cbb0980 savedfp=7f1cbb09d0 lr=7f85d46020
+FRAME tid=320 fp=7f1cbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/321 SeqQueueNetwork
+REGS tid=321 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1c3b07f0 fp=7f1c3b07f0
+FRAME tid=321 fp=7f1c3b07f0 savedfp=7f1c3b08c0 lr=7f8582f610
+FRAME tid=321 fp=7f1c3b08c0 savedfp=7f1c3b08d0 lr=7f35bc0f0c
+FRAME tid=321 fp=7f1c3b08d0 savedfp=7f1c3b0950 lr=7f36069ab0
+FRAME tid=321 fp=7f1c3b0950 savedfp=7f1c3b0980 lr=7f85d9c184
+FRAME tid=321 fp=7f1c3b0980 savedfp=7f1c3b09d0 lr=7f85d46020
+FRAME tid=321 fp=7f1c3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/322 SeqQueueNetwork
+REGS tid=322 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1bbb07f0 fp=7f1bbb07f0
+FRAME tid=322 fp=7f1bbb07f0 savedfp=7f1bbb08c0 lr=7f8582f610
+FRAME tid=322 fp=7f1bbb08c0 savedfp=7f1bbb08d0 lr=7f35bc0f0c
+FRAME tid=322 fp=7f1bbb08d0 savedfp=7f1bbb0950 lr=7f36069ab0
+FRAME tid=322 fp=7f1bbb0950 savedfp=7f1bbb0980 lr=7f85d9c184
+FRAME tid=322 fp=7f1bbb0980 savedfp=7f1bbb09d0 lr=7f85d46020
+FRAME tid=322 fp=7f1bbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/323 SeqQueueNetwork
+REGS tid=323 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1b3b07f0 fp=7f1b3b07f0
+FRAME tid=323 fp=7f1b3b07f0 savedfp=7f1b3b08c0 lr=7f8582f610
+FRAME tid=323 fp=7f1b3b08c0 savedfp=7f1b3b08d0 lr=7f35bc0f0c
+FRAME tid=323 fp=7f1b3b08d0 savedfp=7f1b3b0950 lr=7f36069ab0
+FRAME tid=323 fp=7f1b3b0950 savedfp=7f1b3b0980 lr=7f85d9c184
+FRAME tid=323 fp=7f1b3b0980 savedfp=7f1b3b09d0 lr=7f85d46020
+FRAME tid=323 fp=7f1b3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/324 SeqQueueNetwork
+REGS tid=324 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1abb07f0 fp=7f1abb07f0
+FRAME tid=324 fp=7f1abb07f0 savedfp=7f1abb08c0 lr=7f8582f610
+FRAME tid=324 fp=7f1abb08c0 savedfp=7f1abb08d0 lr=7f35bc0f0c
+FRAME tid=324 fp=7f1abb08d0 savedfp=7f1abb0950 lr=7f36069ab0
+FRAME tid=324 fp=7f1abb0950 savedfp=7f1abb0980 lr=7f85d9c184
+FRAME tid=324 fp=7f1abb0980 savedfp=7f1abb09d0 lr=7f85d46020
+FRAME tid=324 fp=7f1abb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/325 SeqQueueFtpTran
+REGS tid=325 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f1a3ae6f0 fp=7f1a3ae6f0
+FRAME tid=325 fp=7f1a3ae6f0 savedfp=7f1a3ae7c0 lr=7f8582f610
+FRAME tid=325 fp=7f1a3ae7c0 savedfp=7f1a3ae7d0 lr=7f35ab5890
+FRAME tid=325 fp=7f1a3ae7d0 savedfp=7f1a3ae840 lr=7f35abaae8
+FRAME tid=325 fp=7f1a3ae840 savedfp=7f1a3b08d0 lr=7f35bc0f8c
+FRAME tid=325 fp=7f1a3b08d0 savedfp=7f1a3b0950 lr=7f36069ab0
+FRAME tid=325 fp=7f1a3b0950 savedfp=7f1a3b0980 lr=7f85d9c184
+FRAME tid=325 fp=7f1a3b0980 savedfp=7f1a3b09d0 lr=7f85d46020
+FRAME tid=325 fp=7f1a3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/326 SeqQueueSelfTim
+REGS tid=326 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f19bb07f0 fp=7f19bb07f0
+FRAME tid=326 fp=7f19bb07f0 savedfp=7f19bb08c0 lr=7f8582f610
+FRAME tid=326 fp=7f19bb08c0 savedfp=7f19bb08d0 lr=7f35bc0f0c
+FRAME tid=326 fp=7f19bb08d0 savedfp=7f19bb0950 lr=7f36069ab0
+FRAME tid=326 fp=7f19bb0950 savedfp=7f19bb0980 lr=7f85d9c184
+FRAME tid=326 fp=7f19bb0980 savedfp=7f19bb09d0 lr=7f85d46020
+FRAME tid=326 fp=7f19bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/327 SeqQueueFaceReg
+REGS tid=327 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f193b07f0 fp=7f193b07f0
+FRAME tid=327 fp=7f193b07f0 savedfp=7f193b08c0 lr=7f8582f610
+FRAME tid=327 fp=7f193b08c0 savedfp=7f193b08d0 lr=7f35bc0f0c
+FRAME tid=327 fp=7f193b08d0 savedfp=7f193b0950 lr=7f36069ab0
+FRAME tid=327 fp=7f193b0950 savedfp=7f193b0980 lr=7f85d9c184
+FRAME tid=327 fp=7f193b0980 savedfp=7f193b09d0 lr=7f85d46020
+FRAME tid=327 fp=7f193b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/328 SeqQueueGetCurr
+REGS tid=328 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f18bb07f0 fp=7f18bb07f0
+FRAME tid=328 fp=7f18bb07f0 savedfp=7f18bb08c0 lr=7f8582f610
+FRAME tid=328 fp=7f18bb08c0 savedfp=7f18bb08d0 lr=7f35bc0f0c
+FRAME tid=328 fp=7f18bb08d0 savedfp=7f18bb0950 lr=7f36069ab0
+FRAME tid=328 fp=7f18bb0950 savedfp=7f18bb0980 lr=7f85d9c184
+FRAME tid=328 fp=7f18bb0980 savedfp=7f18bb09d0 lr=7f85d46020
+FRAME tid=328 fp=7f18bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/329 SeqQueueHdmiCon
+REGS tid=329 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f183b07f0 fp=7f183b07f0
+FRAME tid=329 fp=7f183b07f0 savedfp=7f183b08c0 lr=7f8582f610
+FRAME tid=329 fp=7f183b08c0 savedfp=7f183b08d0 lr=7f35bc0f0c
+FRAME tid=329 fp=7f183b08d0 savedfp=7f183b0950 lr=7f36069ab0
+FRAME tid=329 fp=7f183b0950 savedfp=7f183b0980 lr=7f85d9c184
+FRAME tid=329 fp=7f183b0980 savedfp=7f183b09d0 lr=7f85d46020
+FRAME tid=329 fp=7f183b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/330 SeqQueueVgaCach
+REGS tid=330 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f17bb07f0 fp=7f17bb07f0
+FRAME tid=330 fp=7f17bb07f0 savedfp=7f17bb08c0 lr=7f8582f610
+FRAME tid=330 fp=7f17bb08c0 savedfp=7f17bb08d0 lr=7f35bc0f0c
+FRAME tid=330 fp=7f17bb08d0 savedfp=7f17bb0950 lr=7f36069ab0
+FRAME tid=330 fp=7f17bb0950 savedfp=7f17bb0980 lr=7f85d9c184
+FRAME tid=330 fp=7f17bb0980 savedfp=7f17bb09d0 lr=7f85d46020
+FRAME tid=330 fp=7f17bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/331 SeqQueueDispSwi
+STORAGE_PROBE_THREAD /proc/194/task/332 SeqQueueSetYuvO
+REGS tid=332 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f16bb07f0 fp=7f16bb07f0
+FRAME tid=332 fp=7f16bb07f0 savedfp=7f16bb08c0 lr=7f8582f610
+FRAME tid=332 fp=7f16bb08c0 savedfp=7f16bb08d0 lr=7f35bc0f0c
+FRAME tid=332 fp=7f16bb08d0 savedfp=7f16bb0950 lr=7f36069ab0
+FRAME tid=332 fp=7f16bb0950 savedfp=7f16bb0980 lr=7f85d9c184
+FRAME tid=332 fp=7f16bb0980 savedfp=7f16bb09d0 lr=7f85d46020
+FRAME tid=332 fp=7f16bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/333 SeqQueueBackgro
+REGS tid=333 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f163b07f0 fp=7f163b07f0
+FRAME tid=333 fp=7f163b07f0 savedfp=7f163b08c0 lr=7f8582f610
+FRAME tid=333 fp=7f163b08c0 savedfp=7f163b08d0 lr=7f35bc0f0c
+FRAME tid=333 fp=7f163b08d0 savedfp=7f163b0950 lr=7f36069ab0
+FRAME tid=333 fp=7f163b0950 savedfp=7f163b0980 lr=7f85d9c184
+FRAME tid=333 fp=7f163b0980 savedfp=7f163b09d0 lr=7f85d46020
+FRAME tid=333 fp=7f163b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/334 SeqQueueBackgro
+REGS tid=334 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f15bb07f0 fp=7f15bb07f0
+FRAME tid=334 fp=7f15bb07f0 savedfp=7f15bb08c0 lr=7f8582f610
+FRAME tid=334 fp=7f15bb08c0 savedfp=7f15bb08d0 lr=7f35bc0f0c
+FRAME tid=334 fp=7f15bb08d0 savedfp=7f15bb0950 lr=7f36069ab0
+FRAME tid=334 fp=7f15bb0950 savedfp=7f15bb0980 lr=7f85d9c184
+FRAME tid=334 fp=7f15bb0980 savedfp=7f15bb09d0 lr=7f85d46020
+FRAME tid=334 fp=7f15bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/335 SeqQueueApo
+REGS tid=335 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f153b07f0 fp=7f153b07f0
+FRAME tid=335 fp=7f153b07f0 savedfp=7f153b08c0 lr=7f8582f610
+FRAME tid=335 fp=7f153b08c0 savedfp=7f153b08d0 lr=7f35bc0f0c
+FRAME tid=335 fp=7f153b08d0 savedfp=7f153b0950 lr=7f36069ab0
+FRAME tid=335 fp=7f153b0950 savedfp=7f153b0980 lr=7f85d9c184
+FRAME tid=335 fp=7f153b0980 savedfp=7f153b09d0 lr=7f85d46020
+FRAME tid=335 fp=7f153b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/336 SeqQueueZoomDri
+REGS tid=336 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f14bb07f0 fp=7f14bb07f0
+FRAME tid=336 fp=7f14bb07f0 savedfp=7f14bb08c0 lr=7f8582f610
+FRAME tid=336 fp=7f14bb08c0 savedfp=7f14bb08d0 lr=7f35bc0f0c
+FRAME tid=336 fp=7f14bb08d0 savedfp=7f14bb0950 lr=7f36069ab0
+FRAME tid=336 fp=7f14bb0950 savedfp=7f14bb0980 lr=7f85d9c184
+FRAME tid=336 fp=7f14bb0980 savedfp=7f14bb09d0 lr=7f85d46020
+FRAME tid=336 fp=7f14bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/337 SeqQueueGetStil
+REGS tid=337 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f143b07f0 fp=7f143b07f0
+FRAME tid=337 fp=7f143b07f0 savedfp=7f143b08c0 lr=7f8582f610
+FRAME tid=337 fp=7f143b08c0 savedfp=7f143b08d0 lr=7f35bc0f0c
+FRAME tid=337 fp=7f143b08d0 savedfp=7f143b0950 lr=7f36069ab0
+FRAME tid=337 fp=7f143b0950 savedfp=7f143b0980 lr=7f85d9c184
+FRAME tid=337 fp=7f143b0980 savedfp=7f143b09d0 lr=7f85d46020
+FRAME tid=337 fp=7f143b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/338 SeqQueueGetAudi
+REGS tid=338 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f13bb07f0 fp=7f13bb07f0
+FRAME tid=338 fp=7f13bb07f0 savedfp=7f13bb08c0 lr=7f8582f610
+FRAME tid=338 fp=7f13bb08c0 savedfp=7f13bb08d0 lr=7f35bc0f0c
+FRAME tid=338 fp=7f13bb08d0 savedfp=7f13bb0950 lr=7f36069ab0
+FRAME tid=338 fp=7f13bb0950 savedfp=7f13bb0980 lr=7f85d9c184
+FRAME tid=338 fp=7f13bb0980 savedfp=7f13bb09d0 lr=7f85d46020
+FRAME tid=338 fp=7f13bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/339 SeqQueueGetMicD
+REGS tid=339 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f133b07f0 fp=7f133b07f0
+FRAME tid=339 fp=7f133b07f0 savedfp=7f133b08c0 lr=7f8582f610
+FRAME tid=339 fp=7f133b08c0 savedfp=7f133b08d0 lr=7f35bc0f0c
+FRAME tid=339 fp=7f133b08d0 savedfp=7f133b0950 lr=7f36069ab0
+FRAME tid=339 fp=7f133b0950 savedfp=7f133b0980 lr=7f85d9c184
+FRAME tid=339 fp=7f133b0980 savedfp=7f133b09d0 lr=7f85d46020
+FRAME tid=339 fp=7f133b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/340 SeqQueueRsrcAcs
+REGS tid=340 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f12bb07f0 fp=7f12bb07f0
+FRAME tid=340 fp=7f12bb07f0 savedfp=7f12bb08c0 lr=7f8582f610
+FRAME tid=340 fp=7f12bb08c0 savedfp=7f12bb08d0 lr=7f35bc0f0c
+FRAME tid=340 fp=7f12bb08d0 savedfp=7f12bb0950 lr=7f36069ab0
+FRAME tid=340 fp=7f12bb0950 savedfp=7f12bb0980 lr=7f85d9c184
+FRAME tid=340 fp=7f12bb0980 savedfp=7f12bb09d0 lr=7f85d46020
+FRAME tid=340 fp=7f12bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/341 SeqQueueHttpReq
+REGS tid=341 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f123b07f0 fp=7f123b07f0
+FRAME tid=341 fp=7f123b07f0 savedfp=7f123b08c0 lr=7f8582f610
+FRAME tid=341 fp=7f123b08c0 savedfp=7f123b08d0 lr=7f35bc0f0c
+FRAME tid=341 fp=7f123b08d0 savedfp=7f123b0950 lr=7f36069ab0
+FRAME tid=341 fp=7f123b0950 savedfp=7f123b0980 lr=7f85d9c184
+FRAME tid=341 fp=7f123b0980 savedfp=7f123b09d0 lr=7f85d46020
+FRAME tid=341 fp=7f123b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/342 SeqQueueInterce
+REGS tid=342 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f11bb07f0 fp=7f11bb07f0
+FRAME tid=342 fp=7f11bb07f0 savedfp=7f11bb08c0 lr=7f8582f610
+FRAME tid=342 fp=7f11bb08c0 savedfp=7f11bb08d0 lr=7f35bc0f0c
+FRAME tid=342 fp=7f11bb08d0 savedfp=7f11bb0950 lr=7f36069ab0
+FRAME tid=342 fp=7f11bb0950 savedfp=7f11bb0980 lr=7f85d9c184
+FRAME tid=342 fp=7f11bb0980 savedfp=7f11bb09d0 lr=7f85d46020
+FRAME tid=342 fp=7f11bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/343 SeqQueueGetVers
+REGS tid=343 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f113b07f0 fp=7f113b07f0
+FRAME tid=343 fp=7f113b07f0 savedfp=7f113b08c0 lr=7f8582f610
+FRAME tid=343 fp=7f113b08c0 savedfp=7f113b08d0 lr=7f35bc0f0c
+FRAME tid=343 fp=7f113b08d0 savedfp=7f113b0950 lr=7f36069ab0
+FRAME tid=343 fp=7f113b0950 savedfp=7f113b0980 lr=7f85d9c184
+FRAME tid=343 fp=7f113b0980 savedfp=7f113b09d0 lr=7f85d46020
+FRAME tid=343 fp=7f113b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/344 SeqQueueAprCanc
+REGS tid=344 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f10bb07f0 fp=7f10bb07f0
+FRAME tid=344 fp=7f10bb07f0 savedfp=7f10bb08c0 lr=7f8582f610
+FRAME tid=344 fp=7f10bb08c0 savedfp=7f10bb08d0 lr=7f35bc0f0c
+FRAME tid=344 fp=7f10bb08d0 savedfp=7f10bb0950 lr=7f36069ab0
+FRAME tid=344 fp=7f10bb0950 savedfp=7f10bb0980 lr=7f85d9c184
+FRAME tid=344 fp=7f10bb0980 savedfp=7f10bb09d0 lr=7f85d46020
+FRAME tid=344 fp=7f10bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/345 SeqQueueReadCod
+REGS tid=345 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f103b07f0 fp=7f103b07f0
+FRAME tid=345 fp=7f103b07f0 savedfp=7f103b08c0 lr=7f8582f610
+FRAME tid=345 fp=7f103b08c0 savedfp=7f103b08d0 lr=7f35bc0f0c
+FRAME tid=345 fp=7f103b08d0 savedfp=7f103b0950 lr=7f36069ab0
+FRAME tid=345 fp=7f103b0950 savedfp=7f103b0980 lr=7f85d9c184
+FRAME tid=345 fp=7f103b0980 savedfp=7f103b09d0 lr=7f85d46020
+FRAME tid=345 fp=7f103b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/346 SeqQueuePtpOper
+REGS tid=346 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0fbb07f0 fp=7f0fbb07f0
+FRAME tid=346 fp=7f0fbb07f0 savedfp=7f0fbb08c0 lr=7f8582f610
+FRAME tid=346 fp=7f0fbb08c0 savedfp=7f0fbb08d0 lr=7f35bc0f0c
+FRAME tid=346 fp=7f0fbb08d0 savedfp=7f0fbb0950 lr=7f36069ab0
+FRAME tid=346 fp=7f0fbb0950 savedfp=7f0fbb0980 lr=7f85d9c184
+FRAME tid=346 fp=7f0fbb0980 savedfp=7f0fbb09d0 lr=7f85d46020
+FRAME tid=346 fp=7f0fbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/347 SeqQueuePtpGetL
+REGS tid=347 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0f3b07f0 fp=7f0f3b07f0
+FRAME tid=347 fp=7f0f3b07f0 savedfp=7f0f3b08c0 lr=7f8582f610
+FRAME tid=347 fp=7f0f3b08c0 savedfp=7f0f3b08d0 lr=7f35bc0f0c
+FRAME tid=347 fp=7f0f3b08d0 savedfp=7f0f3b0950 lr=7f36069ab0
+FRAME tid=347 fp=7f0f3b0950 savedfp=7f0f3b0980 lr=7f85d9c184
+FRAME tid=347 fp=7f0f3b0980 savedfp=7f0f3b09d0 lr=7f85d46020
+FRAME tid=347 fp=7f0f3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/348 SeqQueueLogDump
+REGS tid=348 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0ebb07f0 fp=7f0ebb07f0
+FRAME tid=348 fp=7f0ebb07f0 savedfp=7f0ebb08c0 lr=7f8582f610
+FRAME tid=348 fp=7f0ebb08c0 savedfp=7f0ebb08d0 lr=7f35bc0f0c
+FRAME tid=348 fp=7f0ebb08d0 savedfp=7f0ebb0950 lr=7f36069ab0
+FRAME tid=348 fp=7f0ebb0950 savedfp=7f0ebb0980 lr=7f85d9c184
+FRAME tid=348 fp=7f0ebb0980 savedfp=7f0ebb09d0 lr=7f85d46020
+FRAME tid=348 fp=7f0ebb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/349 SeqQueueCPAppMe
+REGS tid=349 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0e3b07f0 fp=7f0e3b07f0
+FRAME tid=349 fp=7f0e3b07f0 savedfp=7f0e3b08c0 lr=7f8582f610
+FRAME tid=349 fp=7f0e3b08c0 savedfp=7f0e3b08d0 lr=7f35bc0f0c
+FRAME tid=349 fp=7f0e3b08d0 savedfp=7f0e3b0950 lr=7f36069ab0
+FRAME tid=349 fp=7f0e3b0950 savedfp=7f0e3b0980 lr=7f85d9c184
+FRAME tid=349 fp=7f0e3b0980 savedfp=7f0e3b09d0 lr=7f85d46020
+FRAME tid=349 fp=7f0e3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/350 SeqQueueGenlock
+REGS tid=350 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0dbb07f0 fp=7f0dbb07f0
+FRAME tid=350 fp=7f0dbb07f0 savedfp=7f0dbb08c0 lr=7f8582f610
+FRAME tid=350 fp=7f0dbb08c0 savedfp=7f0dbb08d0 lr=7f35bc0f0c
+FRAME tid=350 fp=7f0dbb08d0 savedfp=7f0dbb0950 lr=7f36069ab0
+FRAME tid=350 fp=7f0dbb0950 savedfp=7f0dbb0980 lr=7f85d9c184
+FRAME tid=350 fp=7f0dbb0980 savedfp=7f0dbb09d0 lr=7f85d46020
+FRAME tid=350 fp=7f0dbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/351 SeqQueueBluetoo
+REGS tid=351 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0d3b07f0 fp=7f0d3b07f0
+FRAME tid=351 fp=7f0d3b07f0 savedfp=7f0d3b08c0 lr=7f8582f610
+FRAME tid=351 fp=7f0d3b08c0 savedfp=7f0d3b08d0 lr=7f35bc0f0c
+FRAME tid=351 fp=7f0d3b08d0 savedfp=7f0d3b0950 lr=7f36069ab0
+FRAME tid=351 fp=7f0d3b0950 savedfp=7f0d3b0980 lr=7f85d9c184
+FRAME tid=351 fp=7f0d3b0980 savedfp=7f0d3b09d0 lr=7f85d46020
+FRAME tid=351 fp=7f0d3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/352 SeqQueueWaitSeq
+REGS tid=352 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0cbb07f0 fp=7f0cbb07f0
+FRAME tid=352 fp=7f0cbb07f0 savedfp=7f0cbb08c0 lr=7f8582f610
+FRAME tid=352 fp=7f0cbb08c0 savedfp=7f0cbb08d0 lr=7f35bc0f0c
+FRAME tid=352 fp=7f0cbb08d0 savedfp=7f0cbb0950 lr=7f36069ab0
+FRAME tid=352 fp=7f0cbb0950 savedfp=7f0cbb0980 lr=7f85d9c184
+FRAME tid=352 fp=7f0cbb0980 savedfp=7f0cbb09d0 lr=7f85d46020
+FRAME tid=352 fp=7f0cbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/353 SeqQueueCloudSe
+REGS tid=353 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0c3b07f0 fp=7f0c3b07f0
+FRAME tid=353 fp=7f0c3b07f0 savedfp=7f0c3b08c0 lr=7f8582f610
+FRAME tid=353 fp=7f0c3b08c0 savedfp=7f0c3b08d0 lr=7f35bc0f0c
+FRAME tid=353 fp=7f0c3b08d0 savedfp=7f0c3b0950 lr=7f36069ab0
+FRAME tid=353 fp=7f0c3b0950 savedfp=7f0c3b0980 lr=7f85d9c184
+FRAME tid=353 fp=7f0c3b0980 savedfp=7f0c3b09d0 lr=7f85d46020
+FRAME tid=353 fp=7f0c3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/354 SeqQueueGetLice
+REGS tid=354 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0bbb07f0 fp=7f0bbb07f0
+FRAME tid=354 fp=7f0bbb07f0 savedfp=7f0bbb08c0 lr=7f8582f610
+FRAME tid=354 fp=7f0bbb08c0 savedfp=7f0bbb08d0 lr=7f35bc0f0c
+FRAME tid=354 fp=7f0bbb08d0 savedfp=7f0bbb0950 lr=7f36069ab0
+FRAME tid=354 fp=7f0bbb0950 savedfp=7f0bbb0980 lr=7f85d9c184
+FRAME tid=354 fp=7f0bbb0980 savedfp=7f0bbb09d0 lr=7f85d46020
+FRAME tid=354 fp=7f0bbb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/355 SeqQueueFilesLi
+REGS tid=355 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0b3b07f0 fp=7f0b3b07f0
+FRAME tid=355 fp=7f0b3b07f0 savedfp=7f0b3b08c0 lr=7f8582f610
+FRAME tid=355 fp=7f0b3b08c0 savedfp=7f0b3b08d0 lr=7f35bc0f0c
+FRAME tid=355 fp=7f0b3b08d0 savedfp=7f0b3b0950 lr=7f36069ab0
+FRAME tid=355 fp=7f0b3b0950 savedfp=7f0b3b0980 lr=7f85d9c184
+FRAME tid=355 fp=7f0b3b0980 savedfp=7f0b3b09d0 lr=7f85d46020
+FRAME tid=355 fp=7f0b3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/356 SeqQueueFocusMa
+REGS tid=356 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0abb07f0 fp=7f0abb07f0
+FRAME tid=356 fp=7f0abb07f0 savedfp=7f0abb08c0 lr=7f8582f610
+FRAME tid=356 fp=7f0abb08c0 savedfp=7f0abb08d0 lr=7f35bc0f0c
+FRAME tid=356 fp=7f0abb08d0 savedfp=7f0abb0950 lr=7f36069ab0
+FRAME tid=356 fp=7f0abb0950 savedfp=7f0abb0980 lr=7f85d9c184
+FRAME tid=356 fp=7f0abb0980 savedfp=7f0abb09d0 lr=7f85d46020
+FRAME tid=356 fp=7f0abb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/357 SeqQueueNotifyE
+REGS tid=357 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f0a3b07f0 fp=7f0a3b07f0
+FRAME tid=357 fp=7f0a3b07f0 savedfp=7f0a3b08c0 lr=7f8582f610
+FRAME tid=357 fp=7f0a3b08c0 savedfp=7f0a3b08d0 lr=7f35bc0f0c
+FRAME tid=357 fp=7f0a3b08d0 savedfp=7f0a3b0950 lr=7f36069ab0
+FRAME tid=357 fp=7f0a3b0950 savedfp=7f0a3b0980 lr=7f85d9c184
+FRAME tid=357 fp=7f0a3b0980 savedfp=7f0a3b09d0 lr=7f85d46020
+FRAME tid=357 fp=7f0a3b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/358 MPR CodecWrappe
+REGS tid=358 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f09bb07a0 fp=7f09bb07a0
+FRAME tid=358 fp=7f09bb07a0 savedfp=7f09bb0870 lr=7f3c482ed0
+FRAME tid=358 fp=7f09bb0870 savedfp=7f09bb0900 lr=7f3c482fb0
+FRAME tid=358 fp=7f09bb0900 savedfp=7f09bb0980 lr=7f85d9c184
+FRAME tid=358 fp=7f09bb0980 savedfp=7f09bb09d0 lr=7f85d46020
+FRAME tid=358 fp=7f09bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/359 MPR filequeue
+REGS tid=359 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f093b0820 fp=7f093b0820
+FRAME tid=359 fp=7f093b0820 savedfp=7f093b08f0 lr=7f3c2944d4
+FRAME tid=359 fp=7f093b08f0 savedfp=7f093b0980 lr=7f85d9c184
+FRAME tid=359 fp=7f093b0980 savedfp=7f093b09d0 lr=7f85d46020
+FRAME tid=359 fp=7f093b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/360 MPR filequeue
+REGS tid=360 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f08bb0820 fp=7f08bb0820
+FRAME tid=360 fp=7f08bb0820 savedfp=7f08bb08f0 lr=7f3c2944d4
+FRAME tid=360 fp=7f08bb08f0 savedfp=7f08bb0980 lr=7f85d9c184
+FRAME tid=360 fp=7f08bb0980 savedfp=7f08bb09d0 lr=7f85d46020
+FRAME tid=360 fp=7f08bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/361 MPR filequeue
+REGS tid=361 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f083b0820 fp=7f083b0820
+FRAME tid=361 fp=7f083b0820 savedfp=7f083b08f0 lr=7f3c2944d4
+FRAME tid=361 fp=7f083b08f0 savedfp=7f083b0980 lr=7f85d9c184
+FRAME tid=361 fp=7f083b0980 savedfp=7f083b09d0 lr=7f85d46020
+FRAME tid=361 fp=7f083b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/362 MPR filequeue
+REGS tid=362 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f07bb0820 fp=7f07bb0820
+FRAME tid=362 fp=7f07bb0820 savedfp=7f07bb08f0 lr=7f3c2944d4
+FRAME tid=362 fp=7f07bb08f0 savedfp=7f07bb0980 lr=7f85d9c184
+FRAME tid=362 fp=7f07bb0980 savedfp=7f07bb09d0 lr=7f85d46020
+FRAME tid=362 fp=7f07bb09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/363 MPR Priority fi
+REGS tid=363 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7f073b0820 fp=7f073b0820
+FRAME tid=363 fp=7f073b0820 savedfp=7f073b08f0 lr=7f3c2944d4
+FRAME tid=363 fp=7f073b08f0 savedfp=7f073b0980 lr=7f85d9c184
+FRAME tid=363 fp=7f073b0980 savedfp=7f073b09d0 lr=7f85d46020
+FRAME tid=363 fp=7f073b09d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/364 MPR IntegRecSti
+REGS tid=364 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e2ab34870 fp=7e2ab34870
+FRAME tid=364 fp=7e2ab34870 savedfp=7e2ab34940 lr=7f3c2ed39c
+FRAME tid=364 fp=7e2ab34940 savedfp=7e2ab34980 lr=7f85d9c184
+FRAME tid=364 fp=7e2ab34980 savedfp=7e2ab349d0 lr=7f85d46020
+FRAME tid=364 fp=7e2ab349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/365 MPR FINALIZE ST
+REGS tid=365 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e2a3347f0 fp=7e2a3347f0
+FRAME tid=365 fp=7e2a3347f0 savedfp=7e2a3348c0 lr=7f3c2937b0
+FRAME tid=365 fp=7e2a3348c0 savedfp=7e2a334980 lr=7f85d9c184
+FRAME tid=365 fp=7e2a334980 savedfp=7e2a3349d0 lr=7f85d46020
+FRAME tid=365 fp=7e2a3349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/366 MPR FINALIZE ST
+REGS tid=366 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e29b347f0 fp=7e29b347f0
+FRAME tid=366 fp=7e29b347f0 savedfp=7e29b348c0 lr=7f3c2937b0
+FRAME tid=366 fp=7e29b348c0 savedfp=7e29b34980 lr=7f85d9c184
+FRAME tid=366 fp=7e29b34980 savedfp=7e29b349d0 lr=7f85d46020
+FRAME tid=366 fp=7e29b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/367 MPR FINALIZE ST
+REGS tid=367 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e293347f0 fp=7e293347f0
+FRAME tid=367 fp=7e293347f0 savedfp=7e293348c0 lr=7f3c2937b0
+FRAME tid=367 fp=7e293348c0 savedfp=7e29334980 lr=7f85d9c184
+FRAME tid=367 fp=7e29334980 savedfp=7e293349d0 lr=7f85d46020
+FRAME tid=367 fp=7e293349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/368 MPR FINALIZE ST
+REGS tid=368 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e28b347f0 fp=7e28b347f0
+FRAME tid=368 fp=7e28b347f0 savedfp=7e28b348c0 lr=7f3c2937b0
+FRAME tid=368 fp=7e28b348c0 savedfp=7e28b34980 lr=7f85d9c184
+FRAME tid=368 fp=7e28b34980 savedfp=7e28b349d0 lr=7f85d46020
+FRAME tid=368 fp=7e28b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/369 MPR FINALIZE ST
+REGS tid=369 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e283347f0 fp=7e283347f0
+FRAME tid=369 fp=7e283347f0 savedfp=7e283348c0 lr=7f3c2937b0
+FRAME tid=369 fp=7e283348c0 savedfp=7e28334980 lr=7f85d9c184
+FRAME tid=369 fp=7e28334980 savedfp=7e283349d0 lr=7f85d46020
+FRAME tid=369 fp=7e283349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/370 MPR FINALIZE ST
+REGS tid=370 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e27b347f0 fp=7e27b347f0
+FRAME tid=370 fp=7e27b347f0 savedfp=7e27b348c0 lr=7f3c2937b0
+FRAME tid=370 fp=7e27b348c0 savedfp=7e27b34980 lr=7f85d9c184
+FRAME tid=370 fp=7e27b34980 savedfp=7e27b349d0 lr=7f85d46020
+FRAME tid=370 fp=7e27b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/371 MPR FINALIZE ST
+REGS tid=371 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e273347f0 fp=7e273347f0
+FRAME tid=371 fp=7e273347f0 savedfp=7e273348c0 lr=7f3c2937b0
+FRAME tid=371 fp=7e273348c0 savedfp=7e27334980 lr=7f85d9c184
+FRAME tid=371 fp=7e27334980 savedfp=7e273349d0 lr=7f85d46020
+FRAME tid=371 fp=7e273349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/372 MPR FINALIZE ST
+REGS tid=372 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e26b347f0 fp=7e26b347f0
+FRAME tid=372 fp=7e26b347f0 savedfp=7e26b348c0 lr=7f3c2937b0
+FRAME tid=372 fp=7e26b348c0 savedfp=7e26b34980 lr=7f85d9c184
+FRAME tid=372 fp=7e26b34980 savedfp=7e26b349d0 lr=7f85d46020
+FRAME tid=372 fp=7e26b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/373 MPR FINALIZE ST
+REGS tid=373 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e263347f0 fp=7e263347f0
+FRAME tid=373 fp=7e263347f0 savedfp=7e263348c0 lr=7f3c2937b0
+FRAME tid=373 fp=7e263348c0 savedfp=7e26334980 lr=7f85d9c184
+FRAME tid=373 fp=7e26334980 savedfp=7e263349d0 lr=7f85d46020
+FRAME tid=373 fp=7e263349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/374 MPR FINALIZE ST
+REGS tid=374 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e25b347f0 fp=7e25b347f0
+FRAME tid=374 fp=7e25b347f0 savedfp=7e25b348c0 lr=7f3c2937b0
+FRAME tid=374 fp=7e25b348c0 savedfp=7e25b34980 lr=7f85d9c184
+FRAME tid=374 fp=7e25b34980 savedfp=7e25b349d0 lr=7f85d46020
+FRAME tid=374 fp=7e25b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/375 MPR FINALIZE ST
+REGS tid=375 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e253347f0 fp=7e253347f0
+FRAME tid=375 fp=7e253347f0 savedfp=7e253348c0 lr=7f3c2937b0
+FRAME tid=375 fp=7e253348c0 savedfp=7e25334980 lr=7f85d9c184
+FRAME tid=375 fp=7e25334980 savedfp=7e253349d0 lr=7f85d46020
+FRAME tid=375 fp=7e253349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/376 MPR FINALIZE ST
+REGS tid=376 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e24b347f0 fp=7e24b347f0
+FRAME tid=376 fp=7e24b347f0 savedfp=7e24b348c0 lr=7f3c2937b0
+FRAME tid=376 fp=7e24b348c0 savedfp=7e24b34980 lr=7f85d9c184
+FRAME tid=376 fp=7e24b34980 savedfp=7e24b349d0 lr=7f85d46020
+FRAME tid=376 fp=7e24b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/377 SIG AND HASH CP
+REGS tid=377 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e243347f0 fp=7e243347f0
+FRAME tid=377 fp=7e243347f0 savedfp=7e243348c0 lr=7f3c2937b0
+FRAME tid=377 fp=7e243348c0 savedfp=7e24334980 lr=7f85d9c184
+FRAME tid=377 fp=7e24334980 savedfp=7e243349d0 lr=7f85d46020
+FRAME tid=377 fp=7e243349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/378 SIG AND HASH CP
+REGS tid=378 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e23b347f0 fp=7e23b347f0
+FRAME tid=378 fp=7e23b347f0 savedfp=7e23b348c0 lr=7f3c2937b0
+FRAME tid=378 fp=7e23b348c0 savedfp=7e23b34980 lr=7f85d9c184
+FRAME tid=378 fp=7e23b34980 savedfp=7e23b349d0 lr=7f85d46020
+FRAME tid=378 fp=7e23b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/379 SIG AND HASH CP
+REGS tid=379 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e233347f0 fp=7e233347f0
+FRAME tid=379 fp=7e233347f0 savedfp=7e233348c0 lr=7f3c2937b0
+FRAME tid=379 fp=7e233348c0 savedfp=7e23334980 lr=7f85d9c184
+FRAME tid=379 fp=7e23334980 savedfp=7e233349d0 lr=7f85d46020
+FRAME tid=379 fp=7e233349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/380 SIG AND HASH SA
+REGS tid=380 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e22b347f0 fp=7e22b347f0
+FRAME tid=380 fp=7e22b347f0 savedfp=7e22b348c0 lr=7f3c2937b0
+FRAME tid=380 fp=7e22b348c0 savedfp=7e22b34980 lr=7f85d9c184
+FRAME tid=380 fp=7e22b34980 savedfp=7e22b349d0 lr=7f85d46020
+FRAME tid=380 fp=7e22b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/381 SIG AND HASH SA
+REGS tid=381 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e223347f0 fp=7e223347f0
+FRAME tid=381 fp=7e223347f0 savedfp=7e223348c0 lr=7f3c2937b0
+FRAME tid=381 fp=7e223348c0 savedfp=7e22334980 lr=7f85d9c184
+FRAME tid=381 fp=7e22334980 savedfp=7e223349d0 lr=7f85d46020
+FRAME tid=381 fp=7e223349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/382 WRITE AND TRANS
+REGS tid=382 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e21b34870 fp=7e21b34870
+FRAME tid=382 fp=7e21b34870 savedfp=7e21b34940 lr=7f3c2ed490
+FRAME tid=382 fp=7e21b34940 savedfp=7e21b34980 lr=7f85d9c184
+FRAME tid=382 fp=7e21b34980 savedfp=7e21b349d0 lr=7f85d46020
+FRAME tid=382 fp=7e21b349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/383 AsyncDcfFileWri
+REGS tid=383 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e21334870 fp=7e21334870
+FRAME tid=383 fp=7e21334870 savedfp=7e21334940 lr=7f3c2ed584
+FRAME tid=383 fp=7e21334940 savedfp=7e21334980 lr=7f85d9c184
+FRAME tid=383 fp=7e21334980 savedfp=7e213349d0 lr=7f85d46020
+FRAME tid=383 fp=7e213349d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/384 MPR MovWriter
+REGS tid=384 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e20ae2eb0 fp=7e20ae2eb0
+FRAME tid=384 fp=7e20ae2eb0 savedfp=7e20ae2f80 lr=7f3c319ac8
+FRAME tid=384 fp=7e20ae2f80 savedfp=7e20ae2fe0 lr=7f3c31f0dc
+FRAME tid=384 fp=7e20ae2fe0 savedfp=7e20ae4930 lr=7f3c322ccc
+FRAME tid=384 fp=7e20ae4930 savedfp=7e20ae4980 lr=7f85d9c184
+FRAME tid=384 fp=7e20ae4980 savedfp=7e20ae49d0 lr=7f85d46020
+FRAME tid=384 fp=7e20ae49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/385 MPR MovWriter
+REGS tid=385 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e20292eb0 fp=7e20292eb0
+FRAME tid=385 fp=7e20292eb0 savedfp=7e20292f80 lr=7f3c319ac8
+FRAME tid=385 fp=7e20292f80 savedfp=7e20292fe0 lr=7f3c31f0dc
+FRAME tid=385 fp=7e20292fe0 savedfp=7e20294930 lr=7f3c322ccc
+FRAME tid=385 fp=7e20294930 savedfp=7e20294980 lr=7f85d9c184
+FRAME tid=385 fp=7e20294980 savedfp=7e202949d0 lr=7f85d46020
+FRAME tid=385 fp=7e202949d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/386 MPR MovWriter
+REGS tid=386 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1fa42eb0 fp=7e1fa42eb0
+FRAME tid=386 fp=7e1fa42eb0 savedfp=7e1fa42f80 lr=7f3c319ac8
+FRAME tid=386 fp=7e1fa42f80 savedfp=7e1fa42fe0 lr=7f3c31f0dc
+FRAME tid=386 fp=7e1fa42fe0 savedfp=7e1fa44930 lr=7f3c322ccc
+FRAME tid=386 fp=7e1fa44930 savedfp=7e1fa44980 lr=7f85d9c184
+FRAME tid=386 fp=7e1fa44980 savedfp=7e1fa449d0 lr=7f85d46020
+FRAME tid=386 fp=7e1fa449d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/387 MPR MovWriter
+REGS tid=387 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1f1f2eb0 fp=7e1f1f2eb0
+FRAME tid=387 fp=7e1f1f2eb0 savedfp=7e1f1f2f80 lr=7f3c319ac8
+FRAME tid=387 fp=7e1f1f2f80 savedfp=7e1f1f2fe0 lr=7f3c31f0dc
+FRAME tid=387 fp=7e1f1f2fe0 savedfp=7e1f1f4930 lr=7f3c322ccc
+FRAME tid=387 fp=7e1f1f4930 savedfp=7e1f1f4980 lr=7f85d9c184
+FRAME tid=387 fp=7e1f1f4980 savedfp=7e1f1f49d0 lr=7f85d46020
+FRAME tid=387 fp=7e1f1f49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/388 MPR MovWriter
+REGS tid=388 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1e9a2eb0 fp=7e1e9a2eb0
+FRAME tid=388 fp=7e1e9a2eb0 savedfp=7e1e9a2f80 lr=7f3c319ac8
+FRAME tid=388 fp=7e1e9a2f80 savedfp=7e1e9a2fe0 lr=7f3c31f0dc
+FRAME tid=388 fp=7e1e9a2fe0 savedfp=7e1e9a4930 lr=7f3c322ccc
+FRAME tid=388 fp=7e1e9a4930 savedfp=7e1e9a4980 lr=7f85d9c184
+FRAME tid=388 fp=7e1e9a4980 savedfp=7e1e9a49d0 lr=7f85d46020
+FRAME tid=388 fp=7e1e9a49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/389 MPR MovWriter
+REGS tid=389 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1e152eb0 fp=7e1e152eb0
+FRAME tid=389 fp=7e1e152eb0 savedfp=7e1e152f80 lr=7f3c319ac8
+FRAME tid=389 fp=7e1e152f80 savedfp=7e1e152fe0 lr=7f3c31f0dc
+FRAME tid=389 fp=7e1e152fe0 savedfp=7e1e154930 lr=7f3c322ccc
+FRAME tid=389 fp=7e1e154930 savedfp=7e1e154980 lr=7f85d9c184
+FRAME tid=389 fp=7e1e154980 savedfp=7e1e1549d0 lr=7f85d46020
+FRAME tid=389 fp=7e1e1549d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/390 MPR MovWriter
+REGS tid=390 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1d902eb0 fp=7e1d902eb0
+FRAME tid=390 fp=7e1d902eb0 savedfp=7e1d902f80 lr=7f3c319ac8
+FRAME tid=390 fp=7e1d902f80 savedfp=7e1d902fe0 lr=7f3c31f0dc
+FRAME tid=390 fp=7e1d902fe0 savedfp=7e1d904930 lr=7f3c322ccc
+FRAME tid=390 fp=7e1d904930 savedfp=7e1d904980 lr=7f85d9c184
+FRAME tid=390 fp=7e1d904980 savedfp=7e1d9049d0 lr=7f85d46020
+FRAME tid=390 fp=7e1d9049d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/391 MPR MovWriter
+REGS tid=391 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1d0b2eb0 fp=7e1d0b2eb0
+FRAME tid=391 fp=7e1d0b2eb0 savedfp=7e1d0b2f80 lr=7f3c319ac8
+FRAME tid=391 fp=7e1d0b2f80 savedfp=7e1d0b2fe0 lr=7f3c31f0dc
+FRAME tid=391 fp=7e1d0b2fe0 savedfp=7e1d0b4930 lr=7f3c322ccc
+FRAME tid=391 fp=7e1d0b4930 savedfp=7e1d0b4980 lr=7f85d9c184
+FRAME tid=391 fp=7e1d0b4980 savedfp=7e1d0b49d0 lr=7f85d46020
+FRAME tid=391 fp=7e1d0b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/392 MPR IntegRecMov
+REGS tid=392 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1c8b4860 fp=7e1c8b4860
+FRAME tid=392 fp=7e1c8b4860 savedfp=7e1c8b4930 lr=7f3c2dd76c
+FRAME tid=392 fp=7e1c8b4930 savedfp=7e1c8b4980 lr=7f85d9c184
+FRAME tid=392 fp=7e1c8b4980 savedfp=7e1c8b49d0 lr=7f85d46020
+FRAME tid=392 fp=7e1c8b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/393 MPR IntegAudio
+REGS tid=393 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1c0b4870 fp=7e1c0b4870
+FRAME tid=393 fp=7e1c0b4870 savedfp=7e1c0b4940 lr=7f3c2aa11c
+FRAME tid=393 fp=7e1c0b4940 savedfp=7e1c0b4980 lr=7f85d9c184
+FRAME tid=393 fp=7e1c0b4980 savedfp=7e1c0b49d0 lr=7f85d46020
+FRAME tid=393 fp=7e1c0b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/394 MPR IntegEdit
+REGS tid=394 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1b8b4870 fp=7e1b8b4870
+FRAME tid=394 fp=7e1b8b4870 savedfp=7e1b8b4940 lr=7f3c2b05d0
+FRAME tid=394 fp=7e1b8b4940 savedfp=7e1b8b4980 lr=7f85d9c184
+FRAME tid=394 fp=7e1b8b4980 savedfp=7e1b8b49d0 lr=7f85d46020
+FRAME tid=394 fp=7e1b8b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/395 MPR IntegEvent
+REGS tid=395 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1b0b47b0 fp=7e1b0b47b0
+FRAME tid=395 fp=7e1b0b47b0 savedfp=7e1b0b4880 lr=7f3c2b4518
+FRAME tid=395 fp=7e1b0b4880 savedfp=7e1b0b48c0 lr=7f3c2b4d78
+FRAME tid=395 fp=7e1b0b48c0 savedfp=7e1b0b4910 lr=7f3c2b5de4
+FRAME tid=395 fp=7e1b0b4910 savedfp=7e1b0b4980 lr=7f85d9c184
+FRAME tid=395 fp=7e1b0b4980 savedfp=7e1b0b49d0 lr=7f85d46020
+FRAME tid=395 fp=7e1b0b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/396 MPR COMM. SERVE
+REGS tid=396 pc=7f856273d4 lr=7f856273b8 sp=7e1a8b47f0 fp=7e1a8b47f0
+FRAME tid=396 fp=7e1a8b47f0 savedfp=7e1a8b4830 lr=7f3c4b5ec0
+FRAME tid=396 fp=7e1a8b4830 savedfp=7e1a8b4980 lr=7f85d9c184
+FRAME tid=396 fp=7e1a8b4980 savedfp=7e1a8b49d0 lr=7f85d46020
+FRAME tid=396 fp=7e1a8b49d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/397 MPR sidb Callba
+REGS tid=397 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e18c3c840 fp=7e18c3c840
+FRAME tid=397 fp=7e18c3c840 savedfp=7e18c3c910 lr=7f3c48984c
+FRAME tid=397 fp=7e18c3c910 savedfp=7e18c3c980 lr=7f85d9c184
+FRAME tid=397 fp=7e18c3c980 savedfp=7e18c3c9d0 lr=7f85d46020
+FRAME tid=397 fp=7e18c3c9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/398 RemotePresenter
+REGS tid=398 pc=7f855d17a8 lr=7f8580c47c sp=7e1839edb0 fp=7e1839edb0
+FRAME tid=398 fp=7e1839edb0 savedfp=7e1839edd0 lr=7f34d20474
+FRAME tid=398 fp=7e1839edd0 savedfp=7e1839ee40 lr=7f34d20810
+FRAME tid=398 fp=7e1839ee40 savedfp=7e1839eef0 lr=7f349d7258
+FRAME tid=398 fp=7e1839eef0 savedfp=7e1839f720 lr=7f34d42648
+FRAME tid=398 fp=7e1839f720 savedfp=7e1839f750 lr=7f34d4275c
+FRAME tid=398 fp=7e1839f750 savedfp=7e1839f8b0 lr=7f34d72964
+FRAME tid=398 fp=7e1839f8b0 savedfp=7e1839f8f0 lr=7f347d6dd8
+FRAME tid=398 fp=7e1839f8f0 savedfp=7e1839f950 lr=7f36069ab0
+FRAME tid=398 fp=7e1839f950 savedfp=7e1839f980 lr=7f85d9c184
+FRAME tid=398 fp=7e1839f980 savedfp=7e1839f9d0 lr=7f85d46020
+FRAME tid=398 fp=7e1839f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/399 AppDebug
+REGS tid=399 pc=7f8561ecbc lr=7f85d82c9c sp=7e17b9e1e0 fp=7e17b9e1e0
+FRAME tid=399 fp=7e17b9e1e0 savedfp=7e17b9e220 lr=7f85d855a4
+FRAME tid=399 fp=7e17b9e220 savedfp=7e17b9e4d0 lr=7f85e14004
+FRAME tid=399 fp=7e17b9e4d0 savedfp=7e17b9e570 lr=7f35f23aec
+FRAME tid=399 fp=7e17b9e570 savedfp=7e17b9f950 lr=7f36069ab0
+FRAME tid=399 fp=7e17b9f950 savedfp=7e17b9f980 lr=7f85d9c184
+FRAME tid=399 fp=7e17b9f980 savedfp=7e17b9f9d0 lr=7f85d46020
+FRAME tid=399 fp=7e17b9f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/400 BackupProxy
+REGS tid=400 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1739f820 fp=7e1739f820
+FRAME tid=400 fp=7e1739f820 savedfp=7e1739f8f0 lr=7f8582f610
+FRAME tid=400 fp=7e1739f8f0 savedfp=7e1739f900 lr=7f35f1ed94
+FRAME tid=400 fp=7e1739f900 savedfp=7e1739f950 lr=7f36069ab0
+FRAME tid=400 fp=7e1739f950 savedfp=7e1739f980 lr=7f85d9c184
+FRAME tid=400 fp=7e1739f980 savedfp=7e1739f9d0 lr=7f85d46020
+FRAME tid=400 fp=7e1739f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/401 ScreenReaderMai
+REGS tid=401 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e16a9f4e0 fp=7e16a9f4e0
+FRAME tid=401 fp=7e16a9f4e0 savedfp=7e16a9f5b0 lr=7f8582f610
+FRAME tid=401 fp=7e16a9f5b0 savedfp=7e16a9f5c0 lr=7f3412b5f0
+FRAME tid=401 fp=7e16a9f5c0 savedfp=7e16a9f950 lr=7f36069ab0
+FRAME tid=401 fp=7e16a9f950 savedfp=7e16a9f980 lr=7f85d9c184
+FRAME tid=401 fp=7e16a9f980 savedfp=7e16a9f9d0 lr=7f85d46020
+FRAME tid=401 fp=7e16a9f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/402 ScreenReaderSto
+REGS tid=402 pc=7f85d4c5ec lr=7f85d4c5d0 sp=7e1629f820 fp=7e1629f820
+FRAME tid=402 fp=7e1629f820 savedfp=7e1629f8f0 lr=7f8582f610
+FRAME tid=402 fp=7e1629f8f0 savedfp=7e1629f900 lr=7f3412a8f4
+FRAME tid=402 fp=7e1629f900 savedfp=7e1629f950 lr=7f36069ab0
+FRAME tid=402 fp=7e1629f950 savedfp=7e1629f980 lr=7f85d9c184
+FRAME tid=402 fp=7e1629f980 savedfp=7e1629f9d0 lr=7f85d46020
+FRAME tid=402 fp=7e1629f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/403 I-InputEvent
+REGS tid=403 pc=7f85622500 lr=7f85d878cc sp=7e15a9f5c0 fp=7e15a9f5c0
+FRAME tid=403 fp=7e15a9f5c0 savedfp=7e15a9f5f0 lr=7f85d85648
+FRAME tid=403 fp=7e15a9f5f0 savedfp=7e15a9f8a0 lr=7f85e14004
+FRAME tid=403 fp=7e15a9f8a0 savedfp=7e15a9f900 lr=7f72a00b40
+FRAME tid=403 fp=7e15a9f900 savedfp=7e15a9f980 lr=7f85d9c184
+FRAME tid=403 fp=7e15a9f980 savedfp=7e15a9f9d0 lr=7f85d46020
+FRAME tid=403 fp=7e15a9f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/404 I-InputEvent
+REGS tid=404 pc=7f85622500 lr=7f85d878cc sp=7e1529f5c0 fp=7e1529f5c0
+FRAME tid=404 fp=7e1529f5c0 savedfp=7e1529f5f0 lr=7f85d85648
+FRAME tid=404 fp=7e1529f5f0 savedfp=7e1529f8a0 lr=7f85e14004
+FRAME tid=404 fp=7e1529f8a0 savedfp=7e1529f900 lr=7f72a00b40
+FRAME tid=404 fp=7e1529f900 savedfp=7e1529f980 lr=7f85d9c184
+FRAME tid=404 fp=7e1529f980 savedfp=7e1529f9d0 lr=7f85d46020
+FRAME tid=404 fp=7e1529f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/405 I-InputEvent
+REGS tid=405 pc=7f85622500 lr=7f85d878cc sp=7e14a9f5c0 fp=7e14a9f5c0
+FRAME tid=405 fp=7e14a9f5c0 savedfp=7e14a9f5f0 lr=7f85d85648
+FRAME tid=405 fp=7e14a9f5f0 savedfp=7e14a9f8a0 lr=7f85e14004
+FRAME tid=405 fp=7e14a9f8a0 savedfp=7e14a9f900 lr=7f72a00b40
+FRAME tid=405 fp=7e14a9f900 savedfp=7e14a9f980 lr=7f85d9c184
+FRAME tid=405 fp=7e14a9f980 savedfp=7e14a9f9d0 lr=7f85d46020
+FRAME tid=405 fp=7e14a9f9d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/406 AppBackupDaemon
+REGS tid=406 pc=7f85d4cadc lr=7f85d4cabc sp=7e142867d0 fp=7e142867d0
+FRAME tid=406 fp=7e142867d0 savedfp=7e142868c0 lr=7f3598acd4
+FRAME tid=406 fp=7e142868c0 savedfp=7e14286950 lr=7f36069ab0
+FRAME tid=406 fp=7e14286950 savedfp=7e14286980 lr=7f85d9c184
+FRAME tid=406 fp=7e14286980 savedfp=7e142869d0 lr=7f85d46020
+FRAME tid=406 fp=7e142869d0 savedfp=0 lr=7f85625dbc
+STORAGE_PROBE_THREAD /proc/194/task/846 IMCMN-DRV-CYCLE
+REGS tid=846 pc=7f85d4c978 lr=7f85d4c95c sp=7e12757820 fp=7e12757820
+FRAME tid=846 fp=7e12757820 savedfp=7e12757910 lr=7f7279b470
+FRAME tid=846 fp=7e12757910 savedfp=7e12757980 lr=7f85d9c184
+FRAME tid=846 fp=7e12757980 savedfp=7e127579d0 lr=7f85d46020
+FRAME tid=846 fp=7e127579d0 savedfp=0 lr=7f85625dbc
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf08 payload=2a00080f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf09 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf09 payload=2a00090f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf0a bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf0a payload=2a000a0f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf0b bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf0b payload=2a000b0f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf0c bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf0c payload=2a000c0f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf0d bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf0d payload=2a000d0f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf0e bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf0e payload=2a000e0f0a002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0xf02 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0xf02 payload=2a00020f0a002000010000000000000000000000
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+DYNAMIC_ID type=0x2a owner=0x1cf result=0 id=0x81cf61c3 caller=0x7f34e555e4
+BB_CONFIG_REQUEST tid=332 frame=0x200d property=0x119 bytes=28 flags=0x8001 source=0x81cf61c3
+BB_CONFIG_BODY 0d2019011c0001800101000000000000000000000000000000000000
+BOOT_LOG_DISPLAY_REVERSE retained hrev1/vrev1/osdRev0/rotation0; virtual image path only; native1119 delivered
+RCV_SITE tid=332 queue=0x81cf61c3 timeout=4294967295 caller=/usr/lib/appFw.so+0x35b8b9c
+RCV_MSG_WAIT tid=332 queue=0x81cf61c3 timeout=4294967295 enter caller=/usr/lib/appFw.so+0x35b8b9c
+RCV_MSG_TMO tid=332 queue=0x81cf61c3 timeout=4294967295 result=0 reply_code=0x1119 bytes=12
+DYNAMIC_ID type=0x2a owner=0x1cf result=0 id=0x81cf61c3 caller=0x7f34e555e4
+SND_MSG_OTHER tid=332 dest=0x807b002b code=0 bytes=16 source=0x81cf61c3 caller=0x7f35f129ec
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+SND_MSG_OTHER tid=276 dest=0x5503e0 code=0x100 bytes=28 source=0x830128 caller=0x7f35f12920
+SND_MSG_PAYLOAD tid=276 dest=0x5503e0 code=0x100 payload=680200010000000000000000000000000000000000000000
+SND_SYNC_OTHER tid=335 dest=0x80924220 code=0x92 bytes=16 source=0x81cf619b caller=0x7f35f14440
+CREATE_SCREEN_ARGS call=46 id=0x352 count=0 this=0x7f3948f148 tid=276
+CREATE_SCREEN_RETURN original A7M4 view method returned
+MANAGER_CAPTURED manager=0x7f327704b8 (captured at 0x1f04414 entry)
+CREATE_SCREEN_ARGS call=47 id=0x8f count=10 this=0x7f3948f148 tid=276
+CREATE_SCREEN_RETURN original A7M4 view method returned
+SND_MSG_OTHER tid=276 dest=0x8280074d code=0x3276 bytes=96 source=0x9088076b caller=0x7f3410dde8
+SND_MSG_OTHER tid=276 dest=0x8280074d code=0x3276 bytes=96 source=0x9088076b caller=0x7f3410dde8
+SND_MSG_OTHER tid=276 dest=0x8280074d code=0x3276 bytes=96 source=0x9088076b caller=0x7f3410dde8
+SND_MSG_OTHER tid=276 dest=0x8280074d code=0x3276 bytes=96 source=0x9088076b caller=0x7f3410dde8
+SND_MSG_OTHER tid=276 dest=0x8280074d code=0 bytes=80 source=0x9088076b caller=0x7f3410dde8
+SND_SYNC_OTHER tid=276 dest=0x14c0424 code=0 bytes=72 source=0x14c0424 caller=0x7f72a3b690
+SND_SYNC_OTHER tid=276 dest=0x14c0424 code=0 bytes=72 source=0x14c0424 caller=0x7f72a3b690
+RESOURCE_LZ_CPU_OK format=7 width=52 height=32 input=657 output=4096 stride=128 bitmap=52x32 nonzero=2589 result=0
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+RCV_MSG_WAIT tid=276 queue=0x5503e0 timeout=0 enter caller=/usr/lib/appFw.so+0x1840860
+RCV_MSG_TMO tid=276 queue=0x5503e0 timeout=0 result=0 reply_code=0x20f bytes=28
+RCV_MSG_WAIT tid=276 queue=0x5503e0 timeout=0 enter caller=/usr/lib/appFw.so+0x1840860
+RCV_MSG_TMO tid=276 queue=0x5503e0 timeout=0 result=0 reply_code=0x20f bytes=28
+RCV_MSG_WAIT tid=276 queue=0x5503e0 timeout=0 enter caller=/usr/lib/appFw.so+0x1840860
+RCV_MSG_TMO tid=276 queue=0x5503e0 timeout=0 result=0 reply_code=0x100 bytes=28
+SND_MSG_OTHER tid=335 dest=0x80920572 code=0x92 bytes=16 source=0xa5a5a5a5 caller=0x7f35f175a4
+SND_MSG_PAYLOAD tid=335 dest=0x80920572 code=0x92 payload=14019200020000006203070100000000
+SND_SYNC_OTHER tid=400 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x70 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x70 payload=8800700001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x71 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x71 payload=8800710001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x72 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x72 payload=8800720001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x73 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x73 payload=8800730001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x74 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x74 payload=8800740001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x75 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x75 payload=8800750001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x76 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x76 payload=8800760001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x77 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x77 payload=8800770001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x78 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x78 payload=8800780001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x79 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x79 payload=8800790001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x71 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x71 payload=8800710001002000010000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x70 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x70 payload=8800700001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x71 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x71 payload=8800710001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x72 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x72 payload=8800720001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x73 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x73 payload=8800730001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x74 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x74 payload=8800740001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x75 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x75 payload=8800750001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x76 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x76 payload=8800760001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x77 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x77 payload=8800770001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x78 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x78 payload=8800780001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x79 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x79 payload=8800790001002000020000000000000000000000
+SND_MSG_OTHER tid=276 dest=0x811006e9 code=0x71 bytes=20 source=0xa5a5a5a5 caller=0x7f36065bf0
+SND_MSG_PAYLOAD tid=276 dest=0x811006e9 code=0x71 payload=8800710001002000010000000000000000000000
+SND_SYNC_OTHER tid=406 dest=0x3e014d code=0 bytes=112 source=0xa5a5a5a5 caller=0x7f85dafae4
+SND_SYNC_OTHER tid=335 dest=0x80924220 code=0x92 bytes=16 source=0x81cf619b caller=0x7f35f14440
+
+A7M4_COMMAND_DONE_82e86c9d8d23a04a016067db:0
+/ # echo PROBE_KERNEL_BEGIN; for t in /proc/$(pidof im.elf)/task/*; do case "$(c
+at "$t/comm")" in SeqQueueCommon|SeqQueueDispSwi|CameraBackgroun|AppFw) echo KER
+NEL_THREAD "$t" "$(cat "$t/comm")"; cat "$t/wchan" "$t/stack" "$t/status";; esac
+; done; echo PROBE_KERNEL_END
+PROBE_KERNEL_BEGIN
+if test -f /tmp/a7m4-diagnostic-events.bin; then LD_BIND_NOW=1 /simulation/diagnostic-export; fi; rc=$?; printf '\nA7M4_COMMAND_DONE_b715ec8e26d49cbcff52de33:%s\n' "$rc"
+KERNEL_THREAD /proc/194/task/274 CameraBackgroun
+do_signal_stop[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080ad694>] do_signal_stop+0x14c/0x228
+[<ffffff80080ae918>] get_signal+0x438/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+Name:	CameraBackgroun
+Umask:	0022
+State:	T (stopped)
+Tgid:	194
+Ngid:	0
+Pid:	274
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+VmPeak:	 6171832 kB
+VmSize:	 6170656 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	 3377596 kB
+VmRSS:	 3377596 kB
+RssAnon:	   78504 kB
+RssFile:	 3296908 kB
+RssShmem:	    2184 kB
+VmData:	 1812012 kB
+VmStk:	     132 kB
+VmExe:	      36 kB
+VmLib:	  115956 kB
+VmPTE:	    7692 kB
+VmPMD:	      36 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	204
+SigQ:	201/4944
+SigPnd:	0000000000040000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001006
+SigCgt:	0000000180030000
+CapInh:	0000000000000000
+CapPrm:	0000003fffffffff
+CapEff:	0000003fffffffff
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Speculation_Store_Bypass:	unknown
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	8
+nonvoluntary_ctxt_switches:	7
+KERNEL_THREAD /proc/194/task/276 AppFw
+do_signal_stop[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080ad694>] do_signal_stop+0x14c/0x228
+[<ffffff80080ae918>] get_signal+0x438/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+Name:	AppFw
+Umask:	0022
+State:	T (stopped)
+Tgid:	194
+Ngid:	0
+Pid:	276
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+VmPeak:	 6171832 kB
+VmSize:	 6170656 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	 3377596 kB
+VmRSS:	 3377596 kB
+RssAnon:	   78504 kB
+RssFile:	 3296908 kB
+RssShmem:	    2184 kB
+VmData:	 1812012 kB
+VmStk:	     132 kB
+VmExe:	      36 kB
+VmLib:	  115956 kB
+VmPTE:	    7692 kB
+VmPMD:	      36 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	204
+SigQ:	201/4944
+SigPnd:	0000000000040000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001006
+SigCgt:	0000000180030000
+CapInh:	0000000000000000
+CapPrm:	0000003fffffffff
+CapEff:	0000003fffffffff
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Speculation_Store_Bypass:	unknown
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	6983
+nonvoluntary_ctxt_switches:	27856
+KERNEL_THREAD /proc/194/task/315 SeqQueueCommon
+0[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80004c439c>] osal_wai_sem_tmo+0x1e4/0x278 [osal_uipc]
+[<ffffff80008ba66c>] udate_wait_for_distribution_done+0x74/0x148 [udate]
+[<ffffff80008b86dc>] udate_get_localtime+0x28c/0x2a0 [udate]
+[<ffffff80008b8c88>] udate_set_date+0x260/0x488 [udate]
+[<ffffff80008b9620>] udate_proc_read_clock+0x4a0/0x648 [udate]
+[<ffffff80004c08f0>] uipc_oom+0x88/0xce0 [osal_uipc]
+[<ffffff80004c2094>] __osal_snd_sync_msg+0x17c/0x260 [osal_uipc]
+[<ffffff80004c218c>] osal_snd_sync_msg+0x14/0x20 [osal_uipc]
+[<ffffff80004bf1c8>] osal_unlock+0xfe8/0x22b0 [osal_uipc]
+[<ffffff80004be584>] osal_unlock+0x3a4/0x22b0 [osal_uipc]
+[<ffffff80083978a4>] cdev_ioctl+0x4c/0xb0
+[<ffffff800819eb4c>] do_vfs_ioctl+0xa4/0x838
+[<ffffff800819f324>] SyS_ioctl+0x44/0x80
+[<ffffff8008082798>] el0_svc_naked+0x4c/0x5c
+[<ffffffffffffffff>] 0xffffffffffffffff
+Name:	SeqQueueCommon
+Umask:	0022
+State:	R (running)
+Tgid:	194
+Ngid:	0
+Pid:	315
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+VmPeak:	 6171832 kB
+VmSize:	 6170656 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	 3377596 kB
+VmRSS:	 3377596 kB
+RssAnon:	   78504 kB
+RssFile:	 3296908 kB
+RssShmem:	    2184 kB
+VmData:	 1812012 kB
+VmStk:	     132 kB
+VmExe:	      36 kB
+VmLib:	  115956 kB
+VmPTE:	    7692 kB
+VmPMD:	      36 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	204
+SigQ:	201/4944
+SigPnd:	0000000000040000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001006
+SigCgt:	0000000180030000
+CapInh:	0000000000000000
+CapPrm:	0000003fffffffff
+CapEff:	0000003fffffffff
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Speculation_Store_Bypass:	unknown
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	29599
+nonvoluntary_ctxt_switches:	9396
+KERNEL_THREAD /proc/194/task/331 SeqQueueDispSwi
+stop_all_threads_timeout[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080c5ba4>] stop_all_threads_timeout+0x154/0x2d8
+[<ffffff80081dd4d8>] do_coredump+0xc8/0xcd8
+[<ffffff80080ae790>] get_signal+0x2b0/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+Name:	SeqQueueDispSwi
+Umask:	0022
+State:	D (disk sleep)
+Tgid:	194
+Ngid:	0
+Pid:	331
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	64
+Groups:	 
+VmPeak:	 6171832 kB
+VmSize:	 6170656 kB
+VmLck:	       0 kB
+VmPin:	       0 kB
+VmHWM:	 3377596 kB
+VmRSS:	 3377596 kB
+RssAnon:	   78504 kB
+RssFile:	 3296908 kB
+RssShmem:	    2184 kB
+VmData:	 1812012 kB
+VmStk:	     132 kB
+VmExe:	      36 kB
+VmLib:	  115956 kB
+VmPTE:	    7692 kB
+VmPMD:	      36 kB
+VmSwap:	       0 kB
+HugetlbPages:	       0 kB
+Threads:	204
+SigQ:	201/4944
+SigPnd:	0000000000040000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000000001006
+SigCgt:	0000000180030000
+CapInh:	0000000000000000
+CapPrm:	0000003fffffffff
+CapEff:	0000003fffffffff
+CapBnd:	0000003fffffffff
+CapAmb:	0000000000000000
+Speculation_Store_Bypass:	unknown
+Cpus_allowed:	1
+Cpus_allowed_list:	0
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	1146
+nonvoluntary_ctxt_switches:	20
+PROBE_KERNEL_END
+/ # if test -f /tmp/a7m4-diagnostic-events.bin; then LD_BIND_NOW=1 /simulation/d
+iagnostic-export; fi; rc=$?; printf '\nA7M4_COMMAND_DONE_b715ec8e26d49cbcff52de3
+3:%s\n' "$rc"

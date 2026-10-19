@@ -1,0 +1,51 @@
+{
+  "run": "native-117-card-main",
+  "phase": "after-restart",
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "qemu_pid": 270922,
+  "card_sha256": "3e7841c21821eefc35b0750765741a3c60cfa41ba81ddab7d8b2b3cff8884e9d",
+  "card_file_records": [
+    "CARD_AUDIT_FILE path=/PRIVATE/DATABASE/DATABASE.BIN size=9670656 magic=9c0cdd8b",
+    "CARD_AUDIT_FILE path=/PRIVATE/M4ROOT/MEDIAPRO.XML size=405 magic=3c3f786d"
+  ],
+  "diagnostic_segments": [
+    {
+      "bytes": 569895,
+      "path": "/tmp/a7m4-diagnostic-events.bin"
+    },
+    {
+      "bytes": 8387987,
+      "path": "/tmp/a7m4-diagnostic-events.previous.bin"
+    }
+  ],
+  "http_frame_matches_original_ap_rgb": true,
+  "frame_pixel_sha256": "d3230e099e71c8f9905e07b8715c3c51018bcb7e4eb713e324073e0823be7433",
+  "original_ap_snapshot": {
+    "sequence": 916434,
+    "pixel_source_seq": 55494,
+    "buffer_id": 1026,
+    "physical": "0x43a7b4100",
+    "width": 640,
+    "height": 480,
+    "row_pixels": 640,
+    "bmp_format": 1,
+    "update_command": "0x1005",
+    "fnv1a64": "913461dbca3d5654",
+    "sha256": "6e79c762caf376cda75c2d7afe82d6e430d753d47e1a2e176e064d728c37cbe3",
+    "metadata_bytes": 24930,
+    "pixel_bytes": 614400,
+    "descriptor_hex": "03100000000000000204000001000000000000008002e001000000008002e00100000000",
+    "fix_hex": "021000000000000005100000",
+    "metadata_update_hex": "0510000000000000",
+    "mode": "AP software consumption; experimental RGBA4444; no CP composition or panel",
+    "source": "single guest snapshot inode, persisted/read-back before completion send",
+    "persistence": "current guest run only (/tmp may be tmpfs)",
+    "console_kernel_records_removed": 0,
+    "console_headless_records_removed": 0,
+    "checksum_scope": "entire container with checksum field zeroed",
+    "ack_delivery_proven": false
+  },
+  "identified_async_records_removed": 0,
+  "audit_console_sha256": "123e9c31c83a0167993da0de2b930faf0ab266f4891500a6829847089338f0cb",
+  "photography_implemented": false
+}

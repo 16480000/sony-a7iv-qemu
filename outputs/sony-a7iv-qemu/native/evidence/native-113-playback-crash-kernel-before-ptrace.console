@@ -1,0 +1,1618 @@
+echo PRE_PTRACE_KERNEL_BEGIN; if test -x /simulation/kernel-log-read; then L
+D_BIND_NOW=1 /simulation/kernel-log-read; fi; cat /proc/sys/kernel/core_pattern;
+ for t in /proc/$(pidof im.elf)/task/*; do case "$(cat "$t/comm")" in SeqQueueCo
+mmon|SeqQueueDispSwi|CameraBackgroun|AppFw) echo KERNEL_THREAD "$t" "$(cat "$t/c
+omm")"; cat "$t/wchan" "$t/stack" "$t/syscall" "$t/stat";; esac; done; echo PRE_
+PTRACE_KERNEL_END; rc=$?; printf '\nA7M4_COMMAND_DONE_4714ef5323e6138a348d732a:%
+s\n' "$rc"
+PRE_PTRACE_KERNEL_BEGIN
+<6>[    0.002812] Booting Linux on physical CPU 0x0
+<5>[    0.004051] Linux version 4.9.337-scel (jp10239@dic-build-scm-u20-008) (gcc version 6.4.0 (20201211 (Sony CE Linux 14.0.1.0)) ) #1 SMP PREEMPT Sat Apr 18 02:42:38 JST 2026
+<6>[    0.004227] Boot CPU: AArch64 Processor [411fd040]
+<5>[    0.007896] random: crng init done
+<3>[    0.008978] invalid cmdline override @ 0x400001000. Using default cmdline.
+<6>[    0.010076] earlycon: pl11 at MMIO 0x0000000009000000 (options '')
+<6>[    0.011286] bootconsole [pl11] enabled
+<4>[    0.011814] memrsv: 0x1000@0x400000000
+<4>[    0.011897] memrsv: 0x60000@0x400020000
+<4>[    0.011907] memrsv: 0x1000000@0x401000000
+<4>[    0.012038] memrsv: 0x200000@0x403e00000
+<4>[    0.012113] memrsv: 0x600000@0x404000000
+<4>[    0.012121] memrsv: 0x400000@0x404c00000
+<4>[    0.012130] memrsv: 0x1000000@0x405000000
+<4>[    0.012138] memrsv: 0x200000@0x410000000
+<4>[    0.012145] memrsv: 0x9e00000@0x410200000
+<4>[    0.012154] memrsv: 0xc400000@0x424000000
+<4>[    0.012161] memrsv: 0xcfc00000@0x430400000
+<4>[    0.012170] memrsv: 0x100000@0x41e000000
+<4>[    0.012184] memrsv: 0x500000@0x41e100000
+<4>[    0.012193] memrsv: 0x20000@0x41ea00000
+<3>[    0.017110] cannot reserve memory at 0x00000000 size 0x0 it is already reserved
+<7>[    0.064651] On node 0 totalpages: 1310720
+<7>[    0.064753]   DMA zone: 14336 pages used for memmap
+<7>[    0.064774]   DMA zone: 0 pages reserved
+<7>[    0.064817]   DMA zone: 1048576 pages, LIFO batch:31
+<7>[    0.121378]   Normal zone: 3584 pages used for memmap
+<7>[    0.121408]   Normal zone: 262144 pages, LIFO batch:31
+<6>[    0.137596] sony-timer-map: f1042000,fffffffff1042000,4000,1
+<6>[    0.137650] sony-scu-map: f1388000,fffffffff1388000,2000,1
+<6>[    0.137665] sony-register-backing: f101d000,fffffffff101d000,20000,1
+<6>[    0.137676] sony-gic-alias: 8000000,fffffffff13a1000,1000,1
+<6>[    0.137964] psci: probing for conduit method from DT.
+<6>[    0.138159] psci: PSCIv1.1 detected in firmware.
+<6>[    0.138172] psci: Using standard PSCI v0.2 function IDs
+<6>[    0.138224] psci: Trusted OS migration not required
+<6>[    0.138259] psci: SMC Calling Convention v1.0
+<6>[    0.139781] percpu: Embedded 17 pages/cpu s29464 r8192 d31976 u69632
+<7>[    0.140299] pcpu-alloc: s29464 r8192 d31976 u69632 alloc=17*4096
+<7>[    0.140433] pcpu-alloc: [0] 0 
+<6>[    0.142166] Detected VIPT I-cache on CPU0
+<6>[    0.142923] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1292800
+<5>[    0.142975] Kernel command line: console=ttyAMA0 earlycon=pl011,0x09000000 loglevel=8 root=/dev/ram0 init=/bin/sh ramdisk_size=460800 rdinit=/init memrsv=0x00001000@0x400000000 memrsv=0x00060000@0x400020000 memrsv=0x01000000@0x401000000:ex memrsv=0x00200000@0x403e00000:uc memrsv=0x00600000@0x404000000 memrsv=0x00400000@0x404C00000:uc memrsv=0x01000000@0x405000000 memrsv=0x00200000@0x410000000 memrsv=0x09E00000@0x410200000:uc memrsv=0x0C400000@0x424000000 memrsv=0xCFC00000@0x430400000:uc memrsv=0x00100000@0x41e000000:uc memrsv=0x00500000@0x41e100000:uc memrsv=0x00020000@0x41ea00000:uc initcall_debug initcall_blacklist=__boottime___udif_init_udif_wdt,__boottime___udif_init_udif_pcie,__boottime___udif_init_udif_ddrc,__boottime___udif_init_pcidma,__boottime_sony_usb_init
+<7>[    0.144080] blacklisting initcall __boottime___udif_init_udif_wdt
+<7>[    0.144120] blacklisting initcall __boottime___udif_init_udif_pcie
+<7>[    0.144126] blacklisting initcall __boottime___udif_init_udif_ddrc
+<7>[    0.144131] blacklisting initcall __boottime___udif_init_pcidma
+<7>[    0.144142] blacklisting initcall __boottime_sony_usb_init
+<6>[    0.144327] PID hash table entries: 4096 (order: 3, 32768 bytes)
+<6>[    0.148909] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+<6>[    0.155608] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+<6>[    0.197000] software IO TLB: mapped [mem 0x41ffff000-0x423fff000] (64MB)
+<6>[    0.275440] Memory: 1265816K/5242880K available (4286K kernel code, 312K rwdata, 1524K rodata, 320K init, 362K bss, 3977064K reserved, 0K cma-reserved)
+<5>[    0.275452] Virtual kernel memory layout:
+<5>[    0.275475]     modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+<5>[    0.275483]     vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB)
+<5>[    0.275513]       .text : 0xffffff8008080000 - 0xffffff80084b0000   (  4288 KB)
+<5>[    0.275521]     .rodata : 0xffffff80084b0000 - 0xffffff8008630000   (  1536 KB)
+<5>[    0.275545]       .init : 0xffffff8008630000 - 0xffffff8008680000   (   320 KB)
+<5>[    0.275555]       .data : 0xffffff8008680000 - 0xffffff80086ce008   (   313 KB)
+<5>[    0.275563]        .bss : 0xffffff80086ce008 - 0xffffff8008728874   (   363 KB)
+<5>[    0.275570]     fixed   : 0xffffffbefe7f9000 - 0xffffffbefec00000   (  4124 KB)
+<5>[    0.275577]     PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB)
+<5>[    0.275583]     vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum)
+<5>[    0.275606]               0xffffffbf00000000 - 0xffffffbf04600000   (    70 MB actual)
+<5>[    0.275635]     memory  : 0xffffffc000000000 - 0xffffffc140000000   (  5120 MB)
+<6>[    0.282384] Preemptible hierarchical RCU implementation.
+<6>[    0.282395] 	Build-time adjustment of leaf fanout to 64.
+<6>[    0.282410] 	RCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=1.
+<6>[    0.282462] RCU: Adjusting geometry for rcu_fanout_leaf=64, nr_cpu_ids=1
+<6>[    0.283049] NR_IRQS:512 nr_irqs:512 0
+<6>[    0.287583] GICv2m: range[mem 0x08020000-0x08020fff], SPI[80:143]
+<6>[    0.295126] arm_arch_timer: Architected cp15 timer(s) running at 2.00MHz (virt).
+<6>[    0.295293] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x1d854df40, max_idle_ns: 1763180808480 ns
+<6>[    0.295651] sched_clock: 56 bits at 2000kHz, resolution 500ns, wraps every 2199023255500ns
+<6>[    0.297890] Calibrating delay loop (skipped), value calculated using timer frequency.. 4.00 BogoMIPS (lpj=20000)
+<6>[    0.297948] pid_max: default: 32768 minimum: 301
+<6>[    0.299317] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+<6>[    0.299355] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+<4>[    0.315600] /cpus/cpu-map: empty cluster
+<7>[    0.348607] calling  __boottime_cpu_suspend_init+0x0/0x58 @ 1
+<7>[    0.348756] initcall __boottime_cpu_suspend_init+0x0/0x58 returned 0 after 0 usecs
+<7>[    0.348878] calling  __boottime_asids_init+0x0/0xd4 @ 1
+<6>[    0.349017] ASID allocator initialised with 32768 entries
+<7>[    0.349093] initcall __boottime_asids_init+0x0/0xd4 returned 0 after 0 usecs
+<7>[    0.349176] calling  __boottime_spawn_ksoftirqd+0x0/0x5c @ 1
+<7>[    0.368676] initcall __boottime_spawn_ksoftirqd+0x0/0x5c returned 0 after 19531 usecs
+<7>[    0.368837] calling  __boottime_migration_init+0x0/0x58 @ 1
+<7>[    0.368967] initcall __boottime_migration_init+0x0/0x58 returned 0 after 0 usecs
+<7>[    0.369054] calling  __boottime_check_cpu_stall_init+0x0/0x34 @ 1
+<7>[    0.369163] initcall __boottime_check_cpu_stall_init+0x0/0x34 returned 0 after 0 usecs
+<7>[    0.369253] calling  __boottime_rcu_spawn_gp_kthread+0x0/0x138 @ 1
+<7>[    0.370579] initcall __boottime_rcu_spawn_gp_kthread+0x0/0x138 returned 0 after 0 usecs
+<7>[    0.370860] calling  __boottime_cpu_stop_init+0x0/0xf0 @ 1
+<7>[    0.389760] initcall __boottime_cpu_stop_init+0x0/0xf0 returned 0 after 19531 usecs
+<7>[    0.389880] calling  __boottime_jump_label_init_module+0x0/0x28 @ 1
+<7>[    0.389975] initcall __boottime_jump_label_init_module+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.390062] calling  __boottime_kmalloc_trace_init+0x0/0xe0 @ 1
+<7>[    0.390203] initcall __boottime_kmalloc_trace_init+0x0/0xe0 returned 0 after 0 usecs
+<7>[    0.390286] calling  __boottime_lru_init+0x0/0x60 @ 1
+<7>[    0.399250] initcall __boottime_lru_init+0x0/0x60 returned 0 after 9765 usecs
+<7>[    0.399405] calling  __boottime_init_zero_pfn+0x0/0x78 @ 1
+<7>[    0.399511] initcall __boottime_init_zero_pfn+0x0/0x78 returned 0 after 0 usecs
+<7>[    0.399596] calling  __boottime_its_pci_msi_init+0x0/0x130 @ 1
+<7>[    0.399755] initcall __boottime_its_pci_msi_init+0x0/0x130 returned 0 after 0 usecs
+<7>[    0.399841] calling  __boottime_its_pmsi_init+0x0/0x124 @ 1
+<7>[    0.399949] initcall __boottime_its_pmsi_init+0x0/0x124 returned 0 after 0 usecs
+<7>[    0.400028] calling  __boottime_dummy_timer_register+0x0/0x40 @ 1
+<7>[    0.400177] initcall __boottime_dummy_timer_register+0x0/0x40 returned 0 after 0 usecs
+<6>[    0.420272] Brought up 1 CPUs
+<6>[    0.420386] SMP: Total of 1 processors activated.
+<6>[    0.420576] CPU features: detected feature: 32-bit EL0 Support
+<6>[    0.421990] CPU: All CPU(s) started at EL1
+<6>[    0.422586] alternatives: patching kernel code
+<6>[    0.432316] devtmpfs: initialized
+<7>[    0.439476] calling  __boottime_ipc_ns_init+0x0/0x4c @ 1
+<7>[    0.439636] initcall __boottime_ipc_ns_init+0x0/0x4c returned 0 after 0 usecs
+<7>[    0.439731] calling  __boottime_init_mmap_min_addr+0x0/0x30 @ 1
+<7>[    0.439807] initcall __boottime_init_mmap_min_addr+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.439891] calling  __boottime_net_ns_init+0x0/0x1f4 @ 1
+<7>[    0.440746] initcall __boottime_net_ns_init+0x0/0x1f4 returned 0 after 9765 usecs
+<7>[    0.441313] calling  __boottime_map_entry_trampoline+0x0/0x184 @ 1
+<7>[    0.441684] initcall __boottime_map_entry_trampoline+0x0/0x184 returned 0 after 0 usecs
+<7>[    0.441778] calling  __boottime_cpu_hotplug_pm_sync_init+0x0/0x30 @ 1
+<7>[    0.441879] initcall __boottime_cpu_hotplug_pm_sync_init+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.441980] calling  __boottime_alloc_frozen_cpus+0x0/0x20 @ 1
+<7>[    0.442061] initcall __boottime_alloc_frozen_cpus+0x0/0x20 returned 0 after 0 usecs
+<7>[    0.442149] calling  __boottime_wq_sysfs_init+0x0/0x4c @ 1
+<7>[    0.442415] initcall __boottime_wq_sysfs_init+0x0/0x4c returned 0 after 0 usecs
+<7>[    0.442496] calling  __boottime_ksysfs_init+0x0/0xc8 @ 1
+<7>[    0.442620] initcall __boottime_ksysfs_init+0x0/0xc8 returned 0 after 0 usecs
+<7>[    0.442696] calling  __boottime_pm_init+0x0/0x94 @ 1
+<7>[    0.442840] initcall __boottime_pm_init+0x0/0x94 returned 0 after 0 usecs
+<7>[    0.442916] calling  __boottime_rcu_exp_runtime_mode+0x0/0x34 @ 1
+<7>[    0.443000] initcall __boottime_rcu_exp_runtime_mode+0x0/0x34 returned 0 after 0 usecs
+<7>[    0.443084] calling  __boottime_init_jiffies_clocksource+0x0/0x30 @ 1
+<6>[    0.443194] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+<7>[    0.443340] initcall __boottime_init_jiffies_clocksource+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.443457] calling  __boottime_futex_init+0x0/0x10c @ 1
+<6>[    0.443567] futex hash table entries: 256 (order: 2, 16384 bytes)
+<7>[    0.443787] initcall __boottime_futex_init+0x0/0x10c returned 0 after 0 usecs
+<7>[    0.443867] calling  __boottime_cgroup_wq_init+0x0/0x78 @ 1
+<7>[    0.443970] initcall __boottime_cgroup_wq_init+0x0/0x78 returned 0 after 0 usecs
+<7>[    0.444051] calling  __boottime_cpu_pm_init+0x0/0x2c @ 1
+<7>[    0.444160] initcall __boottime_cpu_pm_init+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.444237] calling  __boottime_fsnotify_init+0x0/0x38 @ 1
+<7>[    0.444316] initcall __boottime_fsnotify_init+0x0/0x38 returned 0 after 0 usecs
+<7>[    0.444394] calling  __boottime_filelock_init+0x0/0xd8 @ 1
+<7>[    0.444522] initcall __boottime_filelock_init+0x0/0xd8 returned 0 after 0 usecs
+<7>[    0.444597] calling  __boottime_init_script_binfmt+0x0/0x30 @ 1
+<7>[    0.444707] initcall __boottime_init_script_binfmt+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.444785] calling  __boottime_init_elf_binfmt+0x0/0x30 @ 1
+<7>[    0.444853] initcall __boottime_init_elf_binfmt+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.444927] calling  __boottime_configfs_init+0x0/0xbc @ 1
+<7>[    0.445038] initcall __boottime_configfs_init+0x0/0xbc returned 0 after 0 usecs
+<7>[    0.445112] calling  __boottime_debugfs_init+0x0/0x80 @ 1
+<7>[    0.445198] initcall __boottime_debugfs_init+0x0/0x80 returned 0 after 0 usecs
+<7>[    0.445272] calling  __boottime_prandom_init_early+0x0/0x138 @ 1
+<7>[    0.445400] initcall __boottime_prandom_init_early+0x0/0x138 returned 0 after 0 usecs
+<7>[    0.445484] calling  __boottime_sock_init+0x0/0xbc @ 1
+<7>[    0.447135] initcall __boottime_sock_init+0x0/0xbc returned 0 after 0 usecs
+<7>[    0.447221] calling  __boottime_net_defaults_init+0x0/0x3c @ 1
+<7>[    0.447301] initcall __boottime_net_defaults_init+0x0/0x3c returned 0 after 0 usecs
+<7>[    0.447402] calling  __boottime_init_default_flow_dissectors+0x0/0x60 @ 1
+<7>[    0.447610] initcall __boottime_init_default_flow_dissectors+0x0/0x60 returned 0 after 0 usecs
+<7>[    0.447712] calling  __boottime_netlink_proto_init+0x0/0x1ac @ 1
+<6>[    0.448613] NET: Registered protocol family 16
+<7>[    0.449849] initcall __boottime_netlink_proto_init+0x0/0x1ac returned 0 after 0 usecs
+<7>[    0.450805] calling  __boottime_debug_monitors_init+0x0/0x40 @ 1
+<7>[    0.451083] initcall __boottime_debug_monitors_init+0x0/0x40 returned 0 after 0 usecs
+<7>[    0.451184] calling  __boottime_irq_sysfs_init+0x0/0xc0 @ 1
+<7>[    0.455046] initcall __boottime_irq_sysfs_init+0x0/0xc0 returned 0 after 0 usecs
+<7>[    0.455178] calling  __boottime_init_per_zone_wmark_min+0x0/0x20 @ 1
+<7>[    0.456515] initcall __boottime_init_per_zone_wmark_min+0x0/0x20 returned 0 after 0 usecs
+<7>[    0.456636] calling  __boottime_bdi_class_init+0x0/0x80 @ 1
+<7>[    0.458786] initcall __boottime_bdi_class_init+0x0/0x80 returned 0 after 0 usecs
+<7>[    0.458982] calling  __boottime_mm_sysfs_init+0x0/0x48 @ 1
+<7>[    0.459098] initcall __boottime_mm_sysfs_init+0x0/0x48 returned 0 after 0 usecs
+<7>[    0.459182] calling  __boottime_kobject_uevent_init+0x0/0x2c @ 1
+<7>[    0.459446] initcall __boottime_kobject_uevent_init+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.459539] calling  __boottime_pcibus_class_init+0x0/0x30 @ 1
+<7>[    0.459767] initcall __boottime_pcibus_class_init+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.459859] calling  __boottime_pci_driver_init+0x0/0x28 @ 1
+<7>[    0.460012] initcall __boottime_pci_driver_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.460101] calling  __boottime_backlight_class_init+0x0/0xcc @ 1
+<7>[    0.460256] initcall __boottime_backlight_class_init+0x0/0xcc returned 0 after 0 usecs
+<7>[    0.460348] calling  __boottime_amba_init+0x0/0x28 @ 1
+<7>[    0.460831] initcall __boottime_amba_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.460932] calling  __boottime_tty_class_init+0x0/0x60 @ 1
+<7>[    0.461070] initcall __boottime_tty_class_init+0x0/0x60 returned 0 after 0 usecs
+<7>[    0.461174] calling  __boottime_wakeup_sources_debugfs_init+0x0/0x40 @ 1
+<7>[    0.461411] initcall __boottime_wakeup_sources_debugfs_init+0x0/0x40 returned 0 after 0 usecs
+<7>[    0.461506] calling  __boottime_regmap_initcall+0x0/0x24 @ 1
+<7>[    0.461634] initcall __boottime_regmap_initcall+0x0/0x24 returned 0 after 0 usecs
+<7>[    0.461721] calling  __boottime_syscon_init+0x0/0x30 @ 1
+<7>[    0.462369] initcall __boottime_syscon_init+0x0/0x30 returned 0 after 0 usecs
+<7>[    0.462460] calling  __boottime_spi_init+0x0/0xcc @ 1
+<7>[    0.462627] initcall __boottime_spi_init+0x0/0xcc returned 0 after 0 usecs
+<7>[    0.462709] calling  __boottime_i2c_init+0x0/0xc8 @ 1
+<7>[    0.463042] initcall __boottime_i2c_init+0x0/0xc8 returned 0 after 0 usecs
+<7>[    0.463176] calling  __boottime_coresight_init+0x0/0x28 @ 1
+<7>[    0.463320] initcall __boottime_coresight_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.463431] calling  __boottime_udif_init_proc+0x0/0x74 @ 1
+<7>[    0.463551] initcall __boottime_udif_init_proc+0x0/0x74 returned 0 after 0 usecs
+<7>[    0.463632] calling  __boottime_udif_kmalloc_init+0x0/0x3c @ 1
+<7>[    0.463709] initcall __boottime_udif_kmalloc_init+0x0/0x3c returned 0 after 0 usecs
+<7>[    0.463795] calling  __boottime_udif_module_init+0x0/0x28 @ 1
+<7>[    0.463923] initcall __boottime_udif_module_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.464000] calling  __boottime_udif_module_init+0x0/0x2c @ 1
+<7>[    0.464073] initcall __boottime_udif_module_init+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.464650] calling  __boottime_debug_traps_init+0x0/0x68 @ 1
+<7>[    0.464751] initcall __boottime_debug_traps_init+0x0/0x68 returned 0 after 0 usecs
+<7>[    0.464828] calling  __boottime_vdso_init+0x0/0x18c @ 1
+<6>[    0.464929] vdso: 2 pages (1 code @ ffffff80084b6000, 1 data @ ffffff8008684000)
+<7>[    0.465071] initcall __boottime_vdso_init+0x0/0x18c returned 0 after 0 usecs
+<7>[    0.465147] calling  __boottime_arm64_dma_init+0x0/0x54 @ 1
+<6>[    0.466287] DMA: preallocated 256 KiB pool for atomic allocations
+<7>[    0.466385] initcall __boottime_arm64_dma_init+0x0/0x54 returned 0 after 0 usecs
+<7>[    0.466478] calling  __boottime_cxd900xx_reset_init+0x0/0x2c @ 1
+<7>[    0.466623] initcall __boottime_cxd900xx_reset_init+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.466713] calling  __boottime_pl011_init+0x0/0x60 @ 1
+<6>[    0.466784] Serial: AMBA PL011 UART driver
+<7>[    0.466961] initcall __boottime_pl011_init+0x0/0x60 returned 0 after 0 usecs
+<7>[    0.467049] calling  __boottime___udif_init_gpio+0x0/0x38 @ 1
+<7>[    0.473723] initcall __boottime___udif_init_gpio+0x0/0x38 returned 0 after 9765 usecs
+<7>[    0.473857] calling  __boottime_fusb_controller_regs_init+0x0/0x2c @ 1
+<7>[    0.474015] initcall __boottime_fusb_controller_regs_init+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.474108] calling  __boottime_udif_platform_register+0x0/0x44 @ 1
+<7>[    0.474251] initcall __boottime_udif_platform_register+0x0/0x44 returned 0 after 0 usecs
+<7>[    0.474337] calling  __boottime_of_platform_default_populate_init+0x0/0x84 @ 1
+<6>[    0.485817] 9000000.pl011: ttyAMA0 at MMIO 0x9000000 (irq = 33, base_baud = 0) is a PL011 rev1
+<6>[    0.486802] console [ttyAMA0] enabled
+<6>[    0.487110] bootconsole [pl11] disabled
+<7>[    0.488894] initcall __boottime_of_platform_default_populate_init+0x0/0x84 returned 0 after 9765 usecs
+<7>[    0.489690] calling  __boottime_topology_init+0x0/0x98 @ 1
+<7>[    0.490179] initcall __boottime_topology_init+0x0/0x98 returned 0 after 0 usecs
+<7>[    0.490381] calling  __boottime_uid_cache_init+0x0/0xb4 @ 1
+<7>[    0.490672] initcall __boottime_uid_cache_init+0x0/0xb4 returned 0 after 0 usecs
+<7>[    0.490983] calling  __boottime_param_sysfs_init+0x0/0x1d8 @ 1
+<7>[    0.511166] initcall __boottime_param_sysfs_init+0x0/0x1d8 returned 0 after 19531 usecs
+<7>[    0.511498] calling  __boottime_user_namespace_sysctl_init+0x0/0x58 @ 1
+<7>[    0.511883] initcall __boottime_user_namespace_sysctl_init+0x0/0x58 returned 0 after 0 usecs
+<7>[    0.512303] calling  __boottime_pm_sysrq_init+0x0/0x30 @ 1
+<7>[    0.542913] initcall __boottime_pm_sysrq_init+0x0/0x30 returned 0 after 29296 usecs
+<7>[    0.543162] calling  __boottime_ssboot_proc_init+0x0/0x10c @ 1
+<7>[    0.543655] initcall __boottime_ssboot_proc_init+0x0/0x10c returned 0 after 0 usecs
+<7>[    0.543897] calling  __boottime_cgroup_namespaces_init+0x0/0x20 @ 1
+<7>[    0.544073] initcall __boottime_cgroup_namespaces_init+0x0/0x20 returned 0 after 0 usecs
+<7>[    0.544305] calling  __boottime_heapmon_init+0x0/0x60 @ 1
+<7>[    0.544463] initcall __boottime_heapmon_init+0x0/0x60 returned 0 after 0 usecs
+<7>[    0.544640] calling  __boottime_oom_init+0x0/0x78 @ 1
+<7>[    0.544995] initcall __boottime_oom_init+0x0/0x78 returned 0 after 0 usecs
+<7>[    0.545204] calling  __boottime_default_bdi_init+0x0/0x5c @ 1
+<7>[    0.553479] initcall __boottime_default_bdi_init+0x0/0x5c returned 0 after 9765 usecs
+<7>[    0.553702] calling  __boottime_percpu_enable_async+0x0/0x2c @ 1
+<7>[    0.553862] initcall __boottime_percpu_enable_async+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.554061] calling  __boottime_kcompactd_init+0x0/0x38 @ 1
+<7>[    0.554394] initcall __boottime_kcompactd_init+0x0/0x38 returned 0 after 0 usecs
+<7>[    0.554610] calling  __boottime_init_reserve_notifier+0x0/0x20 @ 1
+<7>[    0.554781] initcall __boottime_init_reserve_notifier+0x0/0x20 returned 0 after 0 usecs
+<7>[    0.554987] calling  __boottime_init_admin_reserve+0x0/0x48 @ 1
+<7>[    0.555158] initcall __boottime_init_admin_reserve+0x0/0x48 returned 0 after 0 usecs
+<7>[    0.555507] calling  __boottime_init_user_reserve+0x0/0x48 @ 1
+<7>[    0.555713] initcall __boottime_init_user_reserve+0x0/0x48 returned 0 after 0 usecs
+<7>[    0.555915] calling  __boottime_hugetlb_init+0x0/0x52c @ 1
+<6>[    0.556294] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+<7>[    0.556859] initcall __boottime_hugetlb_init+0x0/0x52c returned 0 after 0 usecs
+<7>[    0.557075] calling  __boottime_crypto_wq_init+0x0/0x50 @ 1
+<7>[    0.563955] initcall __boottime_crypto_wq_init+0x0/0x50 returned 0 after 9765 usecs
+<7>[    0.564190] calling  __boottime_cryptomgr_init+0x0/0x28 @ 1
+<7>[    0.564390] initcall __boottime_cryptomgr_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.564589] calling  __boottime_cryptd_init+0x0/0xec @ 1
+<7>[    0.564970] initcall __boottime_cryptd_init+0x0/0xec returned 0 after 0 usecs
+<7>[    0.565155] calling  __boottime_init_bio+0x0/0xf4 @ 1
+<7>[    0.565749] initcall __boottime_init_bio+0x0/0xf4 returned 0 after 0 usecs
+<7>[    0.565967] calling  __boottime_blk_settings_init+0x0/0x48 @ 1
+<7>[    0.566139] initcall __boottime_blk_settings_init+0x0/0x48 returned 0 after 0 usecs
+<7>[    0.566330] calling  __boottime_blk_ioc_init+0x0/0x44 @ 1
+<7>[    0.566502] initcall __boottime_blk_ioc_init+0x0/0x44 returned 0 after 0 usecs
+<7>[    0.566695] calling  __boottime_blk_softirq_init+0x0/0xc0 @ 1
+<7>[    0.566915] initcall __boottime_blk_softirq_init+0x0/0xc0 returned 0 after 0 usecs
+<7>[    0.567105] calling  __boottime_blk_mq_init+0x0/0x6c @ 1
+<7>[    0.567260] initcall __boottime_blk_mq_init+0x0/0x6c returned 0 after 0 usecs
+<7>[    0.567460] calling  __boottime_genhd_device_init+0x0/0xa0 @ 1
+<7>[    0.567910] initcall __boottime_genhd_device_init+0x0/0xa0 returned 0 after 0 usecs
+<7>[    0.568109] calling  __boottime_pci_slot_init+0x0/0x60 @ 1
+<7>[    0.568277] initcall __boottime_pci_slot_init+0x0/0x60 returned 0 after 0 usecs
+<7>[    0.568459] calling  __boottime_fbmem_init+0x0/0xfc @ 1
+<7>[    0.568715] initcall __boottime_fbmem_init+0x0/0xfc returned 0 after 0 usecs
+<7>[    0.568912] calling  __boottime_misc_init+0x0/0xf4 @ 1
+<7>[    0.569118] initcall __boottime_misc_init+0x0/0xf4 returned 0 after 0 usecs
+<7>[    0.569305] calling  __boottime_dma_buf_init+0x0/0xa4 @ 1
+<7>[    0.569530] initcall __boottime_dma_buf_init+0x0/0xa4 returned 0 after 0 usecs
+<7>[    0.569722] calling  __boottime_pl022_init+0x0/0x28 @ 1
+<7>[    0.569979] initcall __boottime_pl022_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.570171] calling  __boottime_usb_init+0x0/0x1f8 @ 1
+<6>[    0.570654] usbcore: registered new interface driver usbfs
+<6>[    0.570954] usbcore: registered new interface driver hub
+<6>[    0.571183] usbcore: registered new device driver usb
+<7>[    0.572420] initcall __boottime_usb_init+0x0/0x1f8 returned 0 after 0 usecs
+<7>[    0.572614] calling  __boottime_fusb_otg_init+0x0/0xc4 @ 1
+<7>[    0.572905] initcall __boottime_fusb_otg_init+0x0/0xc4 returned 0 after 0 usecs
+<7>[    0.573092] calling  __boottime_usb_udc_init+0x0/0x70 @ 1
+<7>[    0.573270] initcall __boottime_usb_udc_init+0x0/0x70 returned 0 after 0 usecs
+<7>[    0.573767] calling  __boottime_input_init+0x0/0x140 @ 1
+<7>[    0.574001] initcall __boottime_input_init+0x0/0x140 returned 0 after 0 usecs
+<7>[    0.574180] calling  __boottime_dw_i2c_init_driver+0x0/0x2c @ 1
+<7>[    0.574420] initcall __boottime_dw_i2c_init_driver+0x0/0x2c returned 0 after 0 usecs
+<7>[    0.574615] calling  __boottime_power_supply_class_init+0x0/0x6c @ 1
+<7>[    0.574831] initcall __boottime_power_supply_class_init+0x0/0x6c returned 0 after 0 usecs
+<7>[    0.575048] calling  __boottime_arm_pmu_hp_init+0x0/0x64 @ 1
+<7>[    0.575353] initcall __boottime_arm_pmu_hp_init+0x0/0x64 returned 0 after 0 usecs
+<7>[    0.575609] calling  __boottime_ras_init+0x0/0x24 @ 1
+<7>[    0.575823] initcall __boottime_ras_init+0x0/0x24 returned 0 after 0 usecs
+<7>[    0.576043] calling  __boottime_proto_init+0x0/0x28 @ 1
+<7>[    0.576226] initcall __boottime_proto_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.576414] calling  __boottime_net_dev_init+0x0/0x1f4 @ 1
+<7>[    0.581130] initcall __boottime_net_dev_init+0x0/0x1f4 returned 0 after 0 usecs
+<7>[    0.581529] calling  __boottime_neigh_init+0x0/0xac @ 1
+<7>[    0.581734] initcall __boottime_neigh_init+0x0/0xac returned 0 after 0 usecs
+<7>[    0.581923] calling  __boottime_fib_rules_init+0x0/0xdc @ 1
+<7>[    0.582183] initcall __boottime_fib_rules_init+0x0/0xdc returned 0 after 0 usecs
+<7>[    0.582382] calling  __boottime_genl_init+0x0/0x98 @ 1
+<7>[    0.582873] initcall __boottime_genl_init+0x0/0x98 returned 0 after 0 usecs
+<7>[    0.583063] calling  __boottime_ipv4_netfilter_init+0x0/0x28 @ 1
+<7>[    0.583348] initcall __boottime_ipv4_netfilter_init+0x0/0x28 returned 0 after 0 usecs
+<7>[    0.583580] calling  __boottime_cfg80211_init+0x0/0xf8 @ 1
+<7>[    0.594118] initcall __boottime_cfg80211_init+0x0/0xf8 returned 0 after 9765 usecs
+<7>[    0.594355] calling  __boottime_wireless_nlevent_init+0x0/0x58 @ 1
+<7>[    0.595479] initcall __boottime_wireless_nlevent_init+0x0/0x58 returned 0 after 0 usecs
+<7>[    0.596427] calling  __boottime_create_debug_debugfs_entry+0x0/0x3c @ 1
+<7>[    0.596719] initcall __boottime_create_debug_debugfs_entry+0x0/0x3c returned 0 after 0 usecs
+<7>[    0.596989] calling  __boottime_dma_debug_do_init+0x0/0x20 @ 1
+<7>[    0.597196] initcall __boottime_dma_debug_do_init+0x0/0x20 returned 0 after 0 usecs
+<7>[    0.597406] calling  __boottime_clocksource_done_booting+0x0/0x64 @ 1
+<6>[    0.597966] clocksource: Switched to clocksource arch_sys_counter
+<7>[    0.598148] initcall __boottime_clocksource_done_booting+0x0/0x64 returned 0 after 315 usecs
+<7>[    0.598610] calling  __boottime_init_pipe_fs+0x0/0x6c @ 1
+<7>[    0.598904] initcall __boottime_init_pipe_fs+0x0/0x6c returned 0 after 144 usecs
+<7>[    0.599104] calling  __boottime_inotify_user_setup+0x0/0x5c @ 1
+<7>[    0.599467] initcall __boottime_inotify_user_setup+0x0/0x5c returned 0 after 68 usecs
+<7>[    0.599709] calling  __boottime_eventpoll_init+0x0/0x20 @ 1
+<7>[    0.600028] initcall __boottime_eventpoll_init+0x0/0x20 returned 0 after 158 usecs
+<7>[    0.600230] calling  __boottime_anon_inode_init+0x0/0x78 @ 1
+<7>[    0.600522] initcall __boottime_anon_inode_init+0x0/0x78 returned 0 after 129 usecs
+<7>[    0.600729] calling  __boottime_proc_locks_init+0x0/0x44 @ 1
+<7>[    0.600906] initcall __boottime_proc_locks_init+0x0/0x44 returned 0 after 26 usecs
+<7>[    0.601104] calling  __boottime_proc_cmdline_init+0x0/0x40 @ 1
+<7>[    0.601273] initcall __boottime_proc_cmdline_init+0x0/0x40 returned 0 after 16 usecs
+<7>[    0.601477] calling  __boottime_proc_consoles_init+0x0/0x44 @ 1
+<7>[    0.601756] initcall __boottime_proc_consoles_init+0x0/0x44 returned 0 after 41 usecs
+<7>[    0.601955] calling  __boottime_proc_cpuinfo_init+0x0/0x40 @ 1
+<7>[    0.602138] initcall __boottime_proc_cpuinfo_init+0x0/0x40 returned 0 after 22 usecs
+<7>[    0.602330] calling  __boottime_proc_devices_init+0x0/0x44 @ 1
+<7>[    0.602500] initcall __boottime_proc_devices_init+0x0/0x44 returned 0 after 23 usecs
+<7>[    0.602720] calling  __boottime_proc_interrupts_init+0x0/0x44 @ 1
+<7>[    0.602893] initcall __boottime_proc_interrupts_init+0x0/0x44 returned 0 after 20 usecs
+<7>[    0.603472] calling  __boottime_proc_loadavg_init+0x0/0x40 @ 1
+<7>[    0.603904] initcall __boottime_proc_loadavg_init+0x0/0x40 returned 0 after 99 usecs
+<7>[    0.604912] calling  __boottime_proc_meminfo_init+0x0/0x44 @ 1
+<7>[    0.605181] initcall __boottime_proc_meminfo_init+0x0/0x44 returned 0 after 41 usecs
+<7>[    0.605501] calling  __boottime_proc_stat_init+0x0/0x40 @ 1
+<7>[    0.605680] initcall __boottime_proc_stat_init+0x0/0x40 returned 0 after 28 usecs
+<7>[    0.605980] calling  __boottime_proc_uptime_init+0x0/0x40 @ 1
+<7>[    0.606183] initcall __boottime_proc_uptime_init+0x0/0x40 returned 0 after 41 usecs
+<7>[    0.606385] calling  __boottime_proc_version_init+0x0/0x44 @ 1
+<7>[    0.606749] initcall __boottime_proc_version_init+0x0/0x44 returned 0 after 155 usecs
+<7>[    0.606980] calling  __boottime_proc_softirqs_init+0x0/0x40 @ 1
+<7>[    0.607162] initcall __boottime_proc_softirqs_init+0x0/0x40 returned 0 after 22 usecs
+<7>[    0.607730] calling  __boottime_proc_kmsg_init+0x0/0x40 @ 1
+<7>[    0.608296] initcall __boottime_proc_kmsg_init+0x0/0x40 returned 0 after 401 usecs
+<7>[    0.608566] calling  __boottime_proc_page_init+0x0/0x68 @ 1
+<7>[    0.608770] initcall __boottime_proc_page_init+0x0/0x68 returned 0 after 51 usecs
+<7>[    0.608970] calling  __boottime_init_ramfs_fs+0x0/0x20 @ 1
+<7>[    0.609133] initcall __boottime_init_ramfs_fs+0x0/0x20 returned 0 after 17 usecs
+<7>[    0.609326] calling  __boottime_init_hugetlbfs_fs+0x0/0x16c @ 1
+<7>[    0.610124] initcall __boottime_init_hugetlbfs_fs+0x0/0x16c returned 0 after 623 usecs
+<7>[    0.610342] calling  __boottime_blk_scsi_ioctl_init+0x0/0xb8 @ 1
+<7>[    0.610545] initcall __boottime_blk_scsi_ioctl_init+0x0/0xb8 returned 0 after 37 usecs
+<7>[    0.610768] calling  __boottime_simplefb_init+0x0/0xa4 @ 1
+<7>[    0.611061] initcall __boottime_simplefb_init+0x0/0xa4 returned 0 after 144 usecs
+<7>[    0.611261] calling  __boottime_chr_dev_init+0x0/0xdc @ 1
+<7>[    0.613063] initcall __boottime_chr_dev_init+0x0/0xdc returned 0 after 1550 usecs
+<7>[    0.613318] calling  __boottime_firmware_class_init+0x0/0xb8 @ 1
+<7>[    0.613518] initcall __boottime_firmware_class_init+0x0/0xb8 returned 0 after 44 usecs
+<7>[    0.613715] calling  __boottime_sysctl_core_init+0x0/0x48 @ 1
+<7>[    0.613916] initcall __boottime_sysctl_core_init+0x0/0x48 returned 0 after 57 usecs
+<7>[    0.614107] calling  __boottime_eth_offload_init+0x0/0x2c @ 1
+<7>[    0.614309] initcall __boottime_eth_offload_init+0x0/0x2c returned 0 after 57 usecs
+<7>[    0.614501] calling  __boottime_inet_init+0x0/0x274 @ 1
+<6>[    0.614770] NET: Registered protocol family 2
+<6>[    0.615689] IP idents hash table entries: 131072 (order: 8, 1048576 bytes)
+<6>[    0.621075] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+<6>[    0.621652] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+<6>[    0.622794] TCP: Hash tables configured (established 65536 bind 65536)
+<6>[    0.623259] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+<6>[    0.623856] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+<7>[    0.625148] initcall __boottime_inet_init+0x0/0x274 returned 0 after 10258 usecs
+<7>[    0.625475] calling  __boottime_ipv4_offload_init+0x0/0x78 @ 1
+<7>[    0.625781] initcall __boottime_ipv4_offload_init+0x0/0x78 returned 0 after 98 usecs
+<7>[    0.626088] calling  __boottime_af_unix_init+0x0/0x74 @ 1
+<6>[    0.626302] NET: Registered protocol family 1
+<7>[    0.626579] initcall __boottime_af_unix_init+0x0/0x74 returned 0 after 315 usecs
+<7>[    0.626827] calling  __boottime_ipv6_offload_init+0x0/0x90 @ 1
+<7>[    0.627128] initcall __boottime_ipv6_offload_init+0x0/0x90 returned 0 after 126 usecs
+<7>[    0.627375] calling  __boottime_pci_apply_final_quirks+0x0/0x150 @ 1
+<7>[    0.627915] PCI: CLS 0 bytes, default 64
+<7>[    0.628230] initcall __boottime_pci_apply_final_quirks+0x0/0x150 returned 0 after 591 usecs
+<7>[    0.628456] calling  __boottime_populate_rootfs+0x0/0x120 @ 1
+<6>[    0.630304] Trying to unpack rootfs image as initramfs...
+<6>[    1.556509] Freeing initrd memory: 460800K
+<7>[    1.556838] initcall __boottime_populate_rootfs+0x0/0x120 returned 0 after 906417 usecs
+<7>[    1.557717] calling  __boottime_register_kernel_offset_dumper+0x0/0x34 @ 1
+<7>[    1.557979] initcall __boottime_register_kernel_offset_dumper+0x0/0x34 returned 0 after 47 usecs
+<7>[    1.558549] calling  __boottime_cpuinfo_regs_init+0x0/0xdc @ 1
+<7>[    1.558960] initcall __boottime_cpuinfo_regs_init+0x0/0xdc returned 0 after 237 usecs
+<7>[    1.559173] calling  __boottime_armv8_pmu_driver_init+0x0/0x2c @ 1
+<6>[    1.561599] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+<7>[    1.561922] initcall __boottime_armv8_pmu_driver_init+0x0/0x2c returned 0 after 2464 usecs
+<7>[    1.562145] calling  __boottime_register_mem_limit_dumper+0x0/0x38 @ 1
+<7>[    1.562340] initcall __boottime_register_mem_limit_dumper+0x0/0x38 returned 0 after 22 usecs
+<7>[    1.562560] calling  __boottime_cpu_feature_match_SHA1_init+0x0/0x38 @ 1
+<7>[    1.563940] initcall __boottime_cpu_feature_match_SHA1_init+0x0/0x38 returned 0 after 1152 usecs
+<7>[    1.564191] calling  __boottime_cpu_feature_match_SHA2_init+0x0/0x3c @ 1
+<7>[    1.564890] initcall __boottime_cpu_feature_match_SHA2_init+0x0/0x3c returned 0 after 506 usecs
+<7>[    1.565134] calling  __boottime_cpu_feature_match_PMULL_init+0x0/0x38 @ 1
+<7>[    1.565469] initcall __boottime_cpu_feature_match_PMULL_init+0x0/0x38 returned 0 after 150 usecs
+<7>[    1.565723] calling  __boottime_cpu_feature_match_AES_init+0x0/0x38 @ 1
+<7>[    1.566017] initcall __boottime_cpu_feature_match_AES_init+0x0/0x38 returned 0 after 114 usecs
+<7>[    1.566246] calling  __boottime_aes_mod_init+0x0/0x38 @ 1
+<7>[    1.566558] initcall __boottime_aes_mod_init+0x0/0x38 returned 0 after 162 usecs
+<7>[    1.566788] calling  __boottime_cpu_feature_match_AES_init+0x0/0x3c @ 1
+<7>[    1.568172] initcall __boottime_cpu_feature_match_AES_init+0x0/0x3c returned 0 after 1164 usecs
+<7>[    1.568419] calling  __boottime_aes_init+0x0/0x2c @ 1
+<7>[    1.569423] initcall __boottime_aes_init+0x0/0x2c returned 0 after 844 usecs
+<7>[    1.569630] calling  __boottime_cpu_feature_match_CRC32_init+0x0/0x6c @ 1
+<7>[    1.570073] initcall __boottime_cpu_feature_match_CRC32_init+0x0/0x6c returned 0 after 255 usecs
+<7>[    1.570313] calling  __boottime_proc_execdomains_init+0x0/0x40 @ 1
+<7>[    1.570623] initcall __boottime_proc_execdomains_init+0x0/0x40 returned 0 after 135 usecs
+<7>[    1.570872] calling  __boottime_cpuhp_sysfs_init+0x0/0xbc @ 1
+<7>[    1.571132] initcall __boottime_cpuhp_sysfs_init+0x0/0xbc returned 0 after 103 usecs
+<7>[    1.571382] calling  __boottime_ioresources_init+0x0/0x68 @ 1
+<7>[    1.571841] initcall __boottime_ioresources_init+0x0/0x68 returned 0 after 58 usecs
+<7>[    1.572059] calling  __boottime_ssboot_basic_optimizer_init_module+0x0/0x1c8 @ 1
+<7>[    1.572562] initcall __boottime_ssboot_basic_optimizer_init_module+0x0/0x1c8 returned 0 after 289 usecs
+<7>[    1.572820] calling  __boottime_irq_pm_init_ops+0x0/0x2c @ 1
+<7>[    1.572991] initcall __boottime_irq_pm_init_ops+0x0/0x2c returned 0 after 14 usecs
+<7>[    1.573189] calling  __boottime_init_posix_timers+0x0/0x20 @ 1
+<7>[    1.573662] initcall __boottime_init_posix_timers+0x0/0x20 returned 0 after 304 usecs
+<7>[    1.573898] calling  __boottime_init_posix_cpu_timers+0x0/0x20 @ 1
+<7>[    1.574132] initcall __boottime_init_posix_cpu_timers+0x0/0x20 returned 0 after 68 usecs
+<7>[    1.574344] calling  __boottime_timekeeping_init_ops+0x0/0x2c @ 1
+<7>[    1.574515] initcall __boottime_timekeeping_init_ops+0x0/0x2c returned 0 after 12 usecs
+<7>[    1.574742] calling  __boottime_init_clocksource_sysfs+0x0/0x78 @ 1
+<7>[    1.575153] initcall __boottime_init_clocksource_sysfs+0x0/0x78 returned 0 after 238 usecs
+<7>[    1.575488] calling  __boottime_init_timer_list_procfs+0x0/0x4c @ 1
+<7>[    1.575699] initcall __boottime_init_timer_list_procfs+0x0/0x4c returned 0 after 42 usecs
+<7>[    1.575915] calling  __boottime_alarmtimer_init+0x0/0x20 @ 1
+<7>[    1.576473] initcall __boottime_alarmtimer_init+0x0/0x20 returned 0 after 395 usecs
+<7>[    1.576703] calling  __boottime_clockevents_init_sysfs+0x0/0x124 @ 1
+<7>[    1.577124] initcall __boottime_clockevents_init_sysfs+0x0/0x124 returned 0 after 246 usecs
+<7>[    1.577347] calling  __boottime_sched_clock_syscore_init+0x0/0x30 @ 1
+<7>[    1.577529] initcall __boottime_sched_clock_syscore_init+0x0/0x30 returned 0 after 13 usecs
+<7>[    1.577769] calling  __boottime_proc_modules_init+0x0/0x44 @ 1
+<7>[    1.577950] initcall __boottime_proc_modules_init+0x0/0x44 returned 0 after 24 usecs
+<7>[    1.578464] calling  __boottime_kallsyms_init+0x0/0x44 @ 1
+<7>[    1.578652] initcall __boottime_kallsyms_init+0x0/0x44 returned 0 after 24 usecs
+<7>[    1.578848] calling  __boottime_utsname_sysctl_init+0x0/0x2c @ 1
+<7>[    1.579037] initcall __boottime_utsname_sysctl_init+0x0/0x2c returned 0 after 30 usecs
+<7>[    1.579275] calling  __boottime_perf_event_sysfs_init+0x0/0xc4 @ 1
+<7>[    1.579826] initcall __boottime_perf_event_sysfs_init+0x0/0xc4 returned 0 after 339 usecs
+<7>[    1.580053] calling  __boottime_em_module_init+0x0/0x30 @ 1
+<7>[    1.580233] initcall __boottime_em_module_init+0x0/0x30 returned 0 after 13 usecs
+<7>[    1.580432] calling  __boottime_trace_init+0x0/0xc4 @ 1
+<7>[    1.580624] initcall __boottime_trace_init+0x0/0xc4 returned 0 after 52 usecs
+<7>[    1.580812] calling  __boottime_klog_init+0x0/0x120 @ 1
+<3>[    1.580960] klog: klog.addr is not valid.
+<7>[    1.581143] initcall __boottime_klog_init+0x0/0x120 returned -12 after 168 usecs
+<7>[    1.581404] calling  __boottime_kswapd_init+0x0/0x3c @ 1
+<7>[    1.581778] initcall __boottime_kswapd_init+0x0/0x3c returned 0 after 218 usecs
+<7>[    1.581979] calling  __boottime_extfrag_debug_init+0x0/0x9c @ 1
+<7>[    1.582235] initcall __boottime_extfrag_debug_init+0x0/0x9c returned 0 after 94 usecs
+<7>[    1.582444] calling  __boottime_setup_vmstat+0x0/0x204 @ 1
+<7>[    1.593477] initcall __boottime_setup_vmstat+0x0/0x204 returned 0 after 10621 usecs
+<7>[    1.593953] calling  __boottime_mm_compute_batch_init+0x0/0x70 @ 1
+<7>[    1.594186] initcall __boottime_mm_compute_batch_init+0x0/0x70 returned 0 after 52 usecs
+<7>[    1.594414] calling  __boottime_slab_proc_init+0x0/0x44 @ 1
+<7>[    1.594609] initcall __boottime_slab_proc_init+0x0/0x44 returned 0 after 35 usecs
+<7>[    1.594845] calling  __boottime_workingset_init+0x0/0xb0 @ 1
+<6>[    1.595056] workingset: timestamp_bits=62 max_order=19 bucket_order=0
+<7>[    1.595269] initcall __boottime_workingset_init+0x0/0xb0 returned 0 after 244 usecs
+<7>[    1.595765] calling  __boottime_proc_vmalloc_init+0x0/0x44 @ 1
+<7>[    1.595973] initcall __boottime_proc_vmalloc_init+0x0/0x44 returned 0 after 39 usecs
+<7>[    1.596215] calling  __boottime_memblock_init_debugfs+0x0/0x94 @ 1
+<7>[    1.596477] initcall __boottime_memblock_init_debugfs+0x0/0x94 returned 0 after 85 usecs
+<7>[    1.596730] calling  __boottime_procswaps_init+0x0/0x44 @ 1
+<7>[    1.596999] initcall __boottime_procswaps_init+0x0/0x44 returned 0 after 51 usecs
+<7>[    1.597213] calling  __boottime_slab_proc_init+0x0/0x20 @ 1
+<7>[    1.597389] initcall __boottime_slab_proc_init+0x0/0x20 returned 0 after 13 usecs
+<7>[    1.597581] calling  __boottime_cpucache_init+0x0/0x5c @ 1
+<7>[    1.598212] initcall __boottime_cpucache_init+0x0/0x5c returned 0 after 461 usecs
+<7>[    1.598419] calling  __boottime_fcntl_init+0x0/0x44 @ 1
+<7>[    1.598571] initcall __boottime_fcntl_init+0x0/0x44 returned 0 after 20 usecs
+<7>[    1.598746] calling  __boottime_proc_filesystems_init+0x0/0x40 @ 1
+<7>[    1.598923] initcall __boottime_proc_filesystems_init+0x0/0x40 returned 0 after 24 usecs
+<7>[    1.599151] calling  __boottime_start_dirtytime_writeback+0x0/0x48 @ 1
+<7>[    1.599392] initcall __boottime_start_dirtytime_writeback+0x0/0x48 returned 0 after 43 usecs
+<7>[    1.599686] calling  __boottime_dio_init+0x0/0x44 @ 1
+<7>[    1.599879] initcall __boottime_dio_init+0x0/0x44 returned 0 after 46 usecs
+<7>[    1.600063] calling  __boottime_aio_setup+0x0/0xa0 @ 1
+<7>[    1.600495] initcall __boottime_aio_setup+0x0/0xa0 returned 0 after 281 usecs
+<7>[    1.600731] calling  __boottime_init_devpts_fs+0x0/0x48 @ 1
+<7>[    1.600946] initcall __boottime_init_devpts_fs+0x0/0x48 returned 0 after 57 usecs
+<7>[    1.601144] calling  __boottime_init_ext2_fs+0x0/0x78 @ 1
+<7>[    1.601358] initcall __boottime_init_ext2_fs+0x0/0x78 returned 0 after 62 usecs
+<7>[    1.601581] calling  __boottime_init_squashfs_fs+0x0/0x8c @ 1
+<6>[    1.601768] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+<7>[    1.601939] initcall __boottime_init_squashfs_fs+0x0/0x8c returned 0 after 197 usecs
+<7>[    1.602170] calling  __boottime_init_fat_fs+0x0/0x68 @ 1
+<7>[    1.602376] initcall __boottime_init_fat_fs+0x0/0x68 returned 0 after 61 usecs
+<7>[    1.602570] calling  __boottime_init_vfat_fs+0x0/0x28 @ 1
+<7>[    1.602726] initcall __boottime_init_vfat_fs+0x0/0x28 returned 0 after 14 usecs
+<7>[    1.602915] calling  __boottime_init_nls_cp437+0x0/0x2c @ 1
+<7>[    1.603132] initcall __boottime_init_nls_cp437+0x0/0x2c returned 0 after 73 usecs
+<7>[    1.603340] calling  __boottime_init_nls_ascii+0x0/0x2c @ 1
+<7>[    1.603550] initcall __boottime_init_nls_ascii+0x0/0x2c returned 0 after 31 usecs
+<7>[    1.603758] calling  __boottime_fuse_init+0x0/0x1b8 @ 1
+<6>[    1.603921] fuse init (API version 7.26)
+<7>[    1.604540] initcall __boottime_fuse_init+0x0/0x1b8 returned 0 after 617 usecs
+<7>[    1.604743] calling  __boottime_ipc_init+0x0/0x2c @ 1
+<7>[    1.605033] initcall __boottime_ipc_init+0x0/0x2c returned 0 after 150 usecs
+<7>[    1.605221] calling  __boottime_ipc_sysctl_init+0x0/0x2c @ 1
+<7>[    1.605397] initcall __boottime_ipc_sysctl_init+0x0/0x2c returned 0 after 26 usecs
+<7>[    1.605596] calling  __boottime_key_proc_init+0x0/0x88 @ 1
+<7>[    1.605993] initcall __boottime_key_proc_init+0x0/0x88 returned 0 after 217 usecs
+<7>[    1.606227] calling  __boottime_crypto_algapi_init+0x0/0x24 @ 1
+<7>[    1.606445] initcall __boottime_crypto_algapi_init+0x0/0x24 returned 0 after 47 usecs
+<7>[    1.606657] calling  __boottime_seqiv_module_init+0x0/0x28 @ 1
+<7>[    1.606857] initcall __boottime_seqiv_module_init+0x0/0x28 returned 0 after 37 usecs
+<7>[    1.607369] calling  __boottime_echainiv_module_init+0x0/0x28 @ 1
+<7>[    1.607593] initcall __boottime_echainiv_module_init+0x0/0x28 returned 0 after 39 usecs
+<7>[    1.607793] calling  __boottime_hmac_module_init+0x0/0x28 @ 1
+<7>[    1.607953] initcall __boottime_hmac_module_init+0x0/0x28 returned 0 after 12 usecs
+<7>[    1.608582] calling  __boottime_crypto_null_mod_init+0x0/0x74 @ 1
+<7>[    1.609292] initcall __boottime_crypto_null_mod_init+0x0/0x74 returned 0 after 513 usecs
+<7>[    1.609513] calling  __boottime_md5_mod_init+0x0/0x28 @ 1
+<7>[    1.609765] initcall __boottime_md5_mod_init+0x0/0x28 returned 0 after 104 usecs
+<7>[    1.609966] calling  __boottime_sha1_generic_mod_init+0x0/0x28 @ 1
+<7>[    1.610349] initcall __boottime_sha1_generic_mod_init+0x0/0x28 returned 0 after 210 usecs
+<7>[    1.610596] calling  __boottime_sha256_generic_mod_init+0x0/0x2c @ 1
+<7>[    1.610988] initcall __boottime_sha256_generic_mod_init+0x0/0x2c returned 0 after 215 usecs
+<7>[    1.611216] calling  __boottime_sha512_generic_mod_init+0x0/0x2c @ 1
+<7>[    1.611648] initcall __boottime_sha512_generic_mod_init+0x0/0x2c returned 0 after 206 usecs
+<7>[    1.611912] calling  __boottime_crypto_cbc_module_init+0x0/0x28 @ 1
+<7>[    1.612113] initcall __boottime_crypto_cbc_module_init+0x0/0x28 returned 0 after 28 usecs
+<7>[    1.612325] calling  __boottime_crypto_ctr_module_init+0x0/0x64 @ 1
+<7>[    1.612511] initcall __boottime_crypto_ctr_module_init+0x0/0x64 returned 0 after 31 usecs
+<7>[    1.612712] calling  __boottime_crypto_gcm_module_init+0x0/0xf8 @ 1
+<7>[    1.613007] initcall __boottime_crypto_gcm_module_init+0x0/0xf8 returned 0 after 114 usecs
+<7>[    1.613237] calling  __boottime_des_generic_mod_init+0x0/0x2c @ 1
+<7>[    1.613593] initcall __boottime_des_generic_mod_init+0x0/0x2c returned 0 after 185 usecs
+<7>[    1.613799] calling  __boottime_aes_init+0x0/0x28 @ 1
+<7>[    1.614089] initcall __boottime_aes_init+0x0/0x28 returned 0 after 112 usecs
+<7>[    1.614275] calling  __boottime_deflate_mod_init+0x0/0x28 @ 1
+<7>[    1.614529] initcall __boottime_deflate_mod_init+0x0/0x28 returned 0 after 103 usecs
+<7>[    1.614726] calling  __boottime_crypto_authenc_module_init+0x0/0x28 @ 1
+<7>[    1.614901] initcall __boottime_crypto_authenc_module_init+0x0/0x28 returned 0 after 11 usecs
+<7>[    1.615110] calling  __boottime_crypto_authenc_esn_module_init+0x0/0x28 @ 1
+<7>[    1.615290] initcall __boottime_crypto_authenc_esn_module_init+0x0/0x28 returned 0 after 9 usecs
+<7>[    1.615581] calling  __boottime_drbg_init+0x0/0x1e4 @ 1
+<7>[    1.616641] initcall __boottime_drbg_init+0x0/0x1e4 returned 0 after 902 usecs
+<7>[    1.616838] calling  __boottime_jent_mod_init+0x0/0x48 @ 1
+<7>[    1.617942] initcall __boottime_jent_mod_init+0x0/0x48 returned 0 after 906 usecs
+<7>[    1.618240] calling  __boottime_ghash_mod_init+0x0/0x28 @ 1
+<7>[    1.618565] initcall __boottime_ghash_mod_init+0x0/0x28 returned 0 after 169 usecs
+<7>[    1.618771] calling  __boottime_asymmetric_key_init+0x0/0x2c @ 1
+<5>[    1.618988] Key type asymmetric registered
+<7>[    1.619119] initcall __boottime_asymmetric_key_init+0x0/0x2c returned 0 after 183 usecs
+<7>[    1.619371] calling  __boottime_x509_key_init+0x0/0x28 @ 1
+<5>[    1.619564] Asymmetric key parser 'x509' registered
+<7>[    1.619761] initcall __boottime_x509_key_init+0x0/0x28 returned 0 after 219 usecs
+<7>[    1.619970] calling  __boottime_proc_genhd_init+0x0/0x68 @ 1
+<7>[    1.620165] initcall __boottime_proc_genhd_init+0x0/0x68 returned 0 after 45 usecs
+<7>[    1.620362] calling  __boottime_noop_init+0x0/0x28 @ 1
+<6>[    1.620595] io scheduler noop registered (default)
+<7>[    1.620748] initcall __boottime_noop_init+0x0/0x28 returned 0 after 245 usecs
+<7>[    1.620934] calling  __boottime_percpu_counter_startup+0x0/0x34 @ 1
+<7>[    1.621132] initcall __boottime_percpu_counter_startup+0x0/0x34 returned 0 after 36 usecs
+<7>[    1.621333] calling  __boottime_sg_pool_init+0x0/0x114 @ 1
+<7>[    1.621557] initcall __boottime_sg_pool_init+0x0/0x114 returned 0 after 86 usecs
+<7>[    1.621751] calling  __boottime_mod_init+0x0/0x20 @ 1
+<7>[    1.621891] initcall __boottime_mod_init+0x0/0x20 returned 0 after 8 usecs
+<7>[    1.622074] calling  __boottime_pci_proc_init+0x0/0x98 @ 1
+<7>[    1.622261] initcall __boottime_pci_proc_init+0x0/0x98 returned 0 after 49 usecs
+<7>[    1.622442] calling  __boottime_pcie_portdrv_init+0x0/0x98 @ 1
+<7>[    1.622759] initcall __boottime_pcie_portdrv_init+0x0/0x98 returned 0 after 167 usecs
+<7>[    1.622982] calling  __boottime_aer_service_init+0x0/0x48 @ 1
+<7>[    1.623213] initcall __boottime_aer_service_init+0x0/0x48 returned 0 after 86 usecs
+<7>[    1.623419] calling  __boottime_pcie_pme_service_init+0x0/0x28 @ 1
+<7>[    1.623713] initcall __boottime_pcie_pme_service_init+0x0/0x28 returned 0 after 46 usecs
+<7>[    1.623988] calling  __boottime_pci_ep_cfs_init+0x0/0x108 @ 1
+<7>[    1.625863] initcall __boottime_pci_ep_cfs_init+0x0/0x108 returned 0 after 1663 usecs
+<7>[    1.626094] calling  __boottime_pci_epc_init+0x0/0x68 @ 1
+<7>[    1.626298] initcall __boottime_pci_epc_init+0x0/0x68 returned 0 after 58 usecs
+<7>[    1.626501] calling  __boottime_pci_epf_init+0x0/0x4c @ 1
+<7>[    1.626723] initcall __boottime_pci_epf_init+0x0/0x4c returned 0 after 70 usecs
+<7>[    1.626921] calling  __boottime_dw_plat_pcie_driver_init+0x0/0x2c @ 1
+<7>[    1.627188] initcall __boottime_dw_plat_pcie_driver_init+0x0/0x2c returned 0 after 94 usecs
+<7>[    1.627492] calling  __boottime_cxd900xx_pcie_driver_init+0x0/0x2c @ 1
+<7>[    1.627749] initcall __boottime_cxd900xx_pcie_driver_init+0x0/0x2c returned 0 after 81 usecs
+<7>[    1.628270] calling  __boottime_amba_clcdfb_init+0x0/0x48 @ 1
+<7>[    1.628602] initcall __boottime_amba_clcdfb_init+0x0/0x48 returned 0 after 168 usecs
+<7>[    1.628826] calling  __boottime_of_fixed_factor_clk_driver_init+0x0/0x2c @ 1
+<7>[    1.629094] initcall __boottime_of_fixed_factor_clk_driver_init+0x0/0x2c returned 0 after 79 usecs
+<7>[    1.629337] calling  __boottime_of_fixed_clk_driver_init+0x0/0x2c @ 1
+<7>[    1.629583] initcall __boottime_of_fixed_clk_driver_init+0x0/0x2c returned 0 after 72 usecs
+<7>[    1.629814] calling  __boottime_gpio_clk_driver_init+0x0/0x2c @ 1
+<7>[    1.630106] initcall __boottime_gpio_clk_driver_init+0x0/0x2c returned 0 after 104 usecs
+<7>[    1.630320] calling  __boottime_pty_init+0x0/0x240 @ 1
+<7>[    1.630798] initcall __boottime_pty_init+0x0/0x240 returned 0 after 338 usecs
+<7>[    1.630985] calling  __boottime_sysrq_init+0x0/0xa0 @ 1
+<7>[    1.631291] initcall __boottime_sysrq_init+0x0/0xa0 returned 0 after 171 usecs
+<7>[    1.631520] calling  __boottime_nullcon_init+0x0/0x20 @ 1
+<4>[    1.631923] ttynull: NULL console driver $Revision: 1.1.2.1 $
+<7>[    1.632092] initcall __boottime_nullcon_init+0x0/0x20 returned 0 after 418 usecs
+<7>[    1.632274] calling  __boottime_dmmap_init+0x0/0x4c @ 1
+<7>[    1.632552] initcall __boottime_dmmap_init+0x0/0x4c returned 0 after 144 usecs
+<7>[    1.632735] calling  __boottime_topology_sysfs_init+0x0/0xac @ 1
+<7>[    1.632955] initcall __boottime_topology_sysfs_init+0x0/0xac returned 0 after 67 usecs
+<7>[    1.633151] calling  __boottime_cacheinfo_sysfs_init+0x0/0xc8 @ 1
+<4>[    1.633704] Unable to detect cache hierarchy for CPU 0
+<7>[    1.633993] initcall __boottime_cacheinfo_sysfs_init+0x0/0xc8 returned -2 after 668 usecs
+<7>[    1.634228] calling  __boottime_brd_init+0x0/0x1f8 @ 1
+<6>[    1.819205] brd: module loaded
+<7>[    1.819380] initcall __boottime_brd_init+0x0/0x1f8 returned 0 after 180669 usecs
+<7>[    1.819580] calling  __boottime_loop_init+0x0/0x164 @ 1
+<6>[    1.910523] loop: module loaded
+<7>[    1.910681] initcall __boottime_loop_init+0x0/0x164 returned 0 after 88828 usecs
+<7>[    1.910879] calling  __boottime_compswap_init+0x0/0x2e4 @ 1
+<6>[    1.911128] CompSwap: num_devices not specified. Using default: 1
+<6>[    1.911295] CompSwap: Creating 1 devices ...
+<7>[    1.922614] initcall __boottime_compswap_init+0x0/0x2e4 returned 0 after 11297 usecs
+<7>[    1.922885] calling  __boottime_compswap_lzo_init+0x0/0x2c @ 1
+<4>[    1.923076] Register CompSwap LZO compressor/decompressor
+<7>[    1.923315] initcall __boottime_compswap_lzo_init+0x0/0x2c returned 0 after 242 usecs
+<7>[    1.923576] calling  __boottime___udif_init_udif_hwtimer+0x0/0x34 @ 1
+<4>[    1.924049] hwtimer cpu0 OK
+<4>[    1.924934] hwtimer cpu1 OK
+<4>[    1.925070] hwtimer cpu2 OK
+<4>[    1.925168] hwtimer cpu3 OK
+<4>[    1.925368] hwtimer jitter 42
+<7>[    1.925562] initcall __boottime___udif_init_udif_hwtimer+0x0/0x34 returned 0 after 1763 usecs
+<7>[    1.925835] initcall __boottime___udif_init_udif_wdt blacklisted
+<7>[    1.926042] calling  __boottime_dt_node_en_ctrl_init+0x0/0x60 @ 1
+<7>[    1.926522] initcall __boottime_dt_node_en_ctrl_init+0x0/0x60 returned 0 after 285 usecs
+<7>[    1.926759] calling  __boottime_pmon_init+0x0/0x130 @ 1
+<7>[    1.926932] initcall __boottime_pmon_init+0x0/0x130 returned 0 after 24 usecs
+<7>[    1.927133] calling  __boottime_spidev_init+0x0/0xd8 @ 1
+<7>[    1.927486] initcall __boottime_spidev_init+0x0/0xd8 returned 0 after 195 usecs
+<7>[    1.927705] calling  __boottime_net_olddevs_init+0x0/0x9c @ 1
+<7>[    1.928240] initcall __boottime_net_olddevs_init+0x0/0x9c returned 0 after 355 usecs
+<7>[    1.928479] calling  __boottime_tun_init+0x0/0xbc @ 1
+<6>[    1.928637] tun: Universal TUN/TAP device driver, 1.6
+<6>[    1.928783] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<7>[    1.929366] initcall __boottime_tun_init+0x0/0xbc returned 0 after 721 usecs
+<7>[    1.929578] calling  __boottime_uio_init+0x0/0x104 @ 1
+<7>[    1.929942] initcall __boottime_uio_init+0x0/0x104 returned 0 after 204 usecs
+<7>[    1.930284] calling  __boottime_uio_pdrv_genirq_init+0x0/0x2c @ 1
+<7>[    1.930574] initcall __boottime_uio_pdrv_genirq_init+0x0/0x2c returned 0 after 110 usecs
+<7>[    1.930797] calling  __boottime___udif_init_udif_fusb_otg+0x0/0x38 @ 1
+<6>[    1.931399] fusb_set_gpio_base gpioint=fffffffff1030000
+<7>[    1.932739] initcall __boottime___udif_init_udif_fusb_otg+0x0/0x38 returned 0 after 1724 usecs
+<7>[    1.933036] calling  __boottime_dwc3_driver_init+0x0/0x2c @ 1
+<7>[    1.933516] initcall __boottime_dwc3_driver_init+0x0/0x2c returned 0 after 169 usecs
+<7>[    1.933737] calling  __boottime_dwc3_of_simple_driver_init+0x0/0x2c @ 1
+<7>[    1.934280] initcall __boottime_dwc3_of_simple_driver_init+0x0/0x2c returned 0 after 105 usecs
+<7>[    1.934519] calling  __boottime_evdev_init+0x0/0x28 @ 1
+<7>[    1.934676] initcall __boottime_evdev_init+0x0/0x28 returned 0 after 17 usecs
+<7>[    1.934863] calling  __boottime_i2c_dev_init+0x0/0xe4 @ 1
+<6>[    1.935013] i2c /dev entries driver
+<7>[    1.935295] initcall __boottime_i2c_dev_init+0x0/0xe4 returned 0 after 281 usecs
+<7>[    1.935563] calling  __boottime_hid_init+0x0/0x6c @ 1
+<7>[    1.935814] initcall __boottime_hid_init+0x0/0x6c returned 0 after 110 usecs
+<7>[    1.936004] calling  __boottime_hid_generic_init+0x0/0x38 @ 1
+<7>[    1.936264] initcall __boottime_hid_generic_init+0x0/0x38 returned 0 after 105 usecs
+<7>[    1.936553] calling  __boottime_extcon_class_init+0x0/0x30 @ 1
+<7>[    1.936816] initcall __boottime_extcon_class_init+0x0/0x30 returned 0 after 107 usecs
+<7>[    1.937046] calling  __boottime_etm_perf_init+0x0/0xd8 @ 1
+<7>[    1.937388] initcall __boottime_etm_perf_init+0x0/0xd8 returned 0 after 171 usecs
+<7>[    1.937590] calling  __boottime_errind_init+0x0/0x1b4 @ 1
+<7>[    1.937891] initcall __boottime_errind_init+0x0/0x1b4 returned 0 after 152 usecs
+<7>[    1.938266] initcall __boottime___udif_init_udif_pcie blacklisted
+<7>[    1.938429] initcall __boottime___udif_init_udif_ddrc blacklisted
+<7>[    1.938592] calling  __boottime_sock_diag_init+0x0/0x58 @ 1
+<7>[    1.939245] initcall __boottime_sock_diag_init+0x0/0x58 returned 0 after 182 usecs
+<7>[    1.939484] calling  __boottime_xt_init+0x0/0x12c @ 1
+<7>[    1.939732] initcall __boottime_xt_init+0x0/0x12c returned 0 after 108 usecs
+<7>[    1.939921] calling  __boottime_tcpudp_mt_init+0x0/0x2c @ 1
+<7>[    1.940161] initcall __boottime_tcpudp_mt_init+0x0/0x2c returned 0 after 89 usecs
+<7>[    1.940382] calling  __boottime_hl_tg_init+0x0/0x2c @ 1
+<7>[    1.940834] initcall __boottime_hl_tg_init+0x0/0x2c returned 0 after 75 usecs
+<7>[    1.941125] calling  __boottime_idletimer_tg_init+0x0/0xbc @ 1
+<7>[    1.941482] initcall __boottime_idletimer_tg_init+0x0/0xbc returned 0 after 177 usecs
+<7>[    1.941694] calling  __boottime_addrtype_mt_init+0x0/0x2c @ 1
+<7>[    1.941867] initcall __boottime_addrtype_mt_init+0x0/0x2c returned 0 after 13 usecs
+<7>[    1.942067] calling  __boottime_ecn_mt_init+0x0/0x2c @ 1
+<7>[    1.942217] initcall __boottime_ecn_mt_init+0x0/0x2c returned 0 after 10 usecs
+<7>[    1.942490] calling  __boottime_hl_mt_init+0x0/0x2c @ 1
+<7>[    1.942660] initcall __boottime_hl_mt_init+0x0/0x2c returned 0 after 28 usecs
+<7>[    1.942845] calling  __boottime_policy_mt_init+0x0/0x2c @ 1
+<7>[    1.943082] initcall __boottime_policy_mt_init+0x0/0x2c returned 0 after 19 usecs
+<7>[    1.943279] calling  __boottime_gre_offload_init+0x0/0x2c @ 1
+<7>[    1.943480] initcall __boottime_gre_offload_init+0x0/0x2c returned 0 after 23 usecs
+<7>[    1.943671] calling  __boottime_sysctl_ipv4_init+0x0/0x68 @ 1
+<7>[    1.943950] initcall __boottime_sysctl_ipv4_init+0x0/0x68 returned 0 after 134 usecs
+<7>[    1.944143] calling  __boottime_ipip_init+0x0/0xb4 @ 1
+<6>[    1.944279] ipip: IPv4 and MPLS over IPv4 tunneling driver
+<7>[    1.946407] initcall __boottime_ipip_init+0x0/0xb4 returned 0 after 2075 usecs
+<7>[    1.946625] calling  __boottime_gre_init+0x0/0x54 @ 1
+<6>[    1.946763] gre: GRE over IPv4 demultiplexor driver
+<7>[    1.946919] initcall __boottime_gre_init+0x0/0x54 returned 0 after 160 usecs
+<7>[    1.947114] calling  __boottime_ipgre_init+0x0/0x100 @ 1
+<6>[    1.947261] ip_gre: GRE over IPv4 tunneling driver
+<7>[    1.949660] initcall __boottime_ipgre_init+0x0/0x100 returned 0 after 2344 usecs
+<7>[    1.949933] calling  __boottime_ah4_init+0x0/0x94 @ 1
+<7>[    1.950292] initcall __boottime_ah4_init+0x0/0x94 returned 0 after 206 usecs
+<7>[    1.950491] calling  __boottime_esp4_init+0x0/0x90 @ 1
+<7>[    1.950715] initcall __boottime_esp4_init+0x0/0x90 returned 0 after 77 usecs
+<7>[    1.950914] calling  __boottime_ipcomp4_init+0x0/0x90 @ 1
+<7>[    1.951120] initcall __boottime_ipcomp4_init+0x0/0x90 returned 0 after 49 usecs
+<7>[    1.951598] calling  __boottime_ipip_init+0x0/0x88 @ 1
+<7>[    1.951869] initcall __boottime_ipip_init+0x0/0x88 returned 0 after 76 usecs
+<7>[    1.952098] calling  __boottime_xfrm4_beet_init+0x0/0x2c @ 1
+<7>[    1.952329] initcall __boottime_xfrm4_beet_init+0x0/0x2c returned 0 after 79 usecs
+<7>[    1.952564] calling  __boottime_tunnel4_init+0x0/0x50 @ 1
+<7>[    1.952721] initcall __boottime_tunnel4_init+0x0/0x50 returned 0 after 20 usecs
+<7>[    1.952902] calling  __boottime_xfrm4_transport_init+0x0/0x2c @ 1
+<7>[    1.953088] initcall __boottime_xfrm4_transport_init+0x0/0x2c returned 0 after 13 usecs
+<7>[    1.953310] calling  __boottime_xfrm4_mode_tunnel_init+0x0/0x2c @ 1
+<7>[    1.953479] initcall __boottime_xfrm4_mode_tunnel_init+0x0/0x2c returned 0 after 12 usecs
+<7>[    1.953698] calling  __boottime_ip_tables_init+0x0/0xd4 @ 1
+<6>[    1.954104] ip_tables: (C) 2000-2006 Netfilter Core Team
+<7>[    1.954254] initcall __boottime_ip_tables_init+0x0/0xd4 returned 0 after 385 usecs
+<7>[    1.954488] calling  __boottime_iptable_filter_init+0x0/0x6c @ 1
+<7>[    1.956688] initcall __boottime_iptable_filter_init+0x0/0x6c returned 0 after 1958 usecs
+<7>[    1.957087] calling  __boottime_iptable_mangle_init+0x0/0x94 @ 1
+<7>[    1.958455] initcall __boottime_iptable_mangle_init+0x0/0x94 returned 0 after 864 usecs
+<7>[    1.958778] calling  __boottime_iptable_raw_init+0x0/0x94 @ 1
+<7>[    1.959095] initcall __boottime_iptable_raw_init+0x0/0x94 returned 0 after 155 usecs
+<7>[    1.959320] calling  __boottime_ah_mt_init+0x0/0x28 @ 1
+<7>[    1.959602] initcall __boottime_ah_mt_init+0x0/0x28 returned 0 after 31 usecs
+<7>[    1.959793] calling  __boottime_rpfilter_mt_init+0x0/0x28 @ 1
+<7>[    1.959958] initcall __boottime_rpfilter_mt_init+0x0/0x28 returned 0 after 12 usecs
+<7>[    1.960162] calling  __boottime_ecn_tg_init+0x0/0x28 @ 1
+<7>[    1.960319] initcall __boottime_ecn_tg_init+0x0/0x28 returned 0 after 15 usecs
+<7>[    1.960508] calling  __boottime_reject_tg_init+0x0/0x28 @ 1
+<7>[    1.960663] initcall __boottime_reject_tg_init+0x0/0x28 returned 0 after 10 usecs
+<7>[    1.960869] calling  __boottime_cubictcp_register+0x0/0x6c @ 1
+<7>[    1.961087] initcall __boottime_cubictcp_register+0x0/0x6c returned 0 after 48 usecs
+<7>[    1.961295] calling  __boottime_xfrm_user_init+0x0/0x70 @ 1
+<6>[    1.961464] Initializing XFRM netlink socket
+<7>[    1.961687] initcall __boottime_xfrm_user_init+0x0/0x70 returned 0 after 228 usecs
+<7>[    1.961893] calling  __boottime_packet_init+0x0/0xa8 @ 1
+<6>[    1.962069] NET: Registered protocol family 17
+<7>[    1.962344] initcall __boottime_packet_init+0x0/0xa8 returned 0 after 287 usecs
+<7>[    1.962559] calling  __boottime_ipsec_pfkey_init+0x0/0xa4 @ 1
+<6>[    1.962780] NET: Registered protocol family 15
+<7>[    1.962915] initcall __boottime_ipsec_pfkey_init+0x0/0xa4 returned 0 after 197 usecs
+<7>[    1.963999] calling  __boottime_fpsimd_init+0x0/0x8c @ 1
+<7>[    1.964207] initcall __boottime_fpsimd_init+0x0/0x8c returned 0 after 57 usecs
+<7>[    1.964400] calling  __boottime_init_oops_id+0x0/0x48 @ 1
+<7>[    1.964590] initcall __boottime_init_oops_id+0x0/0x48 returned 0 after 46 usecs
+<7>[    1.964803] calling  __boottime_pm_qos_power_init+0x0/0xd8 @ 1
+<7>[    1.965805] initcall __boottime_pm_qos_power_init+0x0/0xd8 returned 0 after 813 usecs
+<7>[    1.966051] calling  __boottime_pm_debugfs_init+0x0/0x40 @ 1
+<7>[    1.966245] initcall __boottime_pm_debugfs_init+0x0/0x40 returned 0 after 38 usecs
+<7>[    1.966460] calling  __boottime_create_warm_boot_proc+0x0/0x7c @ 1
+<7>[    1.966680] initcall __boottime_create_warm_boot_proc+0x0/0x7c returned 0 after 55 usecs
+<7>[    1.966909] calling  __boottime_printk_late_init+0x0/0x98 @ 1
+<7>[    1.967109] initcall __boottime_printk_late_init+0x0/0x98 returned 0 after 41 usecs
+<7>[    1.967401] calling  __boottime_tk_debug_sleep_time_init+0x0/0x58 @ 1
+<7>[    1.967649] initcall __boottime_tk_debug_sleep_time_init+0x0/0x58 returned 0 after 52 usecs
+<7>[    1.967867] calling  __boottime_fault_around_debugfs+0x0/0x50 @ 1
+<7>[    1.968332] initcall __boottime_fault_around_debugfs+0x0/0x50 returned 0 after 36 usecs
+<7>[    1.968538] calling  __boottime_max_swapfiles_check+0x0/0x20 @ 1
+<7>[    1.968694] initcall __boottime_max_swapfiles_check+0x0/0x20 returned 0 after 8 usecs
+<7>[    1.968893] calling  __boottime_check_early_ioremap_leak+0x0/0x64 @ 1
+<7>[    1.969130] initcall __boottime_check_early_ioremap_leak+0x0/0x64 returned 0 after 43 usecs
+<7>[    1.969366] calling  __boottime_kstack_init+0x0/0x40 @ 1
+<7>[    1.969545] initcall __boottime_kstack_init+0x0/0x40 returned 0 after 33 usecs
+<7>[    1.969741] calling  __boottime_irqstack_init+0x0/0x40 @ 1
+<7>[    1.969935] initcall __boottime_irqstack_init+0x0/0x40 returned 0 after 24 usecs
+<7>[    1.970155] calling  __boottime_init_root_keyring+0x0/0x20 @ 1
+<7>[    1.971653] initcall __boottime_init_root_keyring+0x0/0x20 returned 0 after 1295 usecs
+<7>[    1.971894] calling  __boottime_prandom_init_late+0x0/0x50 @ 1
+<7>[    1.972132] initcall __boottime_prandom_init_late+0x0/0x50 returned 0 after 58 usecs
+<7>[    1.972324] calling  __boottime_boot_time_proc_init+0x0/0x44 @ 1
+<7>[    1.972501] initcall __boottime_boot_time_proc_init+0x0/0x44 returned 0 after 28 usecs
+<7>[    1.972713] calling  __boottime_debug_heap_proc_profile+0x0/0xac @ 1
+<7>[    1.972900] initcall __boottime_debug_heap_proc_profile+0x0/0xac returned 0 after 19 usecs
+<7>[    1.973153] calling  __boottime_pci_resource_alignment_sysfs_init+0x0/0x34 @ 1
+<7>[    1.973370] initcall __boottime_pci_resource_alignment_sysfs_init+0x0/0x34 returned 0 after 32 usecs
+<7>[    1.973599] calling  __boottime_pci_sysfs_init+0x0/0x6c @ 1
+<7>[    1.973761] initcall __boottime_pci_sysfs_init+0x0/0x6c returned 0 after 24 usecs
+<7>[    1.973942] calling  __boottime_clk_debug_init+0x0/0x15c @ 1
+<7>[    1.974379] initcall __boottime_clk_debug_init+0x0/0x15c returned 0 after 273 usecs
+<7>[    1.974578] calling  __boottime_cxd_clk_debugfs_register+0x0/0x80 @ 1
+<7>[    1.974790] initcall __boottime_cxd_clk_debugfs_register+0x0/0x80 returned 0 after 34 usecs
+<7>[    1.975005] calling  __boottime_deferred_probe_initcall+0x0/0x40 @ 1
+<7>[    1.975751] initcall __boottime_deferred_probe_initcall+0x0/0x40 returned 0 after 537 usecs
+<7>[    1.976003] initcall __boottime___udif_init_pcidma blacklisted
+<7>[    1.976156] initcall __boottime_sony_usb_init blacklisted
+<7>[    1.976300] calling  __boottime_of_fdt_raw_init+0x0/0x88 @ 1
+<7>[    1.976553] initcall __boottime_of_fdt_raw_init+0x0/0x88 returned 0 after 89 usecs
+<7>[    1.976891] calling  __boottime_cxd90057_pm_init+0x0/0x1c4 @ 1
+<4>[    1.977075] resume vector: not defined
+<4>[    1.977184] sus_error address: not defined
+<7>[    1.977451] initcall __boottime_cxd90057_pm_init+0x0/0x1c4 returned 0 after 394 usecs
+<7>[    1.977660] calling  __boottime_register_sk_filter_ops+0x0/0x20 @ 1
+<7>[    1.977835] initcall __boottime_register_sk_filter_ops+0x0/0x20 returned 0 after 10 usecs
+<7>[    1.978174] calling  __boottime_tcp_congestion_default+0x0/0x28 @ 1
+<7>[    1.978809] initcall __boottime_tcp_congestion_default+0x0/0x28 returned 0 after 67 usecs
+<7>[    1.979026] calling  __boottime_ip_auto_config+0x0/0xeb4 @ 1
+<3>[    1.984281] IP-Config: Failed to open gretap0
+<3>[    1.984440] IP-Config: No network devices available
+<7>[    1.984582] initcall __boottime_ip_auto_config+0x0/0xeb4 returned -19 after 5275 usecs
+<7>[    1.984791] calling  __boottime_clk_disable_unused+0x0/0x120 @ 1
+<7>[    1.985042] initcall __boottime_clk_disable_unused+0x0/0x120 returned 0 after 100 usecs
+<6>[    2.000773] Freeing unused kernel memory: 320K
+<4>[    2.133424] Set MinDrv: fusb_otg
+<4>[    2.137730] devno: loading out-of-tree module taints kernel.
+<4>[    2.138310] devno: module license 'unspecified' taints kernel.
+<4>[    2.138490] Disabling lock debugging due to kernel taint
+<7>[    2.146858] calling  init_module+0x0/0xff8 [osal_utm] @ 121
+<7>[    2.147389] initcall init_module+0x0/0xff8 [osal_utm] returned 0 after 327 usecs
+<7>[    2.151602] calling  init_module+0x0/0xf00 [osal_uipc] @ 123
+<7>[    2.154948] initcall init_module+0x0/0xf00 [osal_uipc] returned 0 after 3004 usecs
+<7>[    2.159032] calling  init_module+0x0/0xeb0 [utimer] @ 126
+<7>[    2.161642] initcall init_module+0x0/0xeb0 [utimer] returned 0 after 2349 usecs
+<7>[    2.167143] calling  init_module+0x0/0xd88 [backup] @ 132
+<4>[    2.173158] backup.ko: ** NO SAVE MODE **
+<7>[    2.173477] initcall init_module+0x0/0xd88 [backup] returned 0 after 5933 usecs
+<7>[    2.191566] calling  init_module+0x0/0xfe0 [stream] @ 136
+<7>[    2.192132] initcall init_module+0x0/0xfe0 [stream] returned 0 after 367 usecs
+<7>[    2.195580] calling  init_module+0x0/0xfe0 [stream2] @ 138
+<7>[    2.196175] initcall init_module+0x0/0xfe0 [stream2] returned 0 after 383 usecs
+<7>[    2.200761] calling  init_module+0x0/0xef8 [osal_ulogio] @ 140
+<7>[    2.209195] initcall init_module+0x0/0xef8 [osal_ulogio] returned 0 after 7900 usecs
+<7>[    2.217680] calling  init_module+0x0/0x1000 [dmm] @ 145
+<7>[    2.223216] initcall init_module+0x0/0x1000 [dmm] returned 0 after 5194 usecs
+<7>[    2.227644] calling  init_module+0x0/0x1000 [grm_ma] @ 148
+<7>[    2.228449] initcall init_module+0x0/0x1000 [grm_ma] returned 0 after 598 usecs
+<7>[    2.232430] calling  init_module+0x0/0xed0 [udate] @ 150
+<7>[    2.233762] initcall init_module+0x0/0xed0 [udate] returned 0 after 1104 usecs
+<7>[    2.311824] calling  init_module+0x0/0xd00 [upm] @ 159
+<4>[    2.318075] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    2.319248] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<7>[    2.323234] initcall init_module+0x0/0xd00 [upm] returned 0 after 10850 usecs
+<4>[    2.324584] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8f7
+<4>[    2.327098] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    2.327665] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    2.328205] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    2.328667] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    2.329002] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    2.329432] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    2.329657] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<7>[    2.334140] calling  init_module+0x0/0xf98 [mcmn_drv] @ 178
+<7>[    2.341970] initcall init_module+0x0/0xf98 [mcmn_drv] returned 0 after 7400 usecs
+<7>[    2.346002] calling  init_module+0x0/0xf68 [kikilog] @ 183
+<7>[    2.347011] initcall init_module+0x0/0xf68 [kikilog] returned 0 after 786 usecs
+<4>[    2.355631] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x5c5
+<4>[    4.389530] [MCMND][RM] First Event From Front. 00000001, 00010001, 00000001
+<3>[    4.451076] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1020
+<4>[    4.480741] open /tmp/kikilog.dat failed, start create mode.
+<3>[    4.513883] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1024
+<3>[    4.514261] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1024
+<4>[    4.690906] liro: Unknown symbol dma330_mem_transfer_async (err 0)
+<4>[    4.691462] liro: Unknown symbol pciatu_unmap (err 0)
+<4>[    4.691815] liro: Unknown symbol pciatu_map (err 0)
+<4>[    4.693190] liro: Unknown symbol interchip_transfer_async (err 0)
+<4>[    4.697182] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    4.697422] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    4.697691] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    4.697941] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    4.748678] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x85c
+<4>[    4.749137] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x85c
+<4>[    4.777463] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x738
+<4>[    4.784333] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x7ec
+<7>[    4.825768] calling  init_module+0x0/0x1000 [wlanMemoryAllocator] @ 218
+<4>[    4.826188] wlanMemoryAllocator: [DEBUG] DEBUG MODE enabled
+<4>[    4.826394] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic[0] = ffffffc11c540000, size = 81920
+<4>[    4.826702] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic[1] = ffffffc11c560000, size = 81920
+<4>[    4.827088] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic[2] = ffffffc11c580000, size = 81920
+<4>[    4.827425] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic_L[0] = ffffffc11c5a0000, size = 131072
+<4>[    4.827702] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic_S[0] = ffffffc11c5c0000, size = 65536
+<4>[    4.829073] wlanMemoryAllocator: Memory Allocated. g_pMemGfpAtomic_SS[0] = ffffffc11c53c000, size = 16384
+<7>[    4.829363] initcall init_module+0x0/0x1000 [wlanMemoryAllocator] returned 0 after 3169 usecs
+<4>[    5.033686] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x964
+<4>[    5.094421] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[    5.124376] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[    5.748233] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<3>[    6.627743] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1020
+<4>[    6.628765] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[    6.788246] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<3>[    7.021897] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1020
+<4>[    7.114475] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    7.115046] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    7.318527] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    7.630320] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[    7.828036] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<4>[    8.631784] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[    8.743971] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.745255] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.748714] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.751544] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.752761] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.756975] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.759043] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.767061] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.779000] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.779847] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.783746] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.784060] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.790522] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.790818] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.813265] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    8.822969] [K]**UIPC ERROR** free_dynamic_msgq_id: QID[81cf61c6] M=1 C=0 S=0 A=1
+<4>[    8.833669] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.833988] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.861796] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.863201] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.864444] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.865515] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.866824] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.867927] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.881170] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x193
+<4>[    8.884851] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.886155] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.888998] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x193
+<4>[    8.900394] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.903440] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x193
+<4>[    8.906073] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.907774] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.910665] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.911612] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.917302] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.918612] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.919593] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[    8.929434] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.932257] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.940742] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.941038] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.941686] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.941924] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.943532] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.943765] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.945105] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.945437] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.945651] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.945860] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.946229] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.946454] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.946674] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.946890] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.947149] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.947394] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.947677] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.948393] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.949330] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.949569] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.964121] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.964453] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.964793] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.965138] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    8.966789] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.967039] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.967438] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.967663] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.967883] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.968555] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.968800] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.969035] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    8.969267] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[    9.000359] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.000861] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.001365] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.002073] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0xe
+<4>[    9.008369] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.009919] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.014210] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x747
+<4>[    9.014901] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x85c
+<3>[    9.188267] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<4>[    9.633069] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[    9.759618] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[    9.760592] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   10.004302] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   10.004760] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   10.005744] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   10.031041] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x319
+<4>[   10.031987] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.032884] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.033690] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.034431] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.068763] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.070145] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<3>[   10.228210] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<4>[   10.496946] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.497802] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.499289] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.525117] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x46
+<4>[   10.525812] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x46
+<4>[   10.526917] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.527624] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x46
+<4>[   10.537075] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x46
+<4>[   10.634489] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   10.667050] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   10.675744] [UDATE_ERROR][udate_set_resource()] ignoring NODEV of osal_snd_sync_msg(RESOURCE).[-1020]
+<4>[   10.684716] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x5c5
+<12>[   11.136172] [U]**UIPC ERROR** free_dynamic_msgq_id: QID[1cfe11c] M=0 C=0 S=0 A=1
+<4>[   11.137090] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   11.137427] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   11.635836] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   12.637287] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   13.638709] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   14.640081] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   15.641464] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   16.643294] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   17.651049] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   18.654845] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   19.658148] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   20.660304] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   21.663141] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   22.685953] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   23.701349] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   24.719401] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   25.722667] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   26.724345] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   27.725803] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[   27.818652] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[   27.836209] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[   27.926746] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[   27.947371] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[   27.991603] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[   28.085325] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<4>[   28.727494] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   29.735141] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   30.736482] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   31.737703] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   32.739700] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   33.740940] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   34.744826] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   35.228670] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   35.230006] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   35.336512] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   35.336820] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   35.746299] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   36.236281] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   36.237018] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   36.289653] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   36.290751] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<12>[   36.329860] [U]**UIPC ERROR** free_dynamic_msgq_id: QID[1cfe11c] M=0 C=0 S=0 A=1
+<4>[   36.330507] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   36.330822] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x83f
+<4>[   36.747895] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   37.291669] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   37.292341] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   37.749136] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   38.759539] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   39.761028] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   40.783843] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   41.786550] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   42.745700] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   42.746788] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   42.788175] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   42.894206] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   42.895166] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.241941] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.242763] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.339239] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.340175] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.684018] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.684888] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.789521] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   43.796989] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   43.798691] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.142868] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.143809] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.263107] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.264528] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.584962] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.585830] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.684963] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.685840] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   44.790902] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   45.002088] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.003485] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.131116] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.132374] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.462422] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.463529] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.566136] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.567081] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.798950] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   45.905036] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   45.906003] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.009221] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.010165] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.410963] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.412034] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.535480] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.537178] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.800166] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   46.940250] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   46.941303] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.091253] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.093679] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.427261] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.428800] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.545312] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.546163] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.801485] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   47.942699] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   47.943694] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.044941] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.045756] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.429524] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.430595] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.551177] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.552077] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.802819] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   48.950025] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   48.951196] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.106051] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.107920] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.495734] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.498574] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.654142] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.656056] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.804269] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   49.995506] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   49.996566] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.117204] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.118375] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.501053] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.501896] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.606744] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.607683] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   50.805560] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   51.009451] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.010438] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.148064] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.149133] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.490476] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.491632] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.631812] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.632635] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.806908] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   51.952114] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   51.953353] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.087944] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.089253] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.472492] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.477381] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.593528] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.595198] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.808568] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   52.948696] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   52.949770] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.056744] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.057682] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.413094] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.413973] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.534706] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.535557] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.809746] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   53.920705] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   53.921469] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.040736] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.041534] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.370801] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.371816] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.512710] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.513671] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.811197] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   54.868269] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   54.869325] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.011906] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.013045] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.367867] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.369109] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.500068] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.500870] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.812745] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   55.862247] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.863225] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.984716] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   55.985527] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.392417] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.393319] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.515915] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.516767] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.814251] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   56.873445] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   56.888433] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.002240] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.003097] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.365588] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.366893] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.515933] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.518802] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.819475] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   57.891105] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   57.892222] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.013808] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.014650] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.392108] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.392964] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.525366] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.526210] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.820614] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   58.889923] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   58.891651] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.005061] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.006093] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.328890] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.330595] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.444295] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.445136] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.774739] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.783209] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.821966] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   59.895181] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   59.896380] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   60.326351] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   60.327185] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   60.327928] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x1
+<4>[   60.825417] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   60.853118] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   60.854377] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   60.973730] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   60.974747] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.350269] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.351225] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.442910] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.443742] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.787768] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.789503] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.826695] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   61.904057] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   61.904932] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.267486] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.268770] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.385091] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.385980] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.754266] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.755247] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.828101] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   62.882720] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   62.883700] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.216315] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.217626] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<3>[   63.291518] ERROR:arch_va_to_phys:va=0x0
+<4>[   63.326515] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.327597] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.655086] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.656082] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.745916] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.747028] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   63.829101] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   64.135201] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.136184] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.228226] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.229165] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.584813] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.585605] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.710893] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.712124] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   64.830819] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   65.027501] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.028826] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.146216] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.147099] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.527838] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.533596] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.654487] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.655342] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   65.832763] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   66.015420] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.016490] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.118557] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.119395] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.493399] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.494416] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.620595] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.621461] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.834240] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   66.991706] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   66.992604] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.094613] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.095544] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.497522] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.500992] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.617157] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.618592] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.835532] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   67.918508] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   67.919552] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.052728] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.053853] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.411219] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.412219] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.507009] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.509015] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.837328] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   68.840075] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.846108] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.970207] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   68.971490] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.372599] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.373647] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.521082] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.521958] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.844275] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   69.923473] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   69.924346] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.038704] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.039621] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.416024] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.417278] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.553126] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.553958] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.845663] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   70.918065] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   70.920691] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.046648] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.047789] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.444576] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.445666] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.616048] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.617205] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.847259] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   71.986452] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   71.987625] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   72.108122] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   72.109394] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   72.852026] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   73.110473] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   73.111276] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   73.858415] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   74.874385] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   75.875893] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   76.296281] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   76.297082] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   76.426512] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   76.427407] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   76.893271] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   77.436003] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   77.436657] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   77.895838] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[   78.198532] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<3>[   78.818593] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<4>[   78.906916] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   79.914973] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[   80.079009] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<3>[   80.698100] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1022
+<4>[   80.916424] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   80.932868] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   80.933969] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.052553] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.053741] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.397634] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.398897] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.497538] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.499300] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.886452] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.887498] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   81.917865] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   82.016946] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.017762] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.380828] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.392909] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.546466] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.547305] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.874495] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.875445] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   82.921140] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   83.025379] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.026222] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.398857] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.399859] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.494856] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.495858] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.911104] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.912121] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   83.922635] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   84.061836] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.062970] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.404420] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.408956] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.532352] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.533239] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.896870] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.897884] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   84.923895] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   85.020821] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.021972] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.372797] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.373838] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.509303] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.510375] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.855531] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.856403] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.925259] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   85.971226] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   85.972343] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.307579] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.308774] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.428750] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.429692] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.797204] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.799109] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<3>[   86.837749] ERROR:arch_va_to_phys:va=0x0
+<3>[   86.842014] ERROR:arch_va_to_phys:va=0x0
+<4>[   86.892603] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.893546] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   86.926368] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   87.283125] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.284192] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.411934] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.413394] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.776004] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.776888] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.923013] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.925077] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   87.928128] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   88.279050] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   88.280088] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   88.406082] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   88.407306] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   88.939844] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   89.408808] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   89.409648] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   89.959090] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   90.961517] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   91.974062] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   92.638974] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   92.640247] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   92.765263] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   92.766308] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   92.975450] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   93.134122] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   93.134945] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   93.268935] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   93.269849] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   93.987628] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   94.270680] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   94.271558] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   94.994548] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   96.013135] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   97.015127] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   97.416186] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   97.417016] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   97.692342] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   97.693433] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   98.016329] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[   98.694466] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   98.695261] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[   99.018737] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  100.024375] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  101.034668] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  102.036171] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  102.287459] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  102.288566] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  102.406263] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  102.407618] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  103.037480] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  103.414285] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  103.416091] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  104.043838] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  105.045711] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  106.062719] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  107.064181] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  108.066019] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  109.067402] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  109.557214] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  109.558355] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  109.786350] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  109.787293] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.056860] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.057901] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.069430] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  110.324292] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.325276] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.526041] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.526966] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.610852] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  110.611994] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  111.071099] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  111.616450] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  111.617039] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  112.075573] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  113.077208] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  114.078711] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  115.080857] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  116.082259] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  117.088079] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<4>[  117.964836] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  117.965758] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x8fc
+<4>[  118.089251] [K]**UIPC ERROR** osal_snd_msg: No snd_msg registered. Skip snd to 0x86f
+<3>[  118.132197] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.132824] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.133016] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.133196] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.133439] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.133654] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.133898] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.134079] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.134251] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.134428] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.134801] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.134980] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.135200] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.135436] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.135652] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.135909] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.136082] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.136249] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.136417] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.136598] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.136879] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137062] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137251] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137433] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137614] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137781] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.137950] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.138218] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.138389] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.138558] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.138726] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.138894] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.139100] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.139348] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.139579] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.139831] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140014] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140184] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140372] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140566] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140759] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.140958] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.141129] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.141298] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.141633] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+<3>[  118.142174] UDIF: cdev_ioctl() Line 100: uipc: warning ret = -1021
+
+KERNEL_THREAD /proc/194/task/274 CameraBackgroun
+do_signal_stop[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080ad694>] do_signal_stop+0x14c/0x228
+[<ffffff80080ae918>] get_signal+0x438/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+-1 0x7f86ffe5f0 0x7fa77efcbc
+274 (CameraBackgroun) T 1 0 0 0 -1 1077936448 0 0 0 0 0 0 0 0 20 0 204 0 481 6318751744 844439 18446744073709551615 4194304 4229451 549517650896 0 0 262144 0 4102 196608 1 0 0 -1 0 0 0 0 0 0 4295760 4298576 4300800 549517655429 549517655489 549517655489 549517656040 0
+KERNEL_THREAD /proc/194/task/276 AppFw
+do_signal_stop[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080ad694>] do_signal_stop+0x14c/0x228
+[<ffffff80080ae918>] get_signal+0x438/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+-1 0x7f549416a0 0x7fa7f1af54
+276 (AppFw) T 1 0 0 0 -1 1077936448 6751 0 0 0 920 451 0 0 20 0 204 0 525 6318751744 844439 18446744073709551615 4194304 4229451 549517650896 0 0 262144 0 4102 196608 1 0 0 -1 0 0 0 0 0 0 4295760 4298576 4300800 549517655429 549517655489 549517655489 549517656040 0
+KERNEL_THREAD /proc/194/task/314 SeqQueueCommon
+0[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80004c439c>] osal_wai_sem_tmo+0x1e4/0x278 [osal_uipc]
+[<ffffff80008ba66c>] udate_wait_for_distribution_done+0x74/0x148 [udate]
+[<ffffff80008b86dc>] udate_get_localtime+0x28c/0x2a0 [udate]
+[<ffffff80008b8c88>] udate_set_date+0x260/0x488 [udate]
+[<ffffff80008b9620>] udate_proc_read_clock+0x4a0/0x648 [udate]
+[<ffffff80004c08f0>] uipc_oom+0x88/0xce0 [osal_uipc]
+[<ffffff80004c2094>] __osal_snd_sync_msg+0x17c/0x260 [osal_uipc]
+[<ffffff80004c218c>] osal_snd_sync_msg+0x14/0x20 [osal_uipc]
+[<ffffff80004bf1c8>] osal_unlock+0xfe8/0x22b0 [osal_uipc]
+[<ffffff80004be584>] osal_unlock+0x3a4/0x22b0 [osal_uipc]
+[<ffffff80083978a4>] cdev_ioctl+0x4c/0xb0
+[<ffffff800819eb4c>] do_vfs_ioctl+0xa4/0x838
+[<ffffff800819f324>] SyS_ioctl+0x44/0x80
+[<ffffff8008082798>] el0_svc_naked+0x4c/0x5c
+[<ffffffffffffffff>] 0xffffffffffffffff
+running
+314 (SeqQueueCommon) R 1 0 0 0 -1 4194624 780 0 0 0 31 3564 0 0 20 0 204 0 689 6318751744 844439 18446744073709551615 4194304 4229451 549517650896 0 0 262144 0 4102 196608 0 0 0 -1 0 0 0 0 0 0 4295760 4298576 4300800 549517655429 549517655489 549517655489 549517656040 0
+KERNEL_THREAD /proc/194/task/330 SeqQueueDispSwi
+stop_all_threads_timeout[<ffffff80080879fc>] __switch_to+0x5c/0x80
+[<ffffff80080c5ba4>] stop_all_threads_timeout+0x154/0x2d8
+[<ffffff80081dd4d8>] do_coredump+0xc8/0xcd8
+[<ffffff80080ae790>] get_signal+0x2b0/0x640
+[<ffffff8008088598>] do_signal+0x60/0x908
+[<ffffff80080891a8>] do_notify_resume+0x88/0x98
+[<ffffff80080825dc>] work_pending+0x8/0x10
+[<ffffffffffffffff>] 0xffffffffffffffff
+-1 0x7f395824b0 0x7fa775f07c
+330 (SeqQueueDispSwi) D 1 0 0 0 -1 4195648 8 0 0 0 2 6 0 0 20 0 204 0 689 6318751744 844439 18446744073709551615 4194304 4229451 549517650896 0 0 0 0 4102 196608 1 0 0 -1 0 0 0 0 0 0 4295760 4298576 4300800 549517655429 549517655489 549517655489 549517656040 0
+PRE_PTRACE_KERNEL_END
+
+A7M4_COMMAND_DONE_4714ef5323e6138a348d732a:0
+/ # 

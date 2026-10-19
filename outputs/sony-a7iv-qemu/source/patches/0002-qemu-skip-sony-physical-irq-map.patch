@@ -1,0 +1,16 @@
+--- a/drivers/irqchip/irq-gic.c
++++ b/drivers/irqchip/irq-gic.c
+@@ -1421,11 +1421,11 @@
+ 	if (IS_ENABLED(CONFIG_ARM_GIC_V2M))
+ 		gicv2m_init(&node->fwnode, gic_data[gic_cnt].domain);
+ 
+-#ifdef CONFIG_OSAL_UDIF
++#if defined(CONFIG_OSAL_UDIF) && !defined(CONFIG_ARCH_CXD900XX_QEMU)
+ 	if (!gic_cnt) {
+ 		udif_map_irq(gic_data[0].domain);
+ 	}
+-#endif /* CONFIG_OSAL_UDIF */
++#endif /* CONFIG_OSAL_UDIF && !CONFIG_ARCH_CXD900XX_QEMU */
+ 
+ 	gic_cnt++;
+ 	return 0;

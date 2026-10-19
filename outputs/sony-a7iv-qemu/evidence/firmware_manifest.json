@@ -1,0 +1,10 @@
+{
+  "model": "ILCE-7M4",
+  "version": "6.02",
+  "release_date": "2026-05-28",
+  "source_page": "https://service.sony.com.cn/download/firm/00003010.html",
+  "download_url": "https://support.d-imaging.sony.co.jp/download/NEX/YE19b5b7b3/BODYDATA.DAT?fm=cn",
+  "size": 757480856,
+  "sha256": "ad6df47a0a93a46336b9920a0d8891d0c766f8c96fa68ebda8685f6c21621188",
+  "verification": "HTTPS and official byte count. SHA-256 computed locally; no Sony-published digest or signature verified."
+}

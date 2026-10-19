@@ -1,0 +1,62 @@
+{
+  "model": "ILCE-7M4",
+  "firmware": "6.02",
+  "display": "none",
+  "menu_boot": true,
+  "keys": [
+    {
+      "key": "DOWN",
+      "qmp_device_socket": true,
+      "pixels_changed": true,
+      "label": "01-down",
+      "sequence": 777,
+      "pixel_source_seq": 738,
+      "pixel_sha256": "a35651c79f9682c6952a7a0e0e61bfdf564a6b43545a2ce427ecf27c60e9c43b",
+      "ramfb_matches_ap_pixels": true,
+      "distinct_colors": 153
+    },
+    {
+      "key": "UP",
+      "qmp_device_socket": true,
+      "pixels_changed": true,
+      "label": "02-up",
+      "sequence": 894,
+      "pixel_source_seq": 854,
+      "pixel_sha256": "c4ab293effca43eb98311b1cc393fc97dcf203524d5b5bc3feeb8144da5bffcf",
+      "ramfb_matches_ap_pixels": true,
+      "distinct_colors": 157
+    },
+    {
+      "key": "ENTER",
+      "qmp_device_socket": true,
+      "pixels_changed": true,
+      "label": "03-enter",
+      "sequence": 1007,
+      "pixel_source_seq": 971,
+      "pixel_sha256": "ac68b74d2979ce537306366df746c1fbb436106e40c25ebf658e7f1c90b2e45d",
+      "ramfb_matches_ap_pixels": true,
+      "distinct_colors": 126
+    },
+    {
+      "key": "MENU",
+      "qmp_device_socket": true,
+      "pixels_changed": true,
+      "label": "04-menu",
+      "sequence": 1115,
+      "pixel_source_seq": 1079,
+      "pixel_sha256": "c4ab293effca43eb98311b1cc393fc97dcf203524d5b5bc3feeb8144da5bffcf",
+      "ramfb_matches_ap_pixels": true,
+      "distinct_colors": 157
+    }
+  ],
+  "full_camera_boot": false,
+  "baseline": {
+    "label": "00-menu",
+    "sequence": 665,
+    "pixel_source_seq": 2,
+    "pixel_sha256": "c4ab293effca43eb98311b1cc393fc97dcf203524d5b5bc3feeb8144da5bffcf",
+    "ramfb_matches_ap_pixels": true,
+    "distinct_colors": 157
+  },
+  "elapsed_seconds": 32.59
+}

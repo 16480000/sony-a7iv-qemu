@@ -1,0 +1,38 @@
+#!/bin/sh
+# QEMU launcher glue; Sony's original /sbin/init is preserved separately.
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin
+export HOME=/
+export TERM=vt100
+export LD_LIBRARY_PATH=/usr/lib:/lib
+mount -t devtmpfs devtmpfs /dev
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mkdir -p /dev/pts /run /tmp /usr /system /cp /setting /log /cert /lens
+mount -t devpts devpts /dev/pts
+mount -t tmpfs tmpfs /run
+
+for block in /sys/block/vd*; do
+    [ -r "$block/serial" ] || continue
+    serial=$(cat "$block/serial")
+    device=/dev/${block##*/}
+    case "$serial" in
+        A7IV_USR)    mount -t ext2 -o ro "$device" /usr ;;
+        A7IV_SYSTEM) mount -t vfat -o ro "$device" /system ;;
+        A7IV_CP)     mount -t vfat -o ro "$device" /cp ;;
+    esac
+done
+
+echo
+echo 'Sony ILCE-7M4 firmware 6.02 user-space on QEMU virt'
+echo 'Kernel: Sony GPL 4.9.337-scel with QEMU adaptations.'
+echo 'Camera menu, ISP and coprocessors are not emulated.'
+echo 'Read-only original firmware partitions:'
+mount
+echo 'QEMU_USERSPACE_READY'
+echo
+
+# A serial getty gives the original BusyBox ash a controlling terminal.
+while true; do
+    /bin/busybox getty -n -l /bin/sh -L ttyAMA0 115200 vt100
+    sleep 1
+done

@@ -1,0 +1,9 @@
+{
+  "model": 16973953,
+  "region": 0,
+  "version": "6.02",
+  "header_crc32": true,
+  "firmware_offset": 1253888,
+  "firmware_size": 753267200,
+  "filesystems": 2
+}

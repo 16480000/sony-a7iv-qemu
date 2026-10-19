@@ -1,0 +1,47 @@
+[
+  {
+    "file": "nflasha5",
+    "bytes": 210606208,
+    "expected_bytes": 210606208,
+    "crc32": "61bfcf5a",
+    "expected_crc32": "61bfcf5a",
+    "sha256": "13120416073b09b13f8501324839d37b84545267dac3d183041fceb8af5a53ca",
+    "passed": true
+  },
+  {
+    "file": "nflasha15",
+    "bytes": 378580992,
+    "expected_bytes": 378580992,
+    "crc32": "7b250fba",
+    "expected_crc32": "7b250fba",
+    "sha256": "b33408130538b6b34b3fe196d455bfce6f404a207a5567a0ab13e933024c8637",
+    "passed": true
+  },
+  {
+    "file": "nflasha8",
+    "bytes": 22777856,
+    "expected_bytes": 22777856,
+    "crc32": "6e279a24",
+    "expected_crc32": "6e279a24",
+    "sha256": "62d16a76ac949e7f9ec5b9b1a46c7cdc65148b1a169b8d617c83c441d7806aee",
+    "passed": true
+  },
+  {
+    "file": "nflasha7",
+    "bytes": 5218304,
+    "expected_bytes": 5218304,
+    "crc32": "9f89b841",
+    "expected_crc32": "9f89b841",
+    "sha256": "a96e69d870c07266551ccd01f13b44f5c53ee1a191eebdf289761c32120d83b8",
+    "passed": true
+  },
+  {
+    "file": "nflasha3",
+    "bytes": 30845952,
+    "expected_bytes": 30845952,
+    "crc32": "18cf7727",
+    "expected_crc32": "18cf7727",
+    "sha256": "8f26ffa8792e60436d7d311e3ae089d929c13daf22c76136360e94e51e0c2862",
+    "passed": true
+  }
+]

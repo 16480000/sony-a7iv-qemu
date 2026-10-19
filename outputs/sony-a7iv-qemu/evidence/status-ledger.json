@@ -1,0 +1,16 @@
+{
+  "objective": "Run the latest Sony ILCE-7M4 firmware in QEMU",
+  "overall_status": "partially_achieved",
+  "questions": [
+    {"question": "Identify and obtain the latest official firmware", "status": "answered", "evidence": "firmware_manifest.json; fdat-header.json", "result": "6.02, released 2026-05-28"},
+    {"question": "Decrypt and validate the update contents", "status": "answered", "evidence": "decryption.json; partition-verification.json", "result": "All checked internal CRCs and partition lengths passed; signature not independently verified"},
+    {"question": "Run original firmware user-space under QEMU", "status": "answered", "evidence": "../logs/final-smoke.log; final-validation.json", "result": "Original BusyBox, glibc, OpenSSL and software IPC modules run with the adapted GPL kernel"},
+    {"question": "Boot the complete original camera system and menus", "status": "unresolved", "evidence": "../logs/app-attempt-2mhz.log; ../logs/hardware-driver-2mhz.log", "result": "Application initialization faults in im.elf; original PCIe ATU driver accesses an unmapped Sony address"},
+    {"question": "Does this demonstrate an unmodified 6.02 kernel or complete CXD90057 emulation?", "status": "answered", "result": "No; the supplied boot uses the recorded adapted Sony GPL 4.9.337-scel kernel on QEMU virt"}
+  ],
+  "remaining_work": [
+    "Recover the missing camera application initialization dependencies",
+    "Implement the required CXD90057 address map and peripheral behavior, including PCIe/coprocessor communication",
+    "Verify original-kernel boot, graphics/menu output and subsequent camera subsystems"
+  ]
+}

@@ -1,0 +1,11 @@
+--- a/arch/arm64/Kconfig.platforms
++++ b/arch/arm64/Kconfig.platforms
+@@ -6,7 +6,7 @@
+ 	select ARCH_EJ
+ 	select ARCH_HAS_PM_SUSPEND_DISK
+ 	select ARCH_HAS_PM_SUSPEND_STOP
+-	select AUTO_IRQ_AFFINITY if SMP
++	select AUTO_IRQ_AFFINITY if SMP && !ARCH_CXD900XX_QEMU
+ 	select AUTO_IRQ_TRIGGER if ARM_GIC_INITIALIZED
+ 	help
+ 	 This enables support for CXD900XX

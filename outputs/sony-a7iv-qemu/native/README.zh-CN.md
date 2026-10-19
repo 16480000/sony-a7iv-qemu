@@ -1,0 +1,13 @@
+# Sony A7 IV 6.02 QEMU
+
+项目版本：**v0.1**。本地 Git 仓库与基线标签说明见 [版本管理](版本管理.zh-CN.md)。
+
+[项目进展报告（2026-10-19）](项目进展报告.zh-CN.md)：已完成内容、实测证据、技术限制和后续验收标准。
+
+双击 Start-Camera.cmd 打开当前原厂主界面，或 [直接打开网页](http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/)。
+
+当前配置包含 64 MiB FAT32 虚拟卡槽 2。原厂菜单、Fn、空卡回放、返回主界面和重启已验证；原厂程序可以写入媒体数据库。实时取景、对焦和照片生成尚未实现。重启会清空虚拟卡和个人设置，再自动重做初始设置。
+
+详见 [使用说明](MAIN-UI.zh-CN.md) 和 [基础功能与验证](BASIC-FUNCTIONS.zh-CN.md)。停止使用面板按钮。Start-Menu.cmd 是保留的旧菜单专用配置。
+
+依赖本机 Codex-Z8-Qemu WSL、D:\CodexWork\sony-a7iv-qemu 固件数据，以及 /opt/sony-a7iv 下已构建的 QEMU 和原厂运行库；此目录不包含完整 Sony 固件，也不是可复制到其他电脑直接运行的镜像。
