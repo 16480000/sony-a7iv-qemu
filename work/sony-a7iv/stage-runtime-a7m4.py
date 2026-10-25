@@ -10,6 +10,46 @@ import struct
 import subprocess
 import sys
 
+def virtual_photo_layout(volume,partition_start):
+    """Return the image_mmca offset and size of the seeded DSC00001.JPG data run."""
+    data=volume.read_bytes()
+    bps=struct.unpack_from('<H',data,11)[0]
+    spc=data[13]
+    reserved=struct.unpack_from('<H',data,14)[0]
+    nfats=data[16]
+    fatsz=struct.unpack_from('<I',data,36)[0]
+    root=struct.unpack_from('<I',data,44)[0]
+    cluster=bps*spc
+    fat=reserved*bps
+    area=(reserved+nfats*fatsz)*bps
+    def chain(start):
+        out=[];c=start
+        while 2<=c<0x0ffffff8 and len(out)<100000:
+            out.append(c)
+            c=struct.unpack_from('<I',data,fat+c*4)[0]&0x0fffffff
+        return out
+    def read_dir(start):
+        raw=bytearray()
+        for c in chain(start):raw+=data[area+(c-2)*cluster:area+(c-1)*cluster]
+        entries=[]
+        for i in range(0,len(raw),32):
+            e=raw[i:i+32]
+            if e[0]==0:break
+            if e[0]==0xe5 or e[11] in (0x08,0x0f):continue
+            c=(struct.unpack_from('<H',e,20)[0]<<16)|struct.unpack_from('<H',e,26)[0]
+            entries.append((bytes(e[0:11]),e[11],c,struct.unpack_from('<I',e,28)[0]))
+        return entries
+    def find(entries,name):
+        for n,attr,c,size in entries:
+            if n==name:return c,size,attr
+        raise AssertionError(name)
+    c,_,attr=find(read_dir(root),b'DCIM       ');assert attr&0x10
+    c,_,attr=find(read_dir(c),b'100MSDCF   ');assert attr&0x10
+    c,size,attr=find(read_dir(c),b'DSC00001JPG');assert not attr&0x10
+    clusters=chain(c);assert clusters and size<=len(clusters)*cluster
+    assert all(clusters[i+1]==clusters[i]+1 for i in range(len(clusters)-1)),'photo file is not contiguous'
+    return partition_start*512+area+(c-2)*cluster,size
+
 PREV=Path('/mnt/c/Users/16483/Documents/Codex/2026-10-16/new-chat/work/sony-a1m2')
 sys.path.insert(0,str(PREV/'pydeps'))
 from elftools.elf.elffile import ELFFile
@@ -32,6 +72,12 @@ parser.add_argument('--background-failure',action='store_true')
 parser.add_argument('--background-control',action='store_true')
 parser.add_argument('--diagnostic-sink',action='store_true')
 parser.add_argument('--rolling-diagnostics',action='store_true')
+parser.add_argument('--imager-control',action='store_true')
+parser.add_argument('--virtual-sensor',action='store_true')
+parser.add_argument('--virtual-photo',action='store_true')
+parser.add_argument('--virtual-video',action='store_true')
+parser.add_argument('--sound-sink',action='store_true')
+parser.add_argument('--sound-hook',action='store_true')
 parser.add_argument('--enable-service',action='append',default=[])
 args=parser.parse_args()
 if args.virtual_card:assert args.file_media and args.native_media_driver,'Virtual card requires native notification driver and original file backend'
@@ -39,6 +85,10 @@ if args.background_failure:assert args.virtual_card,'Documented background failu
 if args.background_control:assert args.virtual_card and not args.background_failure,'Virtual background control requires the isolated card profile and excludes the failure probe'
 if args.diagnostic_sink:assert args.virtual_card,'Diagnostic record receiver is restricted to the isolated card profile'
 if args.rolling_diagnostics:assert args.diagnostic_sink,'Rolling retention requires the precise diagnostic receiver'
+if args.imager_control:assert args.virtual_card and args.init=='menu-init-display','Imager control sink is restricted to the isolated display profile'
+if args.virtual_sensor:assert args.virtual_card and args.init=='menu-init-display','Virtual sensor base layer is restricted to the isolated display profile'
+if args.virtual_photo:assert args.virtual_card,'Virtual photo seeding requires the isolated virtual card profile'
+if args.virtual_video:assert args.virtual_sensor and args.virtual_card,'Virtual video input requires the isolated virtual-sensor card profile'
 if args.diagnostic_sink:
     subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'kernel-log-read.c'),'-Wl,--no-as-needed',*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/kernel-log-read')],check=True)
     subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'diagnostic-export.c'),'-Wl,--no-as-needed',str(ROOT/'usr/lib/libcrypto.so'),*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','libdl-2.25.so','libpthread-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/diagnostic-export')],check=True)
@@ -85,6 +135,10 @@ if args.diagnostic_sink:
     init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_A7M4_DIAGNOSTIC_SINK=1\necho NATIVE_MODULES_LOADED')
 if args.rolling_diagnostics:
     init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_A7M4_DIAGNOSTIC_ROTATE8=1\necho NATIVE_MODULES_LOADED')
+if args.imager_control:
+    init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_A7M4_IMAGER_CONTROL=1\necho NATIVE_MODULES_LOADED')
+if args.virtual_sensor:
+    init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_A7M4_VIRTUAL_SENSOR=auto\necho NATIVE_MODULES_LOADED')
 if args.native_media_driver:
     assert args.init=='menu-init-display'
     init_text=init_text.replace('insmod /usr/kmod/upm.ko','insmod /usr/kmod/upm.ko\ninsmod /usr/kmod/mcmn_drv.ko\necho NATIVE_MEDIA_DRIVER_STATUS=$?')
@@ -107,6 +161,29 @@ if args.file_media:
         with volume.open('wb') as f:f.truncate((sector_count-partition_start)*512)
         subprocess.run(['mkfs.fat','--invariant','-F','32','-s','1','-h',str(partition_start),'-n','SONYQEMU',str(volume)],check=True)
         subprocess.run(['mmd','-i',str(volume),'::/DCIM','::/DCIM/100MSDCF'],check=True)
+        if args.virtual_video:
+            video_raw=W/'virtual-video.rgb4444'
+            video_meta=W/'virtual-video.meta'
+            assert video_raw.exists() and video_meta.exists(),'virtual video assets are missing'
+            shutil.copyfile(video_raw, ROOT/'simulation/virtual-video.rgb4444')
+            shutil.copyfile(video_meta, ROOT/'simulation/virtual-video.meta')
+        if args.virtual_photo:
+            photo=W/'virtual-photo.jpg'
+            raw_photo=W/'virtual-photo.rgb4444'
+            next_photo=W/'virtual-photo-next.jpg'
+            next_raw=W/'virtual-photo-next.rgb4444'
+            assert photo.exists(),'virtual-photo.jpg is missing'
+            assert raw_photo.exists(),'virtual-photo.rgb4444 is missing'
+            assert next_photo.exists(),'virtual-photo-next.jpg is missing'
+            assert next_raw.exists(),'virtual-photo-next.rgb4444 is missing'
+            shutil.copyfile(raw_photo, ROOT/'simulation/virtual-photo.rgb4444')
+            shutil.copyfile(next_photo, ROOT/'simulation/virtual-photo-next.jpg')
+            shutil.copyfile(next_raw, ROOT/'simulation/virtual-photo-next.rgb4444')
+            subprocess.run(['mcopy','-o','-i',str(volume),str(photo),'::/DCIM/100MSDCF/DSC00001.JPG'],check=True)
+            offset,size=virtual_photo_layout(volume,partition_start)
+            assert size==65536,size
+            (ROOT/'simulation/virtual-photo-layout').write_bytes(struct.pack('<QI',offset,size))
+            subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'virtual-photo-capture.c'),'-Wl,--no-as-needed',*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','libdl-2.25.so','libpthread-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/virtual-photo-capture')],check=True)
         subprocess.run(['fsck.fat','-n',str(volume)],check=True)
         mbr=bytearray(512)
         struct.pack_into('<I',mbr,440,0x41374d34)
@@ -122,6 +199,14 @@ if args.virtual_card:
     subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'card-audit.c'),'-Wl,--no-as-needed',str(ROOT/'usr/lib/libcrypto.so'),*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','libdl-2.25.so','libpthread-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/card-audit')],check=True)
     subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'seed-virtual-card.c'),'-Wl,--no-as-needed',*[str(ROOT/'usr/lib'/name) for name in ['libosal_uipc.so','libosal_utm.so']],*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','libdl-2.25.so','libpthread-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/seed-virtual-card')],check=True)
     init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_A7M4_VIRTUAL_CARD=1\nLD_BIND_NOW=1 /simulation/seed-virtual-card\necho VIRTUAL_CARD_SEED_STATUS=$?\necho NATIVE_MODULES_LOADED')
+if args.sound_hook:
+    assert args.init=='menu-init-display','Sound hook is restricted to the display profile'
+    subprocess.run(['make','-C','/opt/sony-a7iv/build/source','O=/opt/sony-a7iv/build','M='+str(W/'sound-hook'),'ARCH=arm64','CROSS_COMPILE=aarch64-linux-gnu-','modules'],check=True)
+    shutil.copyfile(W/'sound-hook/a7m4_snd.ko', ROOT/'simulation/a7m4_snd.ko')
+if args.sound_sink:
+    assert args.init=='menu-init-display','Sound queue sink is restricted to the display profile'
+    subprocess.run(['clang','--target=aarch64-linux-gnu','-fuse-ld=lld','-nostdlib','-O2','-mno-outline-atomics','-Wl,-e,_start','-Wl,--dynamic-linker=/lib/ld-linux-aarch64.so.1',str(W/'sound-queue-sink.c'),'-Wl,--no-as-needed',str(ROOT/'usr/lib/libosal_uipc.so'),str(ROOT/'usr/lib/libosal_utm.so'),*[str(ROOT/'lib'/name) for name in ['libc-2.25.so','libdl-2.25.so','libpthread-2.25.so','ld-2.25.so']],'-Wl,--allow-shlib-undefined','-o',str(ROOT/'simulation/sound-queue-sink')],check=True)
+    init_text=init_text.replace('echo NATIVE_MODULES_LOADED','/simulation/sound-queue-sink 0x8fc >/dev/console 2>&1 &\necho SOUND_SINK_STATUS=$?\necho NATIVE_MODULES_LOADED')
 if args.system_sound:
     assert args.init=='menu-init-display','Sound backing is restricted to the cold-boot probe'
     init_text=init_text.replace('echo NATIVE_MODULES_LOADED','export QEMU_SYSTEM_SOUND_BUFFER=1\necho NATIVE_MODULES_LOADED')

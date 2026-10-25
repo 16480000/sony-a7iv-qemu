@@ -16,6 +16,7 @@ import struct
 import subprocess
 import sys
 import time
+import wave
 from datetime import datetime,timezone,timedelta
 
 BASE=Path('/mnt/d/CodexWork/sony-a7iv-qemu')
@@ -25,6 +26,156 @@ from menu_live import key_command, FirmwareMonitor
 serial_spec=importlib.util.spec_from_file_location('native_serial',Path(__file__).with_name('native-serial.py'))
 serial_module=importlib.util.module_from_spec(serial_spec);serial_spec.loader.exec_module(serial_module)
 serial_command=serial_module.serial_command
+
+def write_web_photo(process,logpath,data,monitor):
+    """Transfer one padded 64 KiB browser JPEG to the guest and overwrite the pre-indexed card file."""
+    if len(data)!=65536:raise ValueError('web photo must be exactly 65536 bytes')
+    encoded=base64.b64encode(data).decode('ascii')
+    for offset in range(0,len(encoded),512):
+        chunk=encoded[offset:offset+512];op='>' if offset==0 else '>>'
+        serial_command(process,logpath,f"printf '%s' '{chunk}' {op} /tmp/a7m4-web-photo.b64",timeout=15,monitor=monitor)
+    raw=serial_command(process,logpath,'/usr/bin/openssl base64 -d -A -in /tmp/a7m4-web-photo.b64 -out /tmp/a7m4-web-photo.jpg; /bin/busybox wc -c /tmp/a7m4-web-photo.b64 /tmp/a7m4-web-photo.jpg; /simulation/virtual-photo-capture /tmp/a7m4-web-photo.jpg; echo WEB_PHOTO_WRITE=$?',timeout=60,monitor=monitor)
+    if b'WEB_PHOTO_WRITE=0' not in raw:raise RuntimeError('guest web-photo write failed')
+
+# The AP still emits a real adf_sys_request for every camera feedback tone.
+# The CP/AIP decoder is not executed, so the host renders the exact firmware
+# bank entry that the descriptor points at. This is a virtual CP output path,
+# not a substitute trigger: disabling Audio Signals in the guest produces no
+# event. The entry header is one byte; the previous web candidates incorrectly
+# skipped one byte in every 32-byte block.
+FW_SOUND_RE=re.compile(r'A7M4_SOUND_PLAY kind=(\d+) option=(\d+) sound_id=(\d+) '
+                       r'param=(0x[0-9a-fA-F]+|\d+) addr=(0x[0-9a-fA-F]+|\d+) '
+                       r'len=(\d+) enabled=(\d+) volume=(\d+)')
+FW_SOUND_NAMES={1:'快门轻响 Ka',2:'快门动作 Sha',3:'Kasha 快门音',4:'对焦锁定提示音',
+                5:'录制开始',6:'录制停止',7:'Kasha 连续快门',8:'连续快门',9:'20fps KaSha',
+                10:'自拍计时',11:'2 秒自拍计时',12:'开机提示音',13:'关机提示音',
+                14:'视频自拍 3 秒',15:'模式切换',16:'ASRID 扫描提示音'}
+def fw_read_events(logpath,offset,partial):
+    """Read complete A7M4_SOUND_PLAY records appended to the serial log."""
+    try:
+        with logpath.open('rb') as log:
+            log.seek(offset)
+            chunk=log.read()
+    except OSError:
+        return offset,partial,[]
+    if not chunk:return offset,partial,[]
+    offset+=len(chunk)
+    lines=(partial+chunk).split(b'\n')
+    partial=lines.pop()
+    if len(partial)>262144:partial=b''
+    events=[]
+    for line in lines:
+        text=line.decode('utf-8','replace')
+        if 'A7M4_SOUND_PLAY' not in text:continue
+        match=FW_SOUND_RE.search(text)
+        if not match:
+            events.append({'parse_error':text[-512:]});continue
+        kind,option,sound_id,param,address,length,enabled,volume=match.groups()
+        events.append({'kind':int(kind),'option':int(option),'sound_id':int(sound_id),
+                       'param':int(param,0),'addr':int(address,0),'len':int(length),
+                       'enabled':int(enabled),'volume':int(volume),
+                       'name':FW_SOUND_NAMES.get(int(sound_id),'Sound #'+sound_id)})
+    return offset,partial,events
+
+def fw_decode_entry(data,rate,volume):
+    """Render one original bank entry as a mono 16-bit WAV.
+
+    The bank entry begins with a one-byte header (0x17/0x07 in observed
+    entries); the remainder is signed 8-bit PCM. Sample-rate selection is a
+    host rendering choice until the original AIP clock is recovered.
+    """
+    if len(data)<=1:raise ValueError('empty sound entry')
+    raw=data[1:]
+    gain=min(.8,.2+.04*max(0,min(16,volume)))
+    pcm=bytearray(len(raw)*2)
+    for i,value in enumerate(raw):
+        sample=int(round((value-256 if value>=128 else value)*gain*256))
+        sample=max(-32768,min(32767,sample))
+        struct.pack_into('<h',pcm,2*i,sample)
+    output=io.BytesIO()
+    with wave.open(output,'wb') as wav:
+        wav.setnchannels(1);wav.setsampwidth(2);wav.setframerate(rate);wav.writeframes(pcm)
+    return output.getvalue()
+
+def fw_decode_event(qmp,out,event,seq):
+    """Read the exact descriptor bytes from guest PA and render the entry.
+
+    The one-byte bank-entry header selects the playback rate. The user
+    calibrated FocusLock (header 0x17) at 48 kHz on 2026-10-21; the matching
+    0x07 group is 16 kHz. This is still the host rendering of AA_RT bytes,
+    not the original CP/AIP decoder, but the rate and 8-bit entry layout now
+    follow the firmware header instead of a guessed global rate.
+    """
+    address=event.get('addr',0);length=event.get('len',0)
+    if not address or not 1<=length<=32768:raise ValueError('descriptor has no backed bank range')
+    dump=out/f'fw-sound-{seq}.bin'
+    qmp.call('pmemsave',{'val':address,'size':length,'filename':'/out/'+dump.name})
+    data=dump.read_bytes()
+    if len(data)!=length:raise ValueError('short PMEM sound read')
+    result=dict(event)
+    result['seq']=seq
+    result['encoded_sha256']=hashlib.sha256(data).hexdigest()
+    result['encoded_bytes']=len(data)
+    result['samples']=max(0,len(data)-1)
+    header=data[0]
+    auto_rate=48000 if header==0x17 else (16000 if header==0x07 else 48000)
+    result['header']=header
+    result['rate']=auto_rate
+    for rate in (8000,16000,24000,32000,48000):
+        wav=fw_decode_entry(data,rate,event.get('volume',4))
+        result[f'wav{rate//1000}']=base64.b64encode(wav).decode('ascii')
+        result[f'duration{rate//1000}']=round(result['samples']/rate,4)
+        (out/f'fw-sound-{seq}-{rate//1000}k.wav').write_bytes(wav)
+    result['wav']=result[f'wav{auto_rate//1000}']
+    result['duration']=round(result['samples']/auto_rate,4)
+    return result
+
+FW_CP={'descriptors':{},'seq':0}
+def fw_parse_descriptors(logpath):
+    """Recover the beep table registered by the original AP at boot."""
+    descriptors={}
+    try:text=logpath.read_text('utf-8','replace')
+    except OSError:return descriptors
+    for match in re.finditer(r'BOOT_LOG_SOUND_DESCRIPTOR id=(\d+) enabled=(\d+) '
+                             r'address=(0x[0-9a-fA-F]+) bytes=(\d+)',text):
+        sound_id,enabled,address,length=match.groups()
+        descriptors[int(sound_id)]={'enabled':int(enabled),'addr':int(address,16),
+                                    'len':int(length),'volume':4}
+    for match in re.finditer(r'BOOT_LOG_SOUND_VOLUME sound_id=(\d+) volume=(\d+)',text):
+        sound_id,volume=match.groups()
+        if int(sound_id) in descriptors:descriptors[int(sound_id)]['volume']=int(volume)
+    return descriptors
+
+def fw_emit_registered(sound_id,source='virtual-cp'):
+    """Play one AP-registered beep through the host virtual CP.
+
+    The trigger is the real native key/sequence; the descriptor table and
+    SysSound bytes are read from the guest, so firmware asset/table changes
+    are audible. The CP/AIP trigger logic itself is approximated.
+    """
+    if not panel or not qmp:return None
+    descriptor=FW_CP['descriptors'].get(int(sound_id))
+    if not descriptor or not descriptor.get('enabled'):return None
+    FW_CP['seq']+=1;seq=FW_CP['seq']
+    event={'kind':1,'option':0,'sound_id':int(sound_id),'param':0,
+           'addr':descriptor['addr'],'len':descriptor['len'],
+           'enabled':descriptor['enabled'],'volume':descriptor.get('volume',4),
+           'name':FW_SOUND_NAMES.get(int(sound_id),'Sound #'+str(sound_id)),
+           'source':source}
+    try:
+        decoded=fw_decode_event(qmp,out,event,seq)
+    except Exception as error:
+        decoded=dict(event,seq=seq,error=str(error))
+    panel.add_fw_sound(decoded)
+    audit={key:value for key,value in decoded.items() if key not in ('wav8','wav16')}
+    results.setdefault('firmware_sounds',[]).append(audit)
+    try:
+        with (out/'fw-sounds.jsonl').open('a') as log:
+            log.write(json.dumps(audit,ensure_ascii=False)+'\n')
+    except OSError:
+        pass
+    return decoded
+
 from headless_osd_capture import capture
 from native_frame import clean_native_export
 from PIL import Image
@@ -44,15 +195,21 @@ p.add_argument('--verify-system-sound',action='store_true')
 p.add_argument('--inspect-threads',type=int,nargs='*',default=[])
 p.add_argument('--inspect-manager',action='store_true')
 p.add_argument('--auto-main',action='store_true',help='Replay the verified original firstboot UI and disable native power save')
+p.add_argument('--allow-unlisted-image',action='store_true',help='Allow auto-main on an explicitly named candidate firmware image')
 p.add_argument('--probe-virtual-card',action='store_true')
 p.add_argument('--probe-storage-controls',action='store_true')
 p.add_argument('--card-main',action='store_true',help='Configure the verified virtual Slot2 profile through the original menu')
+p.add_argument('--virtual-sensor',action='store_true',help='Label the panel as an experimental virtual-sensor test image')
+p.add_argument('--virtual-photo',action='store_true',help='Run the guest virtual-photo capture helper on SHUTTER')
+p.add_argument('--web-video',action='store_true',help='Label the panel as browser-side web-video compositing')
+p.add_argument('--gdb',type=int,help='Optional loopback QEMU gdbstub port')
+p.add_argument('--gdb-socket',action='store_true',help='Expose the QEMU gdbstub on /out/gdb.sock')
 a=p.parse_args()
 if a.probe_storage_controls and not (a.probe_virtual_card and a.auto_main):p.error('Storage control probe requires virtual card and original UI setup replay')
 if a.card_main and (not a.auto_main or a.initramfs!='main-virtual-card-stable.cpio'):p.error('Card main requires the verified card image and automatic original setup')
 if a.probe_virtual_card and a.initramfs not in {'main-virtual-card-cycle.cpio','main-virtual-card-info.cpio'}:p.error('Card-cycle probe requires the isolated test image')
-if a.auto_main and a.initramfs!='main-ap-state-consumer.cpio' and not (a.probe_virtual_card and a.initramfs=='main-virtual-card-info.cpio') and not a.card_main:
-    p.error('Automatic setup requires the verified M4 coldboot image or the explicit isolated virtual-card probe')
+if a.auto_main and a.initramfs not in {'main-ap-state-consumer.cpio','imager-control-test.cpio','virtual-sensor-test.cpio','virtual-photo-test.cpio','virtual-video-test.cpio','sound-feedback-test.cpio','sound-live-test.cpio','language-zh-test.cpio','language-zh-seed.cpio'} and not (a.probe_virtual_card and a.initramfs=='main-virtual-card-info.cpio') and not a.card_main and not a.allow_unlisted_image:
+    p.error('Automatic setup requires the verified M4 coldboot image, an isolated imaging test image, or the explicit isolated virtual-card probe')
 if a.keep_menu_awake and a.initramfs!='menu-window.cpio':p.error('The verified native menu power profile requires menu-window.cpio')
 running_qemu=[]
 for task_proc in Path('/proc').iterdir():
@@ -65,6 +222,23 @@ if len(running_qemu)>=2:p.error('Two QEMU instances are already running; finish 
 out=Path('/opt/sony-a7iv/menu-a7m4/runs')/a.name
 out.mkdir(parents=True,exist_ok=False)
 shutil.copyfile(BASE/'menu-a7m4/virt.dtb',out/'virt.dtb')
+# The board DTB carries the fixed initrd window and ramdisk_size. Rebuild
+# images change the cpio length, so set both from the actual initramfs here
+# instead of relying on a DTB generated for an older image.
+initramfs=BASE/'menu-a7m4'/a.initramfs
+initrd_start=0x440000000
+initrd_size=initramfs.stat().st_size
+initrd_end=initrd_start+initrd_size
+ramdisk_kib=(initrd_size+1023)//1024
+dtb=out/'virt.dtb'
+bootargs=subprocess.run(['fdtget','-t','s',str(dtb),'/chosen','bootargs'],
+                        check=True,capture_output=True,text=True).stdout.rstrip('\n')
+bootargs=re.sub(r'ramdisk_size=\d+',f'ramdisk_size={ramdisk_kib}',bootargs)
+subprocess.run(['fdtput','-t','s',str(dtb),'/chosen','bootargs',bootargs],check=True)
+subprocess.run(['fdtput','-t','x',str(dtb),'/chosen','linux,initrd-start',
+                hex(initrd_start>>32),hex(initrd_start&0xffffffff)],check=True)
+subprocess.run(['fdtput','-t','x',str(dtb),'/chosen','linux,initrd-end',
+                hex(initrd_end>>32),hex(initrd_end&0xffffffff)],check=True)
 command=['bwrap','--unshare-all','--die-with-parent','--new-session','--clearenv',
  '--ro-bind','/usr','/usr','--symlink','usr/lib','/lib','--symlink','usr/lib64','/lib64',
  '--proc','/proc','--dev','/dev','--tmpfs','/tmp',
@@ -92,6 +266,8 @@ command+=['/qemu','-object','memory-backend-ram,id=sony-ram,size=24G,reserve=off
  '-device','loader,file=/kernel.img,addr=0x400080000,force-raw=on',
  '-device','loader,file=/initrd.img,addr=0x440000000,force-raw=on',
  '-device','loader,addr=0x400080000,cpu-num=0','-kernel','/kernel.img','-initrd','/initrd.img']
+if a.gdb:command+=['-gdb',f'tcp:127.0.0.1:{a.gdb}']
+if a.gdb_socket:command+=['-gdb','unix:/out/gdb.sock,server=on,wait=off']
 (out/'command.json').write_text(json.dumps(command,indent=2))
 def file_digest(path):
     digest=hashlib.sha256()
@@ -155,6 +331,19 @@ try:
                     cmd='/simulation/inject-key 0x807a0020 0x92840747 0x1f1 0 1 0 1; sleep 0.2; '+tap(0xa7)+'; /simulation/inject-key 0x807a0020 0x92840747 0x1f1 0 0 0 1'
                 else:cmd=tap(physical[key])
                 serial_command(process,logpath,cmd,timeout=20,monitor=monitor)
+                if key=='HALF' and (not panel or panel.cp_config.get('focus',True)):
+                    fw_emit_registered(4)
+                elif key=='SHUTTER' and panel:
+                    # A7 IV electronic shutter is silent by default. Mechanical
+                    # Ka+Sha / Kasha auditions are explicit virtual-CP choices.
+                    mode=panel.cp_config.get('shutter','silent')
+                    if mode=='mechanical':
+                        fw_emit_registered(1);time.sleep(.06);fw_emit_registered(2)
+                    elif mode=='continuous':
+                        fw_emit_registered(7)
+                    elif mode=='kasha':
+                        fw_emit_registered(3)
+                    # silent / electronic / off: no extra prompt sound
                 results['keys'].append({'key':key,'route':'original InfraInput','capture_file_generated':False})
                 time.sleep(.15);return
             codes={'MENU':'m','ENTER':'ret','UP':'up','DOWN':'down','LEFT':'left','RIGHT':'right','DELETE':'delete'}
@@ -208,7 +397,15 @@ try:
                 for key in keys:emit_key(key)
                 view(expected,after)
             view(0x12e,offset)
-            transition(['UP','ENTER'],0x1e3)
+            # Seed Backup.bin language entry 0x2cf03a6 is set to model
+            # language 25 (Simplified Chinese), with the additive BK4 checksum
+            # at 0x20 recomputed. Boot init copies the GB18030 and Big5 fonts
+            # carved from firmware.fdat into /tmp/images, which fontlist.dat
+            # expects. Confirm the preselected language; do not move the
+            # cursor.
+            time.sleep(.3)
+            results['language_selection_screen']=snap(label+'-language')
+            transition(['ENTER'],0x1e3)
             transition(['ENTER'],0x1e0)
             transition(['DELETE'],0x1c8)
             transition(['ENTER'],0xd1)
@@ -230,8 +427,17 @@ try:
             reference=Path('/mnt/c/Users/16483/Documents/Codex/2026-10-17/new-chat/outputs/sony-a7iv-qemu/native/main-power-save-off.png')
             actual=Image.open(out/power['label']/'qemu.png').convert('RGB')
             expected=Image.open(reference).convert('RGB')
-            if actual.tobytes()!=expected.tobytes():raise RuntimeError('Original power-save Off page did not match the verified UI')
-            results['power_save_off']=True
+            if actual.tobytes()!=expected.tobytes():
+                # The Chinese UI changes the power-save page pixels. The
+                # position-based route is still the verified original route;
+                # retain the actual Chinese page and do not claim the English
+                # reference comparison.
+                results['power_save_reference_mismatch']={
+                    'reason':'camera UI language differs from the English reference',
+                    'actual_screen':power['label']}
+                print('A7M4_POWER_SAVE_REFERENCE_MISMATCH '+json.dumps(results['power_save_reference_mismatch']),flush=True)
+            else:
+                results['power_save_off']=True
             transition(['MENU'],0)
             main=snap(label+'-main')
             results['original_setup_replayed']=True
@@ -281,6 +487,9 @@ try:
         results['visible_boot']=baseline['distinct_colors']>1
         results['menu_boot']=a.initramfs=='menu-window.cpio' and baseline['distinct_colors']>10
         results['baseline']=baseline
+        if a.virtual_sensor:
+            serial_command(process,logpath,'touch /tmp/a7m4-virtual-sensor.on',timeout=20,monitor=monitor)
+            results['virtual_sensor_enabled_after_setup']=True
         if a.probe_storage_controls:
             card_main=configure_slot2('slot2')
             emit_key('FN');time.sleep(.6);fn_before=snap('fn-before-shutter')
@@ -364,11 +573,18 @@ try:
             spec=importlib.util.spec_from_file_location('panel',Path(__file__).with_name('panel-server.py'))
             module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
             panel=module.Panel(a.port,(out/baseline['label']/'qemu.png').read_bytes(),a.panel_token)
+            FW_CP['descriptors']=fw_parse_descriptors(logpath)
+            print('A7M4_FW_BEEP_TABLE '+json.dumps({'ids':sorted(FW_CP['descriptors']),
+                  'addresses':{str(key):hex(value['addr']) for key,value in FW_CP['descriptors'].items()}}),flush=True)
             state={'url':panel.url,'run':str(out),'linux_pid':os.getpid()}
             state_name='live-panel.json' if a.port==18764 else f'live-panel-{a.port}.json'
             (BASE/'menu-a7m4'/state_name).write_text(json.dumps(state))
             print('A7M4_PANEL_URL '+panel.url,flush=True)
         last_refresh=0
+        sound_offset=logpath.stat().st_size
+        sound_partial=b''
+        sound_seq=0
+        last_sound_poll=0
         if a.test:
             previous=baseline
             cases=[('DOWN','down',b'D'),('UP','up',b'U'),('ENTER','ret',b'E'),('MENU','m',b'M')]
@@ -386,19 +602,38 @@ try:
             break_after_test=True
         else:
             break_after_test=False
+        virtual_status=(('虚拟传感器测试图运行中（非原厂 ISP）；快门写入虚拟照片' if a.virtual_photo else '虚拟传感器测试图运行中（非原厂 ISP）；照片尚未实现') if a.virtual_sensor else None)
+        web_video_status='网页视频输入运行中（客户端合成；非原厂 ISP）' if a.web_video else None
         while not break_after_test and process.poll() is None:
             monitor.check()
             if a.seconds and time.monotonic()-start>a.seconds:break
+            if panel and qmp and time.monotonic()-last_sound_poll>.15:
+                last_sound_poll=time.monotonic()
+                sound_offset,sound_partial,records=fw_read_events(logpath,sound_offset,sound_partial)
+                for record in records:
+                    FW_CP['seq']+=1;seq=FW_CP['seq']
+                    record['source']='ap'
+                    try:
+                        decoded=fw_decode_event(qmp,out,record,seq)
+                    except Exception as error:
+                        decoded=dict(record,seq=seq,error=str(error))
+                    panel.add_fw_sound(decoded)
+                    audit={key:value for key,value in decoded.items() if key not in ('wav8','wav16')}
+                    results.setdefault('firmware_sounds',[]).append(audit)
+                    with (out/'fw-sounds.jsonl').open('a') as f:
+                        f.write(json.dumps(audit,ensure_ascii=False)+'\n')
             if panel:
                 if time.monotonic()-last_refresh>.4:
                     qmp.call('screendump',{'filename':'/out/live.ppm'})
                     with Image.open(out/'live.ppm') as im:
                         png=io.BytesIO();im.save(png,format='PNG');panel.frame=png.getvalue()
                         black=im.convert('RGB').getextrema()==((0,0),(0,0),(0,0))
-                        panel.status='当前黑屏；可重新启动恢复原厂初始化' if black else ('原厂界面运行中；虚拟卡槽 2；取景和照片保存尚未实现' if a.card_main else ('原厂界面运行中；省电已关闭；取景和照片保存尚未实现' if results.get('power_save_off') else '原厂界面运行中；取景和照片保存尚未实现'))
+                        panel.status='当前黑屏；可重新启动恢复原厂初始化' if black else (web_video_status or virtual_status or ('原厂界面运行中；虚拟卡槽 2；取景和照片保存尚未实现' if a.card_main else ('原厂界面运行中；省电已关闭；取景和照片保存尚未实现' if results.get('power_save_off') else '原厂界面运行中；取景和照片保存尚未实现')))
                     last_refresh=time.monotonic()
                 if not panel.actions.empty():
-                    key,event,result=panel.actions.get_nowait()
+                    item=panel.actions.get_nowait()
+                    key,event,result=item[:3]
+                    payload=item[3] if len(item)>3 else None
                     try:
                         if key=='STOP':
                             panel.status='虚拟机已停止';event.set();break
@@ -426,10 +661,24 @@ try:
                             if a.auto_main:result['restart']=original_setup(result['restart']['label']+'-setup',offset)
                             if a.card_main:result['restart']=configure_slot2(result['restart']['label']+'-card')
                             if a.keep_menu_awake:result['restart']=configure_native_power_off(result['restart'],result['restart']['label']+'-configured')
+                            FW_CP['descriptors']=fw_parse_descriptors(logpath)
                             panel.frame=(out/result['restart']['label']/'qemu.png').read_bytes()
-                            panel.status='原厂界面已显示；取景和照片保存尚未实现';last_refresh=0
+                            if a.virtual_sensor:
+                                serial_command(process,logpath,'touch /tmp/a7m4-virtual-sensor.on',timeout=20,monitor=monitor)
+                            panel.status=web_video_status or virtual_status or '原厂界面已显示；取景和照片保存尚未实现';last_refresh=0
                             continue
-                        emit_key(key)
+                        if key=='EXEC':
+                            if not isinstance(payload,str) or not payload or len(payload)>4096:raise ValueError('invalid guest command')
+                            raw=serial_command(process,logpath,payload,timeout=60,monitor=monitor)
+                            result['output']=raw.decode('utf-8','replace')[-65536:]
+                        elif key=='PHOTO':
+                            if payload is None:raise ValueError('missing photo payload')
+                            write_web_photo(process,logpath,payload,monitor)
+                            result['photo_bytes']=len(payload)
+                        else:
+                            emit_key(key)
+                            if key=='SHUTTER' and a.virtual_photo:
+                                serial_command(process,logpath,'/simulation/virtual-photo-capture; echo VIRTUAL_PHOTO_CAPTURE_RC=$?',timeout=20,monitor=monitor)
                     except Exception as error:result['error']=str(error)
                     finally:
                         with (out/'actions.jsonl').open('a') as actions:

@@ -1,0 +1,175 @@
+{
+  "url": "http://127.0.0.1:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "started": "2026-10-20T10:57:41.199Z",
+  "actions": [
+    {
+      "key": "FN",
+      "rect": {
+        "x": 315.046875,
+        "y": 602.5,
+        "disabled": false
+      },
+      "elapsed_ms": 1547,
+      "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现",
+      "frame": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-01-fn.png",
+        "bytes": 10562,
+        "sha256": "5ae7adf85783f3c4c1b06f38a3a7d257dae4f6a69823b7896234a6b3bff9d887",
+        "fetch_ms": 4
+      },
+      "page": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\page-01-fn.png",
+        "bytes": 65864,
+        "sha256": "68e8d0214090067fc5d5ebc4f3b088e512bd3295722f908aeadaa28dadadb6ed"
+      },
+      "changed_from_before": true
+    },
+    {
+      "key": "MENU",
+      "rect": {
+        "x": 811.5,
+        "y": 452,
+        "disabled": false
+      },
+      "elapsed_ms": 1247,
+      "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现",
+      "frame": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-02-menu.png",
+        "bytes": 9220,
+        "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+        "fetch_ms": 4
+      },
+      "page": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\page-02-menu.png",
+        "bytes": 58754,
+        "sha256": "08c542fa68957fde6a7c5e69cbe5471c8a460ee5ff57f114ca84c78dc184cd05"
+      },
+      "changed_from_before": true
+    },
+    {
+      "key": "PLAY",
+      "rect": {
+        "x": 269,
+        "y": 602.5,
+        "disabled": false
+      },
+      "elapsed_ms": 1273,
+      "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现",
+      "frame": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-03-play.png",
+        "bytes": 2831,
+        "sha256": "ee3226be3b22888d6ce27067bd6a6214211e163a77bac01d5817e09633c6f8e1",
+        "fetch_ms": 5
+      },
+      "page": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\page-03-play.png",
+        "bytes": 47472,
+        "sha256": "6701340b1f5ec758abf258130570489bc59895cfd87ec6a613e696f0befb2c36"
+      },
+      "changed_from_before": true
+    },
+    {
+      "key": "PLAY",
+      "rect": {
+        "x": 269,
+        "y": 602.5,
+        "disabled": false
+      },
+      "elapsed_ms": 1527,
+      "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现",
+      "frame": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-04-play.png",
+        "bytes": 9220,
+        "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+        "fetch_ms": 5
+      },
+      "page": {
+        "file": "D:\\TMP\\a7m4-imager-control-browser\\page-04-play.png",
+        "bytes": 58910,
+        "sha256": "9da2e4e4e702680714023c7756acc0444a64fbab98912c0afec3741f1a2e6f2f"
+      },
+      "changed_from_before": true
+    }
+  ],
+  "watch": [
+    {
+      "t_ms": 4,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "bytes": 9220,
+      "changed": null
+    },
+    {
+      "t_ms": 511,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "bytes": 9159,
+      "changed": true
+    },
+    {
+      "t_ms": 1029,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "bytes": 9220,
+      "changed": true
+    },
+    {
+      "t_ms": 1544,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "bytes": 9220,
+      "changed": false
+    },
+    {
+      "t_ms": 2063,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "bytes": 9220,
+      "changed": false
+    },
+    {
+      "t_ms": 2581,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "bytes": 9220,
+      "changed": false
+    }
+  ],
+  "errors": [],
+  "status_before": {
+    "status": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\a7m4-imager-control-browser\\page-00-before.png",
+    "bytes": 58125,
+    "sha256": "1ba1a28d5752e59b8a5cf59df316d40252291694e82f111fbd9090166d6f9128"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-00-before.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 6
+    },
+    "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现"
+  },
+  "watch_summary": {
+    "samples": 6,
+    "unique_sha256": 2,
+    "changed_samples": 2,
+    "duration_ms": 3081
+  },
+  "status_after": {
+    "status": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\a7m4-imager-control-browser\\frame-99-final.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 4
+    },
+    "page": {
+      "file": "D:\\TMP\\a7m4-imager-control-browser\\page-99-final.png",
+      "bytes": 58695,
+      "sha256": "065b26ff338fef8f3bfe8a6e1a55bc1fd4326e39a5e9645f2ee9ca9e35f3e9de"
+    },
+    "state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现"
+  },
+  "ok": true,
+  "finished": "2026-10-20T10:57:50.922Z"
+}

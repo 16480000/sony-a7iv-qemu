@@ -31,3 +31,21 @@ BODYDATA.DAT
 .env.*
 *.pem
 *.key
+
+# Host-generated virtual sensor inputs and personal media
+/work/sony-a7iv/sample-video.mp4
+/work/sony-a7iv/virtual-photo*.jpg
+/work/sony-a7iv/*.rgb4444
+/work/sony-a7iv/virtual-video.meta
+/work/sony-a7iv/virtual-video.json
+
+# Kernel module build products
+*.o
+*.ko
+*.mod.c
+.*.cmd
+Module.symvers
+modules.order
+
+# Local publishing tools and authentication scratch space
+/work/publish-tools/

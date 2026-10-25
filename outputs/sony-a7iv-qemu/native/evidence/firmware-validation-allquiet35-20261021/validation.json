@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-21",
+  "target": {
+    "path": "D:\\sony\\work\\BODYDATA_all_quiet35.dat",
+    "bytes": 757480856,
+    "sha256": "549afab72beb9100821b500bc07f05dc504baf016a03b21b4241932044aa5f05"
+  },
+  "candidate_image": {
+    "path": "D:\\CodexWork\\sony-a7iv-qemu\\menu-a7m4\\firmware-candidate-allquiet35.cpio",
+    "bytes": 538057216,
+    "sha256": "0ea7b28c55f740597fd94becc1b8cb3343452a0d1e56e7b1a83128ef6dd52736"
+  },
+  "run": {
+    "name": "firmware-candidate-allquiet35-20261021",
+    "panel_url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+    "boot": "A7M4_ORIGINAL_MAIN_READY",
+    "language": "zh-CN",
+    "beep_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  },
+  "modified_files": {
+    "nflasha8_SysSound.bin": {
+      "base_sha256": "dae3d18d37b85a22398573f04090a4a95a97052380f4b2b4402a374516399dfb",
+      "variant_sha256": "4bd1b46bcf62f7ba60c6c006a91a9357ecce6c845a966f3536f4f16dcde89abf",
+      "changed_entries": [1, 2, 3]
+    },
+    "nflasha15_Kasha.bin": {
+      "path": "/share/avsystemsound/Dslr_Emnt_High_10FPS_Kasha.bin",
+      "base_sha256": "af5ee85594e2b455053e69b9932070a6038406686ac549de4fbd2c54b130d03f",
+      "variant_sha256": "ac23c3a5362cd146e25e429246e608b228585b25f6fadead34472051637ff9cf"
+    },
+    "appFw.so": {
+      "base_sha256": "1e1b9202eaa69198f20df03dbfdab2f103b206cc4ebcd2e7bd817e6a710018a2",
+      "variant_sha256": "5b22d6b24b335ff157d79db496ff8081a828ab96dcfaa983e1e77bfb1dc90f10",
+      "diff_bytes": 32,
+      "changes": ["LUT path strings", "2-byte AArch64 immediate patch at 0x3139945"]
+    },
+    "cpapp-b.bin": {
+      "variant_sha256": "7b9b137d696e5972d20db7f9119076172ed8e0730805d7f0b4c31b87689e2c2b",
+      "changed": false
+    }
+  },
+  "checked_sound_entries": {
+    "1": {"name": "Ka", "encoded_bytes": 256, "rate": 48000, "volume": 4, "encoded_sha256": "f1f55108a4c0e9e7dbe5f9254a9562cbe8b0ca740beb0ed3de17baa6c1f6a90f"},
+    "2": {"name": "Sha", "encoded_bytes": 2944, "rate": 48000, "volume": 4, "encoded_sha256": "a775a0c549e6d6b069f0557a46a4ab850277dcbd6e4ceeab54c0843072c12268"},
+    "3": {"name": "Kasha", "encoded_bytes": 2944, "rate": 48000, "volume": 4, "encoded_sha256": "ac23c3a5362cd146e25e429246e608b228585b25f6fadead34472051637ff9cf"},
+    "4": {"name": "FocusLock", "encoded_bytes": 3712, "rate": 48000, "volume": 2, "encoded_sha256": "691ead99b54206c601f1725f29e66446645c3a8a9f6062cbe83fc3f2b5ec826d", "changed": false}
+  },
+  "not_covered": [
+    "BODYDATA outer CRC / signature / updater acceptance",
+    "real-camera flashing or brick safety",
+    "original CP/AIP execution and electronic-shutter trigger logic",
+    "appFw LUT path and 2-byte patch runtime semantics",
+    "sensor / AF / ISP / JPEG / and hardware timing"
+  ],
+  "verdict": "AP boot, Chinese original UI, registered beep table, and modified SysSound/Kasha bytes pass; full firmware/flashability is not covered."
+}

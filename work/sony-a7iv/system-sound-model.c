@@ -34,6 +34,19 @@ static int a7m4_audio_config(unsigned int id,void *message,int *handled) {
     unsigned short *head=message;
     unsigned char *request=message;
     unsigned int size=real_msg_size(message),source=real_get_source(message),reply_size=0;
+    if(id==0x92840747 && message && size>=8 && head[0]==0x200d) {
+        static unsigned int observed;
+        unsigned int n=__atomic_add_fetch(&observed,1,__ATOMIC_RELAXED);
+        if(n<=4000) {
+            unsigned int shown=size<40?size:40;
+            char text[220];
+            int used=snprintf(text,sizeof text,"n=%u cmd=%#x size=%u flags=%#x src=%#x bytes=",
+                              n,head[1],size,head[3],source);
+            for(unsigned int i=0;i<shown && used+2<(int)sizeof text;++i)
+                used+=snprintf(text+used,sizeof text-used,"%02x",request[i]);
+            record("A7M4_BB_REQ ",text);
+        }
+    }
     if(id!=0x92840747 || !source || head[0]!=0x200d || head[2]!=size || head[3]!=0x8001)return 0;
     if(head[1]==0x32e && size==10 && request[8]>=1 && request[8]<=16 && !request[9])reply_size=12;
     if(head[1]==0x33d && size==8 && getenv("QEMU_SYSTEM_SOUND_BUFFER"))reply_size=24;
@@ -49,6 +62,11 @@ static int a7m4_audio_config(unsigned int id,void *message,int *handled) {
     if(head[1]==0x32a && size==10 && request[8]<=16 && request[9]<21 &&
        a7m4_system_sounds[request[9]][14]==1)reply_size=12;
     if(head[1]==0x328 && size==10 && request[8]<=7 && !request[9])reply_size=12;
+    /* AP adf_sys_request: CP SendADF_SysRequest reads kind at+8, option at+9,
+       sound id at+0xa and a u32 at+0xc, then emits2004/0203/16/1. Retain the
+       real request and acknowledge it; decoding/playback is the host's job. */
+    if(head[1]==0x329 && size>=16 && size<=40 && getenv("QEMU_SYSTEM_SOUND_BUFFER") &&
+       request[8]<=2 && request[9]<=1)reply_size=12;
     if(!reply_size)return 0;
     pthread_mutex_lock(a7m4_sound_lock);
     if(reply_size==24 && a7m4_sound_load()) {
@@ -86,6 +104,30 @@ static int a7m4_audio_config(unsigned int id,void *message,int *handled) {
         if(fd>=0){write(fd,a7m4_sound_volumes,sizeof a7m4_sound_volumes);close(fd);}
         char text[100];snprintf(text,sizeof text,"sound_id=%u volume=%u retained; no playback",request[9],request[8]);
         record("BOOT_LOG_SOUND_VOLUME ",text);
+    } else if(head[1]==0x329) {
+        /* The AP app's real adf_sys_request. Keep the exact fields and bind
+           them to the descriptor bank for host-side firmware audio output. */
+        unsigned int kind=request[8],option=request[9],sound_id=request[10];
+        unsigned int param=0;memcpy(&param,request+12,4);
+        unsigned long address=0;unsigned int length=0,enabled=0,volume=0;
+        if(sound_id<21){
+            memcpy(&address,a7m4_system_sounds[sound_id],8);
+            memcpy(&length,a7m4_system_sounds[sound_id]+8,4);
+            enabled=a7m4_system_sounds[sound_id][14];
+            volume=a7m4_sound_volumes[sound_id];
+        }
+        char text[260];
+        snprintf(text,sizeof text,
+                 "kind=%u option=%u sound_id=%u param=%#x addr=%#lx len=%u enabled=%u volume=%u; original adf_sys_request",
+                 kind,option,sound_id,param,address,length,enabled,volume);
+        record("A7M4_SOUND_PLAY ",text);
+        int fd=open("/tmp/a7m4-sound-play.bin",1|64|512,0600);
+        if(fd>=0){
+            unsigned char event[64];unsigned int stored=size<56?size:56;
+            event[0]=stored;event[1]=0;event[2]=0;event[3]=0;
+            memcpy(event+4,message,stored);
+            write(fd,event,4+stored);close(fd);
+        }
     } else {
         /* Native1..16 maps to stored0..15 (CP63d62..63d90). */
         a7m4_system_volume[0]=request[8];a7m4_system_volume[1]=request[8]-1;

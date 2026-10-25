@@ -1,0 +1,11 @@
+{
+  "files_considered": 282,
+  "python_files_syntax_checked": 69,
+  "document_links_checked": 51,
+  "credential_pattern_matches": 0,
+  "max_file_bytes": 524269,
+  "version": "0.1",
+  "original_v0_1_tag_unchanged": true,
+  "scope": "repository packaging; no camera runtime regression rerun",
+  "date": "2026-10-25"
+}

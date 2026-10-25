@@ -1,0 +1,110 @@
+{
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/?v=zh",
+  "started": "2026-10-21T05:15:21.636Z",
+  "actions": [
+    {
+      "key": "HALF",
+      "rect": {
+        "x": 120,
+        "y": 1278.5,
+        "disabled": false
+      },
+      "elapsed_ms": 2147,
+      "state": "网页视频输入运行中（客户端合成；非原厂 ISP）",
+      "frame": {
+        "file": "D:\\TMP\\fw-zh-test\\frame-01-half.png",
+        "bytes": 9159,
+        "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+        "fetch_ms": 9
+      },
+      "page": {
+        "file": "D:\\TMP\\fw-zh-test\\page-01-half.png",
+        "bytes": 105483,
+        "sha256": "dba1f36798e319e3171a3396ed0a0780938e116ef3bec11ae42759015077e84b"
+      },
+      "changed_from_before": true
+    },
+    {
+      "key": "SHUTTER",
+      "rect": {
+        "x": 202,
+        "y": 1327.5,
+        "disabled": false
+      },
+      "elapsed_ms": 2591,
+      "state": "网页视频输入运行中（客户端合成；非原厂 ISP）",
+      "frame": {
+        "file": "D:\\TMP\\fw-zh-test\\frame-02-shutter.png",
+        "bytes": 9159,
+        "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+        "fetch_ms": 6
+      },
+      "page": {
+        "file": "D:\\TMP\\fw-zh-test\\page-02-shutter.png",
+        "bytes": 105914,
+        "sha256": "af5e2368496cc975b5852bcf0891ad9ff825e49595e136e56520d36b77eebbc4"
+      },
+      "changed_from_before": true
+    }
+  ],
+  "watch": [],
+  "errors": [],
+  "status_before": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\fw-zh-test\\page-00-before.png",
+    "bytes": 183041,
+    "sha256": "527dc55fe9a009ed45c7f908c6a91203aa63ca2667dc64f8ede39205553574a9"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\fw-zh-test\\frame-00-before.png",
+      "bytes": 28732,
+      "sha256": "3d9508868155600ca15a09e95ef35682ab95aa7f946209e355aa01defee65751",
+      "fetch_ms": 7
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "status_after": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "fw": {
+    "seq": 1,
+    "last": {
+      "seq": 1,
+      "sound_id": 4,
+      "name": "对焦锁定提示音",
+      "source": "virtual-cp",
+      "rate": 48000,
+      "duration": 0.077
+    },
+    "plays": 1,
+    "events": [
+      {
+        "seq": 1,
+        "sound_id": 4,
+        "name": "对焦锁定提示音",
+        "source": "virtual-cp"
+      }
+    ],
+    "errors": [],
+    "ctx": "running"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\fw-zh-test\\frame-99-final.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 4
+    },
+    "page": {
+      "file": "D:\\TMP\\fw-zh-test\\page-99-final.png",
+      "bytes": 106147,
+      "sha256": "ef9cb86827e97585216ee90ff1739186c6f258062619579a533f95687919f433"
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "ok": true,
+  "finished": "2026-10-21T05:15:28.765Z"
+}

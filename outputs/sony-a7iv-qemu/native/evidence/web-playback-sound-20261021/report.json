@@ -1,0 +1,97 @@
+{
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "started": "2026-10-20T23:06:14.113Z",
+  "actions": [],
+  "watch": [],
+  "errors": [],
+  "status_before": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "audio_instrumented": true,
+  "audio": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 1,
+    "label": "系统音：开"
+  },
+  "file_input": {
+    "path": "C:/Users/16483/Videos/10月3日.mp4",
+    "media": {
+      "readyState": 4,
+      "videoWidth": 640,
+      "text": "当前视频：10月3日.mp4"
+    }
+  },
+  "photo": {
+    "state": "已写入虚拟卡；点回放查看照片"
+  },
+  "photo_playback": {
+    "overlay": true,
+    "display": "block",
+    "name": "DSC00001.JPG",
+    "count": "1/1 · JPEG",
+    "button": "返回取景",
+    "videoState": "网页照片回放（虚拟回放层；原厂 JPEG 解码未建模）"
+  },
+  "audio_photo": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 3,
+    "label": "系统音：开"
+  },
+  "page_photo": {
+    "file": "D:\\TMP\\web-playback-sound-test2\\page-photo-playback.png",
+    "bytes": 246131,
+    "sha256": "8cb6ea00e81e7a0bacd5a09a146e7d25cefddabc844c071d1a01a14fefd05611"
+  },
+  "photo_return": {
+    "overlay": false,
+    "display": "none",
+    "button": "回放",
+    "videoState": "已回到取景"
+  },
+  "page_photo_return": {
+    "file": "D:\\TMP\\web-playback-sound-test2\\page-photo-return.png",
+    "bytes": 276359,
+    "sha256": "9a5babc05e4bc1b9733be8509af3f395d78f665f668b8f6c5b2de9e687f9ef41"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\web-playback-sound-test2\\page-00-before.png",
+    "bytes": 276992,
+    "sha256": "a97bc047d9d88b7b5df641f6ea5ed0a6df5d849708ae79dc7f2b091dd2e1038f"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\web-playback-sound-test2\\frame-00-before.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 6
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "status_after": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "audio_final": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 4,
+    "label": "系统音：开"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\web-playback-sound-test2\\frame-99-final.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 5
+    },
+    "page": {
+      "file": "D:\\TMP\\web-playback-sound-test2\\page-99-final.png",
+      "bytes": 278860,
+      "sha256": "f4214ab33e3575c4390452cb656f214a7907c06e427af442439af89a265ec140"
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "ok": true,
+  "finished": "2026-10-20T23:06:36.541Z"
+}

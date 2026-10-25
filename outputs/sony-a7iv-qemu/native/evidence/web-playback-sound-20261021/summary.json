@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-21",
+  "instance": "web-video-20261021f",
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "video": {
+    "path": "C:/Users/16483/Videos/10月3日.mp4",
+    "media": {
+      "readyState": 4,
+      "videoWidth": 640,
+      "text": "当前视频：10月3日.mp4"
+    }
+  },
+  "photo_card_write": {
+    "state": "已写入虚拟卡；点回放查看照片"
+  },
+  "photo_playback_overlay": {
+    "overlay": true,
+    "display": "block",
+    "name": "DSC00001.JPG",
+    "count": "1/1 · JPEG",
+    "button": "返回取景",
+    "videoState": "网页照片回放（虚拟回放层；原厂 JPEG 解码未建模）"
+  },
+  "photo_return": {
+    "overlay": false,
+    "display": "none",
+    "button": "回放",
+    "videoState": "已回到取景"
+  },
+  "system_sound": {
+    "startup": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 1,
+      "label": "系统音：开"
+    },
+    "after_photo_and_playback": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 3,
+      "label": "系统音：开"
+    },
+    "final": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 4,
+      "label": "系统音：开"
+    }
+  },
+  "guest_frame_sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+  "guest_frame_unchanged": true,
+  "ok": true,
+  "errors": []
+}

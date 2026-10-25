@@ -1,0 +1,88 @@
+{
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "started": "2026-10-21T02:30:45.535Z",
+  "actions": [],
+  "watch": [],
+  "errors": [],
+  "status_before": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "shutter_fetch": {
+    "status": 200,
+    "bytes": 6884,
+    "type": "audio/wav"
+  },
+  "shutter": {
+    "ctx": "running",
+    "select": "ka8",
+    "label": "快门音：原厂候选 8k（实验解包） · 0.427s",
+    "probe": {
+      "mode": "ka8",
+      "plays": 2,
+      "cached": [
+        "ka8"
+      ],
+      "error": null
+    }
+  },
+  "shutter_custom": {
+    "mode": "custom",
+    "plays": 3,
+    "cached": [
+      "ka8"
+    ],
+    "select": "custom",
+    "label": "快门音：自定义文件 · 0.178s"
+  },
+  "page_shutter_custom": {
+    "file": "D:\\TMP\\web-shutter-ui\\page-shutter-custom.png",
+    "bytes": 101707,
+    "sha256": "4456230222df111e78a4ef972dfe7622d537e37acf1917da31b2e4c1c0fbb896"
+  },
+  "audio_instrumented": true,
+  "audio": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 1,
+    "label": "系统音：开"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\web-shutter-ui\\page-00-before.png",
+    "bytes": 101759,
+    "sha256": "ff5c0ea1ecbc6c83a531187ad58070b524eccf19b35988875b78df7e72f74091"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\web-shutter-ui\\frame-00-before.png",
+      "bytes": 9220,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "fetch_ms": 6
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "status_after": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "audio_final": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 1,
+    "label": "系统音：开"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\web-shutter-ui\\frame-99-final.png",
+      "bytes": 9220,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "fetch_ms": 5
+    },
+    "page": {
+      "file": "D:\\TMP\\web-shutter-ui\\page-99-final.png",
+      "bytes": 101943,
+      "sha256": "63e5172126a63f6a642dfefd86411c7d6d4327eeac2ec7c516a27af1d003ffae"
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "ok": true,
+  "finished": "2026-10-21T02:30:51.262Z"
+}

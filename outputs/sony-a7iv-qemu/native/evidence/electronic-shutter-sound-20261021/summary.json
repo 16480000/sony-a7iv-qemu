@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-21",
+  "instance": "web-video-20261021g",
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "scope": "Web-layer electronic shutter sound selector and custom audio upload; experimental AA_RT extraction. No real-camera flashing, no CP/AIP execution.",
+  "candidate_fetch": {
+    "status": 200,
+    "bytes": 6884,
+    "type": "audio/wav"
+  },
+  "candidate_playback": {
+    "ctx": "running",
+    "select": "ka8",
+    "label": "快门音：原厂候选 8k（实验解包） · 0.427s",
+    "probe": {
+      "mode": "ka8",
+      "plays": 2,
+      "cached": [
+        "ka8"
+      ],
+      "error": null
+    }
+  },
+  "custom_upload": {
+    "mode": "custom",
+    "plays": 3,
+    "cached": [
+      "ka8"
+    ],
+    "select": "custom",
+    "label": "快门音：自定义文件 · 0.178s"
+  },
+  "guest_frame_unchanged": true,
+  "guest_frame_sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+  "photo_flow": {
+    "photo_card_write": {
+      "state": "已写入虚拟卡；点回放查看照片"
+    },
+    "playback_overlay": {
+      "overlay": true,
+      "display": "block",
+      "name": "DSC00001.JPG",
+      "count": "1/1 · JPEG",
+      "button": "返回取景",
+      "videoState": "网页照片回放（虚拟回放层；原厂 JPEG 解码未建模）"
+    },
+    "return": {
+      "overlay": false,
+      "display": "none",
+      "button": "回放",
+      "videoState": "已回到取景"
+    },
+    "audio": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 1,
+      "label": "系统音：开"
+    },
+    "audio_photo": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 2,
+      "label": "系统音：开"
+    },
+    "audio_final": {
+      "ctx": "running",
+      "enabled": true,
+      "beeps": 3,
+      "label": "系统音：开"
+    }
+  },
+  "ok": true,
+  "errors": []
+}

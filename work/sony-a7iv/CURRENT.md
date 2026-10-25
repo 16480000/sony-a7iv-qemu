@@ -1,3 +1,82 @@
+# REPOSITORY PACKAGING 2026-10-25 — V0.1; PRIVATE GITHUB REQUEST
+
+User requested organization and GitHub publication, explicitly choosing PRIVATE.
+Root README, CHANGELOG, NOTICE and docs/STRUCTURE + docs/REPRODUCING now index
+the existing scripts and archived 2026-10-20/21 experiments without moving paths.
+Ignore generated personal video/JPEG/RGBA assets, module build products and publishing tools.
+Keep VERSION=0.1 and original v0.1 tag at3fcc1c3; archive new code/evidence on main.
+Packaging checks: Python syntax, Node/PowerShell syntax, local documentation links,
+credential-pattern scan, generated-artifact exclusion. No camera runtime rerun.
+GitHub CLI is installed only under ignored work/publish-tools/gh/bin/gh.exe.
+Publication depends on GitHub account authorization; inspect gh auth status and
+git remote -v for actual completion. Do not claim upload before push/read-back.
+Previous runtime findings below are preserved as historical evidence.
+
+# CURRENT 2026-10-21 — FIRMWARE-REGISTERED SOUND → VIRTUAL CP → BROWSER
+
+User rejected extracted/web-only shutter sounds and asked to connect real firmware feedback
+(focus prompt etc.) so firmware sound edits can be heard. Passive GDB tracing of
+`osal_snd_msg` and the AP `adf_sys_request` wrapper (`appFw+0x359b41c` →
+`+0x35c10c0`, BB `200d/0329/16/8001`) showed no AP sound request on MENU/HALF/SHUTTER:
+the original CP/AIP (not executed here) owns the UI/focus/shutter beep trigger.
+
+Implemented a host-side virtual CP: parse the original AP's boot-registered beep table
+(`BOOT_LOG_SOUND_DESCRIPTOR/VOLUME`, 16 IDs) and, on the real native HALF/SHUTTER key
+actions, QMP-pmemsave the descriptor's guest SysSound.bin bytes and play them in the
+browser. HALF uses registered FocusLock (ID4); SHUTTER uses the page-selected electronic
+Kasha (ID3), mechanical Ka+Sha (ID1/2), Kasha-continuous (ID7), or off. The original AP
+`adf_sys_request` handler is also installed and would surface as `来源=AP` if it fires.
+The page shows source (AP vs virtual CP). User calibration on 2026-10-21 confirmed
+FocusLock at 48 kHz; the live path now derives the rate from the bank entry header
+(0x17 -> 48 kHz, 0x07 -> 16 kHz). Browser test after the change: AudioContext running,
+FocusLock and Kasha at 48000 Hz, no errors. Kasha/electronic-shutter ID and the 0x07
+group still need listening verification. User then requested a Chinese UI and stated the
+A7 IV electronic shutter has no stock prompt sound. The panel/calibration pages are now
+Chinese; electronic shutter defaults to silent (no Kasha); mechanical Ka+Sha and a
+virtual-CP Kasha audition remain explicit options. Browser test: HALF -> FocusLock
+48 kHz; SHUTTER -> no host sound; AudioContext running, plays=1. Mechanical test then
+produced Ka+Sha at 48 kHz. The camera OSD/menu language is still English and was not
+changed.
+
+Boundary: CP/AIP decode and trigger logic are still not executed. Audio is 1-byte-entry
+header + signed 8-bit PCM, not verified AA_RT; focus is a virtual lock; shutter mode is a
+page choice; CP-native menu beeps are not triggered. Old web candidates remain only as a
+clearly labeled old experiment. Evidence: `native/evidence/firmware-sound-virtual-cp-20261021/`
+(browser AudioContext running, plays=2, Focus Lock → Kasha; WAVs and guest bytes).
+Final instance `sound-cp-zh-20261021` at the existing S5 URL.
+
+# CURRENT 2026-10-20 — IMAGER-CONTROL SINK EXPERIMENT; NO LIVEVIEW
+
+User asked to continue unimplemented content and verify in a browser. No browser MCP is
+configured in this Claude Code session; local Chrome over CDP was used instead
+(outputs/native/runtime/browser-verify.mjs).
+
+Audit result: the 0x40xx/0x41xx records to 0x90030001 are one-way imager-control sends
+from AP source 0x80020002 via osal_snd_msg, not synchronous requests awaiting fabricated
+replies. IWrapperImaging (tid286) waits on queue 0x80020002. /dev/stream2 maps reserved
+guest physical memory (64MiB at 0x416000000 is the leading liveview candidate), but no
+producer fills it. Do not ACK these messages or inject a test pattern as liveview.
+
+Implemented an env-gated silent sink (QEMU_A7M4_IMAGER_CONTROL) in prepare-display-port.py:
+it consumes only the observed wire shape/commands from source0x80020002 to endpoint
+0x90030001, appends exact records to /tmp/a7m4-imager-control.bin (4B length + bytes,
+256KiB cap), logs BOOT_LOG_IMAGER_CONTROL, and sends no completion. stage-runtime-a7m4.py
+gained --imager-control; native-session.py allows imager-control-test.cpio for --auto-main.
+
+Test image imager-control-test.cpio SHA256
+677e08219e500d7226b30d76583e379b42142f0896b5e0ee6d7fccd5cbe3fab7, 471859200B,
+kernel3f301473..., DTB078d664e.... Run verify-20261020-imager-control reached original
+main UI. 69/69 imager requests from source0x80020002 produced 69 sink records; no unmatched
+0x90030001 sends. Residual UIPC: one 0x1 (unrelated) and three 0x193 from the unmodeled
+ReleaseLock 0x4037 path. No exception/fatal. OSD persisted through seq4096.
+
+Chrome verified FN, MENU, PLAY, PLAY over CDP; final original main frame SHA256
+707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64. Two unique watch
+hashes are the card-indicator blink, NOT liveview. No sensor/ISP/AF/JPEG/frame produced.
+Evidence outputs/native/evidence/imager-control-sink.json plus browser-report.json and
+screenshots. Test VM was stopped after verification; main-virtual-card-stable.cpio was
+not promoted or overwritten. This is not a liveview or camera-imaging success.
+
 # CURRENT 2026-10-19 — V0.1 GIT BASELINE; NATIVE117 ACTIVE
 
 User requested Git version control, keeping v0.1. Workspace root is now local Git

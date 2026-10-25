@@ -9,6 +9,9 @@
 *.cmd text eol=crlf
 *.png binary
 *.bin binary
+*.wav binary
+*.jpg binary
+*.mp4 binary
 # Preserve exact bytes in frozen evidence, including diagnostic console dumps.
 outputs/sony-a7iv-qemu/evidence/** -text
 outputs/sony-a7iv-qemu/native/evidence/** -text

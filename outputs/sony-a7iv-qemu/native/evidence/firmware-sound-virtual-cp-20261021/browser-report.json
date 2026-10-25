@@ -1,0 +1,115 @@
+{
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/?v=final",
+  "started": "2026-10-21T04:56:06.389Z",
+  "actions": [
+    {
+      "key": "HALF",
+      "rect": {
+        "x": 120,
+        "y": 1262.5,
+        "disabled": false
+      },
+      "elapsed_ms": 2204,
+      "state": "网页视频输入运行中（客户端合成；非原厂 ISP）",
+      "frame": {
+        "file": "D:\\TMP\\fw-audio-final\\frame-01-half.png",
+        "bytes": 9159,
+        "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+        "fetch_ms": 6
+      },
+      "page": {
+        "file": "D:\\TMP\\fw-audio-final\\page-01-half.png",
+        "bytes": 115465,
+        "sha256": "b42caa50c8c036d9579018867d37a4bb87fd65bb49b6fb5a99564f2eea2d19b6"
+      },
+      "changed_from_before": false
+    },
+    {
+      "key": "SHUTTER",
+      "rect": {
+        "x": 202,
+        "y": 1292.5,
+        "disabled": false
+      },
+      "elapsed_ms": 2343,
+      "state": "网页视频输入运行中（客户端合成；非原厂 ISP）",
+      "frame": {
+        "file": "D:\\TMP\\fw-audio-final\\frame-02-shutter.png",
+        "bytes": 9159,
+        "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+        "fetch_ms": 5
+      },
+      "page": {
+        "file": "D:\\TMP\\fw-audio-final\\page-02-shutter.png",
+        "bytes": 116030,
+        "sha256": "1eab7a325ef5811f297f1f057f7e46a2463b3af985e9c6a8a1fe3d33d5104a2c"
+      },
+      "changed_from_before": false
+    }
+  ],
+  "watch": [],
+  "errors": [],
+  "status_before": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\fw-audio-final\\page-00-before.png",
+    "bytes": 123714,
+    "sha256": "26620b56870bdf38528827d41bca3a5784ca6d234ffff7abcebfdac8fed2a55c"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\fw-audio-final\\frame-00-before.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 7
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "status_after": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "fw": {
+    "seq": 2,
+    "last": {
+      "seq": 2,
+      "sound_id": 3,
+      "name": "Kasha",
+      "source": "virtual-cp",
+      "duration16": 0.1839
+    },
+    "plays": 2,
+    "events": [
+      {
+        "seq": 1,
+        "sound_id": 4,
+        "name": "Focus Lock",
+        "source": "virtual-cp"
+      },
+      {
+        "seq": 2,
+        "sound_id": 3,
+        "name": "Kasha",
+        "source": "virtual-cp"
+      }
+    ],
+    "errors": [],
+    "ctx": "running"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\fw-audio-final\\frame-99-final.png",
+      "bytes": 9159,
+      "sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+      "fetch_ms": 5
+    },
+    "page": {
+      "file": "D:\\TMP\\fw-audio-final\\page-99-final.png",
+      "bytes": 116030,
+      "sha256": "1eab7a325ef5811f297f1f057f7e46a2463b3af985e9c6a8a1fe3d33d5104a2c"
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "ok": true,
+  "finished": "2026-10-21T04:56:13.230Z"
+}

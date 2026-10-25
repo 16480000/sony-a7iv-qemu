@@ -1,4 +1,8 @@
-2026-10-19 当前状态：网页已切换至带卡实例 native117。卡槽 2 的 FAT32 虚拟卡、原厂数据库写入、空卡回放、返回主界面、Fn 和实际重启均已验证。实时取景、自动对焦和照片生成尚未实现。详见 [基础功能进展](BASIC-FUNCTIONS.zh-CN.md) 及 [当前配置验证](evidence/card-profile-promotion.json)。
+2026-10-21 当前状态：实例 `language-zh-allfonts-20261021` 已把**原厂相机菜单改为简体中文**，首次设置语言页高亮“简体中文”，主菜单显示“设置 > 电源设置选项”等中文内容。语言来自原厂 `string_simplifiedchinese*.uxc` 与固件自带 GB18030/Big5 字体；从 `firmware.fdat` 补回 `/tmp/images` 字体（含 `Sony_DI_Icons.ttf`）后才正常渲染。原厂 `Backup.bin` 语言项 `0x2cf03a6`（数据偏移 `0x9b090`）设为 25，并重算 994,788 字节的累加校验和。宿主面板、固件音面板仍为中文；HALF 产生 48 kHz FocusLock，电子快门默认静音。证据见 [原厂相机菜单简体中文](evidence/camera-menu-zh-20261021/README.md)。当前入口为 <http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/>。
+
+2026-10-21 修改固件验证：已用 `D:\sony\work\BODYDATA_all_quiet35.dat`（SHA-256 `549afab7…`）生成候选镜像并启动通过。AP 注册 16 条 beep；ID 1/2/3 的新 Ka/Sha/Kasha 音频从 guest SysSound.bin 读出，事件哈希与修改切片一致；中文 UI 保留。完整 BODYDATA 的 CRC/签名、真机刷写、CP/AIP 和电子快门实际触发仍未覆盖，不能据此认定整包可刷。详见 [修改固件验证](evidence/firmware-validation-allquiet35-20261021/README.md)。
+
+2026-10-19 状态：网页已切换至带卡实例 native117。卡槽 2 的 FAT32 虚拟卡、原厂数据库写入、空卡回放、返回主界面、Fn 和实际重启均已验证。实时取景、自动对焦和照片生成尚未实现。详见 [基础功能进展](BASIC-FUNCTIONS.zh-CN.md) 及 [当前配置验证](evidence/card-profile-promotion.json)。
 
 原先 native104–114 带卡回放卡死的问题已定位至虚拟显示端拒绝合法 EVF 优先级 2；native115/116 修复后的连续操作和显示比对通过。历史记录中的回放失败只适用于修复前的实验。
 

@@ -69,6 +69,7 @@ pin_model=(W/'dataflow-pin-model.c').read_text().replace('/* ORIGINAL_PIN_RECORD
 sound_raw=(R/'usr/share/avsystemsound/SysSound.bin').read_bytes()
 assert len(sound_raw)==77504 and hashlib.sha256(sound_raw).hexdigest()=='dae3d18d37b85a22398573f04090a4a95a97052380f4b2b4402a374516399dfb'
 pin_model+='\n'+(W/'system-sound-model.c').read_text()
+pin_model+='\n'+(W/'sound-trace-model.c').read_text()
 cfg_raw=(R/'cp/DmmCfg.bin').read_bytes()
 assert hashlib.sha256(cfg_raw).hexdigest()=='7e7c09a3bb6922d5a1e5cfbddd29600b2fbc709264ac40bbde35b3f5ea2c54fd'
 cfg_spec=importlib.util.spec_from_file_location('dmm_config',W/'parse-dmm-config.py')
@@ -85,7 +86,7 @@ pin_model+='\n'+(W/'dmm-config-model.c').read_text().replace('/* ORIGINAL_DMM_UN
 (D/'menu-a7m4/original-cp-pin-profile.json').write_text(json.dumps({'pins':pins,'scope':'virtual control-plane; no data stream'},indent=2))
 send_entry='int osal_snd_msg(unsigned int id, void *message) {'
 assert code.count(send_entry)==1
-code=code.replace(send_entry,pin_model+'\n'+send_entry+r'''
+code=code.replace(send_entry,pin_model+'\n'+send_entry+'\n    a7m4_snd_trace(id,message);'+r'''
     /* Exact single-way diagnostic producer: AP3724f4c accepts 1..0xfe0
        payload bytes and allocates payload+32 (3724f74). Header is
        {u16type2,u16cmd83,u32kind,u32length}, timestamp
@@ -245,6 +246,48 @@ code=code.replace(send_entry,pin_model+'\n'+send_entry+r'''
         char text[440];int used=snprintf(text,sizeof text,"tid=%ld dest=%#x source=%#x caller=%.70s+%#lx bytes=%u payload=",syscall(178),id,real_get_source(message),caller_name,caller_offset,bytes);
         for(unsigned int i=0;i<shown && used+2<(int)sizeof(text);++i)used+=snprintf(text+used,sizeof(text)-used,"%02x",((unsigned char *)message)[i]);
         record("BOOT_LOG_IMAGING_REQUEST ",text);
+    }
+    /* AP IWrapperImaging/sequence threads emit one-way type5 imager-control
+       records to CP endpoint90030001. UIPC has no receiver in this emulator,
+       so the original route drops them with a No-snd_msg UIPC error. The AP
+       sender is osal_snd_msg (not a synchronous API) and the observed shape
+       establishes no completion contract. Consume only the exact observed
+       commands from source80020002, retain the exact wire records for later
+       analysis, and emit no reply. This is a silent control sink: no sensor,
+       ISP, DMA, stream2 frame, or liveview state is produced. */
+    if(display_info_enabled && getenv("QEMU_A7M4_IMAGER_CONTROL") &&
+       id==0x90030001 && message && real_msg_size &&
+       real_get_source(message)==0x80020002) {
+        unsigned int bytes=real_msg_size(message);
+        const unsigned char *record_bytes=message;
+        unsigned int command=bytes>=4?((const unsigned short *)message)[1]:0;
+        unsigned int token=bytes>=8?*(const unsigned int *)(record_bytes+4):0;
+        int known=0;
+        switch(command) {
+            case 0x401c: case 0x4022: case 0x4023: case 0x4028: case 0x402a:
+            case 0x4039: case 0x4043: case 0x404e: case 0x4051: case 0x4052:
+            case 0x4070: case 0x4084: case 0x409c: case 0x40af: case 0x40b8:
+            case 0x40c5: case 0x40d1: case 0x40ed: case 0x40fb: case 0x4102:
+            case 0x4139: case 0x4152: known=1; break;
+        }
+        if(bytes>=8 && bytes<=256 && record_bytes[0]==5 && record_bytes[1]==0 && known) {
+            static unsigned int observed, retained_bytes;
+            unsigned int sequence=++observed;
+            int retained=0;
+            if(bytes+4<=260 && retained_bytes+bytes+4<=262144) {
+                unsigned char nested[260];*(unsigned int *)nested=bytes;
+                for(unsigned int i=0;i<bytes;++i)nested[i+4]=record_bytes[i];
+                int fd=open("/tmp/a7m4-imager-control.bin",0x441,0644);
+                if(fd>=0) {
+                    long written=write(fd,nested,bytes+4);close(fd);
+                    if(written==(long)bytes+4){retained_bytes+=bytes+4;retained=1;}
+                }
+            }
+            char text[220];
+            snprintf(text,sizeof text,"tid=%ld sequence=%u command=%#x token=%#x bytes=%u retained=%u total=%u; one-way control sink, no completion/sensor/frame",syscall(178),sequence,command,token,bytes,retained,retained_bytes);
+            record("BOOT_LOG_IMAGER_CONTROL ",text);
+            real_free_msg(id,message);return 0;
+        }
     }
     if(display_info_enabled) {
         int size_handled=0;int size_result=a7m4_dmm_size_query(id,message,&size_handled);

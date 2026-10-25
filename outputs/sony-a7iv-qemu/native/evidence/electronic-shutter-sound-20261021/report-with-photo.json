@@ -1,0 +1,115 @@
+{
+  "url": "http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+  "started": "2026-10-21T02:29:29.588Z",
+  "actions": [],
+  "watch": [],
+  "errors": [],
+  "status_before": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "shutter_fetch": {
+    "status": 200,
+    "bytes": 6884,
+    "type": "audio/wav"
+  },
+  "shutter": {
+    "ctx": "running",
+    "select": "ka8",
+    "label": "快门音：原厂候选 8k（实验解包） · 0.427s",
+    "probe": {
+      "mode": "ka8",
+      "plays": 1,
+      "cached": [
+        "ka8"
+      ],
+      "error": null
+    }
+  },
+  "audio_instrumented": true,
+  "audio": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 1,
+    "label": "系统音：开"
+  },
+  "file_input": {
+    "path": "C:/Users/16483/Videos/10月3日.mp4",
+    "media": {
+      "readyState": 4,
+      "videoWidth": 640,
+      "text": "当前视频：10月3日.mp4"
+    }
+  },
+  "photo": {
+    "state": "已写入虚拟卡；点回放查看照片"
+  },
+  "photo_playback": {
+    "overlay": true,
+    "display": "block",
+    "name": "DSC00001.JPG",
+    "count": "1/1 · JPEG",
+    "button": "返回取景",
+    "videoState": "网页照片回放（虚拟回放层；原厂 JPEG 解码未建模）"
+  },
+  "audio_photo": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 2,
+    "label": "系统音：开"
+  },
+  "page_photo": {
+    "file": "D:\\TMP\\web-custom-shutter-test\\page-photo-playback.png",
+    "bytes": 245056,
+    "sha256": "b2153b50b626301d95c3607aea08a08e45d4ca5d5d71a02e2d312d98d39a54c8"
+  },
+  "photo_return": {
+    "overlay": false,
+    "display": "none",
+    "button": "回放",
+    "videoState": "已回到取景"
+  },
+  "page_photo_return": {
+    "file": "D:\\TMP\\web-custom-shutter-test\\page-photo-return.png",
+    "bytes": 282659,
+    "sha256": "297032c5b760943b0d821c9408b45f5d6c02d5635a82d2e0484670cecd57ff60"
+  },
+  "page_before": {
+    "file": "D:\\TMP\\web-custom-shutter-test\\page-00-before.png",
+    "bytes": 283443,
+    "sha256": "e16fb501250394ae293ac8fea9f02204c94ae04aa2069cd6b339c01ba82784f0"
+  },
+  "initial": {
+    "frame": {
+      "file": "D:\\TMP\\web-custom-shutter-test\\frame-00-before.png",
+      "bytes": 9220,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "fetch_ms": 5
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "status_after": {
+    "status": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "audio_final": {
+    "ctx": "running",
+    "enabled": true,
+    "beeps": 3,
+    "label": "系统音：开"
+  },
+  "final": {
+    "frame": {
+      "file": "D:\\TMP\\web-custom-shutter-test\\frame-99-final.png",
+      "bytes": 9220,
+      "sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7",
+      "fetch_ms": 5
+    },
+    "page": {
+      "file": "D:\\TMP\\web-custom-shutter-test\\page-99-final.png",
+      "bytes": 284358,
+      "sha256": "1d0deae1b3954bfcc2477db874725e181700bb3d02ab3b6550bd2d5f7a09356d"
+    },
+    "state": "网页视频输入运行中（客户端合成；非原厂 ISP）"
+  },
+  "ok": true,
+  "finished": "2026-10-21T02:29:54.746Z"
+}

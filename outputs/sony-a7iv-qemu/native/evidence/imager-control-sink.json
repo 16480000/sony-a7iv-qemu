@@ -1,0 +1,65 @@
+{
+  "title": "A7M4 6.02 silent imager-control sink experiment",
+  "date": "2026-10-20",
+  "scope": "Consume and retain the AP's one-way type-5 imager-control records for CP endpoint 0x90030001. This models the missing receiver boundary only. It sends no completion, produces no sensor/ISP state, fills no stream2 buffer and creates no liveview frame.",
+  "why": "The AP IWrapperImaging path sends 0x40xx/0x41xx control records with source 0x80020002 to CP endpoint 0x90030001 via osal_snd_msg. The emulator had no receiver, so UIPC dropped them and logged 'Skip snd to 0x1'. The send API and wire shape establish no synchronous completion contract.",
+  "implementation": {
+    "model_source": "work/sony-a7iv/prepare-display-port.py (generated menu-observe.c send interposer)",
+    "stage_source": "work/sony-a7iv/stage-runtime-a7m4.py --imager-control",
+    "session_change": "outputs/sony-a7iv-qemu/native/runtime/native-session.py allows imager-control-test.cpio for --auto-main",
+    "runtime_flag": "QEMU_A7M4_IMAGER_CONTROL=1",
+    "retention_file_in_guest": "/tmp/a7m4-imager-control.bin (4-byte little-endian length + exact message bytes, 262144-byte cap)",
+    "accepted_source": "0x80020002",
+    "accepted_destination": "0x90030001",
+    "accepted_wire_type": "byte0=5, byte1=0, bytes8..256",
+    "accepted_commands": ["0x401c", "0x4022", "0x4023", "0x4028", "0x402a", "0x4039", "0x4043", "0x404e", "0x4051", "0x4052", "0x4070", "0x4084", "0x409c", "0x40af", "0x40b8", "0x40c5", "0x40d1", "0x40ed", "0x40fb", "0x4102", "0x4139", "0x4152"],
+    "completion_sent": false
+  },
+  "test_image": {
+    "name": "imager-control-test.cpio",
+    "bytes": 471859200,
+    "sha256": "677e08219e500d7226b30d76583e379b42142f0896b5e0ee6d7fccd5cbe3fab7",
+    "kernel_sha256": "3f30147326233e63b9406f6808122934035b18c7adc55ba1adeb2b8cd1a8e920",
+    "dtb_sha256": "078d664e52a5b8c8e683a8b45f9e6919e21b5074d41bd8c6ab167f46c496e7f4",
+    "profile": "stable-equivalent card profile, test name, --auto-main only (no --card-main)"
+  },
+  "run": {
+    "name": "verify-20261020-imager-control",
+    "panel": "http://127.0.0.1:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/",
+    "console": "/opt/sony-a7iv/menu-a7m4/runs/verify-20261020-imager-control/console.log",
+    "browser_report": "native/evidence/imager-control-sink/browser-report.json",
+    "screenshots": ["native/evidence/imager-control-sink/main.png", "native/evidence/imager-control-sink/fn-panel.png", "native/evidence/imager-control-sink/playback.png"]
+  },
+  "runtime_result": {
+    "imager_requests_source_0x80020002": 69,
+    "imager_control_records": 69,
+    "unmatched_imager_requests": 0,
+    "uipc_skip_0x1_residual": 1,
+    "uipc_skip_0x193_releaselock_0x4037_unmodeled": 3,
+    "exceptions": 0,
+    "fatal_records": 0,
+    "last_persisted_osd_sequence_seen": 4096,
+    "panel_status_after": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现"
+  },
+  "browser_verification": {
+    "engine": "local Chrome headless over CDP (no browser MCP configured)",
+    "initial_frame_sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+    "actions": [
+      {"key": "FN", "frame_sha256": "5ae7adf85783f3c4c1b06f38a3a7d257dae4f6a69823b7896234a6b3bff9d887", "changed": true},
+      {"key": "MENU", "frame_sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7", "changed": true},
+      {"key": "PLAY", "frame_sha256": "ee3226be3b22888d6ce27067bd6a6214211e163a77bac01d5817e09633c6f8e1", "changed": true},
+      {"key": "PLAY", "frame_sha256": "cde143b54920123aee3065c44cf0c880f44d6e14128e52b67a2cd5dc20c657f7", "changed": true}
+    ],
+    "final_frame_sha256": "707f200eae994e689996c20cc806ba114930820a2f2caa16c6f1b6ab4eecbe64",
+    "final_state": "原厂界面运行中；省电已关闭；取景和照片保存尚未实现",
+    "watch": {"samples": 6, "unique_sha256": 2, "changed_samples": 2, "duration_ms": 3081, "meaning": "main-UI card indicator blink, not liveview"}
+  },
+  "limitations": [
+    "No liveview, sensor, ISP, AF, JPEG or photo path is produced or claimed.",
+    "No completion is sent for the consumed one-way imager-control records.",
+    "The AP IWrapperImaging thread still waits on queue 0x80020002; the actual imaging event/frame producer is missing.",
+    "/dev/stream2 maps reserved guest physical memory, but no producer fills it; no test pattern was injected.",
+    "The unmodeled ReleaseLock 0x4037 path still produces the three 0x193 UIPC skips.",
+    "This experimental image was not promoted over main-virtual-card-stable.cpio; the test instance was stopped after verification."
+  ]
+}
