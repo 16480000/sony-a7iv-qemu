@@ -1,0 +1,5 @@
+# Reviewed historical loopback-panel path, not a cloud/API credential.
+# The panel binds 127.0.0.1, rejects foreign origins, and new launches use
+# random paths. See outputs/sony-a7iv-qemu/native/PUBLIC-REVIEW.zh-CN.md.
+# Scope is this exact original-commit/file/rule/line fingerprint only.
+3fcc1c3d4157da5724619b61675f53dda826f906:outputs/sony-a7iv-qemu/native/Start-Camera.ps1:generic-api-key:25

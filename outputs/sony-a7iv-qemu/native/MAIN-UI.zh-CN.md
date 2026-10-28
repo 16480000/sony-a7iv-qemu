@@ -2,7 +2,7 @@
 
 2026-10-19，ILCE-7M4 6.02，当前带卡实例 native117：
 
-[打开本机相机界面](http://localhost:18764/S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl/)
+使用 Start-Camera.cmd 读取并打开本机运行记录中的地址。2026-10-28 起新启动的面板使用随机路径；历史证据中的固定 URL 不是公共演示地址。
 
 方向键和确认键操作原厂界面；MENU 进入菜单或返回；Fn 打开原厂快捷面板。回放显示“No images”，再次按回放返回主界面。当前卡槽 2 为 64 MiB FAT32 虚拟卡，照片记录目标已设为 Slot 2。
 

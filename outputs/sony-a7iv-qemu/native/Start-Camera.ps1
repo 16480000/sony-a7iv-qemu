@@ -22,7 +22,7 @@ if (-not $panel) {
     $launcher = Start-Process -FilePath 'wsl.exe' -WindowStyle Hidden -PassThru -ArgumentList @(
         '-d','Codex-Z8-Qemu','-u','root','--','python3',$linuxScript,
         '--display','none','--web','--auto-main','--card-main','--initramfs','main-virtual-card-stable.cpio',
-        '--name',$runName,'--panel-token','S5jrCd45BfZKkoQmYa7c0ASfeT12LoLl'
+        '--name',$runName
     ) -RedirectStandardOutput (Join-Path $PSScriptRoot 'camera-launcher.log') -RedirectStandardError (Join-Path $PSScriptRoot 'camera-launcher-error.log')
     $deadline = (Get-Date).AddSeconds(240)
     do {

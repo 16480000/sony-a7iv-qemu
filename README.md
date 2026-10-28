@@ -2,6 +2,8 @@
 
 **v0.1 · ILCE-7M4 固件 6.02 · 研究中的模拟运行环境**
 
+原创贡献使用 [MIT License](LICENSE)，第三方代码与资源的例外见 [NOTICE](NOTICE.md)。2026-10-28 已完成公开前的历史与内容检查，范围和结果见 [公开检查记录](outputs/sony-a7iv-qemu/native/PUBLIC-REVIEW.zh-CN.md)。
+
 在定制 QEMU 中运行 Sony A7 IV 的原厂应用与界面，研究启动、显示、输入、存储和协处理器协议。参考 [chocotan/a7c2-re](https://github.com/chocotan/a7c2-re/tree/25efb56d7f0c69355f9225d1da50454207532e7f)，对 A7M4 的地址、资源与协议单独适配。
 
 **已验证主界面和部分基础功能；完整原厂取景、AF、ISP、JPEG 拍摄链路尚未实现。** 网页的视频输入、JPEG 写卡及回放覆盖层是模拟功能，不能作为原厂拍照成功的证据。仓库不包含 Sony 固件、分区镜像或用户视频，也不是下载后直接运行的整机模拟器。
